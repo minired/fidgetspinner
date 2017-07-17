@@ -1339,7 +1339,7 @@ static public class NGUIEditorTools
 		{
 			mEndHorizontal = true;
 			GUILayout.BeginHorizontal();
-			EditorGUILayout.BeginHorizontal("AS TextArea", GUILayout.MinHeight(10f));
+			EditorGUILayout.BeginHorizontal("TextArea", GUILayout.MinHeight(10f));
 		}
 		else
 		{
