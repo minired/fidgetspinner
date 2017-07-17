@@ -8,6 +8,7 @@ namespace Fidget.Main
     public class MainCamera : MonoBehaviour
     {
 
+
         // Use this for initialization
         void Start()
         {
