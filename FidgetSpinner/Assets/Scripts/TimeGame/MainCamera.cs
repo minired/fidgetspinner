@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Common;
-
+using UnityEngine.SceneManagement;
 
 namespace Fidget.TimeGame
 {
@@ -45,14 +45,53 @@ namespace Fidget.TimeGame
 
         void OnRightSwipe()
         {
-            fidgetSpinner.SpeedUp(10);
-            fidgetSpinner.OnSpinStart();
+            if(fidgetSpinner.IsSpin)
+            {
+                if (fidgetSpinner.IsRightDirection())
+                {
+                    fidgetSpinner.SpeedUp(50);
+                }
+                else
+                {
+                    fidgetSpinner.SpeedUp(-50);
+                }
+            }
+            else
+            {
+                fidgetSpinner.SetRightDirection();
+                fidgetSpinner.SpeedUp(50);
+                fidgetSpinner.OnSpinStart();
+            }
         }
 
         void OnLeftSwipe()
         {
-            fidgetSpinner.SpeedUp(10);
-            fidgetSpinner.OnSpinStart();
+
+            if (fidgetSpinner.IsSpin)
+            {
+                if (fidgetSpinner.IsLeftDirection())
+                {
+                    fidgetSpinner.SpeedUp(50);
+                }
+                else
+                {
+                    fidgetSpinner.SpeedUp(-50);
+                }
+            }
+            else
+            {
+                fidgetSpinner.SetLeftDirection();
+                fidgetSpinner.SpeedUp(50);
+                fidgetSpinner.OnSpinStart();
+            }
+           
+        }
+
+
+
+        public void MoveBackTitle()
+        {
+            SceneManager.LoadScene("Main");
         }
 
 

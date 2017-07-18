@@ -10,7 +10,53 @@ namespace Fidget.Common
         float speed = 0.0f;
         bool isSpin = false;
 
+        public bool IsSpin
+        {
+            get
+            {
+                return isSpin;
+            }
+        }
 
+        float direction = 1f;
+
+        public bool IsLeftDirection()
+        {
+            if(direction < 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool IsRightDirection()
+        {
+            if (direction > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+
+        public void SetRightDirection()
+        {
+            direction = 1;
+        }
+
+
+        public void SetLeftDirection()
+        {
+            direction = -1;
+        }
 
         public void SpeedUp(float fact)
         {
@@ -26,7 +72,8 @@ namespace Fidget.Common
 
         public void OnSpinStop()
         {
-
+            speed = 0;
+            isSpin = false;
         }
 
         // Use this for initialization
@@ -40,7 +87,7 @@ namespace Fidget.Common
         {
             if (isSpin)
             {
-                transform.Rotate(zAxis * Time.deltaTime * speed, Space.Self);
+                transform.Rotate(zAxis * Time.deltaTime * speed * direction, Space.Self);
 
                 if (speed > 0)
                 {
