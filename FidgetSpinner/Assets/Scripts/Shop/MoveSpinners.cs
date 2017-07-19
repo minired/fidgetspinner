@@ -19,7 +19,7 @@ public class MoveSpinners : MonoBehaviour {
 
     }
 
-    void MoveRight()
+    public void MoveRight()
     {
         currentPosition = panel.target.x;
         if (currentPosition <= (amountOfSpinners - 1) * -500f)
@@ -31,7 +31,7 @@ public class MoveSpinners : MonoBehaviour {
     }
     
 
-    void MoveLeft()
+    public void MoveLeft()
     {
         currentPosition = panel.target.x;
         if (currentPosition >= 0f)

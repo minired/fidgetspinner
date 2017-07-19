@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4556111014621404}
   - component: {fileID: 114809790048207842}
   m_Layer: 0
-  m_Name: InGameAtlas
+  m_Name: ShopAtlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80,19 +80,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: GoLeft_temp
-    x: 830
-    y: 3263
-    width: 110
-    height: 112
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: GoRight_temp
     x: 719
     y: 3263
     width: 110
@@ -105,6 +92,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: GoRight_temp
+    x: 830
+    y: 3263
+    width: 110
+    height: 112
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: spinner
+    x: 0
+    y: 1609
+    width: 676
+    height: 624
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 20
+    paddingTop: 0
+    paddingBottom: 92
   - name: Spinner1
     x: 719
     y: 3376
