@@ -50,7 +50,7 @@
   <Key Name="PsdParser.example-virtualview.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.example-virtualview.trueTypeFont" Value="Assets/PSD2NGUI/Example/nanumGothic.ttf" />
   <Key Name="PsdParser.example-virtualview.psdFiles" Value="Assets/PSD2NGUI/Example/example.psd:79cb14a63934ea7280657d2eaf1bb2e4:1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.nguiRoot" Value="75500b71-d1e0-4d53-aef1-273c612bfd79" />
+  <Key Name="PsdParser.New PSD2NGUI Project.nguiRoot" Value="da332d91-81fd-4571-8e20-e56da4c8bd72" />
   <Key Name="PsdParser.New PSD2NGUI Project.targetWidth" Value="720" />
   <Key Name="PsdParser.New PSD2NGUI Project.targetHeight" Value="1280" />
   <Key Name="PsdParser.New PSD2NGUI Project.camType" Value="1" />
@@ -59,10 +59,10 @@
   <Key Name="PsdParser.New PSD2NGUI Project.keepOldSprites" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.createControls" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.autoupdate" Value="1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Test/UI_Atlas.prefab" />
+  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/title_Atlas.prefab" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontPrefab" Value="" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontData" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.txt" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.New PSD2NGUI Project.trueTypeFont" Value="Assets/PSD2NGUI/Example/ARIAL.TTF" />
-  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Test/UI.psd:bc2929a4f3c26d43e4edd95a9fbc1c1c:1" />
+  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/title.psd:4186be745b0914e8783b338b42a1b546:1" />
 </Keys>
