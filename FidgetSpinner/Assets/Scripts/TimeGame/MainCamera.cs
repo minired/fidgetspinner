@@ -14,12 +14,17 @@ namespace Fidget.TimeGame
 
         public FidgetSpinner fidgetSpinner;
 
+        public GaugeUI gaugeUI;
+
         private void Awake()
         {
             swipeMouse.leftSwipe += SwipeMouse_leftSwipe;
             swipeMouse.rightSwipe += SwipeMouse_rightSwipe;
             swipeTouch.leftSwipe += SwipeTouch_leftSwipe;
             swipeTouch.rightSwipe += SwipeTouch_rightSwipe;
+
+            gaugeUI.SetGaugeAmount(0.5f);
+
         }
 
         private void SwipeTouch_rightSwipe()

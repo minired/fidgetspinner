@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 34181614}
   - component: {fileID: 34181615}
   m_Layer: 5
-  m_Name: main.psd
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,8 +139,7 @@ Transform:
   - {fileID: 1183462833}
   - {fileID: 247380179}
   - {fileID: 131031073}
-  - {fileID: 1301400589}
-  - {fileID: 1052694598}
+  - {fileID: 2010779237}
   - {fileID: 1723725996}
   - {fileID: 72997312}
   - {fileID: 1642223554}
@@ -227,7 +226,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &72997313
 MonoBehaviour:
@@ -919,7 +918,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &280931360
 MonoBehaviour:
@@ -1016,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &514224578
 MonoBehaviour:
@@ -1363,7 +1362,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1024525569
 MonoBehaviour:
@@ -1460,7 +1459,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1027336122
 MonoBehaviour:
@@ -1553,11 +1552,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1052694597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.000001, y: 288, z: 0}
+  m_LocalPosition: {x: -13, y: 288, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 34181614}
-  m_RootOrder: 6
+  m_Father: {fileID: 2010779237}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1052694599
 MonoBehaviour:
@@ -2078,6 +2077,7 @@ MonoBehaviour:
   swipeMouse: {fileID: 609177993}
   swipeTouch: {fileID: 567234085}
   fidgetSpinner: {fileID: 773853212}
+  gaugeUI: {fileID: 2010779238}
 --- !u!1 &1301400588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,8 +2104,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 392, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 34181614}
-  m_RootOrder: 5
+  m_Father: {fileID: 2010779237}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1301400590
 MonoBehaviour:
@@ -2144,8 +2144,8 @@ MonoBehaviour:
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 12.826087
-  mType: 0
-  mFillDirection: 4
+  mType: 3
+  mFillDirection: 0
   mFillAmount: 1
   mInvert: 0
   mFlip: 0
@@ -2187,7 +2187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1424070496
 MonoBehaviour:
@@ -2284,7 +2284,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1456991367
 MonoBehaviour:
@@ -2366,7 +2366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1642223555
 MonoBehaviour:
@@ -2463,7 +2463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1676266880
 MonoBehaviour:
@@ -2545,7 +2545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1723725997
 MonoBehaviour:
@@ -2740,6 +2740,49 @@ MonoBehaviour:
   mAtlas: {fileID: 114473549754506934, guid: 3ece35c53d2005144b23ad74ca79bd45, type: 2}
   mSpriteName: white
   mFillCenter: 1
+--- !u!1 &2010779236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2010779237}
+  - component: {fileID: 2010779238}
+  m_Layer: 5
+  m_Name: Gauge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2010779237
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010779236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1301400589}
+  - {fileID: 1052694598}
+  m_Father: {fileID: 34181614}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2010779238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010779236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff561eb5721efb44897b0b6a0e8f91cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gaugeSprite: {fileID: 1301400590}
 --- !u!1 &2039139878
 GameObject:
   m_ObjectHideFlags: 0
