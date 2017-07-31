@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 01b998af543676a41acdcdca3e0eb719
-timeCreated: 1500278082
+guid: a9dc0b05266336444ac2fe8acac083fa
+timeCreated: 1501524994
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -21,22 +21,22 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 1
+  isReadable: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: 1
-  maxTextureSize: 2048
+  maxTextureSize: 4096
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
+    filterMode: 2
+    aniso: 4
     mipBias: -1
     wrapU: 1
     wrapV: 1
     wrapW: 1
-  nPOTScale: 0
+  nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -56,7 +56,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
