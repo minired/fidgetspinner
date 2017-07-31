@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21713078}
   - component: {fileID: 21713079}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: btn2_shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 106629389}
   - component: {fileID: 106629390}
   - component: {fileID: 106629391}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: img_planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3001
+  startingRenderQueue: 3000
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -518,7 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655852083}
   - component: {fileID: 655852084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: btn_ad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682644331}
   - component: {fileID: 682644332}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: img_bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 719695439}
   - component: {fileID: 719695440}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: img_Timing spin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -764,7 +764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858604125}
   - component: {fileID: 858604126}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: title.psd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1056,7 +1056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1320947507}
   - component: {fileID: 1320947508}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: btn_setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,7 +1138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1708680266}
   - component: {fileID: 1708680267}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: img_Game spin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1220,7 +1220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142428674}
   - component: {fileID: 2142428675}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: img_Timed spin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
