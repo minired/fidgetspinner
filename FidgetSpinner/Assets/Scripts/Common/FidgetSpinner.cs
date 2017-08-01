@@ -10,6 +10,17 @@ namespace Fidget.Common
         float speed = 0.0f;
         bool isSpin = false;
 
+
+
+        public float Speed
+        {
+            get
+            {
+                return speed;
+            }
+        }
+
+
         public bool IsSpin
         {
             get
@@ -64,6 +75,14 @@ namespace Fidget.Common
                 return;
             speed += fact;
         }
+
+
+        public void AlmostStop()
+        {
+            speed = 40;
+        }
+
+
 
         public void OnSpinStart()
         {

@@ -14,6 +14,16 @@ namespace Fidget.Common
         public event SwipeMouseDelegate leftSwipe;
         public event SwipeMouseDelegate rightSwipe;
 
+        public event SwipeMouseDelegate upSwipe;
+        public event SwipeMouseDelegate downSwipe;
+
+
+
+        public Vector2 GetFirstPressPos()
+        {
+            return firstPressPos;
+        }
+
 
 
 
@@ -38,12 +48,18 @@ namespace Fidget.Common
                 //swipe upwards
                 if (currentSwipe.y > 0 &&  currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
-                    Debug.Log("up swipe");
+                    if(upSwipe != null)
+                    {
+                        upSwipe();
+                    }
                 }
                 //swipe down
                 if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
-                    Debug.Log("down swipe");
+                    if (downSwipe != null)
+                    {
+                        downSwipe();
+                    }
                 }
                 //swipe left
                 if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
