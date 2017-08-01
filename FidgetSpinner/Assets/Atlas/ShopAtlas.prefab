@@ -55,7 +55,7 @@ MonoBehaviour:
   mSprites:
   - name: 892923e6b271309d3a735765f7b49441
     x: 0
-    y: 2234
+    y: 2233
     width: 564
     height: 1002
     borderLeft: 0
@@ -66,9 +66,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: bar
+    x: 720
+    y: 3327
+    width: 456
+    height: 47
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: fill_bar
+    x: 720
+    y: 3283
+    width: 440
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: GoBack
-    x: 941
-    y: 3299
+    x: 1402
+    y: 3298
     width: 78
     height: 76
     borderLeft: 0
@@ -80,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: GoLeft_temp
-    x: 719
-    y: 3263
+    x: 1178
+    y: 3262
     width: 110
     height: 112
     borderLeft: 0
@@ -93,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: GoRight_temp
-    x: 830
-    y: 3263
+    x: 1290
+    y: 3262
     width: 110
     height: 112
     borderLeft: 0
@@ -107,7 +133,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: spinner
     x: 0
-    y: 1609
+    y: 1607
     width: 676
     height: 624
     borderLeft: 0
@@ -119,7 +145,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 92
   - name: Spinner1
-    x: 719
+    x: 720
     y: 3376
     width: 778
     height: 720
@@ -132,8 +158,8 @@ MonoBehaviour:
     paddingTop: 152
     paddingBottom: 152
   - name: spinner2
-    x: 565
-    y: 2558
+    x: 566
+    y: 2557
     width: 730
     height: 678
     borderLeft: 0
@@ -145,8 +171,8 @@ MonoBehaviour:
     paddingTop: 173
     paddingBottom: 173
   - name: spinner3
-    x: 1296
-    y: 2581
+    x: 1298
+    y: 2580
     width: 708
     height: 655
     borderLeft: 0
