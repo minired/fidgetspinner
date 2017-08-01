@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
-  isSpeedBased: 0
+  isSpeedBased: 1
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   delay: 0
-  duration: 1
+  duration: 5
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
-  isSpeedBased: 0
+  isSpeedBased: 1
   hasOnStart: 1
   hasOnPlay: 0
   hasOnUpdate: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   delay: 0
-  duration: 1
+  duration: 5
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -998,10 +998,10 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 3.9772727
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
   mText: 182,293
-  mFontSize: 40
+  mFontSize: 48
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -1015,10 +1015,10 @@ MonoBehaviour:
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
+  mSpacingX: 1
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
+  mUseFloatSpacing: 1
+  mFloatSpacingX: 1.2
   mFloatSpacingY: 0
   mOverflowEllipsis: 0
   mOverflowWidth: 0
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3005
+  startingRenderQueue: 3010
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1406,20 +1406,20 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.9372549, g: 0.88235295, b: 1, a: 1}
   mPivot: 4
-  mWidth: 287
-  mHeight: 47
+  mWidth: 290
+  mHeight: 60
   mDepth: 13
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 6.106383
+  aspectRatio: 4.8333335
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
   mText: Level. 35
-  mFontSize: 43
+  mFontSize: 60
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -1428,12 +1428,12 @@ MonoBehaviour:
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
-  mOverflow: 0
+  mOverflow: 2
   mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
+  mSpacingX: 6
   mSpacingY: 0
   mUseFloatSpacing: 0
   mFloatSpacingX: 0
@@ -1469,7 +1469,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027336120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -228.00002, y: 322, z: 0}
+  m_LocalPosition: {x: -299, y: 322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -1503,20 +1503,20 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
-  mWidth: 145
-  mHeight: 28
+  mColor: {r: 0.7019608, g: 0.6039216, b: 0.8901961, a: 1}
+  mPivot: 3
+  mWidth: 148
+  mHeight: 36
   mDepth: 11
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.178571
+  aspectRatio: 4.111111
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 8dbbafad5a96066458d5c68ed89f7b4d, type: 3}
   mFont: {fileID: 0}
   mText: Time left
-  mFontSize: 25
+  mFontSize: 36
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -1525,15 +1525,15 @@ MonoBehaviour:
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
-  mOverflow: 0
+  mOverflow: 2
   mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
+  mSpacingX: 1
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
+  mUseFloatSpacing: 1
+  mFloatSpacingX: 0.9
   mFloatSpacingY: 0
   mOverflowEllipsis: 0
   mOverflowWidth: 0
@@ -1937,7 +1937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   updateType: 0
-  isSpeedBased: 0
+  isSpeedBased: 1
   hasOnStart: 0
   hasOnPlay: 0
   hasOnUpdate: 0
@@ -1981,7 +1981,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   delay: 0
-  duration: 1
+  duration: 5
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -2245,7 +2245,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1424070494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -254, y: 267, z: 0}
+  m_LocalPosition: {x: -300, y: 267, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -2280,19 +2280,19 @@ MonoBehaviour:
     absolute: 0
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
-  mWidth: 93
-  mHeight: 36
+  mPivot: 3
+  mWidth: 98
+  mHeight: 48
   mDepth: 10
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.5833333
+  aspectRatio: 2.0416667
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
   mText: 12.8
-  mFontSize: 33
+  mFontSize: 48
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -2301,15 +2301,15 @@ MonoBehaviour:
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
-  mOverflow: 0
+  mOverflow: 2
   mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
+  mSpacingX: 1
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
+  mUseFloatSpacing: 1
+  mFloatSpacingX: 1.2
   mFloatSpacingY: 0
   mOverflowEllipsis: 0
   mOverflowWidth: 0
@@ -2342,7 +2342,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642223553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 214, y: 322, z: 0}
+  m_LocalPosition: {x: 301, y: 322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -2376,8 +2376,8 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
+  mColor: {r: 0.7019608, g: 0.6039216, b: 0.8901961, a: 1}
+  mPivot: 5
   mWidth: 174
   mHeight: 36
   mDepth: 9
@@ -2386,10 +2386,10 @@ MonoBehaviour:
   keepAspectRatio: 0
   aspectRatio: 4.8333335
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 8dbbafad5a96066458d5c68ed89f7b4d, type: 3}
   mFont: {fileID: 0}
   mText: High score
-  mFontSize: 33
+  mFontSize: 36
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -2403,10 +2403,10 @@ MonoBehaviour:
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  mSpacingX: 0
+  mSpacingX: 1
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
+  mUseFloatSpacing: 1
+  mFloatSpacingX: 0.9
   mFloatSpacingY: 0
   mOverflowEllipsis: 0
   mOverflowWidth: 0
@@ -2450,7 +2450,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1723725995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: 288, z: 0}
+  m_LocalPosition: {x: 67, y: 288, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -2484,20 +2484,20 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
-  mWidth: 157
-  mHeight: 39
+  mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+  mPivot: 5
+  mWidth: 166
+  mHeight: 48
   mDepth: 7
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.025641
+  aspectRatio: 3.4583333
   keepCrispWhenShrunk: 1
-  mTrueTypeFont: {fileID: 12800000, guid: 5b445feef69c8bc4f9ad5bce881e2d4b, type: 3}
+  mTrueTypeFont: {fileID: 12800000, guid: 73265f32ca6be1748852e3cbcbd67e45, type: 3}
   mFont: {fileID: 0}
-  mText: 199m/s
-  mFontSize: 35
+  mText: 999m/s
+  mFontSize: 48
   mFontStyle: 0
   mAlignment: 0
   mEncoding: 1
@@ -2506,15 +2506,15 @@ MonoBehaviour:
   mEffectColor: {r: 0, g: 0, b: 0, a: 1}
   mSymbols: 1
   mEffectDistance: {x: 1, y: 1}
-  mOverflow: 0
+  mOverflow: 2
   mMaterial: {fileID: 0}
   mApplyGradient: 0
   mGradientTop: {r: 1, g: 1, b: 1, a: 1}
   mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   mSpacingX: 0
   mSpacingY: 0
-  mUseFloatSpacing: 0
-  mFloatSpacingX: 0
+  mUseFloatSpacing: 1
+  mFloatSpacingX: -0.6
   mFloatSpacingY: 0
   mOverflowEllipsis: 0
   mOverflowWidth: 0
