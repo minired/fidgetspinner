@@ -105,9 +105,6 @@ namespace Fidget.Common
                         break;
                 }
             }
-
-
         }
     }
-
 }

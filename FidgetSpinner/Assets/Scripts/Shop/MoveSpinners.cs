@@ -6,7 +6,6 @@ namespace Fidget.Shop
 {
     public class MoveSpinners : MonoBehaviour
     {
-
         public float currentPositionX;
         public float currentPositionY;
         int amountOfSpinners;
@@ -17,8 +16,8 @@ namespace Fidget.Shop
         {
             currentPositionX = transform.localPosition.x;
             currentPositionY = transform.localPosition.y;
-            amountOfSpinners = 4;
 
+            amountOfSpinners = 4;
         }
         void Update()
         {
@@ -33,9 +32,9 @@ namespace Fidget.Shop
             currentPositionX -= PADDING;
 
             Vector3 position = new Vector3(currentPositionX, currentPositionY, 0);
+
             SpringPanel.Begin(this.gameObject, position, 8f);
         }
-
 
         public void MoveLeft()
         {
@@ -45,6 +44,7 @@ namespace Fidget.Shop
             currentPositionX += PADDING;
 
             Vector3 position = new Vector3(currentPositionX, currentPositionY, 0);
+
             SpringPanel.Begin(this.gameObject, position, 8f);
         }
 

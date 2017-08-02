@@ -6,27 +6,55 @@ namespace Fidget.Shop
 {
     public class GaugeControlUnit : MonoBehaviour
     {
-        public UISprite fillGauge;
-        public UILabel speedText;
-
-        // Use this for initialization
-        void Start()
+        enum Spinners
         {
-            speedText.text = fillGauge.fillAmount.ToString();
+            spinner0,
+            spinner1,
+            spinner2,
+            spinner3,
+            spinner4,
+            spinner5,
+
+            total_spinners
         }
 
-        // Update is called once per frame
+        float currentPositionX;
+        float currentPositionY;
+        const float PADDING = 90f;
+
+        public UILabel upgradeMoney;
+        int int_upgradeMoney;
+        public UISprite speedGauge;
+
+        void Start()
+        {
+            currentPositionX = transform.localPosition.x;
+            currentPositionY = transform.localPosition.y;
+
+            speedGauge.fillAmount = 0.3f;
+
+            int_upgradeMoney = int.Parse(upgradeMoney.text);
+        }
+
         void Update()
         {
-
+            if (((currentPositionX - PADDING) / 500) == -(int)Spinners.spinner0)
+            {
+                speedGauge.fillAmount = 0.1f;
+            }
+            else if(((currentPositionX - PADDING) / 500) == -(int)Spinners.spinner1)
+            {
+                speedGauge.fillAmount = 0.2f;
+            }
         }
 
         public void changeGauge()
         {
             Debug.Log("Click");
-            fillGauge.fillAmount += 0.1f;
-            
-            speedText.text = string.Format("{0:0.##}", fillGauge.fillAmount);
+
+            int_upgradeMoney += 500;
+            upgradeMoney.text = int_upgradeMoney.ToString();
+            speedGauge.fillAmount += 0.1f;
         }
     }
 }

@@ -14,12 +14,26 @@ namespace Fidget.TimeGame
 
         public FidgetSpinner fidgetSpinner;
 
+        public GaugeUI gaugeUI;
+
+        public BackUI backBtn;
+
         private void Awake()
         {
             swipeMouse.leftSwipe += SwipeMouse_leftSwipe;
             swipeMouse.rightSwipe += SwipeMouse_rightSwipe;
             swipeTouch.leftSwipe += SwipeTouch_leftSwipe;
             swipeTouch.rightSwipe += SwipeTouch_rightSwipe;
+
+            backBtn.backBtn += BackBtn_backBtn;
+
+            gaugeUI.SetGaugeAmount(0.5f);
+
+        }
+
+        private void BackBtn_backBtn()
+        {
+            SceneManager.LoadScene("Main");
         }
 
         private void SwipeTouch_rightSwipe()
@@ -89,10 +103,7 @@ namespace Fidget.TimeGame
 
 
 
-        public void MoveBackTitle()
-        {
-            SceneManager.LoadScene("Main");
-        }
+     
 
 
         // Use this for initialization
