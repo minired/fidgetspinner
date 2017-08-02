@@ -18,8 +18,7 @@ namespace Fidget.Shop
             total_spinners
         }
 
-        float currentPositionX;
-        float currentPositionY;
+        int currentSpinner;
         //const float PADDING = 90f;
 
         public SpringPanel panel;
@@ -33,8 +32,6 @@ namespace Fidget.Shop
 
         void Start()
         {
-            currentPositionX = transform.localPosition.x;
-            currentPositionY = transform.localPosition.y;
             /*
             speedGauge.fillAmount = 0.3f;
             hasteGauge.fillAmount = 0.2f;
@@ -45,17 +42,35 @@ namespace Fidget.Shop
 
         void Update()
         {
-            currentPositionX = panel.target.x;
-            Debug.Log(currentPositionX);
+            currentSpinner = -(int)(Mathf.Round(panel.target.x) / 500);
+            Debug.Log(currentSpinner);
 
-            if (((currentPositionX) / 500) >= -(int)Spinners.spinner0)
+            switch(currentSpinner)
             {
-                speedGauge.fillAmount = 0.1f;
+                case (int)Spinners.spinner0:
+                    break;
+                case (int)Spinners.spinner1:
+                    break;
+                case (int)Spinners.spinner2:
+                    break;
+                case (int)Spinners.spinner3:
+                    break;
+                case (int)Spinners.spinner4:
+                    break;
+                case (int)Spinners.spinner5:
+                    break;
+                default:
+                    break;
             }
-            else if(((currentPositionX) / 500) == -(int)Spinners.spinner1)
-            {
-                speedGauge.fillAmount = 0.5f;
-            }
+
+            //if (((currentPositionX) / 500) == -(int)Spinners.spinner0)
+            //{
+            //    speedGauge.fillAmount = 0.1f;
+            //}
+            //else if(((currentPositionX) / 500) == -(int)Spinners.spinner1)
+            //{
+            //    speedGauge.fillAmount = 0.5f;
+            //}
         }
 
         public void UpgradeStats()
