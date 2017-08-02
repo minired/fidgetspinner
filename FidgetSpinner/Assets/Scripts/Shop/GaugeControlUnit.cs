@@ -20,41 +20,55 @@ namespace Fidget.Shop
 
         float currentPositionX;
         float currentPositionY;
-        const float PADDING = 90f;
+        //const float PADDING = 90f;
 
+        public SpringPanel panel;
         public UILabel upgradeMoney;
         int int_upgradeMoney;
+
         public UISprite speedGauge;
+        public UISprite hasteGauge;
+        public UISprite dampingGauge;
+        public UISprite coinGauge;
 
         void Start()
         {
             currentPositionX = transform.localPosition.x;
             currentPositionY = transform.localPosition.y;
-
+            /*
             speedGauge.fillAmount = 0.3f;
-
-            int_upgradeMoney = int.Parse(upgradeMoney.text);
+            hasteGauge.fillAmount = 0.2f;
+            dampingGauge.fillAmount = 0.4f;
+            coinGauge.fillAmount = 0.1f;
+            */
         }
 
         void Update()
         {
-            if (((currentPositionX - PADDING) / 500) == -(int)Spinners.spinner0)
+            currentPositionX = panel.target.x;
+            Debug.Log(currentPositionX);
+
+            if (((currentPositionX) / 500) >= -(int)Spinners.spinner0)
             {
                 speedGauge.fillAmount = 0.1f;
             }
-            else if(((currentPositionX - PADDING) / 500) == -(int)Spinners.spinner1)
+            else if(((currentPositionX) / 500) == -(int)Spinners.spinner1)
             {
-                speedGauge.fillAmount = 0.2f;
+                speedGauge.fillAmount = 0.5f;
             }
         }
 
-        public void changeGauge()
+        public void UpgradeStats()
         {
-            Debug.Log("Click");
+            int_upgradeMoney = int.Parse(upgradeMoney.text);
+
+            speedGauge.fillAmount += 0.1f;
+            hasteGauge.fillAmount += 0.1f;
+            dampingGauge.fillAmount += 0.1f;
+            coinGauge.fillAmount += 0.1f;
 
             int_upgradeMoney += 500;
             upgradeMoney.text = int_upgradeMoney.ToString();
-            speedGauge.fillAmount += 0.1f;
         }
     }
 }
