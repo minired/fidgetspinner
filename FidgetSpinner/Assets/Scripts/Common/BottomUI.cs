@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-namespace Fidget.Main
+namespace Fidget.Common
 {
-    public class MainCamera : MonoBehaviour
+    public class BottomUI : MonoBehaviour
     {
+
+
+        public void MoveShopScene()
+        {
+            SceneManager.LoadScene("Shop");
+        }
 
 
         // Use this for initialization
@@ -20,12 +25,5 @@ namespace Fidget.Main
         {
 
         }
-
-        public void MoveGameScene()
-        {
-            SceneManager.LoadScene("Game");
-        }
-
-
     }
 }

@@ -18,6 +18,17 @@ namespace Fidget.TimeGame
 
         public BackUI backBtn;
 
+        public UILabel levelLabel;
+
+        public UILabel timeLabel;
+
+        public UILabel speedLabel;
+
+        public UILabel highScoreLabel;
+
+
+        float rightEventTime = 0.0f;
+
         private void Awake()
         {
             swipeMouse.leftSwipe += SwipeMouse_leftSwipe;
@@ -36,30 +47,7 @@ namespace Fidget.TimeGame
 
         }
 
-        private void SwipeTouch_downSwipe()
-        {
-          
-            if (swipeTouch.GetFirstPressPos().x > 250.0f)
-            {
-                LeftSpeedUp();
-            }
-            else
-            {
-                RightSpeedUp();
-            }
-        }
-
-        private void SwipeTouch_upSwipe()
-        {
-            if (swipeTouch.GetFirstPressPos().x > 250.0f)
-            {
-                RightSpeedUp();
-            }
-            else
-            {
-                LeftSpeedUp();
-            }
-        }
+       
 
         private void SwipeMouse_downSwipe()
         {
@@ -84,39 +72,78 @@ namespace Fidget.TimeGame
                 LeftSpeedUp();
             }
         }
+        static int eventCount = 0;
 
         private void BackBtn_backBtn()
         {
             SceneManager.LoadScene("Main");
         }
 
+        
+
         private void SwipeTouch_rightSwipe()
         {
-            OnRightSwipe(swipeTouch.GetFirstPressPos());
+           
+            if (swipeTouch.GetFirstPressPos().y < 900.0f)
+            {
+                RightSpeedUp();
+            }
+            else
+            {
+                LeftSpeedUp();
+            }
         }
 
         private void SwipeTouch_leftSwipe()
         {
-            OnLeftSwipe(swipeTouch.GetFirstPressPos());
+            if (swipeTouch.GetFirstPressPos().y < 900.0f)
+            {
+                LeftSpeedUp();
+            }
+            else
+            {
+                RightSpeedUp();
+            }
         }
+
+
+        private void SwipeTouch_downSwipe()
+        {
+            eventCount++;
+            levelLabel.text = "down" + eventCount.ToString();
+            timeLabel.text = "*" + swipeTouch.GetFirstPressPos().x.ToString();
+            if (swipeTouch.GetFirstPressPos().x > 500.0f)
+            {
+                LeftSpeedUp();
+            }
+            else
+            {
+                RightSpeedUp();
+            }
+        }
+
+        private void SwipeTouch_upSwipe()
+        {
+
+            if (swipeTouch.GetFirstPressPos().x > 500.0f)
+            {
+                RightSpeedUp();
+            }
+            else
+            {
+                LeftSpeedUp();
+            }
+        }
+
+
+        //Editor
 
         private void SwipeMouse_rightSwipe()
         {
-            OnRightSwipe(swipeMouse.GetFirstPressPos());
-        }
-
-        private void SwipeMouse_leftSwipe()
-        {
-            OnLeftSwipe(swipeMouse.GetFirstPressPos());
-        }
-
-
-        void OnRightSwipe(Vector2 startPos)
-        {
-            Debug.Log(startPos);
+        
             bool isRightDir = true;
-
-            if(startPos.y > 350)
+            //350.0f
+            if (swipeMouse.GetFirstPressPos().y > 350.0f)
             {
                 isRightDir = false;
             }
@@ -130,11 +157,14 @@ namespace Fidget.TimeGame
                 LeftSpeedUp();
             }
         }
-        void OnLeftSwipe(Vector2 startPos)
+
+        private void SwipeMouse_leftSwipe()
         {
+            eventCount++;
+            //levelLabel.text = "left" + eventCount.ToString();
             bool isLeftDir = true;
 
-            if (startPos.y > 350)
+            if (swipeMouse.GetFirstPressPos().y > 350.0f)
             {
                 isLeftDir = false;
             }
@@ -147,60 +177,32 @@ namespace Fidget.TimeGame
                 RightSpeedUp();
             }
         }
+        //Editor
+
+      
         void RightSpeedUp()
         {
-            if (fidgetSpinner.IsSpin)
-            {
-                if (fidgetSpinner.IsRightDirection())
-                {
-                    fidgetSpinner.SpeedUp(30);
-                }
-                else
-                {
-                    if (fidgetSpinner.Speed > 50)
-                    {
-                        fidgetSpinner.AlmostStop();
-                    }
-                    else
-                    {
-                        fidgetSpinner.SpeedUp(-30);
-                    }
-                }
-            }
-            else
+
+            if (!fidgetSpinner.IsSpin)
             {
                 fidgetSpinner.SetRightDirection();
-                fidgetSpinner.SpeedUp(30);
                 fidgetSpinner.OnSpinStart();
+                fidgetSpinner.SpeedUp(30);
+                return;
             }
+            fidgetSpinner.SpeedUp(30);
         }
 
         void LeftSpeedUp()
         {
-            if (fidgetSpinner.IsSpin)
-            {
-                if (fidgetSpinner.IsLeftDirection())
-                {
-                    fidgetSpinner.SpeedUp(30);
-                }
-                else
-                {
-                    if (fidgetSpinner.Speed > 50)
-                    {
-                        fidgetSpinner.AlmostStop();
-                    }
-                    else
-                    {
-                        fidgetSpinner.SpeedUp(-30);
-                    }
-                }
-            }
-            else
+            if (!fidgetSpinner.IsSpin)
             {
                 fidgetSpinner.SetLeftDirection();
-                fidgetSpinner.SpeedUp(30);
                 fidgetSpinner.OnSpinStart();
+                fidgetSpinner.SpeedUp(30);
+                return;
             }
+            fidgetSpinner.SpeedUp(30);
         }
 
 
@@ -221,7 +223,14 @@ namespace Fidget.TimeGame
         // Update is called once per frame
         void Update()
         {
-
+            if (fidgetSpinner.IsSpin)
+            {
+                speedLabel.text = ((int)(fidgetSpinner.Speed)).ToString() + " m/s";
+            }
+            else
+            {
+                speedLabel.text = "0 m/s";
+            }
         }
     }
 }

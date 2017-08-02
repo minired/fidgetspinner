@@ -21,7 +21,7 @@ namespace Fidget.Common
 
         public Vector2 GetFirstPressPos()
         {
-            return firstPressPos;
+            return secondPressPos;
         }
 
 

@@ -1097,7 +1097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &567234084
 GameObject:
@@ -1359,7 +1359,7 @@ GameObject:
   - component: {fileID: 1024525568}
   - component: {fileID: 1024525569}
   m_Layer: 5
-  m_Name: Level. 35
+  m_Name: levelLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1672,68 +1672,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4801432658669166, guid: 225add1cafa006c479b51480715a8253,
     type: 2}
   m_PrefabInternal: {fileID: 75158030}
---- !u!1 &1091552182
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1091552185}
-  - component: {fileID: 1091552184}
-  - component: {fileID: 1091552183}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1091552183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1091552182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &1091552184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1091552182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &1091552185
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1091552182}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1153844318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2078,10 @@ MonoBehaviour:
   fidgetSpinner: {fileID: 773853212}
   gaugeUI: {fileID: 2010779238}
   backBtn: {fileID: 1676266882}
+  levelLabel: {fileID: 1024525569}
+  timeLabel: {fileID: 1424070496}
+  speedLabel: {fileID: 1723725997}
+  highScoreLabel: {fileID: 1642223555}
 --- !u!1 &1301400588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,7 +2174,7 @@ GameObject:
   - component: {fileID: 1424070495}
   - component: {fileID: 1424070496}
   m_Layer: 5
-  m_Name: 12.8
+  m_Name: timeLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2437,7 +2379,7 @@ GameObject:
   - component: {fileID: 1723725996}
   - component: {fileID: 1723725997}
   m_Layer: 5
-  m_Name: 199m/s
+  m_Name: speedLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

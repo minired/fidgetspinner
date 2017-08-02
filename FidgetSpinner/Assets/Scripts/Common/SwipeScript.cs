@@ -13,10 +13,13 @@ namespace Fidget.Common
 
         private float fingerStartTime = 0.0f;
         private Vector2 fingerStartPos = Vector2.zero;
+        private Vector2 fingerWorldStartPos = Vector2.zero;
+        Vector2 swipeDirection = Vector2.zero;
+
+        float minSwipeDist = 10.0f;
 
         private bool isSwipe = false;
-        private float minSwipeDist = 50.0f;
-        private float maxSwipeTime = 0.5f;
+        private float maxSwipeTime = 1.0f;
 
 
 
@@ -29,105 +32,95 @@ namespace Fidget.Common
         public event SwipeDelegate downSwipe;
 
 
+        private void Awake()
+        {
+            minSwipeDist = Mathf.Max(Screen.width, Screen.height) / 8f;
+        }
+
+
+
         public Vector2 GetFirstPressPos()
         {
             return fingerStartPos;
         }
 
+        bool IsCheckSwiped(Vector2 currentPos)
+        {
+            Vector2 currentSwipe = currentPos - fingerStartPos;
+            if(currentSwipe.magnitude > minSwipeDist)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        void OnSwipeDetected(Vector2 currentSwipe)
+        {
+            if (currentSwipe.y > 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+            {
+                if (upSwipe != null)
+                {
+                    upSwipe();
+                }
+            }
+            //swipe down
+            else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+            {
+                if (downSwipe != null)
+                {
+                    downSwipe();
+                }
+            }
+            //swipe left
+            else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            {
+                if (leftSwipe != null)
+                {
+                    leftSwipe();
+                }
+            }
+            //swipe right
+            else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            {
+                if (rightSwipe != null)
+                {
+                    rightSwipe();
+                }
+            }
+        }
 
         void Update()
         {
 
             if (Input.touchCount > 0)
             {
-
-                foreach (Touch touch in Input.touches)
+                Touch t = Input.GetTouch(0);
+                if(t.phase == TouchPhase.Began)
                 {
-                    switch (touch.phase)
-                    {
-                        case TouchPhase.Began:
-                            /* this is a new touch */
-                            isSwipe = true;
-                            fingerStartTime = Time.time;
-                            fingerStartPos = touch.position;
-                            break;
-
-                        case TouchPhase.Canceled:
-                            /* The touch is being canceled */
-                            isSwipe = false;
-                            break;
-
-                        case TouchPhase.Ended:
-
-                            float gestureTime = Time.time - fingerStartTime;
-                            float gestureDist = (touch.position - fingerStartPos).magnitude;
-
-                            if (isSwipe && gestureTime < maxSwipeTime && gestureDist > minSwipeDist)
-                            {
-                                Vector2 direction = touch.position - fingerStartPos;
-                                Vector2 swipeType = Vector2.zero;
-
-                                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-                                {
-                                    // the swipe is horizontal:
-                                    swipeType = Vector2.right * Mathf.Sign(direction.x);
-                                }
-                                else
-                                {
-                                    // the swipe is vertical:
-                                    swipeType = Vector2.up * Mathf.Sign(direction.y);
-                                }
-
-                                if (swipeType.x != 0.0f)
-                                {
-                                    if (swipeType.x > 0.0f)
-                                    {
-                                        // MOVE RIGHT
-                                        if (rightSwipe != null)
-                                        {
-                                            rightSwipe();
-                                        }
-                                    }
-                                    else
-                                    {
-                                        // MOVE LEFT
-                                        if (leftSwipe != null)
-                                        {
-                                            leftSwipe();
-                                        }
-                                    }
-                                }
-
-                                if (swipeType.y != 0.0f)
-                                {
-                                    if (swipeType.y > 0.0f)
-                                    {
-                                        // MOVE UP
-                                        if (upSwipe != null)
-                                        {
-                                            upSwipe();
-                                        }
-                                    }
-                                    else
-                                    {
-                                        // MOVE DOWN
-                                        if (downSwipe != null)
-                                        {
-                                            downSwipe();
-                                        }
-                                    }
-                                }
-
-
-                            }
-
-                            break;
-                    }
-                    return;
+                    fingerStartPos = new Vector2(t.position.x, t.position.y);
                 }
+                else if (t.phase == TouchPhase.Moved)
+                {
+                    Vector2 currentTouchPos = new Vector2(t.position.x, t.position.y);
+                    bool isSwipeDetected = IsCheckSwiped(currentTouchPos);
+                    swipeDirection = (currentTouchPos - fingerStartPos).normalized;
+                    if (isSwipeDetected)
+                    {
+                        OnSwipeDetected(swipeDirection);
+                        fingerStartPos = new Vector2(t.position.x, t.position.y);
+                    }
+                }
+                else if(t.phase == TouchPhase.Ended)
+                {
+                   
+                }
+              
             }
 
+
         }
+
+
 
     }
 

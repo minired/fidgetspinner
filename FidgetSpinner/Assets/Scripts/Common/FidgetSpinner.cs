@@ -70,16 +70,29 @@ namespace Fidget.Common
         }
 
         public void SpeedUp(float fact)
-        {
-            if (speed > 500)
+        { 
+
+            if (speed > 500 )
                 return;
             speed += fact;
+        }
+
+        public void SpeedDown(float fact)
+        {
+            if (speed - fact > 0)
+            {
+                speed -= fact;
+            }
+            else
+            {
+                OnSpinStop();
+            }
         }
 
 
         public void AlmostStop()
         {
-            speed = 40;
+            speed = 30;
         }
 
 
@@ -107,16 +120,9 @@ namespace Fidget.Common
             if (isSpin)
             {
                 transform.Rotate(zAxis * Time.deltaTime * speed * direction, Space.Self);
-
                 if (speed > 0)
                 {
-                    speed -= 0.1f;
-                }
-                
-                if(speed <= 0)
-                {
-                    speed = 0;
-                    isSpin = false;
+                    speed -= 0.5f;
                 }
             }
         }
