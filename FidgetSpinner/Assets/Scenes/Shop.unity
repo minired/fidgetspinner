@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeMoney: {fileID: 1946493346}
-  fillGauge: {fileID: 1079937272}
+  speedGauge: {fileID: 1079937272}
 --- !u!1001 &1341007860
 Prefab:
   m_ObjectHideFlags: 0

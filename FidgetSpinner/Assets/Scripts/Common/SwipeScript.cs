@@ -20,91 +20,115 @@ namespace Fidget.Common
 
 
 
+
         public delegate void SwipeDelegate();
         public event SwipeDelegate leftSwipe;
         public event SwipeDelegate rightSwipe;
 
+        public event SwipeDelegate upSwipe;
+        public event SwipeDelegate downSwipe;
 
-        // Update is called once per frame
+
+        public Vector2 GetFirstPressPos()
+        {
+            return fingerStartPos;
+        }
+
+
         void Update()
         {
-            if (Input.touchCount < 1)
-            {
-                return;
-            }
 
-            foreach (Touch touch in Input.touches)
+            if (Input.touchCount > 0)
             {
-                switch (touch.phase)
+
+                foreach (Touch touch in Input.touches)
                 {
-                    case TouchPhase.Began:
-                        /* this is a new touch */
-                        isSwipe = true;
-                        fingerStartTime = Time.time;
-                        fingerStartPos = touch.position;
-                        break;
+                    switch (touch.phase)
+                    {
+                        case TouchPhase.Began:
+                            /* this is a new touch */
+                            isSwipe = true;
+                            fingerStartTime = Time.time;
+                            fingerStartPos = touch.position;
+                            break;
 
-                    case TouchPhase.Canceled:
-                        /* The touch is being canceled */
-                        isSwipe = false;
-                        break;
+                        case TouchPhase.Canceled:
+                            /* The touch is being canceled */
+                            isSwipe = false;
+                            break;
 
-                    case TouchPhase.Ended:
+                        case TouchPhase.Ended:
 
-                        float gestureTime = Time.time - fingerStartTime;
-                        float gestureDist = (touch.position - fingerStartPos).magnitude;
+                            float gestureTime = Time.time - fingerStartTime;
+                            float gestureDist = (touch.position - fingerStartPos).magnitude;
 
-                        if (isSwipe && gestureTime < maxSwipeTime && gestureDist > minSwipeDist)
-                        {
-                            Vector2 direction = touch.position - fingerStartPos;
-                            Vector2 swipeType = Vector2.zero;
-
-                            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+                            if (isSwipe && gestureTime < maxSwipeTime && gestureDist > minSwipeDist)
                             {
-                                // the swipe is horizontal:
-                                swipeType = Vector2.right * Mathf.Sign(direction.x);
-                            }
-                            else
-                            {
-                                // the swipe is vertical:
-                                swipeType = Vector2.up * Mathf.Sign(direction.y);
-                            }
+                                Vector2 direction = touch.position - fingerStartPos;
+                                Vector2 swipeType = Vector2.zero;
 
-                            if (swipeType.x != 0.0f)
-                            {
-                                if (swipeType.x > 0.0f)
+                                if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
                                 {
-                                    if(rightSwipe != null)
-                                    {
-                                        rightSwipe();
-                                    }
+                                    // the swipe is horizontal:
+                                    swipeType = Vector2.right * Mathf.Sign(direction.x);
                                 }
                                 else
                                 {
-                                    if (leftSwipe != null)
+                                    // the swipe is vertical:
+                                    swipeType = Vector2.up * Mathf.Sign(direction.y);
+                                }
+
+                                if (swipeType.x != 0.0f)
+                                {
+                                    if (swipeType.x > 0.0f)
                                     {
-                                        leftSwipe();
+                                        // MOVE RIGHT
+                                        if (rightSwipe != null)
+                                        {
+                                            rightSwipe();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // MOVE LEFT
+                                        if (leftSwipe != null)
+                                        {
+                                            leftSwipe();
+                                        }
                                     }
                                 }
+
+                                if (swipeType.y != 0.0f)
+                                {
+                                    if (swipeType.y > 0.0f)
+                                    {
+                                        // MOVE UP
+                                        if (upSwipe != null)
+                                        {
+                                            upSwipe();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // MOVE DOWN
+                                        if (downSwipe != null)
+                                        {
+                                            downSwipe();
+                                        }
+                                    }
+                                }
+
+
                             }
 
-                            if (swipeType.y != 0.0f)
-                            {
-                                if (swipeType.y > 0.0f)
-                                {
-                                    // MOVE UP
-                                }
-                                else
-                                {
-                                    // MOVE DOWN
-                                }
-                            }
-
-                        }
-
-                        break;
+                            break;
+                    }
+                    return;
                 }
             }
+
         }
+
     }
+
 }
