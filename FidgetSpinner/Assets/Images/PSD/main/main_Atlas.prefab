@@ -55,9 +55,22 @@ MonoBehaviour:
   mSprites:
   - name: btn_back@sprite
     x: 1780
-    y: 1402
+    y: 1230
     width: 143
     height: 143
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: coin
+    x: 1780
+    y: 1374
+    width: 172
+    height: 171
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -159,7 +172,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: img_speedbg@sprite
     x: 1780
-    y: 1321
+    y: 1149
     width: 222
     height: 80
     borderLeft: 0
