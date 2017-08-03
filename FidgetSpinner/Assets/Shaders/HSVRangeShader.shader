@@ -47,6 +47,7 @@ Shader "Custom/HSVRangeShader"
        _StencilWriteMask ("Stencil Write Mask", Float) = 255
        _StencilReadMask ("Stencil Read Mask", Float) = 255
        _ColorMask ("Color Mask", Float) = 15
+	   _AlphaVal("Color Alpha", Range(0, 1)) = 1
     }
     SubShader
     {
@@ -82,6 +83,7 @@ Shader "Custom/HSVRangeShader"
             float _HSVRangeMin;
             float _HSVRangeMax;
             float4 _HSVAAdjust;
+			float _AlphaVal;
 
             struct Vertex
             {
@@ -130,7 +132,7 @@ Shader "Custom/HSVRangeShader"
                 float3 hsv = rgb2hsv(color.rgb);
                 float affectMult = step(_HSVRangeMin, hsv.r) * step(hsv.r, _HSVRangeMax);
                 float3 rgb = hsv2rgb(hsv + _HSVAAdjust.xyz * affectMult);
-                return float4(rgb, color.a + _HSVAAdjust.a);
+                return float4(rgb, _AlphaVal);
             }
 
             ENDCG
