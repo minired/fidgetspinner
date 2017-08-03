@@ -50,7 +50,7 @@
   <Key Name="PsdParser.example-virtualview.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.example-virtualview.trueTypeFont" Value="Assets/PSD2NGUI/Example/nanumGothic.ttf" />
   <Key Name="PsdParser.example-virtualview.psdFiles" Value="Assets/PSD2NGUI/Example/example.psd:79cb14a63934ea7280657d2eaf1bb2e4:1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.nguiRoot" Value="0df4407e-cf17-4a25-8980-c4d1c72ac682" />
+  <Key Name="PsdParser.New PSD2NGUI Project.nguiRoot" Value="6c18e78f-7fc3-460c-9ca5-fa8cf60c0555" />
   <Key Name="PsdParser.New PSD2NGUI Project.targetWidth" Value="720" />
   <Key Name="PsdParser.New PSD2NGUI Project.targetHeight" Value="1280" />
   <Key Name="PsdParser.New PSD2NGUI Project.camType" Value="1" />
@@ -59,10 +59,10 @@
   <Key Name="PsdParser.New PSD2NGUI Project.keepOldSprites" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.createControls" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.autoupdate" Value="1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/shop/shop_Atlas.prefab" />
+  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/gamespin/gamespin_combo_Atlas.prefab" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontPrefab" Value="" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontData" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.txt" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.New PSD2NGUI Project.trueTypeFont" Value="Assets/PSD2NGUI/Example/ARIAL.TTF" />
-  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/shop/shop.psd:f570de3854e0dded87ecf7a191685733:1" />
+  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/gamespin/gamespin.psd:d35473628303d0c4a8338b943079ebcc:1&#xA;Assets/Images/PSD/gamespin/gamespin_combo.psd:241c7e91bc63802af8648df66d5419c0:1" />
 </Keys>
