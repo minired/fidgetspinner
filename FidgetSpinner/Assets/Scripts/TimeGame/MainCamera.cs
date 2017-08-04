@@ -109,9 +109,6 @@ namespace Fidget.TimeGame
 
         private void SwipeTouch_downSwipe()
         {
-            eventCount++;
-            levelLabel.text = "down" + eventCount.ToString();
-            timeLabel.text = "*" + swipeTouch.GetFirstPressPos().x.ToString();
             if (swipeTouch.GetFirstPressPos().x > 500.0f)
             {
                 LeftSpeedUp();
@@ -140,15 +137,7 @@ namespace Fidget.TimeGame
 
         private void SwipeMouse_rightSwipe()
         {
-        
-            bool isRightDir = true;
-            //350.0f
-            if (swipeMouse.GetFirstPressPos().y > 350.0f)
-            {
-                isRightDir = false;
-            }
-
-            if (isRightDir)
+            if (swipeTouch.GetFirstPressPos().y < 350.0f)
             {
                 RightSpeedUp();
             }
@@ -160,15 +149,7 @@ namespace Fidget.TimeGame
 
         private void SwipeMouse_leftSwipe()
         {
-            eventCount++;
-            //levelLabel.text = "left" + eventCount.ToString();
-            bool isLeftDir = true;
-
-            if (swipeMouse.GetFirstPressPos().y > 350.0f)
-            {
-                isLeftDir = false;
-            }
-            if (isLeftDir)
+            if (swipeTouch.GetFirstPressPos().y < 350.0f)
             {
                 LeftSpeedUp();
             }
@@ -190,7 +171,16 @@ namespace Fidget.TimeGame
                 fidgetSpinner.SpeedUp(30);
                 return;
             }
-            fidgetSpinner.SpeedUp(30);
+
+
+            if (fidgetSpinner.IsLeftDirection() && fidgetSpinner.Speed < 100)
+            {
+                fidgetSpinner.SpeedDown(20);
+            }
+            else
+            {
+                fidgetSpinner.SpeedUp(30);
+            }
         }
 
         void LeftSpeedUp()
@@ -202,7 +192,15 @@ namespace Fidget.TimeGame
                 fidgetSpinner.SpeedUp(30);
                 return;
             }
-            fidgetSpinner.SpeedUp(30);
+
+            if (fidgetSpinner.IsRightDirection() && fidgetSpinner.Speed < 100)
+            {
+                fidgetSpinner.SpeedDown(20);
+            }
+            else
+            {
+                fidgetSpinner.SpeedUp(30);
+            }
         }
 
 

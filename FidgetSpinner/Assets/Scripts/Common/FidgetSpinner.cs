@@ -72,7 +72,7 @@ namespace Fidget.Common
         public void SpeedUp(float fact)
         { 
 
-            if (speed > 500 )
+            if (speed > 900 )
                 return;
             speed += fact;
         }
@@ -114,15 +114,58 @@ namespace Fidget.Common
 
         }
 
+        float GetSpeedMinus()
+        {
+            float result = 0.0f;
+            if(speed < 100)
+            {
+                result = - 0.6f;
+            }
+            else if (speed < 200)
+            {
+                result = -0.9f;
+            }
+            else if(speed < 300)
+            {
+                result = -1.0f;
+            }
+            else if (speed < 400)
+            {
+                result = -1.2f;
+            }
+            else if(speed < 500)
+            {
+                result = -1.4f;
+            }
+            else if (speed < 600)
+            {
+                result = -1.6f;
+            }
+            else if (speed < 700)
+            {
+                result = -1.8f;
+            }
+            else
+            {
+                result = -2.0f;
+            }
+
+
+            return result;
+
+        }
+
         // Update is called once per frame
         void Update()
         {
             if (isSpin)
             {
                 transform.Rotate(zAxis * Time.deltaTime * speed * direction, Space.Self);
-                if (speed > 0)
+                float t = GetSpeedMinus();
+                speed += t;
+                if(speed < 0.1f)
                 {
-                    speed -= 0.5f;
+                    OnSpinStop();
                 }
             }
         }
