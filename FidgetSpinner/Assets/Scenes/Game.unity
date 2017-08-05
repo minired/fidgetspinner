@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 280931359}
   - component: {fileID: 280931360}
   m_Layer: 5
-  m_Name: 182,293
+  m_Name: scoreLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -955,7 +955,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 280931358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 212, y: 263, z: 0}
+  m_LocalPosition: {x: 300, y: 263, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -990,7 +990,7 @@ MonoBehaviour:
     absolute: 0
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
+  mPivot: 5
   mWidth: 175
   mHeight: 44
   mDepth: 12
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
-  mText: 182,293
+  mText: 0
   mFontSize: 48
   mFontStyle: 0
   mAlignment: 0
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   levelLabel: {fileID: 1024525569}
   timeLabel: {fileID: 1424070496}
   speedLabel: {fileID: 1723725997}
-  highScoreLabel: {fileID: 1642223555}
+  scoreLabel: {fileID: 280931360}
   resultPopup: {fileID: 1169333657}
 --- !u!1 &1301400588
 GameObject:
@@ -2310,7 +2310,7 @@ GameObject:
   - component: {fileID: 1642223554}
   - component: {fileID: 1642223555}
   m_Layer: 5
-  m_Name: High score
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2323,7 +2323,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642223553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 301, y: 322, z: 0}
+  m_LocalPosition: {x: 214, y: 322, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 34181614}
@@ -2358,7 +2358,7 @@ MonoBehaviour:
     absolute: 0
   updateAnchors: 1
   mColor: {r: 0.7019608, g: 0.6039216, b: 0.8901961, a: 1}
-  mPivot: 5
+  mPivot: 4
   mWidth: 174
   mHeight: 36
   mDepth: 9
@@ -2369,7 +2369,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 8dbbafad5a96066458d5c68ed89f7b4d, type: 3}
   mFont: {fileID: 0}
-  mText: High score
+  mText: Score
   mFontSize: 36
   mFontStyle: 0
   mAlignment: 0

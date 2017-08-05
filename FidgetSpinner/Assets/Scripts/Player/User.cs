@@ -25,12 +25,12 @@ namespace Fidget.Player
             }
         }
 
-        public ulong Gold
+        public ulong Coin
         {
             get
             {
                 ulong num;
-                bool res = ulong.TryParse(putil.GetString("gold"), out num);
+                bool res = ulong.TryParse(putil.GetString("coin"), out num);
                 if (res == false)
                 {
                     return 0;
@@ -39,12 +39,22 @@ namespace Fidget.Player
             }
             set
             {
-                putil.SetString("gold", value.ToString());
+                putil.SetString("coin", value.ToString());
             }
         }
 
 
-        
+        public int Score
+        {
+            get
+            {
+                return putil.GetInt("score");
+            }
+            set
+            {
+                putil.SetInt("score", value);
+            }
+        }
 
 
         public int MaxFidgetSpinnerCount

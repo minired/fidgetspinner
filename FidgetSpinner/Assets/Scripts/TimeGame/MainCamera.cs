@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Common;
 using UnityEngine.SceneManagement;
+using Fidget.Player;
 
 namespace Fidget.TimeGame
 {
@@ -24,7 +25,7 @@ namespace Fidget.TimeGame
 
         public UILabel speedLabel;
 
-        public UILabel highScoreLabel;
+        public UILabel scoreLabel;
 
         public ResultPopup resultPopup;
 
@@ -32,6 +33,10 @@ namespace Fidget.TimeGame
         float rightEventTime = 0.0f;
         bool isGameStart = false;
         float gameTime = 0.0f;
+
+
+        ExpTable expTable = new ExpTable();
+
 
         private void Awake()
         {
@@ -49,13 +54,32 @@ namespace Fidget.TimeGame
 
             resultPopup.popupClosed += ResultPopup_popupClosed;
             resultPopup.gameObject.SetActive(false);
-            gaugeUI.SetGaugeAmount(0.5f);
 
+            User.Instance.Score = 0;
+            SetLevelLabel();
+            SetScoreLabel();
         }
+
+
+        void SetLevelLabel()
+        {
+            int level = expTable.GetLevel(User.Instance.Exp);
+            levelLabel.text = "Level. " + level.ToString();
+            float rate = expTable.GetLevelRate(level, User.Instance.Exp);
+            gaugeUI.SetGaugeAmount(rate);
+        }
+
+        void SetScoreLabel()
+        {
+            scoreLabel.text = User.Instance.Score.ToString("N0");
+        }
+
 
         private void ResultPopup_popupClosed()
         {
             gameTime = 20.0f;
+            User.Instance.Score = 0;
+            SetScoreLabel();
             isGameStart = true;
         }
 
@@ -183,15 +207,7 @@ namespace Fidget.TimeGame
                 return;
             }
 
-
-            if (fidgetSpinner.IsLeftDirection() && fidgetSpinner.Speed < 100)
-            {
-                fidgetSpinner.SpeedDown(20);
-            }
-            else
-            {
-                fidgetSpinner.SpeedUp(30);
-            }
+            fidgetSpinner.SpeedUp(30);
         }
 
         void LeftSpeedUp()
@@ -207,14 +223,7 @@ namespace Fidget.TimeGame
                 return;
             }
 
-            if (fidgetSpinner.IsRightDirection() && fidgetSpinner.Speed < 100)
-            {
-                fidgetSpinner.SpeedDown(20);
-            }
-            else
-            {
-                fidgetSpinner.SpeedUp(30);
-            }
+            fidgetSpinner.SpeedUp(30);
         }
 
 
@@ -256,6 +265,8 @@ namespace Fidget.TimeGame
             if (fidgetSpinner.IsSpin)
             {
                 speedLabel.text = ((int)(fidgetSpinner.Speed)).ToString() + " m/s";
+                SetLevelLabel();
+                SetScoreLabel();
             }
             else
             {

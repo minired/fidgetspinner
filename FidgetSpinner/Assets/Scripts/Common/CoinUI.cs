@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Fidget.Player;
 namespace Fidget.Common
 {
     public class CoinUI : MonoBehaviour
@@ -17,7 +17,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
-            SetCoinLabel(500);
+            SetCoinLabel(User.Instance.Coin);
         }
 
         // Update is called once per frame

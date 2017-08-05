@@ -33,7 +33,6 @@ namespace Fidget.Common
 
         float timer = 0.0f;
 
-        float eventTimer = 0.0f;
 
 
         private void Awake()
@@ -60,65 +59,42 @@ namespace Fidget.Common
 
         void OnSwipeDetected(Vector2 currentSwipe)
         {
-            if (eventTimer < 0.0001f)
-            {
-                eventTimer = timer;
-            }
-            else
-            {
-                if(timer - eventTimer < 0.5f)
-                {
-                    return;
-                }
-            }
-            if (currentSwipe.y > 0.5f && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+
+            if (currentSwipe.y > 0.2f && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
             {
                 if (upSwipe != null)
                 {
                     upSwipe();
-                    eventTimer = timer;
                 }
             }
             //swipe down
-            else if (currentSwipe.y < -0.5f && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+            else if (currentSwipe.y < -0.2f && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
             {
                 if (downSwipe != null)
                 {
                     downSwipe();
-                    eventTimer = timer;
                 }
             }
             //swipe left
-            else if (currentSwipe.x < -0.5f && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            else if (currentSwipe.x < -0.2f && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
             {
                 if (leftSwipe != null)
                 {
                     leftSwipe();
-                    eventTimer = timer;
                 }
             }
             //swipe right
-            else if (currentSwipe.x > 0.5f && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+            else if (currentSwipe.x > 0.2f && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
             {
                 if (rightSwipe != null)
                 {
                     rightSwipe();
-                    eventTimer = timer;
                 }
             }
         }
 
         void Update()
         {
-
-            timer += Time.deltaTime;
-
-            if(timer > 999999)
-            {
-                timer = 0.0f;
-                eventTimer = 0.0f;
-            }
-
             if (Input.touchCount > 0)
             {
                 Touch t = Input.GetTouch(0);

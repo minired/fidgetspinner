@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Fidget.Player;
 namespace Fidget.Common
 {
     public class FidgetSpinner : MonoBehaviour
@@ -10,7 +11,7 @@ namespace Fidget.Common
         float speed = 0.0f;
         bool isSpin = false;
 
-
+        float expUpdateTime = 0.0f;
 
         public float Speed
         {
@@ -166,6 +167,17 @@ namespace Fidget.Common
                 if(speed < 0.1f)
                 {
                     OnSpinStop();
+                }
+                else if (speed > 60f)
+                {
+                    expUpdateTime += Time.deltaTime;
+                    if(expUpdateTime > 0.1f)
+                    {
+                        User.Instance.Exp += (int)(speed*0.02f);
+                        User.Instance.Score += (int)(speed);
+                        expUpdateTime = 0.0f;
+
+                    }
                 }
             }
         }
