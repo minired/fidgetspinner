@@ -13,6 +13,20 @@ namespace Fidget.Player
         }
 
 
+
+        public int EquipIndex
+        {
+            get
+            {
+                return putil.GetInt("equipindex");
+            }
+            set
+            {
+                putil.SetInt("equipindex", value);
+            }
+        }
+
+
         public int Exp
         {
             get

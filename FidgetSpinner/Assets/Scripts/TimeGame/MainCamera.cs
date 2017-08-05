@@ -4,6 +4,7 @@ using UnityEngine;
 using Fidget.Common;
 using UnityEngine.SceneManagement;
 using Fidget.Player;
+using Fidget.Data;
 
 namespace Fidget.TimeGame
 {
@@ -29,6 +30,7 @@ namespace Fidget.TimeGame
 
         public ResultPopup resultPopup;
 
+       
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -37,6 +39,7 @@ namespace Fidget.TimeGame
 
         ExpTable expTable = new ExpTable();
 
+        FidgetSpinnerData fidgetData = new FidgetSpinnerData();
 
         private void Awake()
         {
@@ -56,10 +59,18 @@ namespace Fidget.TimeGame
             resultPopup.gameObject.SetActive(false);
 
             User.Instance.Score = 0;
+
+
+            SetFidgetSpinner();
             SetLevelLabel();
             SetScoreLabel();
         }
 
+
+        void SetFidgetSpinner()
+        {
+            fidgetSpinner.GetComponent<UISprite>().spriteName = fidgetData.fidgetSpinnerList[User.Instance.EquipIndex].spriteName;
+        }
 
         void SetLevelLabel()
         {
