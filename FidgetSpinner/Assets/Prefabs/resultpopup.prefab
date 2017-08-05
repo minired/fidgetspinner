@@ -212,6 +212,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4182655074725298}
   - component: {fileID: 114086041457071472}
+  - component: {fileID: 54470766051542200}
+  - component: {fileID: 114782442743451880}
   m_Layer: 5
   m_Name: resultpopup
   m_TagString: Untagged
@@ -308,6 +310,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4241523880473454}
   - component: {fileID: 114733291507884250}
+  - component: {fileID: 65594885863252426}
+  - component: {fileID: 114580901565222030}
   m_Layer: 5
   m_Name: ic_return
   m_TagString: Untagged
@@ -580,6 +584,33 @@ Transform:
   m_Father: {fileID: 4182655074725298}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54470766051542200
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649383201191164}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65594885863252426
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901599538214582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 168, y: 168, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114086041457071472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -616,13 +647,13 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3000
+  startingRenderQueue: 3011
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 300, w: 200}
   mClipSoftness: {x: 4, y: 4}
-  mDepth: 15
+  mDepth: 6
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
@@ -662,7 +693,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.7619047
+  aspectRatio: 4.4761906
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
@@ -730,7 +761,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.6666665
+  aspectRatio: 4.3809524
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -851,7 +882,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.095238
+  aspectRatio: 4.142857
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
@@ -1040,7 +1071,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.6666665
+  aspectRatio: 5.857143
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -1161,7 +1192,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.1666667
+  aspectRatio: 3.2083333
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -1352,6 +1383,35 @@ MonoBehaviour:
   mAtlas: {fileID: 114818846350573898, guid: cf3fc4ae408c3be4e92a2be0d68a85b2, type: 2}
   mSpriteName: ic_coin@sprite
   mFillCenter: 1
+--- !u!114 &114580901565222030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901599538214582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1901599538214582}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 114782442743451880}
+    mMethodName: OnRestartGame
+    mParameters: []
+    oneShot: 0
 --- !u!114 &114621139668255944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1441,7 +1501,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.6666665
+  aspectRatio: 2.375
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -1505,8 +1565,8 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 168
   mHeight: 168
-  mDepth: 2
-  autoResizeBoxCollider: 0
+  mDepth: 16
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -1526,6 +1586,17 @@ MonoBehaviour:
   mAtlas: {fileID: 114818846350573898, guid: cf3fc4ae408c3be4e92a2be0d68a85b2, type: 2}
   mSpriteName: ic_return@sprite
   mFillCenter: 1
+--- !u!114 &114782442743451880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649383201191164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348408a5142252a468dd27960ecf4cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114867631353375992
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1630,7 +1701,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.375
+  aspectRatio: 2.3066666
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}

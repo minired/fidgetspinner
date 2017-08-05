@@ -26,8 +26,12 @@ namespace Fidget.TimeGame
 
         public UILabel highScoreLabel;
 
+        public ResultPopup resultPopup;
+
 
         float rightEventTime = 0.0f;
+        bool isGameStart = false;
+        float gameTime = 0.0f;
 
         private void Awake()
         {
@@ -43,11 +47,17 @@ namespace Fidget.TimeGame
 
             backBtn.backBtn += BackBtn_backBtn;
 
+            resultPopup.popupClosed += ResultPopup_popupClosed;
+            resultPopup.gameObject.SetActive(false);
             gaugeUI.SetGaugeAmount(0.5f);
 
         }
 
-       
+        private void ResultPopup_popupClosed()
+        {
+            gameTime = 20.0f;
+            isGameStart = true;
+        }
 
         private void SwipeMouse_downSwipe()
         {
@@ -163,7 +173,8 @@ namespace Fidget.TimeGame
       
         void RightSpeedUp()
         {
-
+            if (!isGameStart)
+                return;
             if (!fidgetSpinner.IsSpin)
             {
                 fidgetSpinner.SetRightDirection();
@@ -185,6 +196,9 @@ namespace Fidget.TimeGame
 
         void LeftSpeedUp()
         {
+            if (!isGameStart)
+                return;
+
             if (!fidgetSpinner.IsSpin)
             {
                 fidgetSpinner.SetLeftDirection();
@@ -215,12 +229,30 @@ namespace Fidget.TimeGame
         // Use this for initialization
         void Start()
         {
-
+            gameTime = 20.0f;
+            isGameStart = true;
         }
 
         // Update is called once per frame
         void Update()
         {
+            if(!isGameStart)
+            {
+                return;
+            }
+
+            if(gameTime <= 0.0f)
+            {
+                timeLabel.text = "0";
+                isGameStart = false;
+                fidgetSpinner.OnSpinStop();
+                resultPopup.gameObject.SetActive(true);
+                return;
+            }
+
+            gameTime -= Time.deltaTime;
+            timeLabel.text = gameTime.ToString("0.0");
+
             if (fidgetSpinner.IsSpin)
             {
                 speedLabel.text = ((int)(fidgetSpinner.Speed)).ToString() + " m/s";
