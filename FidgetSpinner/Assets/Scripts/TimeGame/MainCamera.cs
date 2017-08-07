@@ -39,8 +39,28 @@ namespace Fidget.TimeGame
 
         ExpTable expTable = new ExpTable();
 
-
+        FidgetSpinnerDetail fidgetDetail;
         private void Awake()
+        {
+
+            EventInit();
+            resultPopup.gameObject.SetActive(false);
+           
+
+            User.Instance.Score = 0;
+            SetFidgetSpinnerDetail();
+            SetFidgetSpinner();
+            SetLevelLabel();
+            SetScoreLabel();
+        }
+
+        void SetFidgetSpinnerDetail()
+        {
+            int equipIndex = User.Instance.EquipIndex;
+            fidgetDetail = FidgetSpinnerData.GetFidgetSpinnerDetail(equipIndex, User.Instance.GetFidgetSpinnerLevel(equipIndex));
+        }
+
+        void EventInit()
         {
             swipeMouse.leftSwipe += SwipeMouse_leftSwipe;
             swipeMouse.rightSwipe += SwipeMouse_rightSwipe;
@@ -53,22 +73,16 @@ namespace Fidget.TimeGame
             swipeTouch.downSwipe += SwipeTouch_downSwipe;
 
             backBtn.backBtn += BackBtn_backBtn;
-
             resultPopup.popupClosed += ResultPopup_popupClosed;
-            resultPopup.gameObject.SetActive(false);
-
-            User.Instance.Score = 0;
-
-
-            SetFidgetSpinner();
-            SetLevelLabel();
-            SetScoreLabel();
         }
 
 
         void SetFidgetSpinner()
         {
             fidgetSpinner.GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[User.Instance.EquipIndex].spriteName;
+            fidgetSpinner.SetMaxSpeed(fidgetDetail.speed);
+            fidgetSpinner.SetDamping(fidgetDetail.damping);
+            fidgetSpinner.SetHaste(fidgetDetail.haste);
         }
 
         void SetLevelLabel()
@@ -213,11 +227,11 @@ namespace Fidget.TimeGame
             {
                 fidgetSpinner.SetRightDirection();
                 fidgetSpinner.OnSpinStart();
-                fidgetSpinner.SpeedUp(30);
+                fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
                 return;
             }
 
-            fidgetSpinner.SpeedUp(30);
+            fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
         }
 
         void LeftSpeedUp()
@@ -229,19 +243,12 @@ namespace Fidget.TimeGame
             {
                 fidgetSpinner.SetLeftDirection();
                 fidgetSpinner.OnSpinStart();
-                fidgetSpinner.SpeedUp(30);
+                fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
                 return;
             }
 
-            fidgetSpinner.SpeedUp(30);
+            fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
         }
-
-
-
-        
-
-
-
      
 
 

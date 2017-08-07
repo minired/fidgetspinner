@@ -21,11 +21,11 @@ namespace Fidget.Data
     public struct FidgetSpinnerDetail
     {
 
-        float speed;
-        float haste;
-        float damping;
-        float coin;
-        ulong upgrade;
+        public float speed;
+        public float haste;
+        public float damping;
+        public float coin;
+        public ulong upgrade;
         public FidgetSpinnerDetail(float speed, float haste, float damping, float coin, ulong upgrade)
         {
             this.speed = speed;

@@ -11,7 +11,33 @@ namespace Fidget.Common
         float speed = 0.0f;
         bool isSpin = false;
 
+
+        float maxSpeed = 100.0f;
+        public float MaxSpeed
+        {
+            get
+            {
+                return maxSpeed;
+            }
+        }
+
+
+        float damping = 2.0f;
+
+
+
         float expUpdateTime = 0.0f;
+
+        float haste = 10.0f;
+
+        public float Haste
+        {
+            get
+            {
+                return haste;
+            }
+        }
+
 
         public float Speed
         {
@@ -58,6 +84,21 @@ namespace Fidget.Common
         }
 
 
+        public void SetMaxSpeed(float speedRate)
+        {
+            maxSpeed = (8.99f * speedRate) + 100.0f;
+        }
+
+        public void SetDamping(float dampingRate)
+        {
+            damping += (2f- (dampingRate * 0.02f));
+        }
+
+        public void SetHaste(float hasteRate)
+        {
+            haste += (haste * 0.5f);
+        }
+
 
         public void SetRightDirection()
         {
@@ -73,7 +114,7 @@ namespace Fidget.Common
         public void SpeedUp(float fact)
         { 
 
-            if (speed > 900 )
+            if (speed > maxSpeed)
                 return;
             speed += fact;
         }
@@ -151,6 +192,11 @@ namespace Fidget.Common
                 result = -2.0f;
             }
 
+
+            if (speed > 100)
+            {
+                result -= damping;
+            }
 
             return result;
 
