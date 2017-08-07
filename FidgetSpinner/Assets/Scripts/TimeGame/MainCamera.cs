@@ -39,7 +39,6 @@ namespace Fidget.TimeGame
 
         ExpTable expTable = new ExpTable();
 
-        FidgetSpinnerData fidgetData = new FidgetSpinnerData();
 
         private void Awake()
         {
@@ -69,7 +68,7 @@ namespace Fidget.TimeGame
 
         void SetFidgetSpinner()
         {
-            fidgetSpinner.GetComponent<UISprite>().spriteName = fidgetData.fidgetSpinnerList[User.Instance.EquipIndex].spriteName;
+            fidgetSpinner.GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[User.Instance.EquipIndex].spriteName;
         }
 
         void SetLevelLabel()

@@ -70,6 +70,19 @@ namespace Fidget.Player
             }
         }
 
+        public int GetFidgetSpinnerLevel(int index)
+        {
+            return putil.GetInt("fidgetspinnerlevel" + index.ToString());
+        }
+
+        public void SetFidgetSpinnerLevel(int index, int val)
+        {
+            putil.SetInt("fidgetspinnerlevel" + index.ToString(), val);
+        }
+
+
+
+
 
         public int MaxFidgetSpinnerCount
         {
