@@ -7,6 +7,14 @@ namespace Fidget.Common
     {
         public delegate void PopupCloseDelegate();
         public event PopupCloseDelegate popupClosed;
+
+        public UILabel scoreLabel;
+        public UILabel highscoreLabel;
+
+        public UILabel coinGainLabel;
+        public UILabel coinMoreLabel;
+        public UILabel coinAdLabel;
+
         // Use this for initialization
         void Start()
         {

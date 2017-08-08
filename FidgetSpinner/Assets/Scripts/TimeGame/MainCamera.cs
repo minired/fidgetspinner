@@ -108,8 +108,10 @@ namespace Fidget.TimeGame
         {
             gameTime = 20.0f;
             coinDelay = fidgetSpinner.CoinDelay;
-            User.Instance.Score = 0;
+            User.Instance.Coin = User.Instance.Coin + ((ulong)(User.Instance.Score * 2));
+            coinUI.SetCoinLabel(User.Instance.Coin);
             SetScoreLabel();
+            User.Instance.Score = 0;
             isGameStart = true;
         }
 
@@ -279,6 +281,17 @@ namespace Fidget.TimeGame
                 timeLabel.text = "0";
                 isGameStart = false;
                 fidgetSpinner.OnSpinStop();
+
+                if(User.Instance.Score > User.Instance.HighScore)
+                {
+                    User.Instance.HighScore = User.Instance.Score;
+                }
+
+                resultPopup.scoreLabel.text = User.Instance.Score.ToString();
+                resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
+                resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
+                resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
+                resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
                 return;
             }
