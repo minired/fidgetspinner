@@ -1279,6 +1279,12 @@ MonoBehaviour:
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
+--- !u!114 &858629022 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114305389550267862, guid: 225add1cafa006c479b51480715a8253,
+    type: 2}
+  m_PrefabInternal: {fileID: 75158030}
+  m_Script: {fileID: 11500000, guid: 476205578a4c47d469cf39111974fea4, type: 3}
 --- !u!1 &1024525567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,6 +2076,7 @@ MonoBehaviour:
   speedLabel: {fileID: 1723725997}
   scoreLabel: {fileID: 280931360}
   resultPopup: {fileID: 1169333657}
+  coinUI: {fileID: 858629022}
 --- !u!1 &1301400588
 GameObject:
   m_ObjectHideFlags: 0

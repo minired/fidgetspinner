@@ -30,6 +30,27 @@ namespace Fidget.Common
 
         float haste = 10.0f;
 
+        ulong coin = 5;
+
+        float coinDelay = 0.0f;
+        public float CoinDelay
+        {
+            get
+            {
+                return coinDelay;
+            }
+        }
+
+        public ulong Coin
+        {
+            get
+            {
+                return coin;
+            }
+        }
+
+
+
         public float Haste
         {
             get
@@ -100,6 +121,94 @@ namespace Fidget.Common
         }
 
 
+        public void SetCoin(float coinRate)
+        {
+            if(coinRate < 10.0f)
+            {
+                coin = 5;
+            }
+            else if(coinRate < 20.0f)
+            {
+                coin = 10;
+            }
+            else if(coinRate < 30.0f)
+            {
+                coin = 15;
+            }
+            else if(coinRate < 40.0f)
+            {
+                coin = 20;
+            }
+            else if(coinRate < 50.0f)
+            {
+                coin = 25;
+            }
+            else if (coinRate < 60.0f)
+            {
+                coin = 30;
+            }
+            else if (coinRate < 70.0f)
+            {
+                coin = 35;
+            }
+            else if (coinRate < 80.0f)
+            {
+                coin = 40;
+            }
+            else if (coinRate < 90.0f)
+            {
+                coin = 50;
+            }
+            else 
+            {
+                coin = 60;
+            }
+        }
+
+        public void SetCoinDelay(float coinRate)
+        {
+            if (coinRate < 10.0f)
+            {
+                coinDelay = 6.0f;
+            }
+            else if (coinRate < 20.0f)
+            {
+                coinDelay = 5.5f;
+            }
+            else if (coinRate < 30.0f)
+            {
+                coinDelay = 5.0f;
+            }
+            else if (coinRate < 40.0f)
+            {
+                coinDelay = 4.5f;
+            }
+            else if (coinRate < 50.0f)
+            {
+                coinDelay = 4.0f;
+            }
+            else if (coinRate < 60.0f)
+            {
+                coinDelay = 3.5f;
+            }
+            else if (coinRate < 70.0f)
+            {
+                coinDelay = 3.0f;
+            }
+            else if (coinRate < 80.0f)
+            {
+                coinDelay = 2.5f;
+            }
+            else if (coinRate < 90.0f)
+            {
+                coinDelay = 2.0f;
+            }
+            else
+            {
+                coinDelay = 1.5f;
+            }
+        }
+
         public void SetRightDirection()
         {
             direction = 1;
@@ -132,6 +241,11 @@ namespace Fidget.Common
         }
 
 
+        public void IncreaseCoin()
+        {
+            User.Instance.Coin += coin;
+        }
+
         public void AlmostStop()
         {
             speed = 30;
@@ -149,6 +263,7 @@ namespace Fidget.Common
             speed = 0;
             isSpin = false;
         }
+
 
         // Use this for initialization
         void Start()

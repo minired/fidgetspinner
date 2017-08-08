@@ -30,11 +30,14 @@ namespace Fidget.TimeGame
 
         public ResultPopup resultPopup;
 
+        public CoinUI coinUI;
+
        
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
         float gameTime = 0.0f;
+        float coinDelay = 5.0f;
 
 
         ExpTable expTable = new ExpTable();
@@ -83,6 +86,8 @@ namespace Fidget.TimeGame
             fidgetSpinner.SetMaxSpeed(fidgetDetail.speed);
             fidgetSpinner.SetDamping(fidgetDetail.damping);
             fidgetSpinner.SetHaste(fidgetDetail.haste);
+            fidgetSpinner.SetCoin(fidgetDetail.coin);
+            fidgetSpinner.SetCoinDelay(fidgetDetail.coin);
         }
 
         void SetLevelLabel()
@@ -102,6 +107,7 @@ namespace Fidget.TimeGame
         private void ResultPopup_popupClosed()
         {
             gameTime = 20.0f;
+            coinDelay = fidgetSpinner.CoinDelay;
             User.Instance.Score = 0;
             SetScoreLabel();
             isGameStart = true;
@@ -256,6 +262,7 @@ namespace Fidget.TimeGame
         void Start()
         {
             gameTime = 20.0f;
+            coinDelay = fidgetSpinner.CoinDelay;
             isGameStart = true;
         }
 
@@ -277,6 +284,16 @@ namespace Fidget.TimeGame
             }
 
             gameTime -= Time.deltaTime;
+            coinDelay -= Time.deltaTime;
+
+
+            if(coinDelay <= 0.0f)
+            {
+                fidgetSpinner.IncreaseCoin();
+                coinDelay = fidgetSpinner.CoinDelay;
+                coinUI.SetCoinLabel(User.Instance.Coin);
+            }
+
             timeLabel.text = gameTime.ToString("0.0");
 
             if (fidgetSpinner.IsSpin)
