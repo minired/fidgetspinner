@@ -40,16 +40,16 @@ namespace Fidget.Data
     public class FidgetSpinnerData
     {
         public static FidgetSpinnerItem[]  fidgetSpinnerItems = {
-            new FidgetSpinnerItem( "Gaxay", "1", 0),
-            new FidgetSpinnerItem( "Bat", "2", 0),
-            new FidgetSpinnerItem( "Bat", "3", 0),
-            new FidgetSpinnerItem( "Bat", "4", 0),
-            new FidgetSpinnerItem( "Bat", "5", 0),
-            new FidgetSpinnerItem( "Bat", "6", 0),
-            new FidgetSpinnerItem( "Bat", "7", 1),
-            new FidgetSpinnerItem( "Bat", "8", 1),
-            new FidgetSpinnerItem( "Bat", "9", 1),
-            new FidgetSpinnerItem( "Bat", "10", 1),
+            new FidgetSpinnerItem( "Gaxay", "spinner1", 0),
+            new FidgetSpinnerItem( "Bat", "spinner2", 0),
+            new FidgetSpinnerItem( "Bat", "spinner3", 0),
+            new FidgetSpinnerItem( "Bat", "spinner4", 0),
+            new FidgetSpinnerItem( "Bat", "spinner5", 0),
+            new FidgetSpinnerItem( "Bat", "spinner6", 0),
+            new FidgetSpinnerItem( "Bat", "spinner7", 1),
+            new FidgetSpinnerItem( "Bat", "spinner8", 1),
+            new FidgetSpinnerItem( "Bat", "spinner9", 1),
+            new FidgetSpinnerItem( "Bat", "spinner10", 1),
         };
 
 
