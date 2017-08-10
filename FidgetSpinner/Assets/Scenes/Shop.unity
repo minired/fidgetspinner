@@ -2480,7 +2480,6 @@ GameObject:
   - component: {fileID: 1282996700}
   - component: {fileID: 1282996699}
   - component: {fileID: 1282996698}
-  - component: {fileID: 1282996703}
   - component: {fileID: 1282996704}
   - component: {fileID: 1282996705}
   m_Layer: 0
@@ -2560,18 +2559,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1282996703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1282996697}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3026d9b04c87246be4c810089023fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gauge: {fileID: 684806952}
 --- !u!114 &1282996704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,24 +2570,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec01b4a63af124145b4fc109cf3c24cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyAtlas: {fileID: 114809790048207842, guid: 38f1a077c26212a44b490504f1177b75, type: 2}
   buyLabel: {fileID: 1724169571}
   buyButton: {fileID: 687577934}
   coin: {fileID: 1777056539}
   backUI: {fileID: 1971813632}
+  upgradeLabel: {fileID: 1946493346}
+  panel: {fileID: 583514554}
+  speedGauge: {fileID: 1079937272}
+  hasteGauge: {fileID: 1124628736}
+  dampingGauge: {fileID: 863812231}
+  coinGauge: {fileID: 1127027397}
 --- !u!114 &1282996705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1282996697}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c69a4dca814a6014b9a51ba1ffc46e54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 583514554}
-  upgradeMoney: {fileID: 1946493346}
+  upgradeLabel: {fileID: 1946493346}
   currentMoney: {fileID: 1777056539}
   speedGauge: {fileID: 1079937272}
   hasteGauge: {fileID: 1124628736}
@@ -3542,8 +3534,8 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick:
-  - mTarget: {fileID: 1282996705}
-    mMethodName: UpgradeStats
+  - mTarget: {fileID: 1282996704}
+    mMethodName: UpgradeClicked
     mParameters: []
     oneShot: 0
 --- !u!114 &1777056539 stripped

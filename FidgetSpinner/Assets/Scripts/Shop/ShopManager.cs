@@ -7,23 +7,164 @@ namespace Fidget.Shop
 {
     public class ShopManager : MonoBehaviour
     {
-        public UIAtlas buyAtlas;
+        enum Spinners
+        {
+            spinner0,
+            spinner1,
+            spinner2,
+            spinner3,
+            spinner4,
+            spinner5,
+            spinner6,
+            spinner7,
+
+            total_spinners
+        }
+
+        enum State
+        {
+            NONE,
+            BUY,
+            EQUIP
+        }
+
+        FidgetSpinners[] Fidget = new FidgetSpinners[(int)Spinners.total_spinners];
+
+        // button
         public UILabel buyLabel;
         public UISprite buyButton;
         public UILabel coin;
-        int currentCoin;
+        private int currentCoin;
+
+        // back_Button
         public Fidget.Common.BackUI backUI;
 
-        // Use this for initialization
-        void Start()
+        // upgrade_Button
+        public UILabel upgradeLabel;
+
+        // currentSpinner
+        public SpringPanel panel;
+        private int currentSpinner;
+        private int previousSpinner;
+
+        // Gauge
+        public UISprite speedGauge;
+        public UISprite hasteGauge;
+        public UISprite dampingGauge;
+        public UISprite coinGauge;
+
+        void InitSpinners()
         {
-            currentCoin = int.Parse(coin.text);
+            for (int i = 0; i < (int)Spinners.total_spinners; ++i)
+            {
+                Fidget[i] = new FidgetSpinners()
+                {
+                    Speed = 0.1f * i,
+                    Haste = 0.1f * i,
+                    Damping = 0.1f * i,
+                    Coin = 0.1f * i,
+
+                    UpgradeCost = 1000 * (i + 1),
+                    BuyState = 0
+                };
+            }
         }
 
-        // Update is called once per frame
+        void UpdateSpinner()
+        {
+            upgradeLabel.text = Fidget[currentSpinner].UpgradeCost.ToString("n0");
+
+            switch (currentSpinner)
+            {
+                case (int)Spinners.spinner0:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner0].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner0].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner0].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner0].Coin;
+                    break;
+                case (int)Spinners.spinner1:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner1].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner1].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner1].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner1].Coin;
+                    break;
+                case (int)Spinners.spinner2:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner2].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner2].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner2].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner2].Coin;
+                    break;
+                case (int)Spinners.spinner3:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner3].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner3].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner3].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner3].Coin;
+                    break;
+                case (int)Spinners.spinner4:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner4].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner4].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner4].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner4].Coin;
+                    break;
+                case (int)Spinners.spinner5:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner5].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner5].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner5].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner5].Coin;
+                    break;
+                case (int)Spinners.spinner6:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner6].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner6].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner6].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner6].Coin;
+                    break;
+                case (int)Spinners.spinner7:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner7].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner7].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner7].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner7].Coin;
+                    break;
+                default:
+                    break;
+            }
+
+            switch (Fidget[currentSpinner].BuyState)
+            {
+                case (int)State.NONE:
+                    buyLabel.text = "BUY";
+                    buyButton.GetComponent<UIButton>().normalSprite = "BTN_BUY_BG@sprite";
+                    buyButton.GetComponent<UIButton>().pressedSprite = "box_require@spirte";
+                    break;
+                case (int)State.BUY:
+                    buyLabel.text = "EQUIP";
+                    buyButton.GetComponent<UIButton>().normalSprite = "BTN_BUY_BG@sprite";
+                    buyButton.GetComponent<UIButton>().pressedSprite = "box_require@spirte";
+                    break;
+                case (int)State.EQUIP:
+                    buyLabel.text = "EQUIP";
+                    buyButton.GetComponent<UIButton>().normalSprite = "BTN_inactive_bG@sprite";
+                    buyButton.GetComponent<UIButton>().pressedSprite = null;
+                    break;
+            }
+        }
+
+        void Start()
+        {
+            InitSpinners();
+            UpdateSpinner();
+
+            previousSpinner = 0;
+        }
+
         void Update()
         {
+            /*TODO: Import current spinner from equiped spinner*/
+            currentSpinner = -(int)(Mathf.Round(panel.target.x) / 500);
 
+            if (previousSpinner != currentSpinner)
+                UpdateSpinner();
+
+            previousSpinner = currentSpinner;
         }
 
         private void Awake()
@@ -38,17 +179,51 @@ namespace Fidget.Shop
 
         public void BuyClicked()
         {
-            if (buyLabel.text == "BUY" && currentCoin >= 500)
+            currentCoin = int.Parse(coin.text);
+
+            if (Fidget[currentSpinner].BuyState == (int)State.NONE && currentCoin >= 500)
             {
-                
                 buyLabel.text = "EQUIP";
+                Fidget[currentSpinner].BuyState = (int)State.BUY;
                 currentCoin -= 500;
                 coin.text = currentCoin.ToString();
             }
-            else if (buyLabel.text == "EQUIP")
+            else if (Fidget[currentSpinner].BuyState == (int)State.BUY)
             {
+                Fidget[currentSpinner].BuyState = (int)State.EQUIP;
                 buyButton.GetComponent<UIButton>().normalSprite = "BTN_inactive_bG@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = null;
+
+                // base condition: another spinner equip
+                for (int i = 0; i < (int)Spinners.total_spinners; ++i)
+                {
+                    if (i != currentSpinner && Fidget[i].BuyState == (int)State.EQUIP)
+                        Fidget[i].BuyState = (int)State.BUY;
+                }
+            }
+        }
+
+        public void UpgradeClicked()
+        {
+            int tempCost = Fidget[currentSpinner].UpgradeCost;
+            currentCoin = int.Parse(coin.text);
+
+            if (tempCost <= currentCoin && Fidget[currentSpinner].BuyState != (int)State.NONE)
+            {
+                currentCoin -= tempCost;
+                Fidget[currentSpinner].UpgradeCost += 500;
+                coin.text = currentCoin.ToString();
+                upgradeLabel.text = Fidget[currentSpinner].UpgradeCost.ToString("n0");
+
+                Fidget[currentSpinner].Speed += 0.1f;
+                Fidget[currentSpinner].Haste += 0.1f;
+                Fidget[currentSpinner].Damping += 0.1f;
+                Fidget[currentSpinner].Coin += 0.1f;
+
+                speedGauge.fillAmount = Fidget[currentSpinner].Speed;
+                hasteGauge.fillAmount = Fidget[currentSpinner].Haste;
+                dampingGauge.fillAmount = Fidget[currentSpinner].Damping;
+                coinGauge.fillAmount = Fidget[currentSpinner].Coin;
             }
         }
     }
