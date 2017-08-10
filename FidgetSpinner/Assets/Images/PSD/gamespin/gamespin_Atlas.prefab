@@ -33,7 +33,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1500560201333532}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: -0.00000004371139}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -106,19 +106,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite
-    x: 621
-    y: 289
-    width: 96
-    height: 140
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: btn_unpress_left@sprite
     x: 263
     y: 133
     width: 96
@@ -131,9 +118,35 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: btn_unpress_right@sprite
+  - name: btn_press_right@sprite (Copy)
     x: 1091
     y: 522
+    width: 96
+    height: 140
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_unpress_left@sprite
+    x: 621
+    y: 289
+    width: 96
+    height: 140
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_unpress_right@sprite
+    x: 621
+    y: 148
     width: 96
     height: 140
     borderLeft: 0
@@ -236,8 +249,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: timebar@sprite
-    x: 621
-    y: 8
+    x: 718
+    y: 149
     width: 32
     height: 280
     borderLeft: 0
