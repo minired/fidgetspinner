@@ -21,9 +21,8 @@ namespace Fidget.Shop
         }
 
         public SpringPanel panel;
-        public UILabel upgradeMoney;
-        int int_upgradeMoney;
-        int[] needMoney = new int[(int)Spinners.total_spinners];
+        public UILabel upgradeLabel;
+        int[] upgradeCost = new int[(int)Spinners.total_spinners];
 
         public UILabel currentMoney;
         int int_currentMoney;
@@ -49,21 +48,27 @@ namespace Fidget.Shop
                 dampingValue[i] = 0.1f * (i + 1);
                 coinValue[i] = 0.1f * (i + 1);
             }
+
+            for (int i = 0; i < (int)Spinners.total_spinners; ++i)
+            {
+                upgradeCost[i] = 3000 + (500 * i);
+            }
         }
 
         void Start()
         {
             Init();
-            int_upgradeMoney = int.Parse(upgradeMoney.text);
-            upgradeMoney.text = int_upgradeMoney.ToString("n0");
         }
 
         void Update()
         {
+            /*TODO: Import current spinner from equiped spinner*/
             currentSpinner = -(int)(Mathf.Round(panel.target.x) / 500);
             //Debug.Log(currentSpinner);
 
-            switch(currentSpinner)
+            upgradeLabel.text = upgradeCost[currentSpinner].ToString("n0");
+
+            switch (currentSpinner)
             {
                 case (int)Spinners.spinner0:
                     speedGauge.fillAmount = speedValue[(int)Spinners.spinner0];
@@ -118,20 +123,25 @@ namespace Fidget.Shop
             }
         }
 
+        public int GetCurrentSpinner()
+        {
+            return currentSpinner;
+        }
+
         public void UpgradeStats()
         {
             int_currentMoney = int.Parse(currentMoney.text);
 
-            if (int_currentMoney >= int_upgradeMoney)
+            if (int_currentMoney >= upgradeCost[currentSpinner])
             {
                 speedValue[currentSpinner] += 0.1f;
                 hasteValue[currentSpinner] += 0.1f;
                 dampingValue[currentSpinner] += 0.1f;
                 coinValue[currentSpinner] += 0.1f;
 
-                int_currentMoney -= int_upgradeMoney;
-                int_upgradeMoney += 500;
-                upgradeMoney.text = int_upgradeMoney.ToString("n0");
+                int_currentMoney -= upgradeCost[currentSpinner];
+                upgradeCost[currentSpinner] += 500;
+                upgradeLabel.text = upgradeCost[currentSpinner].ToString("n0");
 
                 currentMoney.text = int_currentMoney.ToString();
             }

@@ -70,6 +70,20 @@ namespace Fidget.Player
             }
         }
 
+
+        public int HighScore
+        {
+            get
+            {
+                return putil.GetInt("highscore");
+            }
+            set
+            {
+                putil.SetInt("highscore", value);
+            }
+        }
+
+
         public int GetFidgetSpinnerLevel(int index)
         {
             return putil.GetInt("fidgetspinnerlevel" + index.ToString());

@@ -55,7 +55,7 @@ MonoBehaviour:
   mSprites:
   - name: btn_ad@sprite
     x: 1780
-    y: 1522
+    y: 1162
     width: 143
     height: 143
     borderLeft: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: btn_setting@sprite
     x: 1924
-    y: 1719
+    y: 1215
     width: 90
     height: 90
     borderLeft: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: btn2_shop@sprite
     x: 1780
-    y: 1666
+    y: 1018
     width: 143
     height: 143
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_Game spin@sprite
-    x: 0
-    y: 598
+    x: 605
+    y: 681
     width: 376
     height: 81
     borderLeft: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: img_planet@sprite
     x: 1780
-    y: 1810
+    y: 1536
     width: 252
     height: 238
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_Timed spin@sprite
-    x: 0
-    y: 516
+    x: 605
+    y: 599
     width: 374
     height: 81
     borderLeft: 0
@@ -146,9 +146,48 @@ MonoBehaviour:
     paddingBottom: 0
   - name: img_Timing spin@sprite
     x: 0
-    y: 680
+    y: 55
     width: 412
     height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: star1
+    x: 1780
+    y: 1306
+    width: 243
+    height: 229
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 7
+    paddingBottom: 7
+  - name: star2
+    x: 1780
+    y: 1775
+    width: 242
+    height: 273
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 15
+    paddingRight: 16
+    paddingTop: 0
+    paddingBottom: 0
+  - name: titleLogo
+    x: 0
+    y: 138
+    width: 604
+    height: 624
     borderLeft: 0
     borderRight: 0
     borderTop: 0

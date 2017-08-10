@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fidget.Player;
+using Fidget.Data;
 namespace Fidget.Common
 {
     public class FidgetSpinner : MonoBehaviour
@@ -29,6 +30,27 @@ namespace Fidget.Common
         float expUpdateTime = 0.0f;
 
         float haste = 10.0f;
+
+        ulong coin = 5;
+
+        float coinDelay = 0.0f;
+        public float CoinDelay
+        {
+            get
+            {
+                return coinDelay;
+            }
+        }
+
+        public ulong Coin
+        {
+            get
+            {
+                return coin;
+            }
+        }
+
+
 
         public float Haste
         {
@@ -100,6 +122,65 @@ namespace Fidget.Common
         }
 
 
+        
+
+        public void SetCoin(float coinRate)
+        {
+            coin = FidgetSpinnerData.coinBonusAmount[0];
+            for (int i=0; i < FidgetSpinnerData.coinBonusLevel.Length; ++i)
+            {
+                if (coinRate < FidgetSpinnerData.coinBonusLevel[i])
+                {
+                    coin = FidgetSpinnerData.coinBonusAmount[i];
+                    break;
+                }
+            }
+        }
+
+        public void SetCoinDelay(float coinRate)
+        {
+            if (coinRate < 10.0f)
+            {
+                coinDelay = 6.0f;
+            }
+            else if (coinRate < 20.0f)
+            {
+                coinDelay = 5.5f;
+            }
+            else if (coinRate < 30.0f)
+            {
+                coinDelay = 5.0f;
+            }
+            else if (coinRate < 40.0f)
+            {
+                coinDelay = 4.5f;
+            }
+            else if (coinRate < 50.0f)
+            {
+                coinDelay = 4.0f;
+            }
+            else if (coinRate < 60.0f)
+            {
+                coinDelay = 3.5f;
+            }
+            else if (coinRate < 70.0f)
+            {
+                coinDelay = 3.0f;
+            }
+            else if (coinRate < 80.0f)
+            {
+                coinDelay = 2.5f;
+            }
+            else if (coinRate < 90.0f)
+            {
+                coinDelay = 2.0f;
+            }
+            else
+            {
+                coinDelay = 1.5f;
+            }
+        }
+
         public void SetRightDirection()
         {
             direction = 1;
@@ -132,6 +213,11 @@ namespace Fidget.Common
         }
 
 
+        public void IncreaseCoin()
+        {
+            User.Instance.Coin += coin;
+        }
+
         public void AlmostStop()
         {
             speed = 30;
@@ -149,6 +235,7 @@ namespace Fidget.Common
             speed = 0;
             isSpin = false;
         }
+
 
         // Use this for initialization
         void Start()
@@ -219,7 +306,7 @@ namespace Fidget.Common
                     expUpdateTime += Time.deltaTime;
                     if(expUpdateTime > 0.1f)
                     {
-                        User.Instance.Exp += (int)(speed*0.02f);
+                        User.Instance.Exp += (int)(speed*0.1f);
                         User.Instance.Score += (int)(speed);
                         expUpdateTime = 0.0f;
 
