@@ -84,7 +84,7 @@ namespace Fidget.TimeGame
 
         void SetFidgetSpinner()
         {
-            fidgetSpinner.GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[User.Instance.EquipIndex].spriteName;
+            fidgetSpinner.SetSprite(User.Instance.EquipIndex);
             fidgetSpinner.SetMaxSpeed(fidgetDetail.speed);
             fidgetSpinner.SetDamping(fidgetDetail.damping);
             fidgetSpinner.SetHaste(fidgetDetail.haste);

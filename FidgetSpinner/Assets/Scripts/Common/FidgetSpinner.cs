@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using Fidget.Player;
 using Fidget.Data;
 namespace Fidget.Common
 {
     public class FidgetSpinner : MonoBehaviour
     {
+
+
+        public List<UIAtlas> atlasList;
 
         Vector3 zAxis = new Vector3(0, 0, 10);
 
@@ -104,6 +108,23 @@ namespace Fidget.Common
             }
 
         }
+
+
+        public void SetSprite(int index)
+        {
+            if(index < 6)
+            {
+                GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[index].atlasIndex];
+                GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[index].spriteName;
+            }
+            else
+            {
+                GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[index].atlasIndex];
+                GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[index].spriteName;
+            }
+
+        }
+
 
 
         public void SetMaxSpeed(float speedRate)
