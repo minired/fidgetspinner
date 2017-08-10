@@ -35,6 +35,8 @@ namespace Fidget.TimeGame
         public BackgroundSelector backgroundSelector;
 
 
+        public CoinAnimation coinAnimation;
+
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -115,6 +117,7 @@ namespace Fidget.TimeGame
             SetScoreLabel();
             User.Instance.Score = 0;
             isGameStart = true;
+            coinAnimation.OnPlayAnimation();
         }
 
         private void SwipeMouse_downSwipe()
