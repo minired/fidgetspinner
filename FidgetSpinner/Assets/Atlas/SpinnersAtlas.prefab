@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1649396040965020}
+  m_RootGameObject: {fileID: 1759119438994392}
   m_IsPrefabParent: 1
---- !u!1 &1649396040965020
+--- !u!1 &1759119438994392
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4453011600383794}
-  - component: {fileID: 114139307474662628}
+  - component: {fileID: 4432906037700000}
+  - component: {fileID: 114867095190658084}
   m_Layer: 0
   m_Name: SpinnersAtlas
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4453011600383794
+--- !u!4 &4432906037700000
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649396040965020}
+  m_GameObject: {fileID: 1759119438994392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114139307474662628
+--- !u!114 &114867095190658084
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1649396040965020}
+  m_GameObject: {fileID: 1759119438994392}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
@@ -53,46 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: c85e8a133085aa742b3bc8463dd10ef8, type: 2}
   mSprites:
-  - name: 1
-    x: 711
-    y: 301
-    width: 720
-    height: 431
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 151
-    paddingBottom: 138
-  - name: 2
-    x: 0
-    y: 1359
-    width: 697
-    height: 689
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 5
-    paddingRight: 0
-    paddingTop: 13
-    paddingBottom: 0
-  - name: 3
-    x: 0
-    y: 714
-    width: 710
-    height: 644
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 66
-  - name: 4
+  - name: spinner1
     x: 711
     y: 733
     width: 676
@@ -105,7 +66,46 @@ MonoBehaviour:
     paddingRight: 21
     paddingTop: 0
     paddingBottom: 95
-  - name: 5
+  - name: spinner2
+    x: 711
+    y: 301
+    width: 720
+    height: 431
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 151
+    paddingBottom: 138
+  - name: spinner3
+    x: 0
+    y: 714
+    width: 710
+    height: 644
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 66
+  - name: spinner4
+    x: 0
+    y: 1359
+    width: 697
+    height: 689
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 0
+    paddingTop: 13
+    paddingBottom: 0
+  - name: spinner5
     x: 0
     y: 65
     width: 678
@@ -118,7 +118,7 @@ MonoBehaviour:
     paddingRight: 21
     paddingTop: 66
     paddingBottom: 6
-  - name: 6
+  - name: spinner6
     x: 698
     y: 1390
     width: 705
