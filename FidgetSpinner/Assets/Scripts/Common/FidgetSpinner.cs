@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fidget.Player;
+using Fidget.Data;
 namespace Fidget.Common
 {
     public class FidgetSpinner : MonoBehaviour
@@ -121,47 +122,18 @@ namespace Fidget.Common
         }
 
 
+        
+
         public void SetCoin(float coinRate)
         {
-            if(coinRate < 10.0f)
+            coin = FidgetSpinnerData.coinBonusAmount[0];
+            for (int i=0; i < FidgetSpinnerData.coinBonusLevel.Length; ++i)
             {
-                coin = 5;
-            }
-            else if(coinRate < 20.0f)
-            {
-                coin = 10;
-            }
-            else if(coinRate < 30.0f)
-            {
-                coin = 15;
-            }
-            else if(coinRate < 40.0f)
-            {
-                coin = 20;
-            }
-            else if(coinRate < 50.0f)
-            {
-                coin = 25;
-            }
-            else if (coinRate < 60.0f)
-            {
-                coin = 30;
-            }
-            else if (coinRate < 70.0f)
-            {
-                coin = 35;
-            }
-            else if (coinRate < 80.0f)
-            {
-                coin = 40;
-            }
-            else if (coinRate < 90.0f)
-            {
-                coin = 50;
-            }
-            else 
-            {
-                coin = 60;
+                if (coinRate < FidgetSpinnerData.coinBonusLevel[i])
+                {
+                    coin = FidgetSpinnerData.coinBonusAmount[i];
+                    break;
+                }
             }
         }
 
@@ -334,7 +306,7 @@ namespace Fidget.Common
                     expUpdateTime += Time.deltaTime;
                     if(expUpdateTime > 0.1f)
                     {
-                        User.Instance.Exp += (int)(speed*0.02f);
+                        User.Instance.Exp += (int)(speed*0.1f);
                         User.Instance.Score += (int)(speed);
                         expUpdateTime = 0.0f;
 

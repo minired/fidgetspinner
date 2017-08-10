@@ -32,7 +32,9 @@ namespace Fidget.TimeGame
 
         public CoinUI coinUI;
 
-       
+        public BackgroundSelector backgroundSelector;
+
+
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -263,6 +265,7 @@ namespace Fidget.TimeGame
         // Use this for initialization
         void Start()
         {
+            backgroundSelector.SetBackground(User.Instance.EquipIndex);
             gameTime = 20.0f;
             coinDelay = fidgetSpinner.CoinDelay;
             isGameStart = true;

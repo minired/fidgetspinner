@@ -53,6 +53,33 @@ namespace Fidget.Data
         };
 
 
+        public static ulong[] coinBonusAmount = {
+            100,
+            500,
+           1000,
+           1500,
+           2000,
+           2500,
+           3000,
+           3500,
+           4000,
+           4500,
+        };
+
+        public static float[] coinBonusLevel = {
+            10f,
+            20f,
+            30f,
+            40f,
+            50f,
+            60f,
+            70f,
+            80f,
+            90f,
+           101f,
+        };
+
+
         public static FidgetSpinnerDetail[,] fidgetSpinnerDetails = {
             //1
             {
