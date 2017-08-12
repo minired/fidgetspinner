@@ -37,6 +37,9 @@ namespace Fidget.TimeGame
 
         public CoinAnimation coinAnimation;
 
+        public MoveHandIcon moveHandIcon;
+
+        public BottomUI bottomUI;
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -47,13 +50,13 @@ namespace Fidget.TimeGame
         ExpTable expTable = new ExpTable();
 
         FidgetSpinnerDetail fidgetDetail;
+
+
         private void Awake()
         {
 
             EventInit();
             resultPopup.gameObject.SetActive(false);
-           
-
             User.Instance.Score = 0;
             SetFidgetSpinnerDetail();
             SetFidgetSpinner();
@@ -116,8 +119,10 @@ namespace Fidget.TimeGame
             coinUI.SetCoinLabel(User.Instance.Coin);
             SetScoreLabel();
             User.Instance.Score = 0;
-            isGameStart = true;
             coinAnimation.OnPlayAnimation();
+            moveHandIcon.AnimationOn();
+            bottomUI.InitPosition();
+            fidgetSpinner.InitPosition();
         }
 
         private void SwipeMouse_downSwipe()
@@ -150,11 +155,11 @@ namespace Fidget.TimeGame
             SceneManager.LoadScene("Main");
         }
 
-        
+
 
         private void SwipeTouch_rightSwipe()
         {
-           
+
             if (swipeTouch.GetFirstPressPos().y < 900.0f)
             {
                 RightSpeedUp();
@@ -231,7 +236,7 @@ namespace Fidget.TimeGame
         }
         //Editor
 
-      
+
         void RightSpeedUp()
         {
             if (!isGameStart)
@@ -262,7 +267,7 @@ namespace Fidget.TimeGame
 
             fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
         }
-     
+
 
 
         // Use this for initialization
@@ -271,24 +276,33 @@ namespace Fidget.TimeGame
             backgroundSelector.SetBackground(User.Instance.EquipIndex);
             gameTime = 20.0f;
             coinDelay = fidgetSpinner.CoinDelay;
-            isGameStart = true;
+            moveHandIcon.AnimationOn();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(!isGameStart)
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (!isGameStart && !resultPopup.gameObject.activeInHierarchy)
+                {
+                    moveHandIcon.AnimationOff();
+                    bottomUI.MoveStart();
+                    isGameStart = true;
+                }
+            }
+            if (!isGameStart)
             {
                 return;
             }
 
-            if(gameTime <= 0.0f)
+            if (gameTime <= 0.0f)
             {
                 timeLabel.text = "0";
                 isGameStart = false;
                 fidgetSpinner.OnSpinStop();
 
-                if(User.Instance.Score > User.Instance.HighScore)
+                if (User.Instance.Score > User.Instance.HighScore)
                 {
                     User.Instance.HighScore = User.Instance.Score;
                 }
@@ -306,7 +320,7 @@ namespace Fidget.TimeGame
             coinDelay -= Time.deltaTime;
 
 
-            if(coinDelay <= 0.0f)
+            if (coinDelay <= 0.0f)
             {
                 fidgetSpinner.IncreaseCoin();
                 coinDelay = fidgetSpinner.CoinDelay;
