@@ -13,6 +13,8 @@ namespace Fidget.Common
 
         Vector3 zAxis = new Vector3(0, 0, 10);
 
+      
+
         float speed = 0.0f;
         bool isSpin = false;
 
@@ -107,6 +109,16 @@ namespace Fidget.Common
                 return false;
             }
 
+        }
+
+        void Awake()
+        {
+            
+        }
+
+        public void InitPosition()
+        {
+            transform.rotation = new Quaternion();
         }
 
 
