@@ -170,10 +170,23 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: img_speedbg@sprite
+  - name: navi
+    x: 1953
+    y: 1450
+    width: 57
+    height: 95
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: speed bg
     x: 1780
     y: 1149
-    width: 222
+    width: 210
     height: 80
     borderLeft: 0
     borderRight: 0
