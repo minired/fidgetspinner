@@ -17,6 +17,8 @@ namespace Fidget.Shop
             spinner5,
             spinner6,
             spinner7,
+            spinner8,
+            spinner9,
 
             total_spinners
         }
@@ -123,6 +125,18 @@ namespace Fidget.Shop
                     hasteGauge.fillAmount = Fidget[(int)Spinners.spinner7].Haste;
                     dampingGauge.fillAmount = Fidget[(int)Spinners.spinner7].Damping;
                     coinGauge.fillAmount = Fidget[(int)Spinners.spinner7].Coin;
+                    break;
+                case (int)Spinners.spinner8:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner8].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner8].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner8].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner8].Coin;
+                    break;
+                case (int)Spinners.spinner9:
+                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner9].Speed;
+                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner9].Haste;
+                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner9].Damping;
+                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner9].Coin;
                     break;
                 default:
                     break;
