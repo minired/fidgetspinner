@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fidget.Common;
+using Fidget.Player;
+using Fidget.Data;
 
 namespace Fidget.Shop
 {
@@ -40,7 +42,7 @@ namespace Fidget.Shop
         public UILabel buyLabel;
         public UISprite buyButton;
         public UILabel coin;
-        private int currentCoin;
+        private ulong currentCoin;
 
         // back_Button
         public Fidget.Common.BackUI backUI;
@@ -50,6 +52,7 @@ namespace Fidget.Shop
 
         // currentSpinner
         public SpringPanel panel;
+        public UIPanel uiPanel;
         private int currentSpinner;
         private int previousSpinner;
         public UILabel fidgetName;
@@ -66,32 +69,42 @@ namespace Fidget.Shop
             nameMatch.Add(Spinners.spinner1, "Batman");
             nameMatch.Add(Spinners.spinner2, "Triangle");
             nameMatch.Add(Spinners.spinner3, "Flower");
-            nameMatch.Add(Spinners.spinner4, "Flower");
-            nameMatch.Add(Spinners.spinner5, "Flower");
-            nameMatch.Add(Spinners.spinner6, "Flower");
-            nameMatch.Add(Spinners.spinner7, "Flower");
-            nameMatch.Add(Spinners.spinner8, "Flower");
-            nameMatch.Add(Spinners.spinner9, "Flower");
+            nameMatch.Add(Spinners.spinner4, "Flower1");
+            nameMatch.Add(Spinners.spinner5, "Flower2");
+            nameMatch.Add(Spinners.spinner6, "Flower3");
+            nameMatch.Add(Spinners.spinner7, "Flower4");
+            nameMatch.Add(Spinners.spinner8, "Flower5");
+            nameMatch.Add(Spinners.spinner9, "Flower6");
         }
 
         void InitSpinners()
         {
             Spinners imgCode;
+            State buyCode;
 
             for (int i = 0; i < (int)Spinners.total_spinners; ++i)
             {
                 imgCode = (Spinners)i;
+
+                if (User.Instance.GetFidgetSpinnerLevel(i) == 0)
+                    buyCode = State.NONE;
+                else if (User.Instance.GetFidgetSpinnerLevel(i) >= 1 && currentSpinner == i)
+                    buyCode = State.EQUIP;
+                else
+                    buyCode = State.BUY;
+
                 Fidget[i] = new FidgetSpinners()
                 {
                     FidgetName = nameMatch[imgCode],
-                    Speed = 0.1f * i,
-                    Haste = 0.1f * i,
-                    Damping = 0.1f * i,
-                    Coin = 0.1f * i,
+                    Level = User.Instance.GetFidgetSpinnerLevel(i),
+                    Speed = FidgetSpinnerData.fidgetSpinnerDetails[i, User.Instance.GetFidgetSpinnerLevel(i)].speed * 0.01f,
+                    Haste = FidgetSpinnerData.fidgetSpinnerDetails[i, User.Instance.GetFidgetSpinnerLevel(i)].haste * 0.01f,
+                    Damping = FidgetSpinnerData.fidgetSpinnerDetails[i, User.Instance.GetFidgetSpinnerLevel(i)].damping * 0.01f,
+                    Coin = FidgetSpinnerData.fidgetSpinnerDetails[i, User.Instance.GetFidgetSpinnerLevel(i)].coin * 0.01f,
 
                     BuyCost = 100 * (i + 1),
-                    UpgradeCost = 1000 * (i + 1),
-                    BuyState = 0
+                    UpgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[i, User.Instance.GetFidgetSpinnerLevel(i)].upgrade,
+                    BuyState = (int)buyCode
                 };
             }
         }
@@ -132,6 +145,13 @@ namespace Fidget.Shop
 
         void Start()
         {
+            currentSpinner = User.Instance.EquipIndex;
+            coin.text = User.Instance.Coin.ToString();
+
+            /*TODO: y*/
+            panel.transform.localPosition = new Vector3(-500 * currentSpinner, 185, 0);
+            uiPanel.clipOffset = new Vector2(500 * currentSpinner, 0);
+
             SetDictionary();
             InitSpinners();
             UpdateSpinner();
@@ -141,9 +161,8 @@ namespace Fidget.Shop
 
         void Update()
         {
-            /*TODO: Import current spinner from equiped spinner*/
             currentSpinner = -(int)(Mathf.Round(panel.target.x) / 500);
-
+            
             if (previousSpinner != currentSpinner)
                 UpdateSpinner();
 
@@ -157,23 +176,27 @@ namespace Fidget.Shop
 
         private void BackUI_backBtn()
         {
+            User.Instance.Coin = currentCoin;
             SceneManager.LoadScene("Main");
         }
 
         public void BuyClicked()
         {
-            currentCoin = int.Parse(coin.text);
+            currentCoin = ulong.Parse(coin.text);
 
             if (Fidget[currentSpinner].BuyState == (int)State.NONE && currentCoin >= 500)
             {
                 buyLabel.text = "EQUIP";
                 Fidget[currentSpinner].BuyState = (int)State.BUY;
-                currentCoin -= Fidget[currentSpinner].BuyCost;
+                currentCoin -= (ulong)Fidget[currentSpinner].BuyCost;
                 coin.text = currentCoin.ToString();
+
+                User.Instance.SetFidgetSpinnerLevel(currentSpinner, 1);
             }
             else if (Fidget[currentSpinner].BuyState == (int)State.BUY)
             {
                 Fidget[currentSpinner].BuyState = (int)State.EQUIP;
+                User.Instance.EquipIndex = currentSpinner;
                 buyButton.GetComponent<UIButton>().normalSprite = "BTN_inactive_bG@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = null;
 
@@ -188,25 +211,29 @@ namespace Fidget.Shop
 
         public void UpgradeClicked()
         {
-            int tempCost = Fidget[currentSpinner].UpgradeCost;
-            currentCoin = int.Parse(coin.text);
+            ulong tempCost = Fidget[currentSpinner].UpgradeCost;
+            currentCoin = ulong.Parse(coin.text);
 
             if (tempCost <= currentCoin && Fidget[currentSpinner].BuyState != (int)State.NONE)
             {
-                currentCoin -= tempCost;
-                Fidget[currentSpinner].UpgradeCost += 500;
-                coin.text = currentCoin.ToString();
-                upgradeLabel.text = Fidget[currentSpinner].UpgradeCost.ToString("n0");
+                User.Instance.SetFidgetSpinnerLevel(currentSpinner, User.Instance.GetFidgetSpinnerLevel(currentSpinner) + 1);
+                Fidget[currentSpinner].Level = User.Instance.GetFidgetSpinnerLevel(currentSpinner);
 
-                Fidget[currentSpinner].Speed += 0.1f;
-                Fidget[currentSpinner].Haste += 0.1f;
-                Fidget[currentSpinner].Damping += 0.1f;
-                Fidget[currentSpinner].Coin += 0.1f;
+                currentCoin -= tempCost;
+                coin.text = currentCoin.ToString();
+
+                Fidget[currentSpinner].Speed = FidgetSpinnerData.fidgetSpinnerDetails[currentSpinner, Fidget[currentSpinner].Level].speed * 0.01f;
+                Fidget[currentSpinner].Haste = FidgetSpinnerData.fidgetSpinnerDetails[currentSpinner, Fidget[currentSpinner].Level].haste * 0.01f;
+                Fidget[currentSpinner].Damping = FidgetSpinnerData.fidgetSpinnerDetails[currentSpinner, Fidget[currentSpinner].Level].damping * 0.01f;
+                Fidget[currentSpinner].Coin = FidgetSpinnerData.fidgetSpinnerDetails[currentSpinner, Fidget[currentSpinner].Level].coin * 0.01f;
+                Fidget[currentSpinner].UpgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[currentSpinner, Fidget[currentSpinner].Level].upgrade;
 
                 speedGauge.fillAmount = Fidget[currentSpinner].Speed;
                 hasteGauge.fillAmount = Fidget[currentSpinner].Haste;
                 dampingGauge.fillAmount = Fidget[currentSpinner].Damping;
                 coinGauge.fillAmount = Fidget[currentSpinner].Coin;
+
+                upgradeLabel.text = Fidget[currentSpinner].UpgradeCost.ToString("n0");
             }
         }
     }

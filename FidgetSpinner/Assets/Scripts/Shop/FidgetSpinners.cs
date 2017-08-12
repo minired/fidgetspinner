@@ -8,8 +8,9 @@ namespace Fidget.Shop
     {
         private int fidgetId;
         private string fidgetName;
+        private int level;
         private int buyCost;
-        private int upgradeCost;
+        private ulong upgradeCost;
         private int buyState;
 
         private float speed;
@@ -27,12 +28,17 @@ namespace Fidget.Shop
             get { return fidgetName; }
             set { fidgetName = value; }
         }
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
         public int BuyCost
         {
             get { return buyCost; }
             set { buyCost = value; }
         }
-        public int UpgradeCost
+        public ulong UpgradeCost
         {
             get { return upgradeCost; }
             set { upgradeCost = value; }
@@ -63,19 +69,5 @@ namespace Fidget.Shop
             get { return coin; }
             set { coin = value; }
         }
-
-        /*
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
-        */
     }
 }

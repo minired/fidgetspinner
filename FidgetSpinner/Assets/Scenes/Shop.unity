@@ -2612,6 +2612,7 @@ MonoBehaviour:
   backUI: {fileID: 1971813632}
   upgradeLabel: {fileID: 1946493346}
   panel: {fileID: 583514554}
+  uiPanel: {fileID: 583514557}
   fidgetName: {fileID: 118377124}
   speedGauge: {fileID: 1079937272}
   hasteGauge: {fileID: 1124628736}
@@ -4163,7 +4164,7 @@ Prefab:
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: aspectRatio
-      value: 2.6666667
+      value: 2.857143
       objectReference: {fileID: 0}
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
