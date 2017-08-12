@@ -54,7 +54,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: ce09cf8b094929f4ead071f488a61f18, type: 2}
   mSprites:
   - name: spinner10
-    x: 0
+    x: 693
     y: 715
     width: 684
     height: 683
@@ -66,9 +66,35 @@ MonoBehaviour:
     paddingRight: 18
     paddingTop: 12
     paddingBottom: 19
+  - name: spinner11
+    x: 0
+    y: 162
+    width: 620
+    height: 618
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 50
+    paddingRight: 50
+    paddingTop: 51
+    paddingBottom: 51
+  - name: spinner12
+    x: 0
+    y: 782
+    width: 675
+    height: 615
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 22
+    paddingRight: 23
+    paddingTop: 0
+    paddingBottom: 105
   - name: spinner7
-    x: 686
-    y: 1088
+    x: 622
+    y: 403
     width: 720
     height: 310
     borderLeft: 0
@@ -80,7 +106,7 @@ MonoBehaviour:
     paddingTop: 206
     paddingBottom: 205
   - name: spinner8
-    x: 0
+    x: 693
     y: 1400
     width: 741
     height: 648
@@ -93,18 +119,18 @@ MonoBehaviour:
     paddingTop: 93
     paddingBottom: 0
   - name: spinner9
-    x: 743
-    y: 1413
-    width: 676
-    height: 635
+    x: 0
+    y: 1399
+    width: 691
+    height: 649
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 22
-    paddingRight: 22
-    paddingTop: 31
-    paddingBottom: 54
+    paddingLeft: 14
+    paddingRight: 15
+    paddingTop: 21
+    paddingBottom: 50
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

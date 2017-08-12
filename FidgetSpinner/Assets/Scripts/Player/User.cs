@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Common;
+
 namespace Fidget.Player
 {
     public class User : Singleton<User>

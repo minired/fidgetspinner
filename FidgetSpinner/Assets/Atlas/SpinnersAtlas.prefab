@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: c85e8a133085aa742b3bc8463dd10ef8, type: 2}
   mSprites:
   - name: spinner1
-    x: 711
-    y: 733
+    x: 1352
+    y: 773
     width: 676
     height: 625
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 95
   - name: spinner2
-    x: 711
-    y: 301
+    x: 707
+    y: 340
     width: 720
     height: 431
     borderLeft: 0
@@ -81,19 +81,19 @@ MonoBehaviour:
     paddingBottom: 138
   - name: spinner3
     x: 0
-    y: 714
-    width: 710
-    height: 644
+    y: 1457
+    width: 651
+    height: 591
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 66
+    paddingLeft: 29
+    paddingRight: 30
+    paddingTop: 31
+    paddingBottom: 88
   - name: spinner4
-    x: 0
+    x: 653
     y: 1359
     width: 697
     height: 689
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 13
     paddingBottom: 0
   - name: spinner5
-    x: 0
-    y: 65
+    x: 1352
+    y: 1400
     width: 678
     height: 648
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 66
     paddingBottom: 6
   - name: spinner6
-    x: 698
-    y: 1390
+    x: 0
+    y: 699
     width: 705
     height: 658
     borderLeft: 0
