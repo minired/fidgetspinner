@@ -39,12 +39,15 @@ namespace Fidget.GameSpin
             {
                 leftPlanets[i] = NGUITools.AddChild(parent, planet);        //좌우 행성 생성
                 rightPlanets[i] = NGUITools.AddChild(parent, planet);
+
                 leftPlanets[i].transform.localPosition = leftPosition[i];       // 자리 지정
                 rightPlanets[i].transform.localPosition = rightPosition[i];
+
                 rightPlanets[i].transform.localScale *= sizeDown;      // 크기 지정
                 leftPlanets[i].transform.localScale *= sizeDown;
 
                 leftNum = Random.Range(0, 2);
+
                 if (leftNum == 0)           // 좌우 상반되게 랜덤번호 생성
                 {
                     rightNum = Random.Range(1, 3);
@@ -63,8 +66,14 @@ namespace Fidget.GameSpin
 
         }
 
-        void ProceedPlanets()       // 버튼 누른 뒤 행성들 이동
+        void TweenPlanets()       // 버튼 누른 뒤 행성들 이동
         {
+            if (LeanTween.isTweening(leftPlanets[buttomNum]))
+            {
+                LeanTween.cancelAll();
+                ForcePlanets();
+            }
+
             int j = 0;
 
             leftPlanets[buttomNum].transform.localPosition = leftPosition[9];       // 맨밑 행성 맨위로, 사이즈 조절
@@ -101,10 +110,32 @@ namespace Fidget.GameSpin
 
             leftPlanets[buttomNum].transform.localScale *= sizeUp;
             rightPlanets[buttomNum].transform.localScale *= sizeUp;
+
         }
 
-        void ProceedPlanets_Fever()
+        void ForcePlanets()
         {
+            int j = 0;
+            for (int i = buttomNum; i < 10; i++, j++)
+            {
+                leftPlanets[i].transform.localPosition = leftPosition[j];
+                rightPlanets[i].transform.localPosition = rightPosition[j];
+            }
+            for (int i = 0; i < buttomNum; i++, j++)
+            {
+                leftPlanets[i].transform.localPosition = leftPosition[j];
+                rightPlanets[i].transform.localPosition = rightPosition[j];
+            }
+        }
+
+        void TweenPlanets_Fever()
+        {
+            if (LeanTween.isTweening(leftPlanets[buttomNum]))
+            {
+                LeanTween.cancelAll();
+                ForcePlanets();
+            }
+
             int j = 0;
 
             leftPlanets[buttomNum].transform.localPosition = leftPosition[9];       // 맨밑 행성 맨위로, 사이즈 조절
@@ -131,87 +162,89 @@ namespace Fidget.GameSpin
             leftPlanets[buttomNum].transform.localScale *= sizeUp;
             rightPlanets[buttomNum].transform.localScale *= sizeUp;
         }
+        
 
+        void PlanetSuccess()
+        {
+            timer.Success();
+            //score.Success();
+            combo.Success();
+            fever.Success();
+            circle.Success();
+            TweenPlanets();
+        }
+
+        void PlanetFail(bool isStone)
+        {
+            if (isStone)
+            {
+                combo.Fail();
+                fever.Fail();
+            }
+            else
+            {
+                timer.BrokenFail();
+                combo.Fail();
+                fever.Fail();
+            }
+            TweenPlanets();
+        }
+
+        void LeftNormalProc()
+        {
+            if (leftPlanets[buttomNum].GetComponent<Planet>().isPlanet)
+            {
+                PlanetSuccess();
+            }
+            else
+            {
+                PlanetFail(leftPlanets[buttomNum].GetComponent<Planet>().isStone);
+            }
+        }
+
+        void RightNormalProc()
+        {
+            if (rightPlanets[buttomNum].GetComponent<Planet>().isPlanet)
+            {
+                PlanetSuccess();
+            }
+            else
+            {
+                PlanetFail(rightPlanets[buttomNum].GetComponent<Planet>().isStone);
+            }
+        }
+
+        void FeverProc()
+        {
+            timer.Success();
+            //score.Success();
+            combo.Success();
+            circle.Success();
+
+            TweenPlanets_Fever();
+        }
         public void LeftButton()
         {
-            if (!isFever)
-            {
-                if (leftPlanets[buttomNum].GetComponent<Planet>().isPlanet)
-                {
-                    timer.Success();
-                    score.Success();
-                    combo.Success();
-                    fever.Success();
-                    circle.Success();
-                }
-                else
-                {
-                    if (leftPlanets[buttomNum].GetComponent<Planet>().isStone)
-                    {
-                        //timer.StoneFail();
-                        combo.Fail();
-                        fever.Fail();
-                    }
-                    else
-                    {
-                        timer.BrokenFail();
-                        combo.Fail();
-                        fever.Fail();
-                    }
-                }
-                ProceedPlanets();
-            }
             if(isFever)
             {
-                timer.Success();
-                score.Success();
-                combo.Success();
-                circle.Success();
-
-                ProceedPlanets_Fever();
+                FeverProc();
             }
-
+            else
+            {
+                LeftNormalProc();
+            }
         }
+
 
         public void RightButton()
         {
-            if (!isFever)
+            if (isFever)
             {
-                if (rightPlanets[buttomNum].GetComponent<Planet>().isPlanet)
-                {
-                    timer.Success();
-                    score.Success();
-                    combo.Success();
-                    fever.Success();
-                    circle.Success();
-                }
-                else
-                {
-                    if (rightPlanets[buttomNum].GetComponent<Planet>().isStone)
-                    {
-                        //timer.StoneFail();
-                        combo.Fail();
-                        fever.Fail();
-                    }
-                    else
-                    {
-                        timer.BrokenFail();
-                        combo.Fail();
-                        fever.Fail();
-                    }
-                }
-
-                ProceedPlanets();
+                FeverProc();
             }
-
-            if(isFever)
+            else
             {
-                timer.Success();
-                score.Success();
-                combo.Success();
-                circle.Success();
-
-                ProceedPlanets_Fever();
+                RightNormalProc();
             }
         }
 
