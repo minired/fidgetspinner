@@ -66,6 +66,7 @@ namespace Fidget.Shop
                     Damping = 0.1f * i,
                     Coin = 0.1f * i,
 
+                    BuyCost = 100 * (i + 1),
                     UpgradeCost = 1000 * (i + 1),
                     BuyState = 0
                 };
@@ -147,17 +148,20 @@ namespace Fidget.Shop
                 case (int)State.NONE:
                     buyLabel.text = "BUY";
                     buyButton.GetComponent<UIButton>().normalSprite = "BTN_BUY_BG@sprite";
-                    buyButton.GetComponent<UIButton>().pressedSprite = "box_require@spirte";
+                    buyButton.GetComponent<UIButton>().pressedSprite = "BTN_active_BG@sprite";
                     break;
                 case (int)State.BUY:
                     buyLabel.text = "EQUIP";
                     buyButton.GetComponent<UIButton>().normalSprite = "BTN_BUY_BG@sprite";
-                    buyButton.GetComponent<UIButton>().pressedSprite = "box_require@spirte";
+                    buyButton.GetComponent<UIButton>().pressedSprite = "BTN_active_BG@sprite";
                     break;
                 case (int)State.EQUIP:
                     buyLabel.text = "EQUIP";
                     buyButton.GetComponent<UIButton>().normalSprite = "BTN_inactive_bG@sprite";
                     buyButton.GetComponent<UIButton>().pressedSprite = null;
+                    break;
+                default:
+                    buyButton.GetComponent<UIButton>().pressedSprite = "box_require@spirte";
                     break;
             }
         }
@@ -199,7 +203,7 @@ namespace Fidget.Shop
             {
                 buyLabel.text = "EQUIP";
                 Fidget[currentSpinner].BuyState = (int)State.BUY;
-                currentCoin -= 500;
+                currentCoin -= Fidget[currentSpinner].BuyCost;
                 coin.text = currentCoin.ToString();
             }
             else if (Fidget[currentSpinner].BuyState == (int)State.BUY)

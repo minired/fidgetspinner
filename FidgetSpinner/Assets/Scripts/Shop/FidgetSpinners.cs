@@ -8,6 +8,7 @@ namespace Fidget.Shop
     {
         private int fidgetId;
         private string fidgetName;
+        private int buyCost;
         private int upgradeCost;
         private int buyState;
 
@@ -25,6 +26,11 @@ namespace Fidget.Shop
         {
             get { return fidgetName; }
             set { fidgetName = value; }
+        }
+        public int BuyCost
+        {
+            get { return buyCost; }
+            set { buyCost = value; }
         }
         public int UpgradeCost
         {
