@@ -301,10 +301,15 @@ namespace Fidget.TimeGame
                 timeLabel.text = "0";
                 isGameStart = false;
                 fidgetSpinner.OnSpinStop();
-
+                
                 if (User.Instance.Score > User.Instance.HighScore)
                 {
                     User.Instance.HighScore = User.Instance.Score;
+                    resultPopup.BestSpriteOn();
+                }
+                else
+                {
+                    resultPopup.BestSpriteOff();
                 }
 
                 resultPopup.scoreLabel.text = User.Instance.Score.ToString();
