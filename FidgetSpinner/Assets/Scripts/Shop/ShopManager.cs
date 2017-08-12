@@ -149,8 +149,8 @@ namespace Fidget.Shop
             coin.text = User.Instance.Coin.ToString();
 
             /*TODO: y*/
-            panel.transform.localPosition = new Vector3(-500 * currentSpinner, 185, 0);
-            uiPanel.clipOffset = new Vector2(500 * currentSpinner, 0);
+            panel.transform.localPosition = new Vector3(-630 * currentSpinner, 0, 0);
+            uiPanel.clipOffset = new Vector2(630 * currentSpinner, 0);
 
             SetDictionary();
             InitSpinners();
@@ -161,7 +161,7 @@ namespace Fidget.Shop
 
         void Update()
         {
-            currentSpinner = -(int)(Mathf.Round(panel.target.x) / 500);
+            currentSpinner = -(int)(Mathf.Round(panel.target.x) / 630);
             
             if (previousSpinner != currentSpinner)
                 UpdateSpinner();
