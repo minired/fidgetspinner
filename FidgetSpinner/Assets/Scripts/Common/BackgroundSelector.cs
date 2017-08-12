@@ -15,6 +15,10 @@ namespace Fidget.Common
 
         public void SetBackground(int index)
         {
+            if(materialList.Count <= index)
+            {
+                return;
+            }
             gameObject.GetComponent<SpriteRenderer>().material = materialList[index];
         }
 
