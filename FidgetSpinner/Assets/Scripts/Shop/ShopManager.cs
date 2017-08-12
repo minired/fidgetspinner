@@ -77,6 +77,7 @@ namespace Fidget.Shop
         void InitSpinners()
         {
             Spinners imgCode;
+
             for (int i = 0; i < (int)Spinners.total_spinners; ++i)
             {
                 imgCode = (Spinners)i;
