@@ -59,10 +59,10 @@
   <Key Name="PsdParser.New PSD2NGUI Project.keepOldSprites" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.createControls" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.autoupdate" Value="1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/shop/shop_merge0_Atlas.prefab" />
+  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/gameresult/popup_result_merge_Atlas.prefab" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontPrefab" Value="" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontData" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.txt" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.New PSD2NGUI Project.trueTypeFont" Value="Assets/PSD2NGUI/Example/ARIAL.TTF" />
-  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/shop/shop_merge0.psd:c41b15da0c7e4e3215509e884880c27a:1" />
+  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/gameresult/popup_result_merge.psd:3e57baf709ccfbab32676119e18388e4:1" />
 </Keys>

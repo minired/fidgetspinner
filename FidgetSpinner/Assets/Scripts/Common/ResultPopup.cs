@@ -15,6 +15,8 @@ namespace Fidget.Common
         public UILabel coinMoreLabel;
         public UILabel coinAdLabel;
 
+        public UISprite bestSprite;
+
         // Use this for initialization
         void Start()
         {
@@ -25,6 +27,17 @@ namespace Fidget.Common
         void Update()
         {
 
+        }
+
+
+        public void BestSpriteOn()
+        {
+            bestSprite.gameObject.SetActive(true);
+        }
+
+        public void BestSpriteOff()
+        {
+            bestSprite.gameObject.SetActive(false);
         }
 
         public void OnRestartGame()
