@@ -7,12 +7,11 @@ namespace Fidget.Player
     public class User : Singleton<User>
     {
         PlayerPrefsUtil putil;
+
         protected User()
         {
             putil = new PlayerPrefsUtil();
         }
-
-
 
         public int EquipIndex
         {

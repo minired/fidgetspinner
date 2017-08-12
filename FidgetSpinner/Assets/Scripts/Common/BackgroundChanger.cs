@@ -37,7 +37,7 @@ namespace Fidget.Common
                 background1.GetComponent<SpriteRenderer>().material.SetFloat("_AlphaVal", 1f);
                 background1.GetComponent<SpriteRenderer>().sortingOrder = -10;
                 background2.GetComponent<SpriteRenderer>().sortingOrder = -9;
-                StartCoroutine(ChangeAlpha(1f, background2.GetComponent<SpriteRenderer>().material));
+                StartCoroutine(ChangeAlpha(0.3f, background2.GetComponent<SpriteRenderer>().material));
             }
             else
             {
@@ -46,7 +46,7 @@ namespace Fidget.Common
                 background2.GetComponent<SpriteRenderer>().material.SetFloat("_AlphaVal", 1f);
                 background1.GetComponent<SpriteRenderer>().sortingOrder = -9;
                 background2.GetComponent<SpriteRenderer>().sortingOrder = -10;
-                StartCoroutine(ChangeAlpha(1f, background1.GetComponent<SpriteRenderer>().material));
+                StartCoroutine(ChangeAlpha(0.3f, background1.GetComponent<SpriteRenderer>().material));
             }
             isFrontFirst = !isFrontFirst;
         }
