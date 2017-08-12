@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fidget.Common;
 
 namespace Fidget.Shop
 {
@@ -30,7 +31,10 @@ namespace Fidget.Shop
             EQUIP
         }
 
+        public BackgroundChanger bgChanger;
+
         FidgetSpinners[] Fidget = new FidgetSpinners[(int)Spinners.total_spinners];
+        Dictionary<Spinners, string> nameMatch = new Dictionary<Spinners, string>();
 
         // button
         public UILabel buyLabel;
@@ -48,6 +52,7 @@ namespace Fidget.Shop
         public SpringPanel panel;
         private int currentSpinner;
         private int previousSpinner;
+        public UILabel fidgetName;
 
         // Gauge
         public UISprite speedGauge;
@@ -55,12 +60,27 @@ namespace Fidget.Shop
         public UISprite dampingGauge;
         public UISprite coinGauge;
 
+        void SetDictionary()
+        {
+            nameMatch.Add(Spinners.spinner0, "Galaxy");
+            nameMatch.Add(Spinners.spinner1, "Batman");
+            nameMatch.Add(Spinners.spinner2, "Triangle");
+            nameMatch.Add(Spinners.spinner3, "Flower");
+            nameMatch.Add(Spinners.spinner4, "Flower");
+            nameMatch.Add(Spinners.spinner5, "Flower");
+            nameMatch.Add(Spinners.spinner6, "Flower");
+            nameMatch.Add(Spinners.spinner7, "Flower");
+            nameMatch.Add(Spinners.spinner8, "Flower");
+            nameMatch.Add(Spinners.spinner9, "Flower");
+        }
+
         void InitSpinners()
         {
             for (int i = 0; i < (int)Spinners.total_spinners; ++i)
             {
                 Fidget[i] = new FidgetSpinners()
                 {
+                    //FidgetName = nameMatch[],
                     Speed = 0.1f * i,
                     Haste = 0.1f * i,
                     Damping = 0.1f * i,
@@ -77,71 +97,12 @@ namespace Fidget.Shop
         {
             upgradeLabel.text = Fidget[currentSpinner].UpgradeCost.ToString("n0");
 
-            switch (currentSpinner)
-            {
-                case (int)Spinners.spinner0:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner0].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner0].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner0].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner0].Coin;
-                    break;
-                case (int)Spinners.spinner1:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner1].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner1].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner1].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner1].Coin;
-                    break;
-                case (int)Spinners.spinner2:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner2].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner2].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner2].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner2].Coin;
-                    break;
-                case (int)Spinners.spinner3:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner3].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner3].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner3].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner3].Coin;
-                    break;
-                case (int)Spinners.spinner4:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner4].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner4].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner4].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner4].Coin;
-                    break;
-                case (int)Spinners.spinner5:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner5].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner5].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner5].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner5].Coin;
-                    break;
-                case (int)Spinners.spinner6:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner6].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner6].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner6].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner6].Coin;
-                    break;
-                case (int)Spinners.spinner7:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner7].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner7].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner7].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner7].Coin;
-                    break;
-                case (int)Spinners.spinner8:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner8].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner8].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner8].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner8].Coin;
-                    break;
-                case (int)Spinners.spinner9:
-                    speedGauge.fillAmount = Fidget[(int)Spinners.spinner9].Speed;
-                    hasteGauge.fillAmount = Fidget[(int)Spinners.spinner9].Haste;
-                    dampingGauge.fillAmount = Fidget[(int)Spinners.spinner9].Damping;
-                    coinGauge.fillAmount = Fidget[(int)Spinners.spinner9].Coin;
-                    break;
-                default:
-                    break;
-            }
+            fidgetName.text = Fidget[currentSpinner].FidgetName;
+            speedGauge.fillAmount = Fidget[currentSpinner].Speed;
+            hasteGauge.fillAmount = Fidget[currentSpinner].Haste;
+            dampingGauge.fillAmount = Fidget[currentSpinner].Damping;
+            coinGauge.fillAmount = Fidget[currentSpinner].Coin;
+            bgChanger.ChangeBackground(currentSpinner);
 
             switch (Fidget[currentSpinner].BuyState)
             {
@@ -168,6 +129,7 @@ namespace Fidget.Shop
 
         void Start()
         {
+            SetDictionary();
             InitSpinners();
             UpdateSpinner();
 

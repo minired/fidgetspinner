@@ -22,7 +22,7 @@ namespace Fidget.Shop
             get { return fidgetId; }
             set { fidgetId = value; }
         }
-        public string FigdetName
+        public string FidgetName
         {
             get { return fidgetName; }
             set { fidgetName = value; }
