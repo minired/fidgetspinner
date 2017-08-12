@@ -109,9 +109,61 @@ namespace Fidget.Player
             }
         }
 
-        
 
 
+        public bool Alarm
+        {
+            get
+            {
+                if (putil.GetInt("alarm") < 1)
+                    return false;
+                else
+                    return true;
+            }
+            set
+            {
+                if(value)
+                    putil.SetInt("alarm", 1);
+                else
+                    putil.SetInt("alarm", 0);
+            }
+        }
+
+        public bool Vibration
+        {
+            get
+            {
+                if (putil.GetInt("vibration") < 1)
+                    return false;
+                else
+                    return true;
+            }
+            set
+            {
+                if (value)
+                    putil.SetInt("vibration", 1);
+                else
+                    putil.SetInt("vibration", 0);
+            }
+        }
+
+        public bool Sound
+        {
+            get
+            {
+                if (putil.GetInt("sound") < 1)
+                    return false;
+                else
+                    return true;
+            }
+            set
+            {
+                if (value)
+                    putil.SetInt("sound", 1);
+                else
+                    putil.SetInt("sound", 0);
+            }
+        }
 
         public string DeviceID
         {

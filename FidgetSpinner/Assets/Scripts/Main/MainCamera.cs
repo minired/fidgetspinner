@@ -8,7 +8,7 @@ namespace Fidget.Main
     public class MainCamera : MonoBehaviour
     {
 
-
+        public OptionPopup optionPopUp;
         // Use this for initialization
         void Start()
         {
@@ -29,6 +29,11 @@ namespace Fidget.Main
         public void MoveGameSpinScene()
         {
             SceneManager.LoadScene("GameSpin");
+        }
+
+        public void OnOptionButton()
+        {
+            optionPopUp.gameObject.SetActive(true);
         }
     }
 }
