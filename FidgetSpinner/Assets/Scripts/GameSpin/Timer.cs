@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Fidget.Player;
+using Fidget.Data;
 
 namespace Fidget.GameSpin
 {
@@ -11,12 +12,25 @@ namespace Fidget.GameSpin
         public float deltaAmount;
         public float successAmount;
         public float brokenAmount;
-        //public float stoneAmount;
+        float coin;
+        float haste;
+        float damping;
 
-        // Use this for initialization
+        int fidgetIndex;
+        int level;
+        
+
         void Start()
         {
+            fidgetIndex = User.Instance.EquipIndex;
+            level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
 
+            coin = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].coin;
+            haste = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].haste;
+            damping = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].damping;
+
+            successAmount += (haste * 0.002f);
+            deltaAmount -= (damping * 0.000001f);
         }
 
         // Update is called once per frame
