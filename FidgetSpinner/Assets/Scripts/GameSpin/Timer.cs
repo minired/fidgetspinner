@@ -8,32 +8,37 @@ namespace Fidget.GameSpin
     public class Timer : MonoBehaviour
     {
 
-        public float decreaseAmount;
+        public float deltaAmount;
         public float successAmount;
-        public float failAmount;
+        public float brokenAmount;
+        //public float stoneAmount;
 
         // Use this for initialization
         void Start()
         {
-            decreaseAmount = 0.002f;
-            successAmount = 0.1f;
-            failAmount = 0.1f;
+
         }
 
         // Update is called once per frame
         void Update()
         {
-            this.GetComponent<UISprite>().fillAmount -= decreaseAmount;
+            this.GetComponent<UISprite>().fillAmount -= deltaAmount;
         }
 
         public void Success()
         {
             this.GetComponent<UISprite>().fillAmount += successAmount;
         }
-
-        public void Fail()
+        
+        public void BrokenFail()
         {
-            this.GetComponent<UISprite>().fillAmount -= failAmount;
+            this.GetComponent<UISprite>().fillAmount -= brokenAmount;
         }
+        /*
+        public void StoneFail()
+        {
+            this.GetComponent<UISprite>().fillAmount -= stoneAmount;
+        }
+        */
     }
 }
