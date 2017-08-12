@@ -9,44 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1378064592045014}
+  m_RootGameObject: {fileID: 1360710818306310}
   m_IsPrefabParent: 1
---- !u!1 &1378064592045014
+--- !u!1 &1360710818306310
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4210698205554596}
-  - component: {fileID: 114186173246021722}
-  - component: {fileID: 114773536189295192}
+  - component: {fileID: 4360318192988060}
+  - component: {fileID: 114612688796584158}
   m_Layer: 5
-  m_Name: planet
+  m_Name: circle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4210698205554596
+--- !u!4 &4360318192988060
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378064592045014}
+  m_GameObject: {fileID: 1360710818306310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130, y: -212, z: 0}
+  m_LocalPosition: {x: 0, y: -422, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114186173246021722
+--- !u!114 &114612688796584158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378064592045014}
+  m_GameObject: {fileID: 1360710818306310}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
@@ -69,11 +68,11 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.722}
   mPivot: 4
-  mWidth: 167
-  mHeight: 167
-  mDepth: 4
+  mWidth: 387
+  mHeight: 387
+  mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -91,22 +90,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114668134880709476, guid: 6eae1a6c70801ec4bbe9e1cf0e32eecb, type: 2}
-  mSpriteName: planet@sprite
+  mAtlas: {fileID: 114539107039837760, guid: ad5d578eb32b947449e15b6a7c04d589, type: 2}
+  mSpriteName: circle2
   mFillCenter: 1
---- !u!114 &114773536189295192
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378064592045014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4fed3eed478c14591e22c0e656b79e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlanet: 0
-  isStone: 0
-  planet: {fileID: 21300000, guid: 1dfda88bdd9676c40ba7a96313797ad3, type: 3}
-  broken: {fileID: 21300000, guid: ffd4134d88906a646adc679c5625f52c, type: 3}
-  stone: {fileID: 21300000, guid: 958347474822b164cba6617dc0482e8e, type: 3}

@@ -7,6 +7,7 @@ namespace Fidget.GameSpin
     public class Planet : MonoBehaviour
     {
         public bool isPlanet = false;
+        public bool isStone = false;
 
         public Sprite planet;
         public Sprite broken;
@@ -23,10 +24,12 @@ namespace Fidget.GameSpin
                 case 1:
                     this.GetComponent<UISprite>().spriteName = "broken@sprite";
                     isPlanet = false;
+                    isStone = false;
                     break;
                 case 2:
                     this.GetComponent<UISprite>().spriteName = "stone@sprite";
                     isPlanet = false;
+                    isStone = true;
                     break;
                 default:
                     break;

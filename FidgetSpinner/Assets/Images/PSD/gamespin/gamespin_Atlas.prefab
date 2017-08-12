@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 8864369234b5d2a4fa4fe504972ae33f, type: 2}
   mSprites:
   - name: 1_ell@sprite
-    x: 0
-    y: 11
+    x: 1404
+    y: 1397
     width: 262
     height: 262
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 2_ell@sprite
-    x: 0
-    y: 274
+    x: 1404
+    y: 1660
     width: 388
     height: 388
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: broken@sprite
-    x: 789
-    y: 505
+    x: 1835
+    y: 1502
     width: 157
     height: 157
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_back@sprite
-    x: 947
-    y: 519
+    x: 1283
+    y: 1215
     width: 143
     height: 143
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite
-    x: 263
-    y: 133
+    x: 1835
+    y: 1361
     width: 96
     height: 140
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite (Copy)
-    x: 1091
-    y: 522
+    x: 1932
+    y: 1361
     width: 96
     height: 140
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_left@sprite
-    x: 621
-    y: 289
+    x: 1283
+    y: 1074
     width: 96
     height: 140
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_right@sprite
-    x: 621
-    y: 148
+    x: 1427
+    y: 1153
     width: 96
     height: 140
     borderLeft: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: dark@sprite
     x: 0
-    y: 663
+    y: 997
     width: 1282
     height: 361
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_watch@sprite
-    x: 263
-    y: 69
+    x: 1961
+    y: 1780
     width: 63
     height: 63
     borderLeft: 0
@@ -184,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: mid_Planet@sprite
-    x: 389
-    y: 458
+    x: 1793
+    y: 1844
     width: 231
     height: 204
     borderLeft: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: money@sprite
-    x: 621
-    y: 430
+    x: 1427
+    y: 1294
     width: 290
     height: 64
     borderLeft: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: planet@sprite
-    x: 389
-    y: 107
+    x: 1793
+    y: 1676
     width: 167
     height: 167
     borderLeft: 0
@@ -222,22 +222,61 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: spinner@sprite
-    x: 389
-    y: 275
-    width: 195
-    height: 182
+  - name: spinner1
+    x: 0
+    y: 371
+    width: 676
+    height: 625
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 23
+    paddingRight: 21
+    paddingTop: 0
+    paddingBottom: 95
+  - name: spinner2
+    x: 677
+    y: 565
+    width: 720
+    height: 431
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
     paddingRight: 0
-    paddingTop: 0
+    paddingTop: 151
+    paddingBottom: 138
+  - name: spinner4
+    x: 0
+    y: 1359
+    width: 697
+    height: 689
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 5
+    paddingRight: 0
+    paddingTop: 13
     paddingBottom: 0
+  - name: spinner6
+    x: 698
+    y: 1390
+    width: 705
+    height: 658
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 12
+    paddingTop: 6
+    paddingBottom: 56
   - name: stone@sprite
-    x: 621
-    y: 495
+    x: 1667
+    y: 1492
     width: 167
     height: 167
     borderLeft: 0
@@ -249,8 +288,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: timebar@sprite
-    x: 718
-    y: 149
+    x: 1524
+    y: 1013
     width: 32
     height: 280
     borderLeft: 0

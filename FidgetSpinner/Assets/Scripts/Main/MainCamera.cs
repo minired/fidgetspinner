@@ -26,6 +26,9 @@ namespace Fidget.Main
             SceneManager.LoadScene("Game");
         }
 
-
+        public void MoveGameSpinScene()
+        {
+            SceneManager.LoadScene("GameSpin");
+        }
     }
 }
