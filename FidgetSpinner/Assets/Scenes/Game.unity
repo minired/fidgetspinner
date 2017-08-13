@@ -147,6 +147,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1313036382173574, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
   m_IsPrefabParent: 0
@@ -281,12 +285,12 @@ Prefab:
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: mWidth
-      value: 168
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: aspectRatio
-      value: 4
+      value: 3.857143
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 225add1cafa006c479b51480715a8253, type: 2}
@@ -1320,13 +1324,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9372549, g: 0.88235295, b: 1, a: 1}
   mPivot: 4
-  mWidth: 288
+  mWidth: 290
   mHeight: 60
   mDepth: 13
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.8
+  aspectRatio: 4.8333335
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -1417,13 +1421,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.7019608, g: 0.6039216, b: 0.8901961, a: 1}
   mPivot: 3
-  mWidth: 142
+  mWidth: 148
   mHeight: 36
   mDepth: 11
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.9444444
+  aspectRatio: 4.111111
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 8dbbafad5a96066458d5c68ed89f7b4d, type: 3}
   mFont: {fileID: 0}
@@ -2255,13 +2259,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
-  mWidth: 100
+  mWidth: 98
   mHeight: 48
   mDepth: 10
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.0833333
+  aspectRatio: 2.0416667
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
@@ -2543,13 +2547,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 5
-  mWidth: 170
+  mWidth: 166
   mHeight: 48
   mDepth: 7
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.5416667
+  aspectRatio: 3.4583333
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 73265f32ca6be1748852e3cbcbd67e45, type: 3}
   mFont: {fileID: 0}
