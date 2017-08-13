@@ -155,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1382090422482428
 GameObject:
   m_ObjectHideFlags: 1
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 65341042648616450}
   - component: {fileID: 114698235510916896}
   m_Layer: 5
-  m_Name: returnBtn
+  m_Name: btnBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 4683712669605932}
   - component: {fileID: 114284261550092574}
   m_Layer: 5
-  m_Name: ic_ran
+  m_Name: btnRank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 4520151526275112}
   - component: {fileID: 114845235532391974}
   m_Layer: 5
-  m_Name: ic_share
+  m_Name: btnShare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4193536706357524
 Transform:
@@ -495,8 +495,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4109022402005430}
   - {fileID: 4974518945804986}
+  - {fileID: 4109022402005430}
   - {fileID: 4683712669605932}
   - {fileID: 4520151526275112}
   - {fileID: 4449781908704270}
@@ -660,7 +660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4984618676934698
 Transform:
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.337838
+  aspectRatio: 2.9189188
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3011
+  startingRenderQueue: 3012
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1667,6 +1667,11 @@ MonoBehaviour:
   coinMoreLabel: {fileID: 114630363694178938}
   coinAdLabel: {fileID: 114415289997099254}
   bestSprite: {fileID: 114252818488484906}
+  btnBack: {fileID: 1537704126502394}
+  btnRank: {fileID: 1820288624084706}
+  btnShare: {fileID: 1899905927542628}
+  normalCoinObj: {fileID: 1063920049088532}
+  adCoinObj: {fileID: 1063646303089952}
 --- !u!114 &114783696041591978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1756,7 +1761,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.0555553
+  aspectRatio: 5.388889
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
