@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Fidget.GameSpin
 {
@@ -167,7 +168,7 @@ namespace Fidget.GameSpin
         void PlanetSuccess()
         {
             timer.Success();
-            //score.Success();
+            score.Success();
             combo.Success();
             fever.Success();
             circle.Success();
@@ -180,12 +181,14 @@ namespace Fidget.GameSpin
             {
                 combo.Fail();
                 fever.Fail();
+                score.ResetBonus();
             }
             else
             {
                 timer.BrokenFail();
                 combo.Fail();
                 fever.Fail();
+                score.ResetBonus();
             }
             TweenPlanets();
         }
@@ -217,7 +220,7 @@ namespace Fidget.GameSpin
         void FeverProc()
         {
             timer.Success();
-            //score.Success();
+            score.Success();
             combo.Success();
             circle.Success();
 
@@ -256,6 +259,11 @@ namespace Fidget.GameSpin
                 leftPlanets[i].GetComponent<Planet>().setSprite(0);
                 rightPlanets[i].GetComponent<Planet>().setSprite(0);
             }
+        }
+
+        public void LoadGameSpin()
+        {
+            SceneManager.LoadScene("GameSpin");
         }
 
         public void FeverOff()

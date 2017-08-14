@@ -2,29 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Player;
+using Fidget.Common;
 using Fidget.Data;
 
 namespace Fidget.GameSpin
 {
     public class Timer : MonoBehaviour
     {
-        public UIButton rightbutton;
-        public UIButton leftbutton;
+        public ResultPopup resultPopup;
+        public Score score;
+        public CoinUI coinUI;
 
         bool isGameOver;
 
         public float deltaAmount;
         public float successAmount;
         public float brokenAmount;
+        public float harderTime;
         float coin;
         float haste;
         float damping;
+        float flowedTime;
 
         int fidgetIndex;
         int level;
         
         void Start()
         {
+            flowedTime = 0f;
             isGameOver = false;
             fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
@@ -39,9 +44,49 @@ namespace Fidget.GameSpin
         // Update is called once per frame
         void Update()
         {
+            if (isGameOver)
+                return;
+
+            if (flowedTime >= harderTime)
+            {
+                Harder();
+                harderTime += harderTime;
+            }
+
+            if (this.GetComponent<UISprite>().fillAmount <= 0f)
+            {
+                isGameOver = true;
+                score.SaveScore();
+
+                if (User.Instance.ScoreGameSpin > User.Instance.HighScoreGameSpin)
+                {
+                    User.Instance.HighScoreGameSpin = User.Instance.ScoreGameSpin;
+                    resultPopup.BestSpriteOn();
+                }
+                else
+                {
+                    resultPopup.BestSpriteOff();
+                }
+                User.Instance.Coin += (ulong)User.Instance.ScoreGameSpin * 2;
+
+                resultPopup.scoreLabel.text = User.Instance.ScoreGameSpin.ToString();
+                resultPopup.highscoreLabel.text = User.Instance.HighScoreGameSpin.ToString();
+                resultPopup.coinGainLabel.text = "COIN" + User.Instance.ScoreGameSpin.ToString();
+                resultPopup.coinMoreLabel.text = (User.Instance.ScoreGameSpin * 2).ToString();
+                resultPopup.coinAdLabel.text = (User.Instance.ScoreGameSpin * 4).ToString();
+                resultPopup.gameObject.SetActive(true);
+                resultPopup.BottomBtnAnimation();
+                resultPopup.CoinBtnAnimation();
+                return;
+            }
+
             this.GetComponent<UISprite>().fillAmount -= deltaAmount;
-            if (this.GetComponent<UISprite>().fillAmount == 0f && !isGameOver)
-                GameOver();
+            flowedTime += Time.deltaTime;
+        }
+
+        public void Harder()
+        {
+            deltaAmount *= 1.3f;
         }
 
         public void Success()
@@ -52,10 +97,6 @@ namespace Fidget.GameSpin
         public void BrokenFail()
         {
             this.GetComponent<UISprite>().fillAmount -= brokenAmount;
-        }
-        
-        void GameOver()
-        {
         }
     }
 }

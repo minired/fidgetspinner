@@ -70,6 +70,18 @@ namespace Fidget.Player
             }
         }
 
+        public int ScoreGameSpin
+        {
+            get
+            {
+                return putil.GetInt("scoregamespin");
+            }
+            set
+            {
+                putil.SetInt("scoregamespin", value);
+            }
+        }
+
 
         public int HighScore
         {
@@ -80,6 +92,18 @@ namespace Fidget.Player
             set
             {
                 putil.SetInt("highscore", value);
+            }
+        }
+
+        public int HighScoreGameSpin
+        {
+            get
+            {
+                return putil.GetInt("highscoregamespin");
+            }
+            set
+            {
+                putil.SetInt("highscoregamespin", value);
             }
         }
 

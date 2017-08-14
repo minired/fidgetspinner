@@ -2,31 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Combo : MonoBehaviour {
+namespace Fidget.GameSpin
+{
+    public class Combo : MonoBehaviour {
 
-    int combo;
-    public UILabel label;
+        public UILabel label;
+        public Score score;
 
-	// Use this for initialization
-	void Start () {
-        combo = 0;
-        label.text = combo.ToString();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        int combo;
 
-    public void Success()
-    {
-        combo++;
-        label.text = combo.ToString();
+        // Use this for initialization
+        void Start() {
+            combo = 0;
+            label.text = combo.ToString();
+        }
+
+        // Update is called once per frame
+        void Update() {
+
     }
 
-    public void Fail()
-    {
-        combo = 0;
-        label.text = combo.ToString();
+        public void Success()
+        {
+            combo++;
+            label.text = combo.ToString();
+        }
+
+        public void Fail()
+        {
+            combo = 0;
+            label.text = combo.ToString();
+        }
     }
 }

@@ -6,14 +6,39 @@ namespace Fidget.GameSpin
 {
     public class Fever : MonoBehaviour
     {
+        public UISprite sprite;
+        public PlanetManager manager;
+        public Score score;
 
         bool isFever;
 
         public float feverCount;
         public float feverDuration;
 
-        public UISprite sprite;
-        public PlanetManager manager;
+
+        public void Success()
+        {
+            sprite.fillAmount += (1f / feverCount);
+        }
+
+        public void Fail()
+        {
+            sprite.fillAmount = 0;
+        }
+
+        void FeverOn()
+        {
+            isFever = true;
+            score.AddBonus();
+            manager.FeverOn();
+        }
+
+        void FeverOff()
+        {
+            isFever = false;
+            manager.FeverOff();
+            sprite.fillAmount = 0f;
+        }
 
         // Use this for initialization
         void Start()
@@ -33,31 +58,6 @@ namespace Fidget.GameSpin
 
             if (sprite.fillAmount < 0.01f && isFever)
                 FeverOff();
-        }
-
-        public void Success()
-        {
-            sprite.fillAmount += (1f / feverCount);
-        }
-
-        public void Fail()
-        {
-            sprite.fillAmount = 0;
-        }
-
-        void FeverOn()
-        {
-            isFever = true;
-            manager.FeverOn();
-            Debug.Log("피버 시작");
-        }
-
-        void FeverOff()
-        {
-            isFever = false;
-            manager.FeverOff();
-            sprite.fillAmount = 0f;
-            Debug.Log("피버 끝");
         }
     }
 }

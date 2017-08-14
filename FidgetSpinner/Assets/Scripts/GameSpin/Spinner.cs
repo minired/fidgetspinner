@@ -21,7 +21,6 @@ namespace Fidget.GameSpin
 
         void Awake()
         {
-            User.Instance.EquipIndex = 5;
             fidgetIndex = User.Instance.EquipIndex;
         }
 

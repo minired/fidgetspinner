@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 namespace Fidget.Common
 {
     public class BackUI : MonoBehaviour
@@ -20,6 +22,11 @@ namespace Fidget.Common
             {
                 backBtn();
             }
+        }
+
+        public void LoadPrevScene()
+        {
+            SceneManager.LoadScene("Main");
         }
 
 
