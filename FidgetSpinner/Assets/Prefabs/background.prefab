@@ -61,6 +61,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: b85f2127fe8464d529d97a277e99e8ad, type: 2}
   - {fileID: 2100000, guid: f8dcf700611214446ade5dbb22b8d62f, type: 2}
   - {fileID: 2100000, guid: e0f3c8ae69d8a4249913dd106b04551c, type: 2}
+  - {fileID: 2100000, guid: 1529db5177bfe4c27a45bba1e2476096, type: 2}
+  - {fileID: 2100000, guid: 26e31cbc0a0d94c11a465dab6761640e, type: 2}
+  - {fileID: 2100000, guid: 120b03b667a0c40f592a473534f52f99, type: 2}
+  - {fileID: 2100000, guid: 4cf4ae4c7f7af4f239d2475957bb70b0, type: 2}
 --- !u!212 &212601931387069488
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -74,7 +78,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 83a1d6d152a044079910ca0bbf77227e, type: 2}
+  - {fileID: 2100000, guid: b85f2127fe8464d529d97a277e99e8ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
