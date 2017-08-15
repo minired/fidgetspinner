@@ -1060,7 +1060,7 @@ MonoBehaviour:
   deltaAmount: 0.002
   successAmount: 0.1
   brokenAmount: 0.2
-  harderTime: 0.4
+  harderTime: 0.5
 --- !u!1 &728186757
 GameObject:
   m_ObjectHideFlags: 1
@@ -1241,6 +1241,7 @@ GameObject:
   - component: {fileID: 852880789}
   - component: {fileID: 852880788}
   - component: {fileID: 852880787}
+  - component: {fileID: 852880790}
   m_Layer: 5
   m_Name: left_button
   m_TagString: Untagged
@@ -1297,11 +1298,7 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
-  - mTarget: {fileID: 1282996703}
-    mMethodName: LeftButton
-    mParameters: []
-    oneShot: 0
+  onClick: []
 --- !u!114 &852880789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,6 +1352,34 @@ MonoBehaviour:
   mAtlas: {fileID: 114668134880709476, guid: 6eae1a6c70801ec4bbe9e1cf0e32eecb, type: 2}
   mSpriteName: btn_press_right@sprite
   mFillCenter: 1
+--- !u!114 &852880790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852880785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e862f287df53bb64db191162f851a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOver: []
+  onHoverOut: []
+  onPress:
+  - mTarget: {fileID: 1282996703}
+    mMethodName: LeftButton
+    mParameters: []
+    oneShot: 0
+  onRelease: []
+  onSelect: []
+  onDeselect: []
+  onClick: []
+  onDoubleClick: []
+  onDragStart: []
+  onDragEnd: []
+  onDragOver: []
+  onDragOut: []
+  onDrag: []
 --- !u!1 &855614100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,6 +1391,7 @@ GameObject:
   - component: {fileID: 855614102}
   - component: {fileID: 855614104}
   - component: {fileID: 855614103}
+  - component: {fileID: 855614105}
   m_Layer: 5
   m_Name: right_button
   m_TagString: Untagged
@@ -1475,11 +1501,35 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick:
+  onClick: []
+--- !u!114 &855614105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855614100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e862f287df53bb64db191162f851a296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onHoverOver: []
+  onHoverOut: []
+  onPress:
   - mTarget: {fileID: 1282996703}
     mMethodName: RightButton
     mParameters: []
     oneShot: 0
+  onRelease: []
+  onSelect: []
+  onDeselect: []
+  onClick: []
+  onDoubleClick: []
+  onDragStart: []
+  onDragEnd: []
+  onDragOver: []
+  onDragOut: []
+  onDrag: []
 --- !u!1001 &933733429
 Prefab:
   m_ObjectHideFlags: 0
@@ -1803,7 +1853,7 @@ MonoBehaviour:
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.016666668
+  aspectRatio: 0.26666668
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 114796a32fd79d24596c3ff2d6447a51, type: 3}
   mFont: {fileID: 0}
