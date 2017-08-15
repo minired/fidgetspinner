@@ -1385,7 +1385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgChanger: {fileID: 899621101}
-  panel: {fileID: 583514554}
+  springPanel: {fileID: 583514554}
+  uiPanel: {fileID: 583514557}
   backUI: {fileID: 459886029}
 --- !u!1001 &1308898521
 Prefab:

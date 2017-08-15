@@ -1256,6 +1256,8 @@ MonoBehaviour:
   buyLabel: {fileID: 114349545887736992}
   upgradeButton: {fileID: 114342457115676960}
   upgradeLabel: {fileID: 114535945054451946}
+  upgradeIcon: {fileID: 114566158568697646}
+  requireLv: {fileID: 114948602327861370}
   speedGauge: {fileID: 114953299517567172}
   hasteGauge: {fileID: 114845882759494352}
   dampingGauge: {fileID: 114659685090173090}
@@ -2278,7 +2280,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3012
+  startingRenderQueue: 3016
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
