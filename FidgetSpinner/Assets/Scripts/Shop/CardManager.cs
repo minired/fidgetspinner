@@ -118,6 +118,7 @@ namespace Fidget.Shop
             {
                 currentCoin -= FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
                 haveCoin.text = currentCoin.ToString();
+                User.Instance.Coin = currentCoin;
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 levelLabel.text = "Lv." + spriteLevel.ToString();
@@ -141,6 +142,7 @@ namespace Fidget.Shop
             {
                 currentCoin -= upgradeCost;
                 haveCoin.text = currentCoin.ToString();
+                User.Instance.Coin = currentCoin;
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 levelLabel.text = "Lv." + spriteLevel.ToString();
