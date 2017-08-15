@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameSpin.unity
     guid: 8ddd14f353342f54d8a55a332408342a
+  - enabled: 1
+    path: Assets/Scenes/TimingGame.unity
+    guid: b2868b5b0dfcd484884a9cff7f60ac58

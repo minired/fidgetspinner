@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Fidget.TimeGame
+namespace Fidget.TimingGame
 {
     public class TimingCircle : MonoBehaviour
     {
@@ -16,17 +16,23 @@ namespace Fidget.TimeGame
         public GameObject particleObj2;
 
 
-        float speed = 100f;
+        float speed = -50f;
 
         bool isBarSpin = false;
 
         float distance = 1.0f;
 
+
+        private void Awake()
+        {
+            isBarSpin = false;
+            timbBar.gameObject.SetActive(false);
+        }
+
         // Use this for initialization
         void Start()
         {
-            //SpinStart();
-            StartPaticleAnimation();
+
         }
 
         // Update is called once per frame
@@ -37,16 +43,8 @@ namespace Fidget.TimeGame
             {
                 timbBar.gameObject.transform.RotateAround(centerCircle.transform.position, Vector3.forward, speed * Time.deltaTime);
             }
-            if (Input.GetMouseButtonDown(0))
-            {
-                isBarSpin = !isBarSpin;
-                if (!isBarSpin)
-                {
-                    CheckDistance();
-                }
-
-            }
         }
+
 
         public void CheckDistance()
         {
@@ -94,12 +92,14 @@ namespace Fidget.TimeGame
 
         public void SpinStart()
         {
+            timbBar.gameObject.SetActive(true);
             isBarSpin = true;
         }
 
         public void SpinStop()
         {
             isBarSpin = false;
+            CheckDistance();
         }
 
         public void AnimationEnd(GameObject obj)

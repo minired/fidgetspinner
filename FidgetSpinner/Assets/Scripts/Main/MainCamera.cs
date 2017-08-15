@@ -31,6 +31,11 @@ namespace Fidget.Main
             SceneManager.LoadScene("GameSpin");
         }
 
+        public void MoveTimingSpinScene()
+        {
+            SceneManager.LoadScene("TimingGame");
+        }
+
         public void OnOptionButton()
         {
             optionPopUp.gameObject.SetActive(true);
