@@ -76,8 +76,15 @@ namespace Fidget.Shop
             else
                 buyState = State.BUYED;
 
-            
-            if (buyState == State.NONE)
+            if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL)
+            {
+                upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
+                upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+
+                requireLv.text = "[fffff6]" + "MAX";
+                upgradeLabel.text = null;
+            }
+            else if (buyState == State.NONE)
             {
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
@@ -92,7 +99,7 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[4e2f9f]" + "EQUIP";
-                requireLv.text = "[3e3f40]" + "Upgrade";
+                requireLv.text = "[3e3f40]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
@@ -102,7 +109,7 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[4e2f9f]" + "EQUIP";
-                requireLv.text = "[fffff6]" + "Upgrade";
+                requireLv.text = "[fffff6]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
@@ -112,7 +119,7 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[3e3f40]" + "EQUIP";
-                requireLv.text = "[3e3f40]" + "Upgrade";
+                requireLv.text = "[3e3f40]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
@@ -122,7 +129,7 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = null;
                 buyLabel.text = "[3e3f40]" + "EQUIP";
-                requireLv.text = "[fffff6]" + "Upgrade";
+                requireLv.text = "[fffff6]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
@@ -151,7 +158,7 @@ namespace Fidget.Shop
                 haveCoin.text = currentCoin.ToString();
                 User.Instance.Coin = currentCoin;
 
-                requireLv.text = "[fffff6]" + "Upgrade";
+                requireLv.text = "[fffff6]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 levelLabel.text = "Lv." + spriteLevel.ToString();
@@ -172,7 +179,7 @@ namespace Fidget.Shop
             {
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
-                requireLv.text = "[3e3f40]" + "Upgrade";
+                requireLv.text = "[3e3f40]" + "UPGRADE Lv." + (spriteLevel + 1);
             }
         }
 
