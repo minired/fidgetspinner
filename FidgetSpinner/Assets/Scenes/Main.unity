@@ -416,8 +416,10 @@ GameObject:
   m_Component:
   - component: {fileID: 719695439}
   - component: {fileID: 719695440}
+  - component: {fileID: 719695442}
+  - component: {fileID: 719695441}
   m_Layer: 5
-  m_Name: img_Timing spin
+  m_Name: TimingspinBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +471,7 @@ MonoBehaviour:
   mWidth: 412
   mHeight: 82
   mDepth: 5
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 5.02439
@@ -489,6 +491,47 @@ MonoBehaviour:
   mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: img_Timing spin@sprite
   mFillCenter: 1
+--- !u!114 &719695441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719695438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 719695438}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 1282996703}
+    mMethodName: MoveTimingSpinScene
+    mParameters: []
+    oneShot: 0
+--- !u!65 &719695442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719695438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 412, y: 82, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &858604124
 GameObject:
   m_ObjectHideFlags: 0
