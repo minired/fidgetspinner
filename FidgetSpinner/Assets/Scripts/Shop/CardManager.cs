@@ -109,7 +109,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_require@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin@sprite";
-                upgradeLabel.text = "[ffffff]" + upgradeCost;
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost > currentCoin && buyState == State.BUYED)
             {
@@ -120,7 +120,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
-                upgradeLabel.text = "[ffffff]" + upgradeCost;
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost <= currentCoin && buyState == State.BUYED)
             {
@@ -131,7 +131,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
-                upgradeLabel.text = "[512e91]" + upgradeCost;
+                upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost > currentCoin && buyState == State.EQUIPED)
             {
@@ -142,7 +142,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
-                upgradeLabel.text = "[ffffff]" + upgradeCost;
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else
             {
@@ -153,7 +153,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
-                upgradeLabel.text = "[512e91]" + upgradeCost;
+                upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
             }
         }
 
