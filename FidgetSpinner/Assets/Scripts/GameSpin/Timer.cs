@@ -13,6 +13,7 @@ namespace Fidget.GameSpin
         public Score score;
         public CoinUI coinUI;
 
+        public bool isStarted;
         bool isGameOver;
 
         public float deltaAmount;
@@ -30,6 +31,7 @@ namespace Fidget.GameSpin
         void Start()
         {
             flowedTime = 0f;
+            isStarted = false;
             isGameOver = false;
             fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
@@ -45,6 +47,8 @@ namespace Fidget.GameSpin
         void Update()
         {
             if (isGameOver)
+                return;
+            if (!isStarted)
                 return;
 
             if (flowedTime >= harderTime)
@@ -79,9 +83,9 @@ namespace Fidget.GameSpin
                 resultPopup.CoinBtnAnimation();
                 return;
             }
-
-            this.GetComponent<UISprite>().fillAmount -= deltaAmount;
-            flowedTime += Time.deltaTime;
+            
+                this.GetComponent<UISprite>().fillAmount -= deltaAmount;
+                flowedTime += Time.deltaTime;
         }
 
         public void Harder()
