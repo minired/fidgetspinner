@@ -37,11 +37,19 @@ namespace Fidget.TimingGame
 
         public TimingCircle timingCircle;
 
+        public UILabel timeLabel;
+
         ExpTable expTable = new ExpTable();
 
         FidgetSpinnerDetail fidgetDetail;
 
         bool isGameStart = false;
+
+        bool isSpinStart = false;
+
+        float fidgetPoint = 0.0f;
+
+        float gameTime = 0.0f;
 
         private void Awake()
         {
@@ -53,6 +61,7 @@ namespace Fidget.TimingGame
             SetLevelLabel();
             SetScoreLabel();
             speedLabel.text = "0 m/s";
+            isSpinStart = false;
         }
 
         private void BackBtn_backBtn()
@@ -84,6 +93,7 @@ namespace Fidget.TimingGame
         {
             backgroundSelector.SetBackground(User.Instance.EquipIndex);
             clickIcon.SetActive(true);
+            gameTime = 20.0f;
         }
 
         void SetLevelLabel()
@@ -97,10 +107,53 @@ namespace Fidget.TimingGame
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetMouseButtonDown(0))
+
+            if (isSpinStart)
             {
+                gameTime -= Time.deltaTime;
+                timeLabel.text = gameTime.ToString("0.0");
+            }
+
+            if (gameTime <= 0.0f)
+            {
+                timeLabel.text = "0";
+                isGameStart = false;
+                isSpinStart = false;
+                fidgetSpinner.OnSpinStop();
+
+                if (User.Instance.Score > User.Instance.HighScore)
+                {
+                    User.Instance.HighScore = User.Instance.Score;
+                    resultPopup.BestSpriteOn();
+                }
+                else
+                {
+                    resultPopup.BestSpriteOff();
+                }
+
+                resultPopup.scoreLabel.text = User.Instance.Score.ToString();
+                resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
+                resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
+                resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
+                resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
+                resultPopup.gameObject.SetActive(true);
+                resultPopup.BottomBtnAnimation();
+                resultPopup.CoinBtnAnimation();
+                return;
+            }
+
+
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (isSpinStart)
+                {
+                    return;
+                }
                 if(!isGameStart && !resultPopup.gameObject.activeInHierarchy)
                 {
+                    fidgetPoint = 0.0f;
+                    isSpinStart = false;
                     bottomUI.MoveStart();
                     clickIcon.SetActive(false);
                     isGameStart = true;
@@ -110,11 +163,33 @@ namespace Fidget.TimingGame
 
                 if (isGameStart)
                 {
-                    timingCircle.SpinStop();
-                    isGameStart = false;
+                    if (!fidgetSpinner.IsSpin)
+                    {
+                        fidgetSpinner.SetLeftDirection();
+                        fidgetSpinner.OnSpinStart();
+                        isSpinStart = true;
+                        isGameStart = false;
+                    }
+                    fidgetPoint = timingCircle.GetPoint();
+                    StartCoroutine(FidgetSpin());
+                    gameTime = 20.0f;
                     return;
                 }
             }
         }
+
+
+        IEnumerator FidgetSpin()
+        {
+            while (true)
+            {
+                fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
+                speedLabel.text = ((int)(fidgetSpinner.Speed)).ToString() + " m/s";
+                SetLevelLabel();
+                SetScoreLabel();
+                yield return new WaitForSeconds(0.3f);
+            }
+        }
+
     }
 }

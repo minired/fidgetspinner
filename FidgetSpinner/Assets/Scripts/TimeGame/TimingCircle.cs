@@ -16,7 +16,7 @@ namespace Fidget.TimingGame
         public GameObject particleObj2;
 
 
-        float speed = -50f;
+        float speed = -100f;
 
         bool isBarSpin = false;
 
@@ -46,7 +46,7 @@ namespace Fidget.TimingGame
         }
 
 
-        public void CheckDistance()
+        void CheckDistance()
         {
             float d1 = Vector3.Distance(timbBar.transform.position, pivot1.transform.position);
             float d2 = Vector3.Distance(timbBar.transform.position, pivot2.transform.position);
