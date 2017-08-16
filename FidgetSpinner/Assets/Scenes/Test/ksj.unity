@@ -392,6 +392,48 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!1001 &1219238260
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.19000491
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.25199234
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732391366735748, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c48250838aee43e45921e76368fe5b5e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1282996697
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ namespace Fidget.Data
 
     public class FidgetSpinnerData
     {
-        public static FidgetSpinnerItem[]  fidgetSpinnerItems = {
+        public static FidgetSpinnerItem[] fidgetSpinnerItems = {
             new FidgetSpinnerItem( "Gaxay", "spinner1", 0),
             new FidgetSpinnerItem( "Bat", "spinner2", 0),
             new FidgetSpinnerItem( "Bat", "spinner3", 0),
@@ -93,19 +93,19 @@ namespace Fidget.Data
                 new FidgetSpinnerDetail( 25f, 25f, 25f, 25f, 600),
                 new FidgetSpinnerDetail( 30f, 30f, 30f, 30f, 700),
                 new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
-                new FidgetSpinnerDetail( 40f, 40f, 40f, 40f, 900),
-                new FidgetSpinnerDetail( 45f, 45f, 45f, 45f, 1000),
-                new FidgetSpinnerDetail( 50f, 50f, 50f, 50f, 1100),
-                new FidgetSpinnerDetail( 55f, 55f, 55f, 55f, 1200),
-                new FidgetSpinnerDetail( 60f, 60f, 60f, 60f, 1300),
-                new FidgetSpinnerDetail( 65f, 65f, 65f, 65f, 1400),
-                new FidgetSpinnerDetail( 70f, 70f, 70f, 70f, 1500),
-                new FidgetSpinnerDetail( 75f, 75f, 75f, 75f, 1600),
-                new FidgetSpinnerDetail( 80f, 80f, 80f, 80f, 1700),
-                new FidgetSpinnerDetail( 85f, 85f, 85f, 85f, 1800),
-                new FidgetSpinnerDetail( 90f, 90f, 90f, 90f, 1900),
-                new FidgetSpinnerDetail( 95f, 95f, 95f, 95f, 2000),
-                new FidgetSpinnerDetail( 100f, 100f, 100f, 100f, 20000),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 35f, 35f, 35f, 35f, 800),
+                new FidgetSpinnerDetail( 40f, 37, 55, 85f, 20000),
             },
             //2
          {

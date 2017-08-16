@@ -76,12 +76,28 @@ namespace Fidget.Shop
             else
                 buyState = State.BUYED;
 
-            if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL)
+            if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL && buyState == State.BUYED)
             {
+                buyButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
+                buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
+                buyLabel.text = "[4e2f9f]" + "EQUIP";
+
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
 
-                requireLv.text = "[fffff6]" + "MAX";
+                requireLv.text = "[3e3f40]" + "MAX";
+                upgradeLabel.text = null;
+            }
+            else if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL && buyState == State.EQUIPED)
+            {
+                buyButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
+                buyButton.GetComponent<UIButton>().pressedSprite = null;
+                buyLabel.text = "[3e3f40]" + "EQUIP";
+
+                upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
+                upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+
+                requireLv.text = "[3e3f40]" + "MAX";
                 upgradeLabel.text = null;
             }
             else if (buyState == State.NONE)
@@ -93,6 +109,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_require@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin@sprite";
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost > currentCoin && buyState == State.BUYED)
             {
@@ -103,6 +120,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost <= currentCoin && buyState == State.BUYED)
             {
@@ -113,6 +131,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
+                upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
             }
             else if (upgradeCost > currentCoin && buyState == State.EQUIPED)
             {
@@ -123,6 +142,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
             }
             else
             {
@@ -133,6 +153,7 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
+                upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
             }
         }
 
@@ -180,6 +201,7 @@ namespace Fidget.Shop
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
                 requireLv.text = "[3e3f40]" + "UPGRADE Lv." + (spriteLevel + 1);
+                upgradeLabel.text = "[ffffff]" + upgradeCost;
             }
         }
 
@@ -205,7 +227,10 @@ namespace Fidget.Shop
 
                 upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
 
-                upgradeLabel.text = upgradeCost.ToString("n0");
+                if(upgradeCost > currentCoin)
+                    upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
+                else
+                    upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
             }
         }
     }
