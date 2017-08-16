@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: broken@sprite
-    x: 1835
-    y: 1502
+    x: 1283
+    y: 1201
     width: 157
     height: 157
     borderLeft: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: btn_back@sprite
     x: 1283
-    y: 1215
+    y: 1057
     width: 143
     height: 143
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite
-    x: 1835
-    y: 1361
+    x: 1441
+    y: 1153
     width: 96
     height: 140
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite (Copy)
-    x: 1932
-    y: 1361
+    x: 1441
+    y: 1012
     width: 96
     height: 140
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_left@sprite
-    x: 1283
-    y: 1074
+    x: 1538
+    y: 1153
     width: 96
     height: 140
     borderLeft: 0
@@ -145,10 +145,23 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_right@sprite
-    x: 1427
+    x: 1635
     y: 1153
     width: 96
     height: 140
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: combo_Planet@sprite
+    x: 1793
+    y: 1676
+    width: 167
+    height: 167
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -197,7 +210,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: money@sprite
-    x: 1427
+    x: 1441
     y: 1294
     width: 290
     height: 64
@@ -210,8 +223,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: planet@sprite
-    x: 1793
-    y: 1676
+    x: 1667
+    y: 1492
     width: 167
     height: 167
     borderLeft: 0
@@ -275,7 +288,7 @@ MonoBehaviour:
     paddingTop: 6
     paddingBottom: 56
   - name: stone@sprite
-    x: 1667
+    x: 1835
     y: 1492
     width: 167
     height: 167
@@ -288,8 +301,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: timebar@sprite
-    x: 1524
-    y: 1013
+    x: 1732
+    y: 1078
     width: 32
     height: 280
     borderLeft: 0

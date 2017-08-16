@@ -9,9 +9,6 @@ namespace Fidget.GameSpin
         public bool isPlanet = false;
         public bool isStone = false;
 
-        public Sprite planet;
-        public Sprite broken;
-        public Sprite stone;
 
         public void setSprite(int n)
         {
@@ -30,6 +27,10 @@ namespace Fidget.GameSpin
                     this.GetComponent<UISprite>().spriteName = "stone@sprite";
                     isPlanet = false;
                     isStone = true;
+                    break;
+                case 3:
+                    this.GetComponent<UISprite>().spriteName = "combo_Planet@sprite";
+                    isPlanet = true;
                     break;
                 default:
                     break;

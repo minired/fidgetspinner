@@ -8,13 +8,13 @@ namespace Fidget.GameSpin
 
         public UILabel label;
         public Score score;
+        public GameObject comboParent;
 
         int combo;
 
         // Use this for initialization
         void Start() {
-            combo = 0;
-            label.text = combo.ToString();
+            combo = 1;
         }
 
         // Update is called once per frame
@@ -26,11 +26,13 @@ namespace Fidget.GameSpin
         {
             combo++;
             label.text = combo.ToString();
+            comboParent.SetActive(true);
         }
 
         public void Fail()
         {
             combo = 0;
+            comboParent.SetActive(false);
             label.text = combo.ToString();
         }
     }

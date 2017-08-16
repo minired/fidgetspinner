@@ -8,6 +8,8 @@ namespace Fidget.GameSpin
 {
     public class Spinner : MonoBehaviour
     {
+        public bool isStarted;
+
         public Timer timer;
         public List<UIAtlas> atlasList;
         public Score score;
@@ -26,6 +28,7 @@ namespace Fidget.GameSpin
 
         void Start()
         {
+            isStarted = false;
             GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[fidgetIndex].atlasIndex];
             GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[fidgetIndex].spriteName;
             fidgetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, 1].speed;
@@ -33,8 +36,11 @@ namespace Fidget.GameSpin
 
         void Update()
         {
-            relativeSpeed = timer.GetComponent<UISprite>().fillAmount;
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.localEulerAngles.z + (fixedSpeed * relativeSpeed));
+            if (isStarted)
+            {
+                relativeSpeed = timer.GetComponent<UISprite>().fillAmount;
+                transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, transform.localEulerAngles.z + (fixedSpeed * relativeSpeed));
+            }
         }
     }
 }

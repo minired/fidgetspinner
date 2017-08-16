@@ -9,6 +9,7 @@ namespace Fidget.GameSpin
     {
 
         public GameObject planet;
+        public Spinner spinner;
         public GameObject parent;
         public Timer timer;
         public Score score;
@@ -32,40 +33,6 @@ namespace Fidget.GameSpin
         public float sizeDown;
         public float moveTime;
         
-        void Start()
-        {
-            buttomNum = 0;
-
-            for(int i = 0; i < 10; i++)
-            {
-                leftPlanets[i] = NGUITools.AddChild(parent, planet);        //좌우 행성 생성
-                rightPlanets[i] = NGUITools.AddChild(parent, planet);
-
-                leftPlanets[i].transform.localPosition = leftPosition[i];       // 자리 지정
-                rightPlanets[i].transform.localPosition = rightPosition[i];
-
-                rightPlanets[i].transform.localScale *= sizeDown;      // 크기 지정
-                leftPlanets[i].transform.localScale *= sizeDown;
-
-                leftNum = Random.Range(0, 2);
-
-                if (leftNum == 0)           // 좌우 상반되게 랜덤번호 생성
-                {
-                    rightNum = Random.Range(1, 3);
-                }
-                else
-                {
-                    leftNum = Random.Range(1, 3);
-                    rightNum = 0;
-                }
-
-                rightPlanets[i].GetComponent<Planet>().setSprite(rightNum);     // 번호대로 행성 sprite 변경
-                leftPlanets[i].GetComponent<Planet>().setSprite(leftNum);
-            }
-            rightPlanets[0].transform.localScale *= sizeUp;      // 크기 지정
-            leftPlanets[0].transform.localScale *= sizeUp;
-
-        }
 
         void TweenPlanets()       // 버튼 누른 뒤 행성들 이동
         {
@@ -144,8 +111,8 @@ namespace Fidget.GameSpin
             leftPlanets[buttomNum].transform.localScale *= sizeDown;
             rightPlanets[buttomNum].transform.localScale *= sizeDown;
 
-            rightPlanets[buttomNum].GetComponent<Planet>().setSprite(0);
-            leftPlanets[buttomNum].GetComponent<Planet>().setSprite(0);
+            rightPlanets[buttomNum].GetComponent<Planet>().setSprite(3);
+            leftPlanets[buttomNum].GetComponent<Planet>().setSprite(3);
 
             for (int i = buttomNum + 1; i < 10; i++, j++)       // 나머지는 한칸씩 아래로
             {
@@ -234,6 +201,8 @@ namespace Fidget.GameSpin
             }
             else
             {
+                timer.isStarted = true;
+                spinner.isStarted = true;
                 LeftNormalProc();
             }
         }
@@ -247,6 +216,8 @@ namespace Fidget.GameSpin
             }
             else
             {
+                timer.isStarted = true;
+                spinner.isStarted = true;
                 RightNormalProc();
             }
         }
@@ -256,8 +227,8 @@ namespace Fidget.GameSpin
             isFever = true;
             for(int i = 0; i < 10; i++)
             {
-                leftPlanets[i].GetComponent<Planet>().setSprite(0);
-                rightPlanets[i].GetComponent<Planet>().setSprite(0);
+                leftPlanets[i].GetComponent<Planet>().setSprite(3);
+                rightPlanets[i].GetComponent<Planet>().setSprite(3);
             }
         }
 
@@ -271,13 +242,56 @@ namespace Fidget.GameSpin
             isFever = false;
         }
 
+        void Start()
+        {
+            buttomNum = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                leftPlanets[i] = NGUITools.AddChild(parent, planet);        //좌우 행성 생성
+                rightPlanets[i] = NGUITools.AddChild(parent, planet);
+
+                leftPlanets[i].transform.localPosition = leftPosition[i];       // 자리 지정
+                rightPlanets[i].transform.localPosition = rightPosition[i];
+
+                rightPlanets[i].transform.localScale *= sizeDown;      // 크기 지정
+                leftPlanets[i].transform.localScale *= sizeDown;
+
+                leftNum = Random.Range(0, 2);
+
+                if (leftNum == 0)           // 좌우 상반되게 랜덤번호 생성
+                {
+                    rightNum = Random.Range(1, 3);
+                }
+                else
+                {
+                    leftNum = Random.Range(1, 3);
+                    rightNum = 0;
+                }
+
+                rightPlanets[i].GetComponent<Planet>().setSprite(rightNum);     // 번호대로 행성 sprite 변경
+                leftPlanets[i].GetComponent<Planet>().setSprite(leftNum);
+            }
+            rightPlanets[0].transform.localScale *= sizeUp;      // 크기 지정
+            leftPlanets[0].transform.localScale *= sizeUp;
+
+        }
+
         // Update is called once per frame
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                timer.isStarted = true;
+                spinner.isStarted = true;
                 LeftButton();
+            }
             if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                timer.isStarted = true;
+                spinner.isStarted = true;
                 RightButton();
+            }
         }
     }
 }
