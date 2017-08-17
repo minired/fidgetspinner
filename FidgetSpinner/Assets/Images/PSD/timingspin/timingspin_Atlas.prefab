@@ -54,8 +54,21 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 9d18feb49549e7b44b46851ee3e50414, type: 2}
   mSprites:
   - name: bar@sprite
-    x: 608
-    y: 1944
+    x: 606
+    y: 663
+    width: 46
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar_gray
+    x: 653
+    y: 663
     width: 46
     height: 104
     borderLeft: 0
@@ -67,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: center_cir@sprite
-    x: 0
-    y: 897
+    x: 1442
+    y: 1512
     width: 528
     height: 536
     borderLeft: 0
@@ -79,10 +92,36 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: out_line@sprite
+  - name: combo
     x: 0
-    y: 1434
-    width: 607
+    y: 768
+    width: 720
+    height: 1280
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: combo_gray
+    x: 721
+    y: 768
+    width: 720
+    height: 1280
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: out_line
+    x: 0
+    y: 153
+    width: 605
     height: 614
     borderLeft: 0
     borderRight: 0

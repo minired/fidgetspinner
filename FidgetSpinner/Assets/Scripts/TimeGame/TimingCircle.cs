@@ -16,6 +16,10 @@ namespace Fidget.TimingGame
         public GameObject particleObj2;
 
 
+        public UISprite spinGood;
+        public UISprite spinBad;
+
+
         float speed = -100f;
 
         bool isBarSpin = false;
@@ -27,6 +31,8 @@ namespace Fidget.TimingGame
         {
             isBarSpin = false;
             timbBar.gameObject.SetActive(false);
+            spinGood.gameObject.SetActive(false);
+            spinBad.gameObject.SetActive(false);
         }
 
         // Use this for initialization
@@ -46,7 +52,7 @@ namespace Fidget.TimingGame
         }
 
 
-        void CheckDistance()
+        public void CheckDistance()
         {
             float d1 = Vector3.Distance(timbBar.transform.position, pivot1.transform.position);
             float d2 = Vector3.Distance(timbBar.transform.position, pivot2.transform.position);
@@ -61,9 +67,33 @@ namespace Fidget.TimingGame
         }
 
 
+        public bool IsGoodPoint()
+        {
+            if(distance < 0.2f)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
+
+        public void SpeedUp()
+        {
+            speed -= 20;
+        }
+
+        public void SpeedDown()
+        {
+            speed += 20;
+        }
+
         public float GetPoint()
         {
-            if(distance < 0.1f)
+            if (distance < 0.1f)
             {
                 return 100f - (distance * 80.0f); 
             }
@@ -90,16 +120,22 @@ namespace Fidget.TimingGame
             }
         }
 
+        public void SetSpeedFromFidget(float fidgetSpeed)
+        {
+            fidgetSpeed = fidgetSpeed * 0.5f;
+            speed = (-1*fidgetSpeed) - 100.0f;
+        }
+
         public void SpinStart()
         {
             timbBar.gameObject.SetActive(true);
+            speed = -100f;
             isBarSpin = true;
         }
 
         public void SpinStop()
         {
             isBarSpin = false;
-            CheckDistance();
         }
 
         public void AnimationEnd(GameObject obj)
@@ -117,6 +153,22 @@ namespace Fidget.TimingGame
             particleObj2.gameObject.SetActive(true);
             particleObj2.GetComponent<DG.Tweening.DOTweenPath>().DORewind();
             particleObj2.GetComponent<DG.Tweening.DOTweenPath>().DOPlay();
+        }
+
+        public void ClickGood()
+        {
+            spinGood.gameObject.SetActive(true);
+            spinBad.gameObject.SetActive(false);
+            spinGood.GetComponent<TweenAlpha>().ResetToBeginning();
+            spinGood.GetComponent<TweenAlpha>().PlayForward();
+        }
+
+        public void ClickBad()
+        {
+            spinGood.gameObject.SetActive(false);
+            spinBad.gameObject.SetActive(true);
+            spinBad.GetComponent<TweenAlpha>().ResetToBeginning();
+            spinBad.GetComponent<TweenAlpha>().PlayForward();
         }
     }
 }

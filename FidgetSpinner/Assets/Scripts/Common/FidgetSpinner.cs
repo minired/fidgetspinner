@@ -18,6 +18,8 @@ namespace Fidget.Common
         float speed = 0.0f;
         bool isSpin = false;
 
+        bool isLoopMode = false;
+
 
         float maxSpeed = 100.0f;
         public float MaxSpeed
@@ -30,7 +32,13 @@ namespace Fidget.Common
 
 
         float damping = 2.0f;
-
+        public float Damping
+        {
+            get
+            {
+                return damping;
+            }
+        }
 
 
         float expUpdateTime = 0.0f;
@@ -114,6 +122,12 @@ namespace Fidget.Common
         void Awake()
         {
             
+        }
+
+
+        public void SetLoopMode()
+        {
+            isLoopMode = true;
         }
 
         public void InitPosition()
@@ -246,6 +260,7 @@ namespace Fidget.Common
         }
 
 
+
         public void IncreaseCoin()
         {
             User.Instance.Coin += coin;
@@ -328,8 +343,11 @@ namespace Fidget.Common
             if (isSpin)
             {
                 transform.Rotate(zAxis * Time.deltaTime * speed * direction, Space.Self);
-                float t = GetSpeedMinus();
-                speed += t;
+                if (!isLoopMode)
+                {
+                    float t = GetSpeedMinus();
+                    speed += t;
+                }
                 if(speed < 0.1f)
                 {
                     OnSpinStop();
