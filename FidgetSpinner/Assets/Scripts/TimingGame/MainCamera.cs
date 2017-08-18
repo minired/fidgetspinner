@@ -5,6 +5,7 @@ using Fidget.Common;
 using Fidget.Player;
 using Fidget.Data;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 
 namespace Fidget.TimingGame
 {
@@ -55,6 +56,22 @@ namespace Fidget.TimingGame
         {
             Init();
             InitGame();
+        }
+
+
+        bool IsButtonArea(Vector3 pos)
+        {
+            if (pos.x < 120.0f && pos.y < 120.0f)
+            {
+                return true;
+            }
+
+            if (pos.x > 380.0f && pos.y < 120.0f)
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void Init()
@@ -199,6 +216,8 @@ namespace Fidget.TimingGame
             }
         }
 
+
+
         // Update is called once per frame
         void Update()
         {
@@ -223,6 +242,21 @@ namespace Fidget.TimingGame
                 }
                 if(!isGameStart && !resultPopup.gameObject.activeInHierarchy)
                 {
+                    if (IsButtonArea(Input.mousePosition))
+                    {
+                        return;
+                    }
+
+                    if (Advertisement.isShowing)
+                    {
+                        return;
+                    }
+
+                    if (bottomUI.adPopupObj.activeInHierarchy)
+                    {
+                        return;
+                    }
+
                     InitGame();
                     GameStart();
                     return;

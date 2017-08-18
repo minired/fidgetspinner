@@ -5,7 +5,7 @@ using Fidget.Common;
 using UnityEngine.SceneManagement;
 using Fidget.Player;
 using Fidget.Data;
-
+using UnityEngine.Advertisements;
 namespace Fidget.TimeGame
 {
     public class MainCamera : MonoBehaviour
@@ -50,6 +50,11 @@ namespace Fidget.TimeGame
         ExpTable expTable = new ExpTable();
 
         FidgetSpinnerDetail fidgetDetail;
+
+
+        public UISprite adBtnSprite;
+        public UISprite shopBtnSprite;
+        public UISprite backBtnSprite;
 
 
         private void Awake()
@@ -279,6 +284,23 @@ namespace Fidget.TimeGame
             moveHandIcon.AnimationOn();
         }
 
+        bool IsButtonArea(Vector3 pos)
+        {
+            if (pos.x < 120.0f  && pos.y < 120.0f)
+            {
+                return true;
+            }
+
+            if (pos.x > 380.0f && pos.y < 120.0f)
+            {
+                return true;
+            }
+
+            return false;
+        }
+   
+
+
         // Update is called once per frame
         void Update()
         {
@@ -286,6 +308,20 @@ namespace Fidget.TimeGame
             {
                 if (!isGameStart && !resultPopup.gameObject.activeInHierarchy)
                 {
+                    if (IsButtonArea(Input.mousePosition))
+                    {
+                        return;
+                    }
+                    if (Advertisement.isShowing)
+                    {
+                        return;
+                    }
+
+                    if (bottomUI.adPopupObj.activeInHierarchy)
+                    {
+                        return;
+                    }
+
                     moveHandIcon.AnimationOff();
                     bottomUI.MoveStart();
                     isGameStart = true;

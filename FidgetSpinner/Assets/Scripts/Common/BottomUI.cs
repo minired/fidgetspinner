@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Advertisements;
 namespace Fidget.Common
 {
     public class BottomUI : MonoBehaviour
@@ -15,6 +16,8 @@ namespace Fidget.Common
 
         Vector3 shopBtnPos;
         Vector3 adBtnPos;
+
+      
 
         public void MoveShopScene()
         {
@@ -31,7 +34,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
-
+            Advertisement.Initialize("1515814", true);
         }
         void MoveEnd()
         {
@@ -66,8 +69,15 @@ namespace Fidget.Common
 
         public void ShowAdPopup()
         {
-            adPopupObj.SetActive(true);
+            if (Advertisement.IsReady())
+            {
+                adPopupObj.SetActive(true);
+            }
         }
+
+
+        
+
 
         // Update is called once per frame
         void Update()
