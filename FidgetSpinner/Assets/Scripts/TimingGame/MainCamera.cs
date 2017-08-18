@@ -67,7 +67,7 @@ namespace Fidget.TimingGame
 
         private void ResultPopup_popupClosed()
         {
-            gameTime = 20.0f;
+            gameTime = 30.0f;
             User.Instance.Coin = User.Instance.Coin + ((ulong)(User.Instance.Score * 2));
             coinUI.SetCoinLabel(User.Instance.Coin);
             SetScoreLabel();
@@ -118,7 +118,7 @@ namespace Fidget.TimingGame
         {
             backgroundSelector.SetBackground(User.Instance.EquipIndex);
             clickIcon.SetActive(true);
-            gameTime = 20.0f;
+            gameTime = 30.0f;
         }
 
         void SetLevelLabel()
@@ -178,7 +178,7 @@ namespace Fidget.TimingGame
             }
             fidgetPoint = timingCircle.GetPoint();
             StartCoroutine(FidgetSpin());
-            gameTime = 20.0f;
+            gameTime = 30.0f;
             isSpinStart = true;
             isGameStart = true;
         }
@@ -195,6 +195,7 @@ namespace Fidget.TimingGame
             {
                 timingCircle.ClickBad();
                 fidgetSpinner.SpeedDown(fidgetSpinner.Damping * 3f);
+                SoundManager.Instance.Vibrate();
             }
         }
 
