@@ -8,9 +8,11 @@ namespace Fidget.Common
     {
         public UILabel coinLabel;
 
+        DigitChanger digitChanger = new DigitChanger();
+
         public void SetCoinLabel(ulong coin)
         {
-            coinLabel.text = coin.ToString();
+            coinLabel.text = digitChanger.UdigitToString(coin);
         }
 
 
