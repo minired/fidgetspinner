@@ -8,12 +8,16 @@ namespace Fidget.Data
         public string name;
         public string spriteName;
         public int atlasIndex;
+        public int requireLevel;
+        public ulong price;
 
-        public FidgetSpinnerItem(string name, string spriteName, int atlasIndex)
+        public FidgetSpinnerItem(string name, string spriteName, int atlasIndex, int requireLevel, ulong price)
         {
             this.name = name;
             this.spriteName = spriteName;
             this.atlasIndex = atlasIndex;
+            this.requireLevel = requireLevel;
+            this.price = price;
         }
 
     }
@@ -26,6 +30,8 @@ namespace Fidget.Data
         public float damping;
         public float coin;
         public ulong upgrade;
+       
+
         public FidgetSpinnerDetail(float speed, float haste, float damping, float coin, ulong upgrade)
         {
             this.speed = speed;
@@ -40,18 +46,18 @@ namespace Fidget.Data
     public class FidgetSpinnerData
     {
         public static FidgetSpinnerItem[] fidgetSpinnerItems = {
-            new FidgetSpinnerItem( "Gaxay", "spinner1", 0),
-            new FidgetSpinnerItem( "Bat", "spinner2", 0),
-            new FidgetSpinnerItem( "Bat", "spinner3", 0),
-            new FidgetSpinnerItem( "Bat", "spinner4", 0),
-            new FidgetSpinnerItem( "Bat", "spinner5", 0),
-            new FidgetSpinnerItem( "Bat", "spinner6", 0),
-            new FidgetSpinnerItem( "Bat", "spinner7", 1),
-            new FidgetSpinnerItem( "Bat", "spinner8", 1),
-            new FidgetSpinnerItem( "Bat", "spinner9", 1),
-            new FidgetSpinnerItem( "Bat", "spinner10", 1),
-            new FidgetSpinnerItem( "Bat", "spinner11", 1),
-            new FidgetSpinnerItem( "Bat", "spinner12", 1),
+            new FidgetSpinnerItem( "Gaxay", "spinner1", 0, 1, 0),
+            new FidgetSpinnerItem( "Bat", "spinner2", 0, 5, 1000),
+            new FidgetSpinnerItem( "Bat", "spinner3", 0, 10, 5000),
+            new FidgetSpinnerItem( "Bat", "spinner4", 0, 20, 10000),
+            new FidgetSpinnerItem( "Bat", "spinner5", 0, 30, 15000),
+            new FidgetSpinnerItem( "Bat", "spinner6", 0, 40, 100000),
+            new FidgetSpinnerItem( "Bat", "spinner7", 1, 50, 500000),
+            new FidgetSpinnerItem( "Bat", "spinner8", 1, 60, 1000000),
+            new FidgetSpinnerItem( "Bat", "spinner9", 1, 70, 5000000),
+            new FidgetSpinnerItem( "Bat", "spinner10", 1, 80, 10000000),
+            new FidgetSpinnerItem( "Bat", "spinner11", 1, 90, 30000000),
+            new FidgetSpinnerItem( "Bat", "spinner12", 1, 100, 50000000),
         };
 
 
