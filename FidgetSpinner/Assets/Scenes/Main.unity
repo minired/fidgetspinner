@@ -627,6 +627,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 276064825}
     m_Modifications:
+    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
+        type: 2}
+      propertyPath: onClick.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -658,6 +663,16 @@ Prefab:
     - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
+        type: 2}
+      propertyPath: onClick.Array.data[0].mTarget
+      value: 
+      objectReference: {fileID: 1433478844}
+    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
+        type: 2}
+      propertyPath: onClick.Array.data[0].mMethodName
+      value: ShowAdPopup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
@@ -1132,6 +1147,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4045103641674874, guid: 75adaa0619d53814880f08fa6d8c2a8c,
     type: 2}
   m_PrefabInternal: {fileID: 359850261}
+--- !u!114 &1433478844 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114006139928042842, guid: e6cb6f90bd155a441a8c0d50201fb89c,
+    type: 2}
+  m_PrefabInternal: {fileID: 987265538}
+  m_Script: {fileID: 11500000, guid: e6b1cfc4821011a438525c927db1ff05, type: 3}
 --- !u!1 &1708680265
 GameObject:
   m_ObjectHideFlags: 0

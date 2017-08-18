@@ -11,6 +11,8 @@ namespace Fidget.Common
         public GameObject adBtnObj;
 
 
+        public GameObject adPopupObj;
+
         Vector3 shopBtnPos;
         Vector3 adBtnPos;
 
@@ -59,6 +61,12 @@ namespace Fidget.Common
             }
             LeanTween.moveX(adBtnObj, -0.9f, 1.0f).setOnComplete(MoveEnd);
             LeanTween.moveX(shopBtnObj, 0.9f, 1.0f);
+        }
+
+
+        public void ShowAdPopup()
+        {
+            adPopupObj.SetActive(true);
         }
 
         // Update is called once per frame
