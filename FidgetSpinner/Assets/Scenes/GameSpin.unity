@@ -1800,6 +1800,8 @@ GameObject:
   - component: {fileID: 1137670985}
   - component: {fileID: 1137670987}
   - component: {fileID: 1137670986}
+  - component: {fileID: 1137670989}
+  - component: {fileID: 1137670988}
   m_Layer: 5
   m_Name: TabLabel
   m_TagString: Untagged
@@ -1834,7 +1836,6 @@ MonoBehaviour:
   tabLabel: {fileID: 1137670987}
   timer: {fileID: 716118343}
   spinner: {fileID: 365153613}
-  block: {fileID: 0}
 --- !u!114 &1137670987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1903,6 +1904,47 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!65 &1137670988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137670984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 932.04114, y: 1697.0879, z: 0}
+  m_Center: {x: 12.380676, y: 80.473404, z: 0}
+--- !u!114 &1137670989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137670984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1137670984}
+  hover: {r: 0.88235295, g: 0.78431374, b: 0.5882353, a: 1}
+  pressed: {r: 0.7176471, g: 0.6392157, b: 0.48235294, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 1137670986}
+    mMethodName: GameStart
+    mParameters: []
+    oneShot: 0
 --- !u!1 &1153844318
 GameObject:
   m_ObjectHideFlags: 0

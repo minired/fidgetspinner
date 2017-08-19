@@ -10,14 +10,13 @@ namespace Fidget.GameSpin
         public UILabel tabLabel;
         public Timer timer;
         public Spinner spinner;
-        public GameObject block;
 
         IEnumerator FadeOut()
         {
             while (tabLabel.alpha > 0f)
             {
-                tabLabel.alpha -= 0.05f;
-                yield return new WaitForSeconds(0.03f);
+                tabLabel.alpha -= 0.03f;
+                yield return new WaitForSeconds(0.01f);
             }
             StartCoroutine(FadeIn());
         }
@@ -26,19 +25,17 @@ namespace Fidget.GameSpin
         {
             while (tabLabel.alpha < 1f)
             {
-                tabLabel.alpha += 0.05f;
-                yield return new WaitForSeconds(0.03f);
+                tabLabel.alpha += 0.03f;
+                yield return new WaitForSeconds(0.01f);
             }
             StartCoroutine(FadeOut());
         }
 
         public void GameStart()
         {
-            StopAllCoroutines();
-            gameObject.SetActive(false);
-            Destroy(block);
             timer.isStarted = true;
             spinner.isStarted = true;
+            gameObject.SetActive(false);
         }
 
         // Use this for initialization
