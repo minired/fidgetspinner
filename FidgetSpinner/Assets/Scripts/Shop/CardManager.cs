@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Data;
 using Fidget.Player;
+using Fidget.Common;
 
 namespace Fidget.Shop
 {
@@ -20,7 +21,7 @@ namespace Fidget.Shop
         public List<UIAtlas> atlasList;
 
         // Coin
-        public UILabel haveCoin;
+        public CoinUI coin = new CoinUI();
         private ulong currentCoin;
 
         // Fidget Base Data
@@ -53,8 +54,7 @@ namespace Fidget.Shop
         void InitCard()
         {
             currentCoin = User.Instance.Coin;
-            haveCoin.text = currentCoin.ToString();
-
+            
             int atlasCode;
             atlasCode = FidgetSpinnerData.fidgetSpinnerItems[cardID].atlasIndex;
             fidgetSprite.GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[cardID].atlasIndex];
@@ -196,7 +196,7 @@ namespace Fidget.Shop
             if (buyState == State.NONE && currentCoin >= FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade)
             {
                 currentCoin -= FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
-                haveCoin.text = currentCoin.ToString();
+                coin.SetCoinLabel(currentCoin);
                 User.Instance.Coin = currentCoin;
 
                 requireLv.text = "[fffff6]" + "UPGRADE Lv." + (spriteLevel + 1);
@@ -234,7 +234,7 @@ namespace Fidget.Shop
             else if (upgradeCost <= currentCoin && buyState != State.NONE)
             {
                 currentCoin -= upgradeCost;
-                haveCoin.text = currentCoin.ToString();
+                coin.SetCoinLabel(currentCoin);
                 User.Instance.Coin = currentCoin;
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
