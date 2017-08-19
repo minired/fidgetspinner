@@ -201,8 +201,6 @@ namespace Fidget.GameSpin
             }
             else
             {
-                timer.isStarted = true;
-                spinner.isStarted = true;
                 LeftNormalProc();
             }
         }
@@ -216,8 +214,6 @@ namespace Fidget.GameSpin
             }
             else
             {
-                timer.isStarted = true;
-                spinner.isStarted = true;
                 RightNormalProc();
             }
         }

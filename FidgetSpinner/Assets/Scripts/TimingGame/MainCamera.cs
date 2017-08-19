@@ -247,10 +247,10 @@ namespace Fidget.TimingGame
                         return;
                     }
 
-                    if (Advertisement.isShowing)
-                    {
-                        return;
-                    }
+                    //if (Advertisement.isShowing)
+                    //{
+                    //    return;
+                    //}
 
                     if (bottomUI.adPopupObj.activeInHierarchy)
                     {

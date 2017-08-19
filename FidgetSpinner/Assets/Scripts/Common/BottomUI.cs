@@ -34,7 +34,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
-            Advertisement.Initialize("1515814", true);
+            //Advertisement.Initialize("1515814", true);
         }
         void MoveEnd()
         {
@@ -69,10 +69,10 @@ namespace Fidget.Common
 
         public void ShowAdPopup()
         {
-            if (Advertisement.IsReady())
-            {
-                adPopupObj.SetActive(true);
-            }
+            //if (Advertisement.IsReady())
+            //{
+            //    adPopupObj.SetActive(true);
+            //}
         }
 
 

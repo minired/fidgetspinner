@@ -312,10 +312,10 @@ namespace Fidget.TimeGame
                     {
                         return;
                     }
-                    if (Advertisement.isShowing)
-                    {
-                        return;
-                    }
+                    //if (Advertisement.isShowing)
+                    //{
+                    //    return;
+                    //}
 
                     if (bottomUI.adPopupObj.activeInHierarchy)
                     {
