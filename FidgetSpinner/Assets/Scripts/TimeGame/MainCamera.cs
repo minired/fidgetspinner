@@ -355,7 +355,6 @@ namespace Fidget.TimeGame
                 resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
                 resultPopup.BottomBtnAnimation();
-                resultPopup.CoinBtnAnimation();
                 return;
             }
 

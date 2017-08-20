@@ -29,8 +29,6 @@ namespace Fidget.TimingGame
 
         public CoinAnimation coinAnimation;
 
-        public BottomUI bottomUI;
-
 
         public GameObject clickIcon;
 
@@ -91,7 +89,6 @@ namespace Fidget.TimingGame
             User.Instance.Score = 0;
             coinAnimation.OnPlayAnimation();
             clickIcon.SetActive(true);
-            bottomUI.InitPosition();
             fidgetSpinner.InitPosition();
         }
 
@@ -171,7 +168,6 @@ namespace Fidget.TimingGame
             resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
             resultPopup.gameObject.SetActive(true);
             resultPopup.BottomBtnAnimation();
-            resultPopup.CoinBtnAnimation();
         }
 
         void SpinProc()
@@ -185,7 +181,6 @@ namespace Fidget.TimingGame
         void GameStart()
         {
             fidgetPoint = 0.0f;
-            bottomUI.MoveStart();
             clickIcon.SetActive(false);
             timingCircle.SpinStart();
             if (!fidgetSpinner.IsSpin)
@@ -252,10 +247,6 @@ namespace Fidget.TimingGame
                     //    return;
                     //}
 
-                    if (bottomUI.adPopupObj.activeInHierarchy)
-                    {
-                        return;
-                    }
 
                     InitGame();
                     GameStart();

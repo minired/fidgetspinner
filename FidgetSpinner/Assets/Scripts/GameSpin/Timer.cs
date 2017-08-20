@@ -80,7 +80,6 @@ namespace Fidget.GameSpin
                 resultPopup.coinAdLabel.text = (User.Instance.ScoreGameSpin * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
                 resultPopup.BottomBtnAnimation();
-                resultPopup.CoinBtnAnimation();
                 return;
             }
             

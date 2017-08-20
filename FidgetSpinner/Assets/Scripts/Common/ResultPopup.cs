@@ -42,12 +42,6 @@ namespace Fidget.Common
         }
 
 
-        public void CoinBtnAnimation()
-        {
-            LeanTween.scale(normalCoinObj, new Vector3(1.05f, 1.05f, 1.0f), 0.5f).setLoopPingPong(1);
-            LeanTween.scale(adCoinObj, new Vector3(1.05f, 1.05f, 1.0f), 0.5f).setDelay(0.3f).setLoopPingPong(1);
-        }
-
         // Update is called once per frame
         void Update()
         {
