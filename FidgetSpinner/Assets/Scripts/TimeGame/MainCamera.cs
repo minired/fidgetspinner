@@ -39,7 +39,6 @@ namespace Fidget.TimeGame
 
         public MoveHandIcon moveHandIcon;
 
-        public BottomUI bottomUI;
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -126,7 +125,6 @@ namespace Fidget.TimeGame
             User.Instance.Score = 0;
             coinAnimation.OnPlayAnimation();
             moveHandIcon.AnimationOn();
-            bottomUI.InitPosition();
             fidgetSpinner.InitPosition();
         }
 
@@ -317,13 +315,8 @@ namespace Fidget.TimeGame
                     //    return;
                     //}
 
-                    if (bottomUI.adPopupObj.activeInHierarchy)
-                    {
-                        return;
-                    }
 
                     moveHandIcon.AnimationOff();
-                    bottomUI.MoveStart();
                     isGameStart = true;
                 }
             }
