@@ -332,6 +332,52 @@ namespace Fidget.Common
             {
                 result -= damping;
             }
+            if (result > 0.0f)
+            {
+                result = 0.0f;
+            }
+            return result;
+
+        }
+
+
+        float GetLoopSpeedMinus()
+        {
+            float result = 0.0f;
+            if (speed < 100)
+            {
+                result = -0.05f;
+            }
+            else if (speed < 200)
+            {
+                result = -0.07f;
+            }
+            else if (speed < 300)
+            {
+                result = -0.09f;
+            }
+            else if (speed < 400)
+            {
+                result = -0.10f;
+            }
+            else if (speed < 500)
+            {
+                result = -0.12f;
+            }
+            else if (speed < 600)
+            {
+                result = -0.14f;
+            }
+            else if (speed < 700)
+            {
+                result = -0.16f;
+            }
+            else
+            {
+                result = -0.18f;
+            }
+
+
 
             return result;
 
@@ -343,12 +389,17 @@ namespace Fidget.Common
             if (isSpin)
             {
                 transform.Rotate(zAxis * Time.deltaTime * speed * direction, Space.Self);
+                float t = 0.0f;
                 if (!isLoopMode)
                 {
-                    float t = GetSpeedMinus();
-                    speed += t;
+                    t = GetSpeedMinus();
                 }
-                if(speed < 0.1f)
+                else
+                {
+                    t = GetLoopSpeedMinus();
+                }
+                speed += t;
+                if (speed < 0.1f)
                 {
                     OnSpinStop();
                 }
