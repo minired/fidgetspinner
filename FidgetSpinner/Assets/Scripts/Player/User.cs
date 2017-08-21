@@ -95,6 +95,18 @@ namespace Fidget.Player
             }
         }
 
+        public string GoogleId
+        {
+            get
+            {
+                return putil.GetString("GoogleId");
+            }
+            set
+            {
+                putil.SetString("GoogleId", value);
+            }
+        }
+
 
         public int HighScoreLoop
         {
