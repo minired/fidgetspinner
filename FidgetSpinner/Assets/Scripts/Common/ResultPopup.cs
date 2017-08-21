@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GooglePlayGames;
 namespace Fidget.Common
 {
     public class ResultPopup : MonoBehaviour
@@ -66,6 +67,11 @@ namespace Fidget.Common
             {
                 popupClosed();
             }
+        }
+
+        public void OnRank()
+        {
+            PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");
         }
     }
 }

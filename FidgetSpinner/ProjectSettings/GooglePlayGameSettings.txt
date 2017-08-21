@@ -1,2 +1,8 @@
 lastUpgrade=00940
 proj.pluginVersion=0.9.40
+proj.AppId=1087387484232
+proj.classDir=Assets
+proj.ConstantsClassName=GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3c%21--+app_id+--%3e%0d%0a++%3cstring+name%3d%22app_id%22+translatable%3d%22false%22%3e1087387484232%3c%2fstring%3e%0d%0a++%3c%21--+achievement+1%eb%a7%8c+%ec%bd%94%ec%9d%b8+%eb%8b%ac%ec%84%b1+--%3e%0d%0a++%3cstring+name%3d%22achievement_1%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQAQ%3c%2fstring%3e%0d%0a++%3c%21--+achievement+5%eb%a7%8c+%ec%bd%94%ec%9d%b8+%eb%8b%ac%ec%84%b1+--%3e%0d%0a++%3cstring+name%3d%22achievement_5%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQAg%3c%2fstring%3e%0d%0a++%3c%21--+achievement+10%eb%a7%8c+%ec%bd%94%ec%9d%b8+%eb%8b%ac%ec%84%b1+--%3e%0d%0a++%3cstring+name%3d%22achievement_10%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQAw%3c%2fstring%3e%0d%0a++%3c%21--+achievement+50%eb%a7%8c+%ec%bd%94%ec%9d%b8+%eb%8b%ac%ec%84%b1+--%3e%0d%0a++%3cstring+name%3d%22achievement_50%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQBA%3c%2fstring%3e%0d%0a++%3c%21--+achievement+100%eb%a7%8c+%ec%bd%94%ec%9d%b8+%eb%8b%ac%ec%84%b1+--%3e%0d%0a++%3cstring+name%3d%22achievement_100%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQBQ%3c%2fstring%3e%0d%0a++%3c%21--+leaderboard+Timed+Spin+--%3e%0d%0a++%3cstring+name%3d%22leaderboard_timed_spin%22+translatable%3d%22false%22%3eCgkIyIDh6tIfEAIQAA%3c%2fstring%3e%0d%0a%3c%2fresources%3e%0d%0a
+and.ClientId=
+android.SetupDone=true
