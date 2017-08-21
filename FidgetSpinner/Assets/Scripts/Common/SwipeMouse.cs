@@ -54,7 +54,7 @@ namespace Fidget.Common
                     }
                 }
                 //swipe down
-                if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
+                else if (currentSwipe.y < 0 && currentSwipe.x > -0.5f && currentSwipe.x < 0.5f)
                 {
                     if (downSwipe != null)
                     {
@@ -62,7 +62,7 @@ namespace Fidget.Common
                     }
                 }
                 //swipe left
-                if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+                else if (currentSwipe.x < 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     if(leftSwipe != null)
                     {
@@ -70,11 +70,48 @@ namespace Fidget.Common
                     }
                 }
                 //swipe right
-                if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
+                else if (currentSwipe.x > 0 && currentSwipe.y > -0.5f && currentSwipe.y < 0.5f)
                 {
                     if (rightSwipe != null)
                     {
                         rightSwipe();
+                    }
+                }
+                else if(Mathf.Abs(currentSwipe.x) > 0.5f && Mathf.Abs(currentSwipe.y) > 0.5f)
+                {
+                    if(Mathf.Abs(currentSwipe.x) > Mathf.Abs(currentSwipe.y))
+                    {
+                        if(currentSwipe.x > 0.0f)
+                        {
+                            if (rightSwipe != null)
+                            {
+                                rightSwipe();
+                            }
+                        }
+                        else
+                        {
+                            if (leftSwipe != null)
+                            {
+                                leftSwipe();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (currentSwipe.y > 0.0f)
+                        {
+                            if (upSwipe != null)
+                            {
+                                upSwipe();
+                            }
+                        }
+                        else
+                        {
+                            if (downSwipe != null)
+                            {
+                                downSwipe();
+                            }
+                        }
                     }
                 }
             }
