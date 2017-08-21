@@ -20,6 +20,9 @@ namespace Fidget.TimingGame
         public UISprite spinBad;
 
 
+        public UISprite infoText;
+
+
         float speed = -100f;
 
         bool isBarSpin = false;
@@ -33,6 +36,7 @@ namespace Fidget.TimingGame
             timbBar.gameObject.SetActive(false);
             spinGood.gameObject.SetActive(false);
             spinBad.gameObject.SetActive(false);
+            infoText.gameObject.SetActive(false);
         }
 
         // Use this for initialization
@@ -159,16 +163,70 @@ namespace Fidget.TimingGame
         {
             spinGood.gameObject.SetActive(true);
             spinBad.gameObject.SetActive(false);
+
+
+            if(distance < 0.05f)
+            {
+                SetInfoText(4);
+            }
+            else if (distance < 0.1f)
+            {
+                SetInfoText(3);
+            }
+            else if (distance < 0.15f)
+            {
+                SetInfoText(2);
+            }
+            else
+            {
+                SetInfoText(1);
+            }
+
+            infoText.gameObject.SetActive(true);
+
             spinGood.GetComponent<TweenAlpha>().ResetToBeginning();
             spinGood.GetComponent<TweenAlpha>().PlayForward();
+
+            infoText.GetComponent<TweenAlpha>().ResetToBeginning();
+            infoText.GetComponent<TweenAlpha>().PlayForward();
         }
 
         public void ClickBad()
         {
             spinGood.gameObject.SetActive(false);
             spinBad.gameObject.SetActive(true);
+            SetInfoText(0);
+            infoText.gameObject.SetActive(true);
+
             spinBad.GetComponent<TweenAlpha>().ResetToBeginning();
             spinBad.GetComponent<TweenAlpha>().PlayForward();
+
+            infoText.GetComponent<TweenAlpha>().ResetToBeginning();
+            infoText.GetComponent<TweenAlpha>().PlayForward();
+        }
+
+        void SetInfoText(int grade)
+        {
+            if(grade == 0)
+            {
+                infoText.spriteName = "bad";
+            }
+            else if(grade == 1)
+            {
+                infoText.spriteName = "good";
+            }
+            else if (grade == 2)
+            {
+                infoText.spriteName = "great";
+            }
+            else if (grade == 3)
+            {
+                infoText.spriteName = "excellent";
+            }
+            else if (grade == 4)
+            {
+                infoText.spriteName = "perfect";
+            }
         }
     }
 }

@@ -53,6 +53,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 9d18feb49549e7b44b46851ee3e50414, type: 2}
   mSprites:
+  - name: bad
+    x: 1442
+    y: 976
+    width: 340
+    height: 137
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 190
+    paddingRight: 190
+    paddingTop: 295
+    paddingBottom: 288
   - name: bar@sprite
     x: 606
     y: 562
@@ -118,6 +131,45 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: excellent
+    x: 0
+    y: 31
+    width: 644
+    height: 121
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 38
+    paddingRight: 38
+    paddingTop: 305
+    paddingBottom: 294
+  - name: good
+    x: 1442
+    y: 1114
+    width: 434
+    height: 137
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 147
+    paddingRight: 139
+    paddingTop: 295
+    paddingBottom: 288
+  - name: great
+    x: 1442
+    y: 1252
+    width: 459
+    height: 132
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 129
+    paddingRight: 132
+    paddingTop: 300
+    paddingBottom: 288
   - name: navi_touch
     x: 606
     y: 667
@@ -144,6 +196,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: perfect
+    x: 1442
+    y: 1385
+    width: 554
+    height: 126
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 83
+    paddingRight: 83
+    paddingTop: 300
+    paddingBottom: 294
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
