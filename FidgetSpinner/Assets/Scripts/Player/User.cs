@@ -95,6 +95,19 @@ namespace Fidget.Player
             }
         }
 
+
+        public int HighScoreLoop
+        {
+            get
+            {
+                return putil.GetInt("highscoreloop");
+            }
+            set
+            {
+                putil.SetInt("highscoreloop", value);
+            }
+        }
+
         public int HighScoreGameSpin
         {
             get

@@ -151,9 +151,9 @@ namespace Fidget.TimingGame
             fidgetSpinner.OnSpinStop();
             timingCircle.SpinStop();
 
-            if (User.Instance.Score > User.Instance.HighScore)
+            if (User.Instance.Score > User.Instance.HighScoreLoop)
             {
-                User.Instance.HighScore = User.Instance.Score;
+                User.Instance.HighScoreLoop = User.Instance.Score;
                 resultPopup.BestSpriteOn();
             }
             else
@@ -162,7 +162,7 @@ namespace Fidget.TimingGame
             }
 
             resultPopup.scoreLabel.text = User.Instance.Score.ToString();
-            resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
+            resultPopup.highscoreLabel.text = User.Instance.HighScoreLoop.ToString();
             resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
             resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
             resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
