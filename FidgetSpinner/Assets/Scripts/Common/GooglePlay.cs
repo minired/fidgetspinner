@@ -293,6 +293,7 @@ namespace Fidget.Common
             {
                 if (isSaving)
                 {
+#if UNITY_ANDROID
                     // 스트링 데이터를 바이트로 바꿔서 메타 정보와 함꼐 저장한다
                     slot0.State = "Opened, now writing";
                     byte[] data = slot0.ToBytes();
@@ -305,6 +306,7 @@ namespace Fidget.Common
                     SavedGameMetadataUpdate updatedMetadata = builder.Build();
                     ((PlayGamesPlatform)Social.Active).SavedGame.CommitUpdate(
                         _game, updatedMetadata, data, SavedGameWritten);
+#endif
                 }
                 else
                 {
