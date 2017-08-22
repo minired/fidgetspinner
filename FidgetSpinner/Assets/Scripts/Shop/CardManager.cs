@@ -19,6 +19,7 @@ namespace Fidget.Shop
         private const int MAXLEVEL = 20;
         public int cardID;
         public List<UIAtlas> atlasList;
+        private ExpTable expTable = new ExpTable();
 
         // Coin
         public CoinUI coin = new CoinUI();
@@ -133,8 +134,7 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[4e2f9f]" + "BUY";
-                /*TODO: Setting Require Lv*/
-                requireLv.text = "[cab7e7]" + "Require Lv.";
+                requireLv.text = "[cab7e7]" + "Require Lv." + FidgetSpinnerData.fidgetSpinnerItems[cardID].requireLevel;
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_require@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin@sprite";
@@ -196,7 +196,7 @@ namespace Fidget.Shop
         void Start()
         {
             InitCard();
-
+            
             BuyUpdate();
         }
 
@@ -208,8 +208,9 @@ namespace Fidget.Shop
 
         public void BuyClicked()
         {
-            /*TODO: upgradeCost -> buyCost*/
-            if (buyState == State.NONE && currentCoin >= FidgetSpinnerData.fidgetSpinnerItems[cardID].price)
+            int playerLevel = expTable.GetLevel(User.Instance.Exp);
+
+            if (buyState == State.NONE && currentCoin >= FidgetSpinnerData.fidgetSpinnerItems[cardID].price && playerLevel >= FidgetSpinnerData.fidgetSpinnerItems[cardID].requireLevel)
             {
                 currentCoin -= FidgetSpinnerData.fidgetSpinnerItems[cardID].price;
                 coin.SetCoinLabel(currentCoin);
