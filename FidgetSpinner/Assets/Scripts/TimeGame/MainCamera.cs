@@ -341,12 +341,13 @@ namespace Fidget.TimeGame
                     resultPopup.BestSpriteOff();
                 }
 
-                resultPopup.scoreLabel.text = User.Instance.Score.ToString();
+                //resultPopup.scoreLabel.text = User.Instance.Score.ToString();
                 resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
                 resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
                 resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
                 resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
+                resultPopup.ShowScore(User.Instance.Score);
                 resultPopup.BottomBtnAnimation();
                 return;
             }

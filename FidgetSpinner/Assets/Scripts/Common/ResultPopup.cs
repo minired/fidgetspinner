@@ -50,6 +50,28 @@ namespace Fidget.Common
         }
 
 
+
+        public void ShowScore(int score)
+        {
+            StartCoroutine(ShowScoreCoroutine(score));
+        }
+
+        IEnumerator ShowScoreCoroutine(int score)
+        {
+            int temp = 0;
+            while(true)
+            {
+                if (temp >= score)
+                {
+                    scoreLabel.text = score.ToString();
+                    break;
+                }
+                scoreLabel.text = temp.ToString();
+                temp += 345;
+                yield return new WaitForFixedUpdate();
+            }
+        }
+
         public void BestSpriteOn()
         {
             bestSprite.gameObject.SetActive(true);

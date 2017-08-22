@@ -73,12 +73,13 @@ namespace Fidget.GameSpin
                 }
                 User.Instance.Coin += (ulong)User.Instance.ScoreGameSpin * 2;
 
-                resultPopup.scoreLabel.text = User.Instance.ScoreGameSpin.ToString();
+                //resultPopup.scoreLabel.text = User.Instance.ScoreGameSpin.ToString();
                 resultPopup.highscoreLabel.text = User.Instance.HighScoreGameSpin.ToString();
                 resultPopup.coinGainLabel.text = "COIN" + User.Instance.ScoreGameSpin.ToString();
                 resultPopup.coinMoreLabel.text = (User.Instance.ScoreGameSpin * 2).ToString();
                 resultPopup.coinAdLabel.text = (User.Instance.ScoreGameSpin * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
+                resultPopup.ShowScore(User.Instance.ScoreGameSpin);
                 resultPopup.BottomBtnAnimation();
                 return;
             }
