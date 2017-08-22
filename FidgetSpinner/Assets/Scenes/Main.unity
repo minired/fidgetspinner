@@ -683,6 +683,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 444384719}
   m_Script: {fileID: 11500000, guid: fe532dcecd50d0242ba6992f2642bae4, type: 3}
+--- !u!1001 &1080019743
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.020118449
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4511299035991670, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1153844318
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionPopUp: {fileID: 1077186678}
+  gameAudio: {fileID: 1424391227}
 --- !u!1 &1295523081
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1190,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4045103641674874, guid: 75adaa0619d53814880f08fa6d8c2a8c,
     type: 2}
   m_PrefabInternal: {fileID: 359850261}
+--- !u!114 &1424391227 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114496587864148584, guid: a84199c0f2eed5d47b138ef05953d34e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1080019743}
+  m_Script: {fileID: 11500000, guid: 864da1353add4dc4db6de16a4d74ef47, type: 3}
 --- !u!114 &1433478844 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114006139928042842, guid: e6cb6f90bd155a441a8c0d50201fb89c,

@@ -9,6 +9,8 @@ namespace Fidget.Player
     {
         PlayerPrefsUtil putil;
 
+        bool isSound = true;
+
         protected User()
         {
             putil = new PlayerPrefsUtil();
@@ -209,9 +211,29 @@ namespace Fidget.Player
             set
             {
                 if (value)
+                {
                     putil.SetInt("sound", 1);
+                    isSound = true;
+                }
                 else
+                {
                     putil.SetInt("sound", 0);
+                    isSound = false;
+                }
+                
+            }
+        }
+
+
+        public bool IsSound
+        {
+            get
+            {
+                return isSound;
+            }
+            set
+            {
+                isSound = value;
             }
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fidget.Common;
 
 namespace Fidget.Main
 {
@@ -9,6 +10,8 @@ namespace Fidget.Main
     {
 
         public OptionPopup optionPopUp;
+
+        public GameAudio gameAudio;
         // Use this for initialization
         void Start()
         {
@@ -23,16 +26,19 @@ namespace Fidget.Main
 
         public void MoveGameScene()
         {
+            gameAudio.ButtonBeepPop();
             SceneManager.LoadScene("Game");
         }
 
         public void MoveGameSpinScene()
         {
+            gameAudio.ButtonBeepPop();
             SceneManager.LoadScene("GameSpin");
         }
 
         public void MoveTimingSpinScene()
         {
+            gameAudio.ButtonBeepPop();
             SceneManager.LoadScene("TimingGame");
         }
 
