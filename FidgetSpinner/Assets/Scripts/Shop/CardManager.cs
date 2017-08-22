@@ -62,7 +62,10 @@ namespace Fidget.Shop
 
             nameLabel.text = FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
             spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
-            levelLabel.text = "Lv." + spriteLevel;
+            if (spriteLevel == 0)
+                levelLabel.text = "Lv.1";
+            else
+                levelLabel.text = "Lv." + spriteLevel;
             upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
             upgradeLabel.text = upgradeCost.ToString("n0");
 
