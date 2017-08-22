@@ -71,7 +71,9 @@ namespace Fidget.Common
 
         public void OnRank()
         {
+#if UNITY_ANDROID
             PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");
+#endif
         }
     }
 }

@@ -26,15 +26,18 @@ namespace Fidget.Common
         {
             if (GameInfo.googlePlayInit)
                 return;
-            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder()
-               .Build();
+
+#if UNITY_ANDROID 
+
+            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().RequestEmail().RequestServerAuthCode(false).RequestIdToken().Build();
             PlayGamesPlatform.InitializeInstance(config);
-            
+
             // recommended for debugging:
             PlayGamesPlatform.DebugLogEnabled = false;
 
             // Activate the Google Play Games platform
             PlayGamesPlatform.Activate();
+#endif
             GameInfo.googlePlayInit = true;
         }
 
@@ -68,8 +71,8 @@ namespace Fidget.Common
             Social.localUser.Authenticate((bool success) =>
             {
                 // handle success or failure
-                if (success)
-                    User.Instance.GoogleId = Social.localUser.id;
+                //if (success)
+                //    User.Instance.GoogleId = Social.localUser.id;
                 //if (success && !GameInfo.IsIOS)
                 //    CheckAllAchievemet();
             });
@@ -229,8 +232,10 @@ namespace Fidget.Common
                 return;
 
             isSaving = true;
+#if UNITY_ANDROID
             ((PlayGamesPlatform)Social.Active).SavedGame.ShowSelectSavedGameUI(
                 "저장할 슬롯을 선택하세요.", 2, true, true, SavedGameSelected);
+#endif
         }
 
 
@@ -240,8 +245,10 @@ namespace Fidget.Common
                 return;
 
             isSaving = false;
+#if UNITY_ANDROID
             ((PlayGamesPlatform)Social.Active).SavedGame.ShowSelectSavedGameUI(
                 "로드할 슬롯을 선택하세요.", 2, false, false, SavedGameSelected);
+#endif
         }
 
         public void SavedGameSelected(SelectUIStatus _status, ISavedGameMetadata _game)
@@ -264,12 +271,14 @@ namespace Fidget.Common
                     // 불러오기
                     slot0.State = "Loading from " + _filename;
                 }
+#if UNITY_ANDROID
                 // 파일을 읽고 쓰기 전에 열어야만 한다
                 ((PlayGamesPlatform)Social.Active).SavedGame
                     .OpenWithAutomaticConflictResolution(_filename,
                             DataSource.ReadCacheOrNetwork,
                                 ConflictResolutionStrategy.UseLongestPlaytime,
                                 SavedGameOpened);
+#endif
             }
             else
             {
@@ -299,10 +308,12 @@ namespace Fidget.Common
                 }
                 else
                 {
+#if UNITY_ANDROID
                     // 우선 파일을 읽어온다
                     slot0.State = "Opened, reading...";
                     ((PlayGamesPlatform)Social.Active).SavedGame
                         .ReadBinaryData(_game, SavedGameLoaded);
+#endif
                 }
             }
             else
