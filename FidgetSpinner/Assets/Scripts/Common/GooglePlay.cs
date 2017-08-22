@@ -27,7 +27,7 @@ namespace Fidget.Common
             if (GameInfo.googlePlayInit)
                 return;
 
-#if UNITY_ANDROID 
+//#if UNITY_ANDROID 
 
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().RequestEmail().RequestServerAuthCode(false).RequestIdToken().Build();
             PlayGamesPlatform.InitializeInstance(config);
@@ -37,7 +37,7 @@ namespace Fidget.Common
 
             // Activate the Google Play Games platform
             PlayGamesPlatform.Activate();
-#endif
+//#endif
             GameInfo.googlePlayInit = true;
         }
 
@@ -47,7 +47,7 @@ namespace Fidget.Common
             if (!GameInfo.IsIOS)
             {
                 Init();
-                //Login();
+                Login();
                 //UpdateCheckAchievements();
             }
         }
@@ -68,8 +68,10 @@ namespace Fidget.Common
             if (isTryLogin)
                 return;
             isTryLogin = true;
+            Debug.Log("Login Try");
             Social.localUser.Authenticate((bool success) =>
             {
+                Debug.Log("Login Success");
                 // handle success or failure
                 //if (success)
                 //    User.Instance.GoogleId = Social.localUser.id;

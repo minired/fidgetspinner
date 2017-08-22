@@ -10,7 +10,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Nexters
   productName: FidgetSpinner
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -217,8 +217,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/fidgetspinner/Keystore/fidget.keystore
+  AndroidKeyaliasName: fidgetspinner
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
