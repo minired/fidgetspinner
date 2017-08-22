@@ -754,7 +754,6 @@ GameObject:
   - component: {fileID: 583514558}
   - component: {fileID: 583514557}
   - component: {fileID: 583514556}
-  - component: {fileID: 583514555}
   - component: {fileID: 583514554}
   m_Layer: 5
   m_Name: Panel
@@ -790,20 +789,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {x: 0, y: 0, z: 0}
   strength: 10
---- !u!114 &583514555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 583514552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9dc6087cc6342a44b136317cb86d7be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentPositionX: 0
-  currentPositionY: 0
-  panel: {fileID: 583514554}
 --- !u!54 &583514556
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1603,6 +1588,10 @@ Prefab:
       propertyPath: coin
       value: 
       objectReference: {fileID: 360434385}
+    - target: {fileID: 0}
+      propertyPath: autoResizeBoxCollider
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ac693cbfe04b1a45abd327d2357dcc6, type: 2}
   m_IsPrefabParent: 0
