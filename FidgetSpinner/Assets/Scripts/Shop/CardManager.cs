@@ -31,10 +31,6 @@ namespace Fidget.Shop
         public UILabel levelLabel;
         private int spriteLevel;
 
-        // Fidget Location
-        private int currentLocation;
-        private int previousLocation;
-
         // Button
         private State buyState;
         public UISprite buyButton;
@@ -91,11 +87,6 @@ namespace Fidget.Shop
                 upgradeLabel.text = upgradeCost.ToString("n0");
             }
 
-            speedGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed * 0.01f;
-            hasteGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste * 0.01f;
-            dampingGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping * 0.01f;
-            coinGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin * 0.01f;
-
             if (spriteLevel < MAXLEVEL)
             {
                 speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].speed;
@@ -109,6 +100,56 @@ namespace Fidget.Shop
                 hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste.ToString();
                 dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping.ToString();
                 coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin.ToString();
+            }
+
+            SetGaugeChanger();
+        }
+
+        public void SetGaugeChanger()
+        {
+            StopCoroutine(GaugeChanger());
+            StartCoroutine(GaugeChanger());
+        }
+
+        IEnumerator GaugeChanger()
+        {
+            float targetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed * 0.01f;
+            float targetHaste = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste * 0.01f;
+            float targetDamping = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping * 0.01f;
+            float targetCoin = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin * 0.01f;
+
+            speedGauge.fillAmount = 0.0f;
+            hasteGauge.fillAmount = 0.0f;
+            dampingGauge.fillAmount = 0.0f;
+            coinGauge.fillAmount = 0.0f;
+
+            bool proc = true;
+
+            while (proc)
+            {
+                proc = false;
+                if (targetSpeed > speedGauge.fillAmount)
+                {
+                    speedGauge.fillAmount += 0.01f;
+                    proc = true;
+                }
+                if (targetHaste > hasteGauge.fillAmount)
+                {
+                    hasteGauge.fillAmount += 0.01f;
+                    proc = true;
+                }
+                if (targetDamping > dampingGauge.fillAmount)
+                {
+                    dampingGauge.fillAmount += 0.01f;
+                    proc = true;
+                }
+                if (targetCoin > coinGauge.fillAmount)
+                {
+                    coinGauge.fillAmount += 0.01f;
+                    proc = true;
+                }
+
+                yield return new WaitForSeconds(0.01f);
             }
         }
 
@@ -222,8 +263,7 @@ namespace Fidget.Shop
             /*TODO: Do optimization*/
             BuyUpdate();
         }
-
-
+        
         public void BuyClicked()
         {
             int playerLevel = expTable.GetLevel(User.Instance.Exp);

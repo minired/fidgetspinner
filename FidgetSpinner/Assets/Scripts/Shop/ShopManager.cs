@@ -21,6 +21,7 @@ namespace Fidget.Shop
 
         public Fidget.Common.BackUI backUI;
 
+        public List<CardManager> cardList;
 
         void UpdateBackground()
         {
@@ -40,9 +41,12 @@ namespace Fidget.Shop
         void Update()
         {
             currentSpinner = -(int)(Mathf.Round(springPanel.target.x) / GAP);
-            
+
             if (previousSpinner != currentSpinner)
+            {
                 UpdateBackground();
+                cardList[currentSpinner].SetGaugeChanger();
+            }
 
             previousSpinner = currentSpinner;
         }
