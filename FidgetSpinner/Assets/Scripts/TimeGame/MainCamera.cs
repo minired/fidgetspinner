@@ -66,6 +66,7 @@ namespace Fidget.TimeGame
             SetFidgetSpinner();
             SetLevelLabel();
             SetScoreLabel();
+            timeLabel.text = "20";
         }
 
         void SetFidgetSpinnerDetail()
@@ -126,6 +127,7 @@ namespace Fidget.TimeGame
             coinAnimation.OnPlayAnimation();
             moveHandIcon.AnimationOn();
             fidgetSpinner.InitPosition();
+            timeLabel.text = "20";
         }
 
         private void SwipeMouse_downSwipe()

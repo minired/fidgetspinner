@@ -54,6 +54,7 @@ namespace Fidget.TimingGame
         {
             Init();
             InitGame();
+            timeLabel.text = "30";
         }
 
 
@@ -90,6 +91,7 @@ namespace Fidget.TimingGame
             coinAnimation.OnPlayAnimation();
             clickIcon.SetActive(true);
             fidgetSpinner.InitPosition();
+            timeLabel.text = "30";
         }
 
         void InitGame()
