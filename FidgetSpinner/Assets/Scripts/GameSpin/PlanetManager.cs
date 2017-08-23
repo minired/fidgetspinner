@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fidget.Common;
 
 namespace Fidget.GameSpin
 {
@@ -16,6 +17,10 @@ namespace Fidget.GameSpin
         public Combo combo;
         public Fever fever;
         public Combo_Circle circle;
+        public CoinAnimation coinAnimation;
+
+        public GameObject resultPopup;
+        public GameObject tabLabel;
 
         public Vector3[] leftPosition;      // 행성 자리 지정
         public Vector3[] rightPosition;
@@ -228,9 +233,28 @@ namespace Fidget.GameSpin
             }
         }
 
-        public void LoadGameSpin()
+        public void RestartGame()
         {
-            SceneManager.LoadScene("GameSpin");
+            resultPopup.SetActive(false);
+            timer.GetComponent<UISprite>().fillAmount = 1f;
+            timer.flowedTime = 0f;
+            timer.isStarted = false;
+            timer.isGameOver = false;
+            timer.deltaAmount = (timer.damping * 0.00001f);
+            timer.harderTime = 4f;
+            spinner.isStarted = false;
+            tabLabel.SetActive(true);
+            tabLabel.GetComponent<TabToStart>().Init();
+            score.Init();
+            score.ResetBonus();
+            combo.Fail();
+            for(int i = 0; i < 10; i++)
+            {
+                Destroy(leftPlanets[i]);
+                Destroy(rightPlanets[i]);
+            }
+            Init();
+            coinAnimation.OnPlayAnimation();
         }
 
         public void FeverOff()
@@ -238,7 +262,7 @@ namespace Fidget.GameSpin
             isFever = false;
         }
 
-        void Start()
+        void Init()
         {
             buttomNum = 0;
 
@@ -270,7 +294,11 @@ namespace Fidget.GameSpin
             }
             rightPlanets[0].transform.localScale *= sizeUp;      // 크기 지정
             leftPlanets[0].transform.localScale *= sizeUp;
+        }
 
+        void Start()
+        {
+            Init();
         }
 
         // Update is called once per frame

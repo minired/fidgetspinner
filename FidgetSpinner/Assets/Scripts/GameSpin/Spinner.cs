@@ -16,7 +16,7 @@ namespace Fidget.GameSpin
 
         public float fixedSpeed;
         public float relativeSpeed;
-        float fidgetSpeed;
+        public float fidgetSpeed;
 
         int fidgetIndex;
 
@@ -32,6 +32,7 @@ namespace Fidget.GameSpin
             GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[fidgetIndex].atlasIndex];
             GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[fidgetIndex].spriteName;
             fidgetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, 1].speed;
+            fixedSpeed += (fidgetSpeed * 0.7f);
         }
 
         void Update()

@@ -14,20 +14,25 @@ namespace Fidget.GameSpin
         public CoinUI coinUI;
 
         public bool isStarted;
-        bool isGameOver;
+        public bool isGameOver;
 
         public float deltaAmount;
         public float successAmount;
         public float brokenAmount;
         public float harderTime;
-        float coin;
-        float haste;
-        float damping;
-        float flowedTime;
+        public float flowedTime;
+        public float coin;
+        public float haste;
+        public float damping;
 
         int fidgetIndex;
         int level;
         
+        void Awake()
+        {
+            User.Instance.SetFidgetSpinnerLevel(0, 1);
+        }
+
         void Start()
         {
             flowedTime = 0f;
@@ -36,11 +41,11 @@ namespace Fidget.GameSpin
             fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
 
-            //haste = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].haste;
-            //damping = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].damping;
+            haste = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].haste;
+            damping = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].damping;
 
-            //successAmount += (haste * 0.002f);
-            //deltaAmount -= (damping * 0.000001f);
+            successAmount += (haste * 0.002f);
+            deltaAmount -= (damping * 0.000015f);
         }
 
         // Update is called once per frame
@@ -54,7 +59,7 @@ namespace Fidget.GameSpin
             if (flowedTime >= harderTime)
             {
                 Harder();
-                harderTime += harderTime;
+                harderTime += 4f;
             }
 
             if (this.GetComponent<UISprite>().fillAmount <= 0f)
@@ -90,7 +95,7 @@ namespace Fidget.GameSpin
 
         public void Harder()
         {
-            deltaAmount *= 1.3f;
+            deltaAmount *= 1.4f;
         }
 
         public void Success()

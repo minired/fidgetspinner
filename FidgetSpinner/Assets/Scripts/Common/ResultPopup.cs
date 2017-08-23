@@ -31,7 +31,7 @@ namespace Fidget.Common
         void Start()
         {
         }
-
+        
         public void BottomBtnAnimation()
         {
             btnBack.transform.localPosition = new Vector3(btnBack.transform.localPosition.x, -720.0f, btnBack.transform.localPosition.z);
@@ -67,7 +67,7 @@ namespace Fidget.Common
                     break;
                 }
                 scoreLabel.text = temp.ToString();
-                temp += 345;
+                temp += 289;
                 yield return new WaitForFixedUpdate();
             }
         }

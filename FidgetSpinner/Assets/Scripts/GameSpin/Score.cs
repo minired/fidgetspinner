@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Player;
+using Fidget.Data;
+using Fidget.Common;
 
 namespace Fidget.GameSpin
 {
@@ -10,12 +12,19 @@ namespace Fidget.GameSpin
         public Spinner spinner;
         public UILabel label;
         public UILabel bonusLabel;
+        public UILabel levelLabel;
+        public Timer timer;
+        ExpTable expTable = new ExpTable();
 
         int bonusLevel;
+        int level;
 
         float score;
         float scoringTime;
         float increasingAmount;
+        float temp;
+        float fidgetSpeed;
+        float fidgetCoin;
         public float initialAmount;
         public float fixedSpeed;
         public float relativeSpeed;
@@ -43,10 +52,10 @@ namespace Fidget.GameSpin
         {
             score += increasingAmount;
             label.text = score.ToString();
+            User.Instance.Exp += (int)(increasingAmount * 0.1f);
         }
 
-        // Use this for initialization
-        void Start()
+        public void Init()
         {
             bonusLevel = 1;
             score = 0f;
@@ -54,17 +63,35 @@ namespace Fidget.GameSpin
             label.text = score.ToString();
         }
 
+        // Use this for initialization
+        void Start()
+        {
+            int fidgetIndex = User.Instance.EquipIndex;
+            level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
+            fidgetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].speed;
+            fidgetCoin = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].coin;
+            fixedSpeed += (fidgetSpeed * 0.08f);
+            initialAmount += fidgetCoin * 0.08f;
+            Init();
+            User.Instance.Coin = 200000000;
+        }
+
         // Update is called once per frame
         void Update()
         {
+            if (!timer.isStarted)
+                return;
             scoringTime += Time.deltaTime;
             relativeSpeed = spinner.relativeSpeed;
             if(scoringTime > 0.1f)
             {
-                score += (relativeSpeed * fixedSpeed);
+                temp = (relativeSpeed * fixedSpeed);
+                score += temp;
                 label.text = ((int)score).ToString();
+                User.Instance.Exp += (int)(temp * 0.2f);
+                level = expTable.GetLevel(User.Instance.Exp);
+                levelLabel.text = "Lv." + level.ToString();
             }
-
         }
     }
 }

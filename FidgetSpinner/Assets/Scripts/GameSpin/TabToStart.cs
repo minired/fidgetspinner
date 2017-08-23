@@ -11,11 +11,13 @@ namespace Fidget.GameSpin
         public Timer timer;
         public Spinner spinner;
 
-        IEnumerator FadeOut()
+        public IEnumerator FadeOut()
         {
-            while (tabLabel.alpha > 0f)
+            while (true)
             {
                 tabLabel.alpha -= 0.03f;
+                if (tabLabel.alpha <= 0f)
+                    break;
                 yield return new WaitForSeconds(0.01f);
             }
             StartCoroutine(FadeIn());
@@ -23,9 +25,11 @@ namespace Fidget.GameSpin
 
         IEnumerator FadeIn()
         {
-            while (tabLabel.alpha < 1f)
+            while (true)
             {
                 tabLabel.alpha += 0.03f;
+                if (tabLabel.alpha >= 1f)
+                    break;
                 yield return new WaitForSeconds(0.01f);
             }
             StartCoroutine(FadeOut());
@@ -38,10 +42,15 @@ namespace Fidget.GameSpin
             gameObject.SetActive(false);
         }
 
+        public void Init()
+        {
+            StartCoroutine(FadeOut());
+        }
+
         // Use this for initialization
         void Start()
         {
-            StartCoroutine(FadeOut());
+            Init();
         }
 
 
