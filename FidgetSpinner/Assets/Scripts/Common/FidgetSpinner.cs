@@ -240,10 +240,12 @@ namespace Fidget.Common
         }
 
         public void SpeedUp(float fact)
-        { 
-
+        {
             if (speed > maxSpeed)
+            {
+                speed = maxSpeed;
                 return;
+            }
             speed += fact;
         }
 
@@ -296,46 +298,37 @@ namespace Fidget.Common
             float result = 0.0f;
             if(speed < 100)
             {
-                result = - 0.6f;
+                result = - 0.5f;
             }
             else if (speed < 200)
             {
-                result = -0.9f;
+                result = -0.6f;
             }
             else if(speed < 300)
             {
-                result = -1.0f;
+                result = -0.7f;
             }
             else if (speed < 400)
             {
-                result = -1.2f;
+                result = -0.8f;
             }
             else if(speed < 500)
             {
-                result = -1.4f;
+                result = -0.9f;
             }
             else if (speed < 600)
             {
-                result = -1.6f;
+                result = -1.0f;
             }
             else if (speed < 700)
             {
-                result = -1.8f;
+                result = -1.1f;
             }
             else
             {
-                result = -2.0f;
+                result = -1.2f;
             }
 
-
-            if (speed > 100)
-            {
-                result -= damping;
-            }
-            if (result > 0.0f)
-            {
-                result = 0.0f;
-            }
             return result;
 
         }

@@ -21,6 +21,7 @@ namespace Fidget.Shop
 
         public Fidget.Common.BackUI backUI;
 
+        public List<CardManager> cardList;
 
         void UpdateBackground()
         {
@@ -34,15 +35,18 @@ namespace Fidget.Shop
             springPanel.transform.localPosition = new Vector3(-GAP * currentSpinner, 0, 0);
             uiPanel.clipOffset = new Vector2(GAP * currentSpinner, 0);
 
-            previousSpinner = 0;
+            previousSpinner = -1;
         }
 
         void Update()
         {
             currentSpinner = -(int)(Mathf.Round(springPanel.target.x) / GAP);
-            
+
             if (previousSpinner != currentSpinner)
+            {
                 UpdateBackground();
+                cardList[currentSpinner].SetGaugeChanger();
+            }
 
             previousSpinner = currentSpinner;
         }

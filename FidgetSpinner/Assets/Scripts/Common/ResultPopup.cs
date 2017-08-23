@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 namespace Fidget.Common
 {
     public class ResultPopup : MonoBehaviour
@@ -94,7 +95,7 @@ namespace Fidget.Common
         public void OnRank()
         {
 #if UNITY_ANDROID
-            PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");
+            Social.ShowLeaderboardUI();
 #endif
         }
     }

@@ -29,7 +29,7 @@ namespace Fidget.Common
 
 //#if UNITY_ANDROID 
 
-            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().RequestEmail().RequestServerAuthCode(false).RequestIdToken().Build();
+            PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
 
             // recommended for debugging:
@@ -71,10 +71,17 @@ namespace Fidget.Common
             Debug.Log("Login Try");
             Social.localUser.Authenticate((bool success) =>
             {
-                Debug.Log("Login Success");
                 // handle success or failure
-                //if (success)
-                //    User.Instance.GoogleId = Social.localUser.id;
+                if (success)
+                {
+                    Debug.Log("Login Success1");
+                    User.Instance.GoogleId = Social.localUser.id;
+                    Debug.Log("Login Success2");
+                }
+                else
+                {
+                    Debug.Log("Login Fail");
+                }
                 //if (success && !GameInfo.IsIOS)
                 //    CheckAllAchievemet();
             });
