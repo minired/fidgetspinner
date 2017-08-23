@@ -282,20 +282,7 @@ namespace Fidget.TimeGame
             moveHandIcon.AnimationOn();
         }
 
-        bool IsButtonArea(Vector3 pos)
-        {
-            if (pos.x < 120.0f  && pos.y < 120.0f)
-            {
-                return true;
-            }
-
-            if (pos.x > 380.0f && pos.y < 120.0f)
-            {
-                return true;
-            }
-
-            return false;
-        }
+      
    
 
 
@@ -306,10 +293,7 @@ namespace Fidget.TimeGame
             {
                 if (!isGameStart && !resultPopup.gameObject.activeInHierarchy)
                 {
-                    if (IsButtonArea(Input.mousePosition))
-                    {
-                        return;
-                    }
+                    
                     //if (Advertisement.isShowing)
                     //{
                     //    return;
