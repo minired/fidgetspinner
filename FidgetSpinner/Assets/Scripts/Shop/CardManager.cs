@@ -17,7 +17,6 @@ namespace Fidget.Shop
         }
 
         private const int MAXLEVEL = 20;
-        public int cardID;
         public List<UIAtlas> atlasList;
         private ExpTable expTable = new ExpTable();
 
@@ -26,10 +25,15 @@ namespace Fidget.Shop
         private ulong currentCoin;
 
         // Fidget Base Data
+        public int cardID;
         public UISprite fidgetSprite;
         public UILabel nameLabel;
         public UILabel levelLabel;
         private int spriteLevel;
+
+        // Fidget Location
+        private int currentLocation;
+        private int previousLocation;
 
         // Button
         private State buyState;
@@ -62,8 +66,20 @@ namespace Fidget.Shop
             fidgetSprite.GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[cardID].spriteName;
 
             nameLabel.text = FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
-            spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
+
+            if (cardID == 0 && User.Instance.GetFidgetSpinnerLevel(cardID) == 0)
+            {
+                User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
+                buyState = State.EQUIPED;
+                User.Instance.EquipIndex = cardID;
+            }
+            else
+            {
+                spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
+            }
+
             upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
+
             if (spriteLevel == 0)
             {
                 levelLabel.text = "Lv.1";
@@ -104,7 +120,7 @@ namespace Fidget.Shop
                 buyState = State.EQUIPED;
             else
                 buyState = State.BUYED;
-
+            
             if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL && buyState == State.BUYED)
             {
                 buyButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
@@ -195,6 +211,7 @@ namespace Fidget.Shop
 
         void Start()
         {
+            //PlayerPrefs.DeleteAll();
             InitCard();
             
             BuyUpdate();
@@ -205,6 +222,7 @@ namespace Fidget.Shop
             /*TODO: Do optimization*/
             BuyUpdate();
         }
+
 
         public void BuyClicked()
         {
