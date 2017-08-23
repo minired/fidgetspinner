@@ -73,7 +73,6 @@ namespace Fidget.GameSpin
             fixedSpeed += (fidgetSpeed * 0.08f);
             initialAmount += fidgetCoin * 0.08f;
             Init();
-            User.Instance.Coin = 200000000;
         }
 
         // Update is called once per frame
