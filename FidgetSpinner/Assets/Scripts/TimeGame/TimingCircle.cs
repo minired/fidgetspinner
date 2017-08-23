@@ -159,6 +159,30 @@ namespace Fidget.TimingGame
             particleObj2.GetComponent<DG.Tweening.DOTweenPath>().DOPlay();
         }
 
+
+
+        public float GetGoodBonus()
+        {
+            float result = 1.0f;
+            if (distance < 0.05f)
+            {
+                result = 2.0f;
+            }
+            else if (distance < 0.1f)
+            {
+                result = 1.5f;
+            }
+            else if (distance < 0.15f)
+            {
+                result = 1.2f;
+            }
+            else
+            {
+                result = 1.0f;
+            }
+            return result;
+        }
+
         public void ClickGood()
         {
             spinGood.gameObject.SetActive(true);

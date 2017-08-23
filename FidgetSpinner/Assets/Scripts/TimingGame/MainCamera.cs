@@ -202,7 +202,7 @@ namespace Fidget.TimingGame
             if (timingCircle.IsGoodPoint())
             {
                 timingCircle.ClickGood();
-                fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
+                fidgetSpinner.SpeedUp(fidgetSpinner.Haste * timingCircle.GetGoodBonus());
             }
             else
             {
