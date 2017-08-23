@@ -66,6 +66,7 @@ namespace Fidget.TimeGame
             SetFidgetSpinner();
             SetLevelLabel();
             SetScoreLabel();
+            timeLabel.text = "20";
         }
 
         void SetFidgetSpinnerDetail()
@@ -126,6 +127,7 @@ namespace Fidget.TimeGame
             coinAnimation.OnPlayAnimation();
             moveHandIcon.AnimationOn();
             fidgetSpinner.InitPosition();
+            timeLabel.text = "20";
         }
 
         private void SwipeMouse_downSwipe()
@@ -282,20 +284,7 @@ namespace Fidget.TimeGame
             moveHandIcon.AnimationOn();
         }
 
-        bool IsButtonArea(Vector3 pos)
-        {
-            if (pos.x < 120.0f  && pos.y < 120.0f)
-            {
-                return true;
-            }
-
-            if (pos.x > 380.0f && pos.y < 120.0f)
-            {
-                return true;
-            }
-
-            return false;
-        }
+      
    
 
 
@@ -306,10 +295,7 @@ namespace Fidget.TimeGame
             {
                 if (!isGameStart && !resultPopup.gameObject.activeInHierarchy)
                 {
-                    if (IsButtonArea(Input.mousePosition))
-                    {
-                        return;
-                    }
+                    
                     //if (Advertisement.isShowing)
                     //{
                     //    return;
