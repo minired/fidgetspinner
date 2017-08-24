@@ -240,7 +240,7 @@ namespace Fidget.GameSpin
             timer.flowedTime = 0f;
             timer.isStarted = false;
             timer.isGameOver = false;
-            timer.deltaAmount = (timer.damping * 0.00001f);
+            timer.deltaAmount = 0.0022f - (timer.damping * 0.00001f);
             timer.harderTime = 4f;
             spinner.isStarted = false;
             tabLabel.SetActive(true);

@@ -89,8 +89,9 @@ namespace Fidget.GameSpin
                 return;
             }
             
-                this.GetComponent<UISprite>().fillAmount -= deltaAmount;
-                flowedTime += Time.deltaTime;
+            this.GetComponent<UISprite>().fillAmount -= deltaAmount;
+            flowedTime += Time.deltaTime;
+            Debug.Log(deltaAmount);
         }
 
         public void Harder()
