@@ -90,6 +90,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114539107039837760, guid: ad5d578eb32b947449e15b6a7c04d589, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: circle2
   mFillCenter: 1

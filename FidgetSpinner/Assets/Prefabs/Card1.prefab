@@ -1350,11 +1350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abf48968b418fd438f485b6c22ae7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardID: 0
   atlasList:
   - {fileID: 114867095190658084, guid: 001afd7e4f1d17241ad89a1436ef7a01, type: 2}
   - {fileID: 114444717121040958, guid: ec589d168087c004e9c51dd7633907ce, type: 2}
   coin: {fileID: 0}
+  cardID: 0
   fidgetSprite: {fileID: 114316420062275150}
   nameLabel: {fileID: 114181873007326464}
   levelLabel: {fileID: 114225255605714954}
@@ -1490,7 +1490,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_inactive_equip copy 2@sprite
   mFillCenter: 1
 --- !u!114 &114148998728607260
@@ -1611,8 +1611,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 2_new@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_new@sprite
   mFillCenter: 1
 --- !u!114 &114181873007326464
 MonoBehaviour:
@@ -1800,7 +1800,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: spiner@sprite
   mFillCenter: 1
 --- !u!114 &114225255605714954
@@ -1921,8 +1921,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 3_new@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_new@sprite
   mFillCenter: 1
 --- !u!114 &114308860904007042
 MonoBehaviour:
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_inactive_equip copy 2@sprite
   mFillCenter: 1
 --- !u!114 &114316420062275150
@@ -2080,7 +2080,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_active_equip@sprite
   mFillCenter: 1
 --- !u!114 &114342457115676960
@@ -2133,7 +2133,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_require@sprite
   mFillCenter: 1
 --- !u!114 &114349545887736992
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: 1_bg@sprite
   mFillCenter: 1
 --- !u!114 &114459172516235206
@@ -2458,7 +2458,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3016
+  startingRenderQueue: 3020
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -2518,7 +2518,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: ic_coin@sprite
   mFillCenter: 1
 --- !u!114 &114593949261773102
@@ -2600,7 +2600,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: ic_coin copy 2@sprite
   mFillCenter: 1
 --- !u!114 &114634480071415836
@@ -2721,8 +2721,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 3_original@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_original@sprite
   mFillCenter: 1
 --- !u!114 &114712739034189268
 MonoBehaviour:
@@ -2774,8 +2774,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 2_bg@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_bg@sprite
   mFillCenter: 1
 --- !u!114 &114738757017770822
 MonoBehaviour:
@@ -2895,8 +2895,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 4_original@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_original@sprite
   mFillCenter: 1
 --- !u!114 &114759645836360864
 MonoBehaviour:
@@ -2948,7 +2948,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: bg_box@sprite
   mFillCenter: 1
 --- !u!114 &114780525335480294
@@ -3001,8 +3001,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 4_new@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_new@sprite
   mFillCenter: 1
 --- !u!114 &114785476174495654
 MonoBehaviour:
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: 1_new@sprite
   mFillCenter: 1
 --- !u!114 &114808135632953608
@@ -3107,7 +3107,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_buy@sprite
   mFillCenter: 1
 --- !u!114 &114838480782376504
@@ -3160,7 +3160,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: ic_coin copy@sprite
   mFillCenter: 1
 --- !u!114 &114839893518601658
@@ -3213,8 +3213,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 3_bg@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_bg@sprite
   mFillCenter: 1
 --- !u!114 &114840800870795112
 MonoBehaviour:
@@ -3334,8 +3334,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 2_original@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_original@sprite
   mFillCenter: 1
 --- !u!114 &114875388590676696
 MonoBehaviour:
@@ -3455,7 +3455,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_active_equip@sprite
   mFillCenter: 1
 --- !u!114 &114928179671698200
@@ -3508,7 +3508,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: box_inactive_equip@sprite
   mFillCenter: 1
 --- !u!114 &114942404640790740
@@ -3642,7 +3642,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: 1_original@sprite
   mFillCenter: 1
 --- !u!114 &114968343982759230
@@ -3695,6 +3695,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
-  mSpriteName: 4_bg@sprite
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
+  mSpriteName: 1_bg@sprite
   mFillCenter: 1
