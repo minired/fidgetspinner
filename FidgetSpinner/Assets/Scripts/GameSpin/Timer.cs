@@ -59,7 +59,10 @@ namespace Fidget.GameSpin
             if (flowedTime >= harderTime)
             {
                 Harder();
-                harderTime += 4f;
+                if (harderTime < 20)
+                    harderTime += 4f;
+                else
+                    harderTime += 7f;
             }
 
             if (this.GetComponent<UISprite>().fillAmount <= 0f)
@@ -107,6 +110,7 @@ namespace Fidget.GameSpin
         public void BrokenFail()
         {
             this.GetComponent<UISprite>().fillAmount -= brokenAmount;
+            SoundManager.Instance.Vibrate();
         }
     }
 }
