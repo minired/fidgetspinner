@@ -15,7 +15,7 @@ namespace Fidget.Common
         }
 
 
-        void StopParticles()
+        public void StopParticles()
         {
             foreach(ParticleSystem psys in particleList)
             {
@@ -23,7 +23,7 @@ namespace Fidget.Common
             }
         }
 
-        void StartParticles()
+        public void StartParticles()
         {
             foreach (ParticleSystem psys in particleList)
             {
