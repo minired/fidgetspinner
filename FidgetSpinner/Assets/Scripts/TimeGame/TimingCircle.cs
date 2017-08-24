@@ -251,6 +251,8 @@ namespace Fidget.TimingGame
             {
                 infoText.spriteName = "perfect";
             }
+
+            infoText.MakePixelPerfect();
         }
     }
 }

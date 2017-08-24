@@ -62,10 +62,10 @@ MonoBehaviour:
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 190
-    paddingRight: 190
-    paddingTop: 295
-    paddingBottom: 288
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: bar@sprite
     x: 606
     y: 562
@@ -140,10 +140,10 @@ MonoBehaviour:
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 38
-    paddingRight: 38
-    paddingTop: 305
-    paddingBottom: 294
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: good
     x: 1442
     y: 1114
@@ -153,10 +153,10 @@ MonoBehaviour:
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 147
-    paddingRight: 139
-    paddingTop: 295
-    paddingBottom: 288
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: great
     x: 1442
     y: 1252
@@ -166,10 +166,10 @@ MonoBehaviour:
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 129
-    paddingRight: 132
-    paddingTop: 300
-    paddingBottom: 288
+    paddingLeft: 0
+    paddingRight: 9
+    paddingTop: 0
+    paddingBottom: 0
   - name: navi_touch
     x: 606
     y: 667
@@ -205,10 +205,10 @@ MonoBehaviour:
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 83
-    paddingRight: 83
-    paddingTop: 300
-    paddingBottom: 294
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
