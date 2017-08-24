@@ -37,7 +37,9 @@ namespace Fidget.GameSpin
         public float sizeUp;
         public float sizeDown;
         public float moveTime;
-        
+
+
+        public ParticleControl particleControl;
 
         void TweenPlanets()       // 버튼 누른 뒤 행성들 이동
         {
@@ -225,6 +227,7 @@ namespace Fidget.GameSpin
 
         public void FeverOn()
         {
+            particleControl.StartParticles();
             isFever = true;
             for(int i = 0; i < 10; i++)
             {
@@ -260,6 +263,7 @@ namespace Fidget.GameSpin
         public void FeverOff()
         {
             isFever = false;
+            particleControl.StopParticles();
         }
 
         void Init()
