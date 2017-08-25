@@ -55,6 +55,19 @@ MonoBehaviour:
   mSprites:
   - name: btn_ad@sprite
     x: 1780
+    y: 1018
+    width: 143
+    height: 143
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_ad_gray
+    x: 1780
     y: 1162
     width: 143
     height: 143
@@ -81,7 +94,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: btn2_shop@sprite
     x: 1780
-    y: 1018
+    y: 874
     width: 143
     height: 143
     borderLeft: 0

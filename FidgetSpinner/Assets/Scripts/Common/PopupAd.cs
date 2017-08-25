@@ -8,12 +8,14 @@ namespace Fidget.Common
     public class PopupAd : MonoBehaviour
     {
 
-
+       
         // Use this for initialization
         void Start()
         {
-
+           
         }
+
+     
 
         // Update is called once per frame
         void Update()
@@ -21,7 +23,10 @@ namespace Fidget.Common
 
         }
 
-
+        public void Close()
+        {
+            gameObject.SetActive(false);
+        }
 
         public void AdButton()
         {
@@ -29,15 +34,16 @@ namespace Fidget.Common
             {
                 ShowOptions options = new ShowOptions();
                 options.resultCallback = AdCallbackhandler;
-                Advertisement.Show(options);
+                Advertisement.Show("rewardedVideo", options);
             }
+            gameObject.SetActive(false);
         }
         void AdCallbackhandler(ShowResult result)
         {
             switch (result)
             {
                 case ShowResult.Finished:
-                    User.Instance.Coin += 50000;
+                    User.Instance.Coin += 100000;
                     Debug.Log("Ad Finished. Rewarding player...");
                     break;
                 case ShowResult.Skipped:

@@ -46,7 +46,6 @@ namespace Fidget.Common
             }
             else
             {
-                Debug.Log("NoLoad");
                 return false;
             }
         }

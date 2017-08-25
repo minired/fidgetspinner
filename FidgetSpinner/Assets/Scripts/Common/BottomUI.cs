@@ -18,8 +18,8 @@ namespace Fidget.Common
 
         Vector3 shopBtnPos;
         Vector3 adBtnPos;
+        public UISprite btnAdSprite;
 
-      
 
         public void MoveShopScene()
         {
@@ -37,7 +37,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
-            //Advertisement.Initialize("1515814", true);
+            StartCoroutine(ChangeStatusProc());
         }
         void MoveEnd()
         {
@@ -79,7 +79,23 @@ namespace Fidget.Common
         }
 
 
-        
+        IEnumerator ChangeStatusProc()
+        {
+            while (true)
+            {
+                if (Advertisement.IsReady())
+                {
+                    btnAdSprite.spriteName = "btn_ad@sprite";
+                    adBtnObj.GetComponent<UIButton>().normalSprite = "btn_ad@sprite";
+                }
+                else
+                {
+                    btnAdSprite.spriteName = "btn_ad_gray";
+                    adBtnObj.GetComponent<UIButton>().normalSprite = "btn_ad_gray";
+                }
+                yield return new WaitForSeconds(3f);
+            }
+        }
 
 
         // Update is called once per frame

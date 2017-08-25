@@ -441,6 +441,8 @@ MonoBehaviour:
   shopBtnObj: {fileID: 1469334524922396}
   adBtnObj: {fileID: 1098920480279088}
   adPopupObj: {fileID: 1607133574982204}
+  gameAudio: {fileID: 0}
+  btnAdSprite: {fileID: 114549724684705522}
 --- !u!114 &114016743861622248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -727,7 +729,7 @@ MonoBehaviour:
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 42dedaa96ba8bed4d8d721cbd296593f, type: 3}
   mFont: {fileID: 0}
-  mText: "click the button, \nwatch videos and keep getting coins!"
+  mText: "click the button, \nwatch videos and keep getting 100K coins!"
   mFontSize: 30
   mFontStyle: 0
   mAlignment: 0
@@ -902,7 +904,7 @@ MonoBehaviour:
   mWidth: 143
   mHeight: 143
   mDepth: 3
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -992,7 +994,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 114006139928042842}
+    mMethodName: ShowAdPopup
+    mParameters: []
+    oneShot: 0
 --- !u!114 &114608778360203622
 MonoBehaviour:
   m_ObjectHideFlags: 1
