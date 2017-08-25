@@ -63,43 +63,48 @@ namespace Fidget.Shop
 
             nameLabel.text = FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
 
-            if (cardID == 0 && User.Instance.GetFidgetSpinnerLevel(cardID) == 0)
+            spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
+
+            if (cardID == 0 && spriteLevel == 0)
             {
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 buyState = State.EQUIPED;
                 User.Instance.EquipIndex = cardID;
             }
-            else
-            {
-                spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
-            }
-
-            upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
 
             if (spriteLevel == 0)
             {
                 levelLabel.text = "Lv.1";
-                upgradeLabel.text = FidgetSpinnerData.fidgetSpinnerItems[cardID].price.ToString("n0");
+                upgradeCost = FidgetSpinnerData.fidgetSpinnerItems[cardID].price;
             }
             else
             {
                 levelLabel.text = "Lv." + spriteLevel;
-                upgradeLabel.text = upgradeCost.ToString("n0");
+                upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].upgrade;
             }
 
-            if (spriteLevel < MAXLEVEL)
-            {
-                speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].speed;
-                hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].haste;
-                dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].damping;
-                coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].coin;
-            }
-            else
+            upgradeLabel.text = upgradeCost.ToString("n0");
+
+            if (spriteLevel == 0)
             {
                 speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed.ToString();
                 hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste.ToString();
                 dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping.ToString();
                 coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin.ToString();
+            }
+            else if (spriteLevel < MAXLEVEL)
+            {
+                speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed;
+                hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste;
+                dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping;
+                coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin;
+            }
+            else
+            {
+                speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed.ToString();
+                hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste.ToString();
+                dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping.ToString();
+                coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin.ToString();
             }
 
             SetGaugeChanger();
@@ -113,10 +118,25 @@ namespace Fidget.Shop
 
         IEnumerator GaugeChanger()
         {
-            float targetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed * 0.01f;
-            float targetHaste = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste * 0.01f;
-            float targetDamping = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping * 0.01f;
-            float targetCoin = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin * 0.01f;
+            float targetSpeed;
+            float targetHaste;
+            float targetDamping;
+            float targetCoin;
+
+            if (spriteLevel == 0)
+            {
+                targetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed * 0.01f;
+                targetHaste = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste * 0.01f;
+                targetDamping = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping * 0.01f;
+                targetCoin = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin * 0.01f;
+            }
+            else
+            {
+                targetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed * 0.01f;
+                targetHaste = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste * 0.01f;
+                targetDamping = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping * 0.01f;
+                targetCoin = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin * 0.01f;
+            }
 
             speedGauge.fillAmount = 0.0f;
             hasteGauge.fillAmount = 0.0f;
@@ -195,14 +215,9 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_require@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin@sprite";
-                if (spriteLevel == 0)
-                {
-                    upgradeLabel.text = "[ffffff]" + FidgetSpinnerData.fidgetSpinnerItems[cardID].price.ToString("n0");
-                }
-                else
-                {
-                    upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
-                }
+                //
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
+                
             }
             else if (upgradeCost > currentCoin && buyState == State.BUYED)
             {
@@ -315,27 +330,27 @@ namespace Fidget.Shop
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 levelLabel.text = "Lv." + spriteLevel.ToString();
 
-                speedGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed * 0.01f;
-                hasteGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste * 0.01f;
-                dampingGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping * 0.01f;
-                coinGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin * 0.01f;
+                speedGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].speed * 0.01f;
+                hasteGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].haste * 0.01f;
+                dampingGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].damping * 0.01f;
+                coinGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].coin * 0.01f;
 
                 if (spriteLevel < MAXLEVEL)
                 {
-                    speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].speed;
-                    hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].haste;
-                    dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].damping;
-                    coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel + 1].coin;
+                    speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed;
+                    hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste;
+                    dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping;
+                    coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin;
                 }
                 else
                 {
-                    speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed.ToString();
-                    hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste.ToString();
-                    dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping.ToString();
-                    coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin.ToString();
+                    speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed.ToString();
+                    hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste.ToString();
+                    dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping.ToString();
+                    coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin.ToString();
                 }
 
-                upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
+                upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].upgrade;
 
                 if(upgradeCost > currentCoin)
                     upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
