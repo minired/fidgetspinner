@@ -72,7 +72,7 @@ namespace Fidget.TimeGame
         void SetFidgetSpinnerDetail()
         {
             int equipIndex = User.Instance.EquipIndex;
-            fidgetDetail = FidgetSpinnerData.GetFidgetSpinnerDetail(equipIndex, User.Instance.GetFidgetSpinnerLevel(equipIndex));
+            fidgetDetail = FidgetSpinnerData.GetFidgetSpinnerDetail(equipIndex, User.Instance.GetFidgetSpinnerLevel(equipIndex)-1);
         }
 
         void EventInit()

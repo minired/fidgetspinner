@@ -17,6 +17,15 @@ namespace Fidget.Common
 
         GooglePlayAchievement achievement = new GooglePlayAchievement();
         static bool isTryLogin = false;
+
+        public string[] levelAchievementCode = { "CgkIyIDh6tIfEAIQCg", "CgkIyIDh6tIfEAIQCw", "CgkIyIDh6tIfEAIQDA", "CgkIyIDh6tIfEAIQDQ", "CgkIyIDh6tIfEAIQDg", "CgkIyIDh6tIfEAIQDw",
+        "CgkIyIDh6tIfEAIQEA", "CgkIyIDh6tIfEAIQEQ", "CgkIyIDh6tIfEAIQEg", "CgkIyIDh6tIfEAIQEw", "CgkIyIDh6tIfEAIQFA", "CgkIyIDh6tIfEAIQFQ"  };
+
+        public int[] levelAchivementLevel = { 10,50,100,200,300,400,500,600,700,800,900,999};
+        
+
+        
+
         void Awake()
         {
         }
@@ -226,13 +235,51 @@ namespace Fidget.Common
         {
             if (GameInfo.IsIOS)
                 return;
-            CheckMapAchievement();
-            CheckCharacterAchievement();
-            CheckCoinAchievement();
-            CheckLevelAchievement();
-            CheckStageFloorAchievement();
-            CheckReviveAchievement();
+            CheckAllLevelMission(User.Instance.LevelMissionGrade);
         }
+
+        bool IsUpperLevel(int level)
+        {
+            ExpTable exptable = new ExpTable();
+            int cur = exptable.GetLevel(User.Instance.Exp);
+
+            if(cur >= level)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+        void CheckLevelMission(int level, string missionCode)
+        {
+            if (IsUpperLevel(level))
+            {
+                Social.ReportProgress(missionCode, 100.0f, (bool success) =>
+                {
+                    // handle success or failure
+                    if (success)
+                    {
+                        User.Instance.LevelMissionGrade++;
+                    }
+                });
+            }
+        }
+
+
+        void CheckAllLevelMission(int grade)
+        {
+            for(int i=0; i < levelAchievementCode.Length; ++i)
+            {
+                if (grade == i)
+                {
+                    CheckLevelMission(levelAchivementLevel[i], levelAchievementCode[i]);
+                }
+            }
+        }
+
 
 
         public void SaveGame()

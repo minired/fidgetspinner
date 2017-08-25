@@ -18,6 +18,7 @@ namespace Fidget.Main
         void Start()
         {
             googlePlay.LoginWithInit();
+            googlePlay.UpdateCheckAchievements();
         }
 
         // Update is called once per frame

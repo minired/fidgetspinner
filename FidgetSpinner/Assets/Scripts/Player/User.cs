@@ -237,6 +237,25 @@ namespace Fidget.Player
             }
         }
 
+        #region Mission
+
+        public int LevelMissionGrade
+        {
+            get
+            {
+                return putil.GetInt("levelmissiongrade");
+            }
+            set
+            {
+                putil.SetInt("levelmissiongrade", value);
+            }
+        }
+
+
+
+
+        #endregion
+
         public string DeviceID
         {
             get
