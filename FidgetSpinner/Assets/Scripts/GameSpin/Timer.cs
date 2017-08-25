@@ -28,11 +28,6 @@ namespace Fidget.GameSpin
         int fidgetIndex;
         int level;
         
-        void Awake()
-        {
-            User.Instance.SetFidgetSpinnerLevel(0, 1);
-        }
-
         void Start()
         {
             flowedTime = 0f;
@@ -101,7 +96,6 @@ namespace Fidget.GameSpin
             
             this.GetComponent<UISprite>().fillAmount -= deltaAmount;
             flowedTime += Time.deltaTime;
-            Debug.Log(deltaAmount);
         }
 
         public void Harder()
