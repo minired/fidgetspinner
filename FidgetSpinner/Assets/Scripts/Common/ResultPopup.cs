@@ -16,6 +16,10 @@ namespace Fidget.Common
         public UILabel coinGainLabel;
         public UILabel coinMoreLabel;
         public UILabel coinAdLabel;
+        public UILabel coinAdTitleLabel;
+        public UISprite coinAdBGSprite;
+
+        public UISprite coinAdIcon;
 
         public UISprite bestSprite;
 
@@ -31,6 +35,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
+           
         }
         
         public void BottomBtnAnimation()
@@ -91,6 +96,39 @@ namespace Fidget.Common
                 popupClosed();
             }
         }
+
+        public void SetEnableAdButton()
+        {
+            coinAdBGSprite.spriteName = "coin2_bg@sprite";
+            coinAdBGSprite.gameObject.GetComponent<UIButton>().normalSprite = "coin2_bg@sprite";
+            coinAdLabel.color = Color.white;
+            coinAdTitleLabel.color = Color.white;
+            coinAdIcon.spriteName = "ic_ad@sprite";
+        }
+        public void SetDisableAdButton()
+        {
+            coinAdBGSprite.spriteName = "coin2_bg_gray@sprite";
+            coinAdBGSprite.gameObject.GetComponent<UIButton>().normalSprite = "coin2_bg_gray@sprite";
+
+            coinAdLabel.color = new Color(0.79f,0.8f,0.78f); 
+            coinAdTitleLabel.color = new Color(0.79f, 0.8f, 0.78f);
+            coinAdIcon.spriteName = "ic_ad_gray@sprite";
+        }
+        public void SetEndAdButton()
+        {
+            coinAdBGSprite.spriteName = "coin_bg@sprite";
+            coinAdBGSprite.gameObject.GetComponent<UIButton>().normalSprite = "coin_bg@sprite";
+
+            coinAdLabel.color = new Color(0.79f, 0.72f, 0.90f);
+            coinAdTitleLabel.color = new Color(0.79f, 0.72f, 0.90f);
+            coinAdIcon.spriteName = "ic_ad@sprite";
+        }
+
+        public void OnAdButton()
+        {
+            Debug.Log("ad on");
+        }
+
 
         public void OnRank()
         {

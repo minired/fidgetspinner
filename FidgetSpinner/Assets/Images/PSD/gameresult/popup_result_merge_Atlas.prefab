@@ -55,7 +55,7 @@ MonoBehaviour:
   mSprites:
   - name: ad_bg@sprite
     x: 0
-    y: 419
+    y: 104
     width: 470
     height: 104
     borderLeft: 0
@@ -94,7 +94,33 @@ MonoBehaviour:
     paddingBottom: 0
   - name: coin_bg@sprite
     x: 0
+    y: 209
+    width: 470
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: coin2_bg@sprite
+    x: 0
     y: 314
+    width: 470
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: coin2_bg_gray@sprite
+    x: 0
+    y: 419
     width: 470
     height: 104
     borderLeft: 0
@@ -119,6 +145,19 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_ad@sprite
+    x: 530
+    y: 556
+    width: 48
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_ad_gray@sprite
     x: 478
     y: 556
     width: 48
@@ -145,19 +184,6 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_ran@sprite
-    x: 530
-    y: 599
-    width: 168
-    height: 168
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: ic_return@sprite
     x: 361
     y: 599
     width: 168
@@ -170,8 +196,21 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: ic_return@sprite
+    x: 530
+    y: 599
+    width: 168
+    height: 168
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: ic_share@sprite
-    x: 0
+    x: 471
     y: 145
     width: 168
     height: 168

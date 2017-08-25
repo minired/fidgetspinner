@@ -59,10 +59,10 @@
   <Key Name="PsdParser.New PSD2NGUI Project.keepOldSprites" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.createControls" Value="1" />
   <Key Name="PsdParser.New PSD2NGUI Project.autoupdate" Value="1" />
-  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/popupad/popup_ad_Atlas.prefab" />
+  <Key Name="PsdParser.New PSD2NGUI Project.atlasPrefab" Value="Assets/Images/PSD/result/resultpopup_Atlas.prefab" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontPrefab" Value="" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontData" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.txt" />
   <Key Name="PsdParser.New PSD2NGUI Project.fontTexture" Value="Assets/PSD2NGUI/Example/nanumGothic/nanumGothic.png" />
   <Key Name="PsdParser.New PSD2NGUI Project.trueTypeFont" Value="Assets/PSD2NGUI/Example/ARIAL.TTF" />
-  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/popupad/popup_ad.psd:c5c21671cf84feb74dcac684525b3883:1" />
+  <Key Name="PsdParser.New PSD2NGUI Project.psdFiles" Value="Assets/Images/PSD/result/resultpopup.psd:8a123d25e5dfc8126f605eb3a52aead1:1" />
 </Keys>

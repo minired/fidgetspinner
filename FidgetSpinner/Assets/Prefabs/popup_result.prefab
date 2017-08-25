@@ -29,15 +29,17 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1063646303089952
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4449781908704270}
   - component: {fileID: 114323968994423770}
+  - component: {fileID: 114297172339325990}
+  - component: {fileID: 65136621086430718}
   m_Layer: 5
-  m_Name: ad_bg
+  m_Name: adbutton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +87,7 @@ GameObject:
   - component: {fileID: 4273127650029848}
   - component: {fileID: 114188128942406126}
   m_Layer: 5
-  m_Name: Label (7)
+  m_Name: coinAdTitleLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,6 +120,21 @@ GameObject:
   - component: {fileID: 114836750190064564}
   m_Layer: 5
   m_Name: coinGainLabel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1236649286130434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4839801246019242}
+  m_Layer: 5
+  m_Name: AdButtonGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +222,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1450761214786684
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -213,7 +230,7 @@ GameObject:
   - component: {fileID: 4193536706357524}
   - component: {fileID: 114005805013900794}
   m_Layer: 5
-  m_Name: ic_ad
+  m_Name: iconAd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,7 +416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4109022402005430
 Transform:
@@ -425,7 +442,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4193536706357524
 Transform:
@@ -437,8 +454,8 @@ Transform:
   m_LocalPosition: {x: -184, y: -232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 5
+  m_Father: {fileID: 4839801246019242}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4197472180590788
 Transform:
@@ -464,7 +481,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4273127650029848
 Transform:
@@ -476,8 +493,8 @@ Transform:
   m_LocalPosition: {x: -64, y: -236, z: 0}
   m_LocalScale: {x: 0.9984, y: 0.9984, z: 0.9984}
   m_Children: []
-  m_Father: {fileID: 4877507789766198}
-  m_RootOrder: 7
+  m_Father: {fileID: 4839801246019242}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4287279392755370
 Transform:
@@ -502,8 +519,8 @@ Transform:
   m_LocalPosition: {x: 80, y: -236, z: 0}
   m_LocalScale: {x: 0.9984, y: 0.9984, z: 0.9984}
   m_Children: []
-  m_Father: {fileID: 4877507789766198}
-  m_RootOrder: 8
+  m_Father: {fileID: 4839801246019242}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4359992060254992
 Transform:
@@ -532,13 +549,12 @@ Transform:
   - {fileID: 4109022402005430}
   - {fileID: 4683712669605932}
   - {fileID: 4520151526275112}
-  - {fileID: 4449781908704270}
-  - {fileID: 4193536706357524}
   - {fileID: 4679079572423422}
   - {fileID: 4215344071425534}
   - {fileID: 4002485320346402}
   - {fileID: 4460582665417566}
   - {fileID: 4881175938601940}
+  - {fileID: 4839801246019242}
   - {fileID: 4877507789766198}
   - {fileID: 4111737973426706}
   m_Father: {fileID: 0}
@@ -554,8 +570,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -232, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 4
+  m_Father: {fileID: 4839801246019242}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4460582665417566
 Transform:
@@ -568,7 +584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4475300823376006
 Transform:
@@ -620,7 +636,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4683712669605932
 Transform:
@@ -648,6 +664,23 @@ Transform:
   m_Father: {fileID: 4877507789766198}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4839801246019242
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1236649286130434}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4273127650029848}
+  - {fileID: 4299600677168870}
+  - {fileID: 4449781908704270}
+  - {fileID: 4193536706357524}
+  m_Father: {fileID: 4427982619271284}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4877507789766198
 Transform:
   m_ObjectHideFlags: 1
@@ -665,10 +698,8 @@ Transform:
   - {fileID: 4801221291808558}
   - {fileID: 4643403545455450}
   - {fileID: 4197472180590788}
-  - {fileID: 4273127650029848}
-  - {fileID: 4299600677168870}
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4881175938601940
 Transform:
@@ -681,7 +712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4974518945804986
 Transform:
@@ -720,6 +751,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 168, y: 168, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65136621086430718
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063646303089952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 470, y: 104, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65341042648616450
 BoxCollider:
@@ -1162,7 +1205,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0.7921569, g: 0.7254902, b: 0.90588236, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 174
   mHeight: 42
@@ -1238,7 +1281,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3011
+  startingRenderQueue: 3012
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1354,6 +1397,35 @@ MonoBehaviour:
   mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
   mSpriteName: ic_ran@sprite
   mFillCenter: 1
+--- !u!114 &114297172339325990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1063646303089952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1063646303089952}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 114751687557363546}
+    mMethodName: OnAdButton
+    mParameters: []
+    oneShot: 0
 --- !u!114 &114323968994423770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1405,7 +1477,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
-  mSpriteName: ad_bg@sprite
+  mSpriteName: coin2_bg@sprite
   mFillCenter: 1
 --- !u!114 &114325105667296498
 MonoBehaviour:
@@ -1503,7 +1575,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.7921569, g: 0.7254902, b: 0.90588236, a: 1}
   mPivot: 4
   mWidth: 188
   mHeight: 42
@@ -1571,7 +1643,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 0.7921569, g: 0.7254902, b: 0.90588236, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 3
   mWidth: 122
   mHeight: 42
@@ -1668,7 +1740,7 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 0.7921569, g: 0.7254902, b: 0.90588236, a: 1}
   mPivot: 3
   mWidth: 122
   mHeight: 42
@@ -1794,6 +1866,9 @@ MonoBehaviour:
   coinGainLabel: {fileID: 114836750190064564}
   coinMoreLabel: {fileID: 114630363694178938}
   coinAdLabel: {fileID: 114415289997099254}
+  coinAdTitleLabel: {fileID: 114188128942406126}
+  coinAdBGSprite: {fileID: 114323968994423770}
+  coinAdIcon: {fileID: 114005805013900794}
   bestSprite: {fileID: 114252818488484906}
   btnBack: {fileID: 1537704126502394}
   btnRank: {fileID: 1820288624084706}
