@@ -251,10 +251,46 @@ namespace Fidget.Player
             }
         }
 
+        public int CoinMissionGrade
+        {
+            get
+            {
+                return putil.GetInt("coinmissiongrade");
+            }
+            set
+            {
+                putil.SetInt("coinmissiongrade", value);
+            }
+        }
 
+        public int TimedSpeedMissionGrade
+        {
+            get
+            {
+                return putil.GetInt("timedspeedmissiongrade");
+            }
+            set
+            {
+                putil.SetInt("timedspeedmissiongrade", value);
+            }
+        }
 
 
         #endregion
+
+
+        public float TimedSpinHighSpeed
+        {
+            get
+            {
+                return putil.GetFloat("timedspinhighspeed");
+            }
+            set
+            {
+                putil.SetFloat("timedspinhighspeed", value);
+            }
+        }
+
 
         public string DeviceID
         {
