@@ -72,10 +72,10 @@ namespace Fidget.Common
 
         public void ShowAdPopup()
         {
-            //if (Advertisement.IsReady())
-            //{
-            //    adPopupObj.SetActive(true);
-            //}
+            if (Advertisement.IsReady())
+            {
+                adPopupObj.SetActive(true);
+            }
         }
 
 
