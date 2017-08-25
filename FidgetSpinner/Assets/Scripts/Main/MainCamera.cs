@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fidget.Common;
 using UnityEngine.Advertisements;
-
+using Fidget.Player;
 namespace Fidget.Main
 {
     public class MainCamera : MonoBehaviour
@@ -15,6 +15,24 @@ namespace Fidget.Main
         public GameAudio gameAudio;
 
         public GooglePlay googlePlay;
+
+
+        private void Awake()
+        {
+           if(User.Instance.InitMobile < 1)
+            {
+                InitGame();
+            }
+        }
+        void InitGame()
+        {
+            User.Instance.Vibration = true;
+            User.Instance.Sound = true;
+            User.Instance.Alarm = true;
+
+            User.Instance.InitMobile = 2;
+        }
+
         // Use this for initialization
         void Start()
         {

@@ -279,6 +279,19 @@ namespace Fidget.Player
         #endregion
 
 
+        public int InitMobile
+        {
+            get
+            {
+                return putil.GetInt("initmobile");
+            }
+            set
+            {
+                putil.SetInt("initmobile", value);
+            }
+        }
+
+
         public float TimedSpinHighSpeed
         {
             get
