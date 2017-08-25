@@ -190,7 +190,7 @@ namespace Fidget.TimingGame
             resultPopup.gameObject.SetActive(true);
             resultPopup.ShowScore(User.Instance.Score);
             resultPopup.BottomBtnAnimation();
-            if (GameInfo.gameCount % 4 == 0)
+            if (GameInfo.gameCount % 5 == 0)
             {
                 AdPopupChecker();
             }

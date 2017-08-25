@@ -263,7 +263,7 @@ namespace Fidget.GameSpin
             }
             Init();
             coinAnimation.OnPlayAnimation();
-            if (GameInfo.gameCount % 4 == 0)
+            if (GameInfo.gameCount % 5 == 0)
             {
                 AdPopupChecker();
             }
