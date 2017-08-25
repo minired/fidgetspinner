@@ -18,7 +18,7 @@ namespace Fidget.Common
         {
             try
             {
-                if (!User.Instance.IsSound)
+                if (!GameInfo.isSoundOn)
                     return;
                 LeanAudio.play(buttonBeepList[0]);
             }
@@ -27,6 +27,8 @@ namespace Fidget.Common
 
             }
         }
+
+
        
 
         // Update is called once per frame

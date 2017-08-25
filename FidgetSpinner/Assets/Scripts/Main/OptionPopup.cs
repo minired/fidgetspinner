@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Player;
+using Fidget.Common;
 
 namespace Fidget.Main
 {
@@ -14,8 +15,9 @@ namespace Fidget.Main
         public UISprite musicOff;
         public UISprite vibrationOff;
         public UISprite alarmOff;
+
         // Use this for initialization
-        void Start()
+        void Awake()
         {
             SetIcon();
         }
@@ -75,6 +77,7 @@ namespace Fidget.Main
                 musicOn.gameObject.SetActive(false);
                 musicOff.gameObject.SetActive(true);
             }
+            GameInfo.isSoundOn = User.Instance.Sound;
         }
         public void OnVibrationToggle()
         {

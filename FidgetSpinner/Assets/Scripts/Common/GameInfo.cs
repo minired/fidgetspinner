@@ -7,6 +7,8 @@ namespace Fidget.Common
     {
         public static bool googlePlayInit = false;
         public static bool IsIOS = false;
+
+        public static bool isSoundOn = true;
         
     }
 }

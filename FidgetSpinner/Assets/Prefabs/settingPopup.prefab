@@ -732,6 +732,7 @@ MonoBehaviour:
   musicOff: {fileID: 114721419819990054}
   vibrationOff: {fileID: 114705524444783522}
   alarmOff: {fileID: 114164878314807214}
+  bgm: {fileID: 0}
 --- !u!114 &114479562883322398
 MonoBehaviour:
   m_ObjectHideFlags: 1

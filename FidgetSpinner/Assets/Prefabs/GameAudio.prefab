@@ -54,3 +54,5 @@ MonoBehaviour:
   buttonBeepList:
   - {fileID: 8300000, guid: 82b342a11412a0948ae178d8802bf348, type: 3}
   effectList: []
+  bgmList:
+  - {fileID: 8300000, guid: 3b0adee88adf9b94bb9597c3282bed7e, type: 3}
