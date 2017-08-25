@@ -155,7 +155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1308652406357836
 GameObject:
   m_ObjectHideFlags: 1
@@ -1218,6 +1218,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2e04e10ed7b2c64da91101c679e74c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelAchievementCode:
+  - CgkIyIDh6tIfEAIQCg
+  - CgkIyIDh6tIfEAIQCw
+  - CgkIyIDh6tIfEAIQDA
+  - CgkIyIDh6tIfEAIQDQ
+  - CgkIyIDh6tIfEAIQDg
+  - CgkIyIDh6tIfEAIQDw
+  - CgkIyIDh6tIfEAIQEA
+  - CgkIyIDh6tIfEAIQEQ
+  - CgkIyIDh6tIfEAIQEg
+  - CgkIyIDh6tIfEAIQEw
+  - CgkIyIDh6tIfEAIQFA
+  - CgkIyIDh6tIfEAIQFQ
+  levelAchivementLevel: 0a0000003200000064000000c80000002c01000090010000f401000058020000bc0200002003000084030000e7030000
+  coinAchievementCode:
+  - CgkIyIDh6tIfEAIQAQ
+  - CgkIyIDh6tIfEAIQAw
+  - CgkIyIDh6tIfEAIQBQ
+  - CgkIyIDh6tIfEAIQFg
+  - CgkIyIDh6tIfEAIQCQ
+  - CgkIyIDh6tIfEAIQFw
+  coinAchivementAmount: 1027000000000000a08601000000000040420f0000000000404b4c0000000000809698000000000080f0fa0200000000
+  timedSpinSpeedAchievementCode:
+  - CgkIyIDh6tIfEAIQGA
+  - CgkIyIDh6tIfEAIQGQ
+  - CgkIyIDh6tIfEAIQGg
+  - CgkIyIDh6tIfEAIQGw
+  - CgkIyIDh6tIfEAIQHA
+  - CgkIyIDh6tIfEAIQHQ
+  timedSpinSpeedAchivementSpeed:
+  - 100
+  - 200
+  - 300
+  - 400
+  - 500
+  - 600
 --- !u!114 &114188128942406126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1322,7 +1358,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3012
+  startingRenderQueue: 3011
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -1917,6 +1953,7 @@ MonoBehaviour:
   normalCoinObj: {fileID: 1063920049088532}
   adCoinObj: {fileID: 1063646303089952}
   goolgePlay: {fileID: 114176002852832764}
+  adButtonGroup: {fileID: 1236649286130434}
 --- !u!114 &114783696041591978
 MonoBehaviour:
   m_ObjectHideFlags: 1

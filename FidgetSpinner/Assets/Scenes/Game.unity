@@ -364,6 +364,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1148499688}
   m_Script: {fileID: 11500000, guid: 476205578a4c47d469cf39111974fea4, type: 3}
+--- !u!1001 &937934070
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.0073337536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.13036011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+  m_IsPrefabParent: 0
 --- !u!114 &940614073 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114250892656290468, guid: e6cb6f90bd155a441a8c0d50201fb89c,
@@ -776,6 +818,7 @@ MonoBehaviour:
   backgroundSelector: {fileID: 1236159994}
   coinAnimation: {fileID: 679059240}
   moveHandIcon: {fileID: 1580826657}
+  admobPlayer: {fileID: 0}
   adBtnSprite: {fileID: 1815193359}
   shopBtnSprite: {fileID: 940614073}
   backBtnSprite: {fileID: 1039201713}

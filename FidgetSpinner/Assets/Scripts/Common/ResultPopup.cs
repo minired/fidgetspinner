@@ -35,10 +35,15 @@ namespace Fidget.Common
 
         public GooglePlay goolgePlay;
 
+        public GameObject adButtonGroup;
+
         // Use this for initialization
         void Start()
         {
-           
+            if (adButtonGroup != null)
+            {
+                adButtonGroup.SetActive(false);
+            }
         }
         
         public void BottomBtnAnimation()

@@ -38,6 +38,8 @@ namespace Fidget.TimingGame
 
         public UILabel timeLabel;
 
+        public AdmobPlayer admobPlayer;
+
         ExpTable expTable = new ExpTable();
 
         FidgetSpinnerDetail fidgetDetail;
@@ -50,6 +52,8 @@ namespace Fidget.TimingGame
 
         float gameTime = 0.0f;
 
+
+
         private void Awake()
         {
             Init();
@@ -57,6 +61,13 @@ namespace Fidget.TimingGame
             timeLabel.text = "30";
         }
 
+        void AdPopupChecker()
+        {
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show("video");
+            }
+        }
 
         bool IsButtonArea(Vector3 pos)
         {
@@ -147,6 +158,7 @@ namespace Fidget.TimingGame
 
         void GameEnd()
         {
+            GameInfo.gameCount++;
             timeLabel.text = "0";
             isGameStart = false;
             isSpinStart = false;
@@ -178,6 +190,10 @@ namespace Fidget.TimingGame
             resultPopup.gameObject.SetActive(true);
             resultPopup.ShowScore(User.Instance.Score);
             resultPopup.BottomBtnAnimation();
+            if (GameInfo.gameCount % 4 == 0)
+            {
+                AdPopupChecker();
+            }
         }
 
         void SpinProc()
@@ -251,11 +267,6 @@ namespace Fidget.TimingGame
                     {
                         return;
                     }
-
-                    //if (Advertisement.isShowing)
-                    //{
-                    //    return;
-                    //}
 
 
                     InitGame();

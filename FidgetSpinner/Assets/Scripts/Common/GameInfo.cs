@@ -9,6 +9,8 @@ namespace Fidget.Common
         public static bool IsIOS = false;
 
         public static bool isSoundOn = true;
+
+        public static uint gameCount = 0;
         
     }
 }

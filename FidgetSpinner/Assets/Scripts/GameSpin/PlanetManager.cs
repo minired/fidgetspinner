@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fidget.Common;
+using UnityEngine.Advertisements;
 
 namespace Fidget.GameSpin
 {
@@ -40,6 +41,9 @@ namespace Fidget.GameSpin
 
 
         public ParticleControl particleControl;
+
+        public AdmobPlayer admobPlayer;
+
 
         void TweenPlanets()       // 버튼 누른 뒤 행성들 이동
         {
@@ -238,6 +242,7 @@ namespace Fidget.GameSpin
 
         public void RestartGame()
         {
+            GameInfo.gameCount++;
             resultPopup.SetActive(false);
             timer.GetComponent<UISprite>().fillAmount = 1f;
             timer.flowedTime = 0f;
@@ -258,6 +263,10 @@ namespace Fidget.GameSpin
             }
             Init();
             coinAnimation.OnPlayAnimation();
+            if (GameInfo.gameCount % 4 == 0)
+            {
+                AdPopupChecker();
+            }
         }
 
         public void FeverOff()
@@ -298,6 +307,14 @@ namespace Fidget.GameSpin
             }
             rightPlanets[0].transform.localScale *= sizeUp;      // 크기 지정
             leftPlanets[0].transform.localScale *= sizeUp;
+        }
+
+        void AdPopupChecker()
+        {
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show("video");
+            }
         }
 
         void Start()
