@@ -46,18 +46,18 @@ namespace Fidget.Data
     public class FidgetSpinnerData
     {
         public static FidgetSpinnerItem[] fidgetSpinnerItems = {
-            new FidgetSpinnerItem( "Gaxay", "spinner1", 0, 1, 0),
+            new FidgetSpinnerItem( "Galaxy", "spinner1", 0, 1, 0),
             new FidgetSpinnerItem( "Bat", "spinner2", 0, 5, 1000),
-            new FidgetSpinnerItem( "Bat", "spinner3", 0, 10, 5000),
-            new FidgetSpinnerItem( "Bat", "spinner4", 0, 20, 10000),
-            new FidgetSpinnerItem( "Bat", "spinner5", 0, 30, 15000),
-            new FidgetSpinnerItem( "Bat", "spinner6", 0, 40, 100000),
-            new FidgetSpinnerItem( "Bat", "spinner7", 1, 50, 500000),
-            new FidgetSpinnerItem( "Bat", "spinner8", 1, 60, 1000000),
-            new FidgetSpinnerItem( "Bat", "spinner9", 1, 70, 5000000),
-            new FidgetSpinnerItem( "Bat", "spinner10", 1, 80, 10000000),
-            new FidgetSpinnerItem( "Bat", "spinner11", 1, 90, 30000000),
-            new FidgetSpinnerItem( "Bat", "spinner12", 1, 100, 50000000),
+            new FidgetSpinnerItem( "Andromeda", "spinner3", 0, 10, 5000),
+            new FidgetSpinnerItem( "Flower", "spinner4", 0, 20, 10000),
+            new FidgetSpinnerItem( "Dagger", "spinner5", 0, 30, 15000),
+            new FidgetSpinnerItem( "AngelWing", "spinner6", 0, 40, 100000),
+            new FidgetSpinnerItem( "Gold", "spinner7", 1, 50, 500000),
+            new FidgetSpinnerItem( "Crystal", "spinner8", 1, 60, 1000000),
+            new FidgetSpinnerItem( "Ocean", "spinner9", 1, 70, 5000000),
+            new FidgetSpinnerItem( "Volcano", "spinner10", 1, 80, 10000000),
+            new FidgetSpinnerItem( "Redvelvet", "spinner11", 1, 90, 30000000),
+            new FidgetSpinnerItem( "DarthVader", "spinner12", 1, 100, 50000000),
         };
 
 
