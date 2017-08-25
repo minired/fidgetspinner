@@ -56,6 +56,8 @@ namespace Fidget.TimeGame
         public UISprite backBtnSprite;
 
 
+        float highSpeed = 0.0f;
+
         private void Awake()
         {
 
@@ -67,6 +69,7 @@ namespace Fidget.TimeGame
             SetLevelLabel();
             SetScoreLabel();
             timeLabel.text = "20";
+            highSpeed = 0.0f;
         }
 
         void SetFidgetSpinnerDetail()
@@ -128,6 +131,7 @@ namespace Fidget.TimeGame
             moveHandIcon.AnimationOn();
             fidgetSpinner.InitPosition();
             timeLabel.text = "20";
+            highSpeed = 0.0f;
         }
 
         private void SwipeMouse_downSwipe()
@@ -342,6 +346,12 @@ namespace Fidget.TimeGame
                 resultPopup.gameObject.SetActive(true);
                 resultPopup.ShowScore(User.Instance.Score);
                 resultPopup.BottomBtnAnimation();
+
+                if(highSpeed > User.Instance.TimedSpinHighSpeed)
+                {
+                    User.Instance.TimedSpinHighSpeed = highSpeed;
+                }
+
                 return;
             }
 
@@ -363,6 +373,11 @@ namespace Fidget.TimeGame
                 speedLabel.text = ((int)(fidgetSpinner.Speed)).ToString() + " m/s";
                 SetLevelLabel();
                 SetScoreLabel();
+
+                if(fidgetSpinner.Speed > highSpeed)
+                {
+                    highSpeed = fidgetSpinner.Speed;
+                }
             }
             else
             {

@@ -21,10 +21,18 @@ namespace Fidget.Common
         public string[] levelAchievementCode = { "CgkIyIDh6tIfEAIQCg", "CgkIyIDh6tIfEAIQCw", "CgkIyIDh6tIfEAIQDA", "CgkIyIDh6tIfEAIQDQ", "CgkIyIDh6tIfEAIQDg", "CgkIyIDh6tIfEAIQDw",
         "CgkIyIDh6tIfEAIQEA", "CgkIyIDh6tIfEAIQEQ", "CgkIyIDh6tIfEAIQEg", "CgkIyIDh6tIfEAIQEw", "CgkIyIDh6tIfEAIQFA", "CgkIyIDh6tIfEAIQFQ"  };
 
-        public int[] levelAchivementLevel = { 10,50,100,200,300,400,500,600,700,800,900,999};
-        
+        public int[] levelAchivementLevel = { 10, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 999 };
 
-        
+
+        public string[] coinAchievementCode = { "CgkIyIDh6tIfEAIQAQ", "CgkIyIDh6tIfEAIQAw", "CgkIyIDh6tIfEAIQBQ", "CgkIyIDh6tIfEAIQFg", "CgkIyIDh6tIfEAIQCQ", "CgkIyIDh6tIfEAIQFw" };
+
+        public ulong[] coinAchivementAmount = { 10000, 100000, 1000000, 5000000,  10000000, 50000000 };
+
+
+        public string[] timedSpinSpeedAchievementCode = { "CgkIyIDh6tIfEAIQGA", "CgkIyIDh6tIfEAIQGQ", "CgkIyIDh6tIfEAIQGg", "CgkIyIDh6tIfEAIQGw", "CgkIyIDh6tIfEAIQHA", "CgkIyIDh6tIfEAIQHQ" };
+
+        public float[] timedSpinSpeedAchivementSpeed = { 100f, 200f, 300f, 400f, 500f, 600f };
+
 
         void Awake()
         {
@@ -236,6 +244,8 @@ namespace Fidget.Common
             if (GameInfo.IsIOS)
                 return;
             CheckAllLevelMission(User.Instance.LevelMissionGrade);
+            CheckAllCoinMission(User.Instance.CoinMissionGrade);
+            CheckAllSpeedMission(User.Instance.TimedSpeedMissionGrade);
         }
 
         bool IsUpperLevel(int level)
@@ -279,6 +289,64 @@ namespace Fidget.Common
                 }
             }
         }
+
+
+
+
+
+        void CheckCoinMission(ulong coin, string missionCode)
+        {
+            if (User.Instance.Coin >= coin)
+            {
+                Social.ReportProgress(missionCode, 100.0f, (bool success) =>
+                {
+                    // handle success or failure
+                    if (success)
+                    {
+                        User.Instance.CoinMissionGrade++;
+                    }
+                });
+            }
+        }
+
+        void CheckAllCoinMission(int grade)
+        {
+            for (int i = 0; i < coinAchievementCode.Length; ++i)
+            {
+                if (grade == i)
+                {
+                    CheckCoinMission(coinAchivementAmount[i], coinAchievementCode[i]);
+                }
+            }
+        }
+
+
+        void CheckTimedSpinSpeedMission(float speed, string missionCode)
+        {
+            if (User.Instance.TimedSpinHighSpeed >= speed)
+            {
+                Social.ReportProgress(missionCode, 100.0f, (bool success) =>
+                {
+                    // handle success or failure
+                    if (success)
+                    {
+                        User.Instance.TimedSpeedMissionGrade++;
+                    }
+                });
+            }
+        }
+        void CheckAllSpeedMission(int grade)
+        {
+            for (int i = 0; i < timedSpinSpeedAchievementCode.Length; ++i)
+            {
+                if (grade == i)
+                {
+                    CheckTimedSpinSpeedMission(timedSpinSpeedAchivementSpeed[i], timedSpinSpeedAchievementCode[i]);
+                }
+            }
+        }
+
+
 
 
 
