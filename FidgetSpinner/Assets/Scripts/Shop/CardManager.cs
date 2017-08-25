@@ -65,7 +65,7 @@ namespace Fidget.Shop
 
             spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
 
-            if (cardID == 0 && spriteLevel == 0)
+            if (cardID == 0 && User.Instance.GetFidgetSpinnerLevel(cardID) == 0)
             {
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
                 buyState = State.EQUIPED;
