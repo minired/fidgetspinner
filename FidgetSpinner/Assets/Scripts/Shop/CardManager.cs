@@ -267,7 +267,6 @@ namespace Fidget.Shop
 
         void Start()
         {
-            //PlayerPrefs.DeleteAll();
             InitCard();
             
             BuyUpdate();
@@ -275,7 +274,6 @@ namespace Fidget.Shop
 
         void Update()
         {
-            /*TODO: Do optimization*/
             BuyUpdate();
         }
         
@@ -297,6 +295,14 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[4e2f9f]" + "EQUIP";
+
+                upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].upgrade;
+                upgradeLabel.text = upgradeCost.ToString("n0");
+
+                speedLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].speed + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].speed;
+                hasteLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].haste + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].haste;
+                dampingLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].damping + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].damping;
+                coinLabel.text = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].coin + " > " + FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel].coin;
             }
             else if(buyState == State.BUYED)
             {
