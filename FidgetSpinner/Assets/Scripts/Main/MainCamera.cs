@@ -47,6 +47,7 @@ namespace Fidget.Main
 
         public void OnOptionButton()
         {
+            gameAudio.ButtonBeepPop();
             optionPopUp.gameObject.SetActive(true);
         }
     }

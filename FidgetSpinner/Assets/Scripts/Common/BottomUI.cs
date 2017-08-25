@@ -14,6 +14,8 @@ namespace Fidget.Common
 
         public GameObject adPopupObj;
 
+        public GameAudio gameAudio;
+
         Vector3 shopBtnPos;
         Vector3 adBtnPos;
 
@@ -21,6 +23,7 @@ namespace Fidget.Common
 
         public void MoveShopScene()
         {
+            gameAudio.ButtonBeepPop();
             SceneManager.LoadScene("Shop");
         }
 

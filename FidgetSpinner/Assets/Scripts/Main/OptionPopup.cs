@@ -16,6 +16,8 @@ namespace Fidget.Main
         public UISprite vibrationOff;
         public UISprite alarmOff;
 
+        public GameAudio gameAudio;
+
         // Use this for initialization
         void Awake()
         {
@@ -78,6 +80,7 @@ namespace Fidget.Main
                 musicOff.gameObject.SetActive(true);
             }
             GameInfo.isSoundOn = User.Instance.Sound;
+            gameAudio.ButtonBeepPop();
         }
         public void OnVibrationToggle()
         {
@@ -92,6 +95,7 @@ namespace Fidget.Main
                 vibrationOn.gameObject.SetActive(false);
                 vibrationOff.gameObject.SetActive(true);
             }
+            gameAudio.ButtonBeepPop();
         }
         public void OnAlarmToggle()
         {
@@ -106,6 +110,7 @@ namespace Fidget.Main
                 alarmOn.gameObject.SetActive(false);
                 alarmOff.gameObject.SetActive(true);
             }
+            gameAudio.ButtonBeepPop();
         }
 
         public void PopupClose()

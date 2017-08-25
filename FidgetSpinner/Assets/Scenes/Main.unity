@@ -328,6 +328,11 @@ Prefab:
       propertyPath: bgm
       value: 
       objectReference: {fileID: 1241161270}
+    - target: {fileID: 114307757028859212, guid: 81570904a8848f44fa2c665448d4d427,
+        type: 2}
+      propertyPath: gameAudio
+      value: 
+      objectReference: {fileID: 1424391227}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81570904a8848f44fa2c665448d4d427, type: 2}
   m_IsPrefabParent: 0
@@ -679,6 +684,11 @@ Prefab:
       propertyPath: onClick.Array.data[0].mMethodName
       value: ShowAdPopup
       objectReference: {fileID: 0}
+    - target: {fileID: 114006139928042842, guid: e6cb6f90bd155a441a8c0d50201fb89c,
+        type: 2}
+      propertyPath: gameAudio
+      value: 
+      objectReference: {fileID: 1424391227}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
   m_IsPrefabParent: 0
