@@ -44,11 +44,15 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
+            
+        }
+
+        public void LoginWithInit()
+        {
             if (!GameInfo.IsIOS)
             {
                 Init();
                 Login();
-                //UpdateCheckAchievements();
             }
         }
 
@@ -68,19 +72,15 @@ namespace Fidget.Common
             if (isTryLogin)
                 return;
             isTryLogin = true;
-            Debug.Log("Login Try");
             Social.localUser.Authenticate((bool success) =>
             {
                 // handle success or failure
                 if (success)
                 {
-                    Debug.Log("Login Success1");
                     User.Instance.GoogleId = Social.localUser.id;
-                    Debug.Log("Login Success2");
                 }
                 else
                 {
-                    Debug.Log("Login Fail");
                 }
                 //if (success && !GameInfo.IsIOS)
                 //    CheckAllAchievemet();

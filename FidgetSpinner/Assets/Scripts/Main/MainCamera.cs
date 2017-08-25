@@ -12,10 +12,12 @@ namespace Fidget.Main
         public OptionPopup optionPopUp;
 
         public GameAudio gameAudio;
+
+        public GooglePlay googlePlay;
         // Use this for initialization
         void Start()
         {
-
+            googlePlay.LoginWithInit();
         }
 
         // Update is called once per frame

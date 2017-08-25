@@ -74,6 +74,13 @@ namespace Fidget.GameSpin
                 {
                     User.Instance.HighScoreGameSpin = User.Instance.ScoreGameSpin;
                     resultPopup.BestSpriteOn();
+                    if (Social.localUser.authenticated)
+                    {
+                        Social.ReportScore(User.Instance.HighScoreGameSpin, "CgkIyIDh6tIfEAIQBw", (bool success) =>
+                        {
+                            // handle success or failure
+                        });
+                    }
                 }
                 else
                 {

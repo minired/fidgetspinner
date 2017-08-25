@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SceneManagement;
 namespace Fidget.Common
 {
     public class ResultPopup : MonoBehaviour
@@ -31,6 +32,8 @@ namespace Fidget.Common
         public GameObject normalCoinObj;
         public GameObject adCoinObj;
 
+
+        public GooglePlay goolgePlay;
 
         // Use this for initialization
         void Start()
@@ -133,7 +136,24 @@ namespace Fidget.Common
         public void OnRank()
         {
 #if UNITY_ANDROID
-            Social.ShowLeaderboardUI();
+            if (Social.localUser.authenticated)
+            {
+                goolgePlay.LoginWithInit();
+            }
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name == "Game")
+            {
+                PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");
+            }
+            else if(scene.name == "GameSpin")
+            {
+                PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQBw");
+            }
+            else if(scene.name == "TimingGame")
+            {
+                PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQCA");
+            }
+           
 #endif
         }
     }

@@ -24,10 +24,33 @@
 
 public static class GPGSIds
 {
-        public const string leaderboard_timed_spin = "CgkIyIDh6tIfEAIQAA"; // <GPGSID>
-        public const string achievement_100 = "CgkIyIDh6tIfEAIQBQ"; // <GPGSID>
-        public const string achievement_1 = "CgkIyIDh6tIfEAIQAQ"; // <GPGSID>
+        public const string achievement_400 = "CgkIyIDh6tIfEAIQDw"; // <GPGSID>
         public const string achievement_10 = "CgkIyIDh6tIfEAIQAw"; // <GPGSID>
+        public const string achievement_200 = "CgkIyIDh6tIfEAIQDQ"; // <GPGSID>
+        public const string achievement_100 = "CgkIyIDh6tIfEAIQBQ"; // <GPGSID>
+        public const string achievement_700 = "CgkIyIDh6tIfEAIQEg"; // <GPGSID>
+        public const string leaderboard_timed_spin = "CgkIyIDh6tIfEAIQAA"; // <GPGSID>
+        public const string achievement_1000 = "CgkIyIDh6tIfEAIQCQ"; // <GPGSID>
+        public const string leaderboard_timing_spin = "CgkIyIDh6tIfEAIQCA"; // <GPGSID>
+        public const string achievement_600 = "CgkIyIDh6tIfEAIQEQ"; // <GPGSID>
+        public const string achievement_50 = "CgkIyIDh6tIfEAIQCw"; // <GPGSID>
+        public const string achievement_100_ms = "CgkIyIDh6tIfEAIQGA"; // <GPGSID>
+        public const string achievement_200_ms = "CgkIyIDh6tIfEAIQGQ"; // <GPGSID>
+        public const string achievement_10_2 = "CgkIyIDh6tIfEAIQCg"; // <GPGSID>
+        public const string achievement_400_ms = "CgkIyIDh6tIfEAIQGw"; // <GPGSID>
+        public const string achievement_100_2 = "CgkIyIDh6tIfEAIQDA"; // <GPGSID>
+        public const string achievement_500_ms = "CgkIyIDh6tIfEAIQHA"; // <GPGSID>
+        public const string achievement_999 = "CgkIyIDh6tIfEAIQFQ"; // <GPGSID>
+        public const string achievement_500_2 = "CgkIyIDh6tIfEAIQFg"; // <GPGSID>
+        public const string achievement_5000 = "CgkIyIDh6tIfEAIQFw"; // <GPGSID>
+        public const string leaderboard_game_spin = "CgkIyIDh6tIfEAIQBw"; // <GPGSID>
+        public const string achievement_600_ms = "CgkIyIDh6tIfEAIQHQ"; // <GPGSID>
+        public const string achievement_300_ms = "CgkIyIDh6tIfEAIQGg"; // <GPGSID>
+        public const string achievement_900 = "CgkIyIDh6tIfEAIQFA"; // <GPGSID>
+        public const string achievement_800 = "CgkIyIDh6tIfEAIQEw"; // <GPGSID>
+        public const string achievement_300 = "CgkIyIDh6tIfEAIQDg"; // <GPGSID>
+        public const string achievement_1 = "CgkIyIDh6tIfEAIQAQ"; // <GPGSID>
+        public const string achievement_500 = "CgkIyIDh6tIfEAIQEA"; // <GPGSID>
 
 }
 
