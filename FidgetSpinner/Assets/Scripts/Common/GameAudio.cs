@@ -8,6 +8,7 @@ namespace Fidget.Common
     {
         public List<AudioClip> buttonBeepList;
         public List<AudioClip> effectList;
+        public AudioClip gameSpinSuccess;
         // Use this for initialization
         void Start()
         {
@@ -28,8 +29,22 @@ namespace Fidget.Common
             }
         }
 
+        public void GameSpinSuccess()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(gameSpinSuccess);
+            }
+            catch
+            {
 
-       
+            }
+        }
+
+
+
 
         // Update is called once per frame
         void Update()

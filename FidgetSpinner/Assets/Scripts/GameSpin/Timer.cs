@@ -12,6 +12,7 @@ namespace Fidget.GameSpin
         public ResultPopup resultPopup;
         public Score score;
         public CoinUI coinUI;
+        public GameAudio gameAudio;
 
         public bool isStarted;
         public bool isGameOver;
@@ -106,6 +107,7 @@ namespace Fidget.GameSpin
         public void Success()
         {
             this.GetComponent<UISprite>().fillAmount += successAmount;
+            gameAudio.GameSpinSuccess();
         }
         
         public void BrokenFail()
