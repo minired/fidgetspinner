@@ -39,6 +39,7 @@ namespace Fidget.TimeGame
 
         public MoveHandIcon moveHandIcon;
 
+        public AdmobPlayer admobPlayer;
 
         float rightEventTime = 0.0f;
         bool isGameStart = false;
@@ -57,6 +58,7 @@ namespace Fidget.TimeGame
 
 
         float highSpeed = 0.0f;
+
 
         private void Awake()
         {
@@ -289,7 +291,13 @@ namespace Fidget.TimeGame
         }
 
       
-   
+        void AdPopupChecker()
+        {
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show("video");
+            }
+        }
 
 
         // Update is called once per frame
@@ -317,6 +325,7 @@ namespace Fidget.TimeGame
 
             if (gameTime <= 0.0f)
             {
+                GameInfo.gameCount++;
                 timeLabel.text = "0";
                 isGameStart = false;
                 fidgetSpinner.OnSpinStop();
@@ -338,7 +347,7 @@ namespace Fidget.TimeGame
                     resultPopup.BestSpriteOff();
                 }
 
-                //resultPopup.scoreLabel.text = User.Instance.Score.ToString();
+                    //resultPopup.scoreLabel.text = User.Instance.Score.ToString();
                 resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
                 resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
                 resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
@@ -351,6 +360,11 @@ namespace Fidget.TimeGame
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
                 }
+                if (GameInfo.gameCount % 5 == 0)
+                {
+                    AdPopupChecker();
+                }
+
 
                 return;
             }

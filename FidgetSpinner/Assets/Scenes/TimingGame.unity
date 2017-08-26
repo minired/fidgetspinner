@@ -9856,6 +9856,7 @@ MonoBehaviour:
   fidgetSpinner: {fileID: 1289741711}
   timingCircle: {fileID: 1472165395}
   timeLabel: {fileID: 887256912}
+  admobPlayer: {fileID: 1864872821}
 --- !u!1 &1289741709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10609,6 +10610,54 @@ MonoBehaviour:
   mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
   mSpriteName: img_gaugewhite@sprite
   mFillCenter: 1
+--- !u!1001 &1864872820
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.0073337536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.13036011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908455414351938, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1864872821 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114693324909480556, guid: c6d2ac502fa54564fa34a9a08430bd63,
+    type: 2}
+  m_PrefabInternal: {fileID: 1864872820}
+  m_Script: {fileID: 11500000, guid: b55b2941a92f6f742ae62a11e4dcf98f, type: 3}
 --- !u!1 &1883953952
 GameObject:
   m_ObjectHideFlags: 0

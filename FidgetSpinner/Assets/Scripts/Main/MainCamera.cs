@@ -36,6 +36,7 @@ namespace Fidget.Main
         // Use this for initialization
         void Start()
         {
+            Advertisement.Initialize("1515814", true);
             googlePlay.LoginWithInit();
             googlePlay.UpdateCheckAchievements();
         }
