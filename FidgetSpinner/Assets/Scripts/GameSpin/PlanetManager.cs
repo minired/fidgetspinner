@@ -255,6 +255,7 @@ namespace Fidget.GameSpin
             tabLabel.GetComponent<TabToStart>().Init();
             score.Init();
             score.ResetBonus();
+            fever.Init();
             combo.Fail();
             for(int i = 0; i < 10; i++)
             {

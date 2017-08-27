@@ -73,6 +73,7 @@ namespace Fidget.Common
         IEnumerator ShowScoreCoroutine(int score)
         {
             int temp = 0;
+            int gap = score / 50;
             while(true)
             {
                 if (temp >= score)
@@ -81,7 +82,7 @@ namespace Fidget.Common
                     break;
                 }
                 scoreLabel.text = temp.ToString();
-                temp += 289;
+                temp += gap;
                 yield return new WaitForFixedUpdate();
             }
         }
