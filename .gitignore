@@ -73,3 +73,15 @@ FidgetSpinner/Assets/Plugins/Android/firebase-common-10.0.1/res.meta
 FidgetSpinner/Assets/Plugins/Android/firebase-iid-10.0.1/res.meta
 FidgetSpinner/.vs/FidgetSpinner/v15/Browse.VC.opendb
 FidgetSpinner/.vs/FidgetSpinner/v15/Browse.VC.db
+
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.Android.dll
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.Editor.dll
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.Unsupported.dll
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.iOS.dll
+
+FidgetSpinner/Assets/UnityAds.meta
+FidgetSpinner/ProjectSettings/UnityConnectSettings.asset
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.iOS.dll.meta
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.Unsupported.dll.meta
+FidgetSpinner/Assets/UnityAds/UnityEngine.Advertisements.Android.dll.meta
+FidgetSpinner/Assets/Plugins/Android/support-annotations-25.2.0.jar.meta
