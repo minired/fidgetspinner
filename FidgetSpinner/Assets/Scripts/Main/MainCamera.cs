@@ -36,7 +36,7 @@ namespace Fidget.Main
         // Use this for initialization
         void Start()
         {
-            Advertisement.Initialize("1515814", true);
+            Advertisement.Initialize("1515814", false);
             googlePlay.LoginWithInit();
             googlePlay.UpdateCheckAchievements();
         }
@@ -44,7 +44,10 @@ namespace Fidget.Main
         // Update is called once per frame
         void Update()
         {
-
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
         }
 
         public void MoveGameScene()

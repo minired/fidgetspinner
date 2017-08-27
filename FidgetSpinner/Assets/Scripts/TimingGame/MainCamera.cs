@@ -63,9 +63,12 @@ namespace Fidget.TimingGame
 
         void AdPopupChecker()
         {
-            if (Advertisement.IsReady())
+            if (!admobPlayer.ShowAd())
             {
-                Advertisement.Show("video");
+                if (Advertisement.IsReady())
+                {
+                    Advertisement.Show("video");
+                }
             }
         }
 
@@ -242,6 +245,10 @@ namespace Fidget.TimingGame
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main");
+            }
             if (isSpinStart && gameTime <= 0.0f)
             {
                 GameEnd();
