@@ -106,7 +106,10 @@ namespace Fidget.Common
             {
                 popupClosed();
             }
-            gameaudio.ButtonBeepPop();
+            if (gameaudio != null)
+            {
+                gameaudio.ButtonBeepPop();
+            }
         }
 
         public void SetEnableAdButton()
@@ -150,7 +153,10 @@ namespace Fidget.Common
                 goolgePlay.LoginWithInit();
             }
             Scene scene = SceneManager.GetActiveScene();
-            gameaudio.ButtonBeepPop();
+            if (gameaudio != null)
+            {
+                gameaudio.ButtonBeepPop();
+            }
             if (scene.name == "Game")
             {
                 PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");

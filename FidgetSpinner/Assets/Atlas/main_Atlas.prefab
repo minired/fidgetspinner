@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1644632828493282}
+  m_RootGameObject: {fileID: 1116900872651328}
   m_IsPrefabParent: 1
---- !u!1 &1644632828493282
+--- !u!1 &1116900872651328
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4250410091872770}
-  - component: {fileID: 114473235092524230}
+  - component: {fileID: 4616192749937736}
+  - component: {fileID: 114398153056387890}
   m_Layer: 0
-  m_Name: popup_Atlas
+  m_Name: main_Atlas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4250410091872770
+--- !u!4 &4616192749937736
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644632828493282}
+  m_GameObject: {fileID: 1116900872651328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,24 +40,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114473235092524230
+--- !u!114 &114398153056387890
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1644632828493282}
+  m_GameObject: {fileID: 1116900872651328}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 4dc18f3547b391a44baa9cfd0e707659, type: 2}
+  material: {fileID: 2100000, guid: 2843b6d50ed841d43a811a8a3d9e26e5, type: 2}
   mSprites:
-  - name: btn_close@sprite
+  - name: btn_back@sprite
+    x: 591
+    y: 4
+    width: 143
+    height: 143
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: coin
+    x: 836
+    y: 290
+    width: 172
+    height: 171
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: img_gaugebg@sprite
     x: 0
-    y: 107
-    width: 39
-    height: 37
+    y: 462
+    width: 600
+    height: 50
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -66,63 +92,11 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: music@sprite
-    x: 809
-    y: 354
-    width: 159
-    height: 158
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: music_off@sprite
-    x: 807
-    y: 39
-    width: 157
-    height: 156
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Notice@sprite
-    x: 648
-    y: 353
-    width: 160
-    height: 159
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: Notice_off@sprite
-    x: 648
-    y: 36
-    width: 158
-    height: 157
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: popup@sprite
+  - name: img_gaugewhite@sprite
     x: 0
-    y: 145
-    width: 647
-    height: 367
+    y: 415
+    width: 590
+    height: 46
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -131,11 +105,11 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: vibration@sprite
-    x: 807
-    y: 196
-    width: 157
-    height: 156
+  - name: img_moneybg@sprite
+    x: 0
+    y: 350
+    width: 290
+    height: 64
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -144,11 +118,63 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: vibration_off@sprite
-    x: 648
-    y: 194
-    width: 158
-    height: 158
+  - name: img_planet1@sprite
+    x: 591
+    y: 229
+    width: 244
+    height: 232
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: img_planet2@sprite
+    x: 0
+    y: 41
+    width: 274
+    height: 308
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 1
+    paddingTop: 0
+    paddingBottom: 0
+  - name: img_planet3@sprite
+    x: 275
+    y: 80
+    width: 254
+    height: 269
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: navi
+    x: 530
+    y: 254
+    width: 57
+    height: 95
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: speed bg
+    x: 591
+    y: 148
+    width: 210
+    height: 80
     borderLeft: 0
     borderRight: 0
     borderTop: 0

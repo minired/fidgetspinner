@@ -145,7 +145,7 @@ Transform:
   m_Children:
   - {fileID: 1289741710}
   m_Father: {fileID: 276064825}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &58516195
 Rigidbody:
@@ -331,8 +331,68 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4025459754383684, guid: ea879acb007edb648ae2184f96f285a7, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114989504536815480, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114838559551947860, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114396846367631330, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114286060381974926, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114417357967303494, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114747503610581740, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114339049544689444, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114677022580902350, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114185788596163252, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
+    - target: {fileID: 114923490270351534, guid: ea879acb007edb648ae2184f96f285a7,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea879acb007edb648ae2184f96f285a7, type: 2}
   m_IsPrefabParent: 0
@@ -447,7 +507,6 @@ Transform:
   m_LocalScale: {x: 0.0015625, y: 0.0015625, z: 0.0015625}
   m_Children:
   - {fileID: 1153844319}
-  - {fileID: 2002427082}
   - {fileID: 789824707}
   - {fileID: 1582016120}
   - {fileID: 58516194}
@@ -556,86 +615,9 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: speed bg
   mFillCenter: 1
---- !u!1001 &457822791
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 276064825}
-    m_Modifications:
-    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
-        type: 2}
-      propertyPath: onClick.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
-        type: 2}
-      propertyPath: onClick.Array.data[0].mTarget
-      value: 
-      objectReference: {fileID: 2002427083}
-    - target: {fileID: 114560363342193580, guid: e6cb6f90bd155a441a8c0d50201fb89c,
-        type: 2}
-      propertyPath: onClick.Array.data[0].mMethodName
-      value: ShowAdPopup
-      objectReference: {fileID: 0}
-    - target: {fileID: 1607133574982204, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1948298575174330, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1212492712955108, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1098920480279088, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1469334524922396, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &505815952
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +789,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4427982619271284, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114836750190064564, guid: 90533b5bcaa7738489c5569082cbbb20,
         type: 2}
@@ -1460,7 +1442,7 @@ Transform:
   - {fileID: 887256911}
   - {fileID: 727447240}
   m_Father: {fileID: 276064825}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &789824708
 Rigidbody:
@@ -1691,7 +1673,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: img_gaugebg@sprite
   mFillCenter: 1
 --- !u!1 &887256910
@@ -2034,7 +2016,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: btn_back@sprite
   mFillCenter: 1
 --- !u!114 &1147748997 stripped
@@ -2484,8 +2466,8 @@ MonoBehaviour:
   path:
     wpLengths:
     - 0
-    - 0.30691624
-    - 0.20285967
+    - 0.29459178
+    - 0.20377377
     - 0.2118813
     - 0.27238593
     - 0.2787868
@@ -2494,7 +2476,7 @@ MonoBehaviour:
     subdivisionsXSegment: 10
     subdivisions: 70
     wps:
-    - {x: -0.0490625, y: 0.2840625, z: -0.015625}
+    - {x: -0.0490625, y: 0.2371875, z: -0.015625}
     - {x: 0.23907545, y: 0.1796168, z: -0.015625}
     - {x: 0.3780831, y: 0.035523392, z: -0.015625}
     - {x: 0.43903515, y: -0.16447848, z: -0.015625}
@@ -2506,7 +2488,7 @@ MonoBehaviour:
       b: {x: 0, y: 0, z: 0}
     - a: {x: -0.24093816, y: -0.6385356, z: -0.015625}
       b: {x: 0, y: 0, z: 0}
-    length: 1.473548
+    length: 1.4621438
     isFinalized: 1
     timesTable:
     - 0.014285714
@@ -2580,76 +2562,76 @@ MonoBehaviour:
     - 0.9857143
     - 1
     lengthsTable:
-    - 0.004745171
-    - 0.018044118
-    - 0.038492404
-    - 0.06468643
-    - 0.09522372
-    - 0.12870342
-    - 0.1637272
-    - 0.19890074
-    - 0.23283651
-    - 0.26415956
-    - 0.29152074
-    - 0.3139072
-    - 0.33406
-    - 0.3531362
-    - 0.3713132
-    - 0.38876694
-    - 0.4056696
-    - 0.42218706
-    - 0.43847647
-    - 0.45468473
-    - 0.47094744
-    - 0.4873891
-    - 0.5041239
-    - 0.52121
-    - 0.53853047
-    - 0.55604255
-    - 0.57372046
-    - 0.5915475
-    - 0.6095175
-    - 0.6276363
-    - 0.6459233
-    - 0.6644126
-    - 0.6831541
-    - 0.702214
-    - 0.72167504
-    - 0.7420827
-    - 0.7637622
-    - 0.78648293
-    - 0.8100138
-    - 0.8341258
-    - 0.85859376
-    - 0.8831991
-    - 0.9077318
-    - 0.9319942
-    - 0.9558051
-    - 0.9790064
-    - 1.0015775
-    - 1.0247992
-    - 1.0489296
-    - 1.0737568
-    - 1.0990431
-    - 1.124533
-    - 1.1499581
-    - 1.1750419
-    - 1.1995018
-    - 1.2230524
-    - 1.2454077
-    - 1.2662846
-    - 1.2855788
-    - 1.3038789
-    - 1.3215214
-    - 1.3387465
-    - 1.35573
-    - 1.3725892
-    - 1.3893932
-    - 1.4061778
-    - 1.4229608
-    - 1.4397582
-    - 1.4566004
-    - 1.473548
+    - 0.0045827734
+    - 0.017419448
+    - 0.03714332
+    - 0.062389094
+    - 0.091793396
+    - 0.12399569
+    - 0.1576398
+    - 0.19137658
+    - 0.2238687
+    - 0.25380108
+    - 0.27990448
+    - 0.3012847
+    - 0.32068926
+    - 0.33926082
+    - 0.35718268
+    - 0.37462127
+    - 0.39172274
+    - 0.40861112
+    - 0.42538774
+    - 0.4421324
+    - 0.45890573
+    - 0.47575212
+    - 0.4927035
+    - 0.50980574
+    - 0.5271262
+    - 0.5446383
+    - 0.5623162
+    - 0.5801432
+    - 0.59811324
+    - 0.61623204
+    - 0.63451904
+    - 0.65300834
+    - 0.67174983
+    - 0.6908097
+    - 0.71027076
+    - 0.73067844
+    - 0.7523579
+    - 0.77507865
+    - 0.7986095
+    - 0.82272154
+    - 0.8471895
+    - 0.8717948
+    - 0.8963275
+    - 0.9205899
+    - 0.94440085
+    - 0.96760213
+    - 0.9901733
+    - 1.013395
+    - 1.0375253
+    - 1.0623525
+    - 1.0876389
+    - 1.1131288
+    - 1.1385539
+    - 1.1636376
+    - 1.1880975
+    - 1.2116481
+    - 1.2340034
+    - 1.2548803
+    - 1.2741746
+    - 1.2924746
+    - 1.3101171
+    - 1.3273423
+    - 1.3443258
+    - 1.361185
+    - 1.3779889
+    - 1.3947735
+    - 1.4115565
+    - 1.4283539
+    - 1.4451962
+    - 1.4621438
   inspectorMode: 0
   pathType: 1
   handlesType: 0
@@ -6115,8 +6097,8 @@ MonoBehaviour:
   path:
     wpLengths:
     - 0
-    - 0.33824804
-    - 0.20813811
+    - 0.32897848
+    - 0.20923778
     - 0.22298601
     - 0.26057386
     - 0.2382027
@@ -6125,7 +6107,7 @@ MonoBehaviour:
     subdivisionsXSegment: 10
     subdivisions: 70
     wps:
-    - {x: 0.077656254, y: 0.27890626, z: -0.0234375}
+    - {x: 0.077656254, y: 0.23203126, z: -0.015625}
     - {x: -0.24745166, y: 0.18809292, z: -0.015625}
     - {x: -0.38473895, y: 0.03717655, z: -0.015625}
     - {x: -0.43219662, y: -0.17808229, z: -0.015625}
@@ -6137,7 +6119,7 @@ MonoBehaviour:
       b: {x: 0, y: 0, z: 0}
     - a: {x: 0.33262455, y: -0.6478003, z: -0.015625}
       b: {x: 0, y: 0, z: 0}
-    length: 1.5262301
+    length: 1.5180671
     isFinalized: 1
     timesTable:
     - 0.014285714
@@ -6211,76 +6193,76 @@ MonoBehaviour:
     - 0.9857143
     - 1
     lengthsTable:
-    - 0.005314885
-    - 0.020194635
-    - 0.043042548
-    - 0.072262935
-    - 0.106261656
-    - 0.14344668
-    - 0.1822295
-    - 0.22102699
-    - 0.25826544
-    - 0.29238892
-    - 0.32187897
-    - 0.34561518
-    - 0.36667895
-    - 0.38640323
-    - 0.40503705
-    - 0.42282343
-    - 0.43999392
-    - 0.45676315
-    - 0.4733245
-    - 0.48984826
-    - 0.5064817
-    - 0.52335155
-    - 0.5405681
-    - 0.55822027
-    - 0.5763
-    - 0.5947477
-    - 0.6135056
-    - 0.63251966
-    - 0.6517402
-    - 0.6711228
-    - 0.6906291
-    - 0.71022785
-    - 0.7298958
-    - 0.7496191
-    - 0.7693946
-    - 0.7897636
-    - 0.8111406
-    - 0.83333457
-    - 0.8561472
-    - 0.8793764
-    - 0.9028177
-    - 0.9262669
-    - 0.9495212
-    - 0.97238153
-    - 0.9946544
-    - 1.0161556
-    - 1.0367777
-    - 1.057232
-    - 1.0777384
-    - 1.0982734
-    - 1.1188143
-    - 1.1393411
-    - 1.1598356
-    - 1.1802833
-    - 1.2006733
-    - 1.2209998
-    - 1.2412617
-    - 1.2614646
-    - 1.2817079
-    - 1.3023591
-    - 1.323516
-    - 1.3451861
-    - 1.3673242
-    - 1.3898476
-    - 1.4126468
-    - 1.4355955
-    - 1.4585595
-    - 1.4814031
-    - 1.503998
-    - 1.5262301
+    - 0.0052096047
+    - 0.019785624
+    - 0.042149782
+    - 0.07072533
+    - 0.103937775
+    - 0.14021581
+    - 0.1779933
+    - 0.2157122
+    - 0.25182873
+    - 0.2848261
+    - 0.31324518
+    - 0.33606997
+    - 0.35642487
+    - 0.37565595
+    - 0.39403424
+    - 0.41180512
+    - 0.42918095
+    - 0.44633618
+    - 0.46340632
+    - 0.48049054
+    - 0.4976566
+    - 0.5149475
+    - 0.53238845
+    - 0.55005723
+    - 0.568137
+    - 0.5865847
+    - 0.60534257
+    - 0.6243566
+    - 0.64357716
+    - 0.6629598
+    - 0.68246615
+    - 0.7020649
+    - 0.7217328
+    - 0.74145615
+    - 0.7612316
+    - 0.78160065
+    - 0.8029776
+    - 0.8251716
+    - 0.84798425
+    - 0.87121344
+    - 0.89465475
+    - 0.91810393
+    - 0.9413582
+    - 0.96421856
+    - 0.98649144
+    - 1.0079926
+    - 1.0286148
+    - 1.049069
+    - 1.0695754
+    - 1.0901104
+    - 1.1106514
+    - 1.1311781
+    - 1.1516726
+    - 1.1721203
+    - 1.1925104
+    - 1.2128369
+    - 1.2330987
+    - 1.2533016
+    - 1.2735449
+    - 1.2941961
+    - 1.315353
+    - 1.3370231
+    - 1.3591613
+    - 1.3816847
+    - 1.4044838
+    - 1.4274325
+    - 1.4503965
+    - 1.4732401
+    - 1.4958351
+    - 1.5180671
   inspectorMode: 0
   pathType: 1
   handlesType: 0
@@ -10167,8 +10149,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet2@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: star2
   mFillCenter: 1
 --- !u!4 &1472165394
 Transform:
@@ -10191,7 +10173,7 @@ Transform:
   - {fileID: 505815953}
   - {fileID: 1230403998}
   m_Father: {fileID: 276064825}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1472165395
 MonoBehaviour:
@@ -10623,7 +10605,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: img_gaugewhite@sprite
   mFillCenter: 1
 --- !u!1001 &1864872820
@@ -10867,8 +10849,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet1@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: star1
   mFillCenter: 1
 --- !u!1001 &1915710485
 Prefab:
@@ -11097,17 +11079,6 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
---- !u!4 &2002427082 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4318751004232728, guid: e6cb6f90bd155a441a8c0d50201fb89c,
-    type: 2}
-  m_PrefabInternal: {fileID: 457822791}
---- !u!114 &2002427083 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114006139928042842, guid: e6cb6f90bd155a441a8c0d50201fb89c,
-    type: 2}
-  m_PrefabInternal: {fileID: 457822791}
-  m_Script: {fileID: 11500000, guid: e6b1cfc4821011a438525c927db1ff05, type: 3}
 --- !u!1 &2047932973
 GameObject:
   m_ObjectHideFlags: 0
@@ -11301,8 +11272,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet3@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: img_planet@sprite
   mFillCenter: 1
 --- !u!1001 &2118364160
 Prefab:

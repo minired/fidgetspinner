@@ -128,6 +128,24 @@ GameObject:
   - component: {fileID: 65695741555956578}
   - component: {fileID: 114479562883322398}
   m_Layer: 5
+  m_Name: btn_close (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1355734125778950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4275873661257864}
+  - component: {fileID: 114125693561230946}
+  - component: {fileID: 65070600013989738}
+  - component: {fileID: 114919076846722346}
+  m_Layer: 5
   m_Name: btn_close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,11 +274,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1295659786192328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 264, y: 172, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 264, y: -603, z: 0}
+  m_LocalScale: {x: 0.9984, y: 0.9984, z: 0.9984}
   m_Children: []
   m_Father: {fileID: 4423668002140324}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4271168270521526
 Transform:
@@ -274,6 +292,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4562725870460372}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4275873661257864
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355734125778950}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 264, y: 172, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4423668002140324}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4317818214743254
 Transform:
@@ -314,9 +345,10 @@ Transform:
   - {fileID: 4317818214743254}
   - {fileID: 4562725870460372}
   - {fileID: 4085399038730984}
-  - {fileID: 4144529530267910}
+  - {fileID: 4275873661257864}
   - {fileID: 4787804810296178}
   - {fileID: 4319942408351238}
+  - {fileID: 4144529530267910}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -414,6 +446,18 @@ Transform:
   m_Father: {fileID: 4085399038730984}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65070600013989738
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355734125778950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 712.7917, y: 503.12598, z: 0}
+  m_Center: {x: -265.86575, y: 216.07765, z: 0}
 --- !u!65 &65141080033488694
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -484,8 +528,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 712.7917, y: 84.8679, z: 0}
-  m_Center: {x: -265.86575, y: 6.9486237, z: 0}
+  m_Size: {x: 712.7917, y: 503.12598, z: 0}
+  m_Center: {x: -265.86575, y: 216.07765, z: 0}
 --- !u!65 &65823231250598642
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -560,8 +604,61 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
-  mSpriteName: popup@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: settingpopup@sprite
+  mFillCenter: 1
+--- !u!114 &114125693561230946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355734125778950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 39
+  mHeight: 37
+  mDepth: 7
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 1.054054
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: btn_close@sprite
   mFillCenter: 1
 --- !u!114 &114164878314807214
 MonoBehaviour:
@@ -613,7 +710,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: Notice_off@sprite
   mFillCenter: 1
 --- !u!114 &114223051161170414
@@ -666,7 +763,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: music@sprite
   mFillCenter: 1
 --- !u!114 &114297501778272992
@@ -841,7 +938,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: vibration@sprite
   mFillCenter: 1
 --- !u!114 &114628950324213394
@@ -962,7 +1059,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: vibration_off@sprite
   mFillCenter: 1
 --- !u!114 &114712016875938764
@@ -1015,7 +1112,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: Notice@sprite
   mFillCenter: 1
 --- !u!114 &114721419819990054
@@ -1068,7 +1165,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: music_off@sprite
   mFillCenter: 1
 --- !u!114 &114748581656033950
@@ -1160,15 +1257,15 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mColor: {r: 1, g: 1, b: 1, a: 0.003921569}
   mPivot: 4
-  mWidth: 39
-  mHeight: 37
+  mWidth: 2
+  mHeight: 2
   mDepth: 7
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.054054
+  aspectRatio: 1
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -1182,8 +1279,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114473235092524230, guid: dfcc751d52f727d4895a0e92c97f20a9, type: 2}
-  mSpriteName: btn_close@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: white
   mFillCenter: 1
 --- !u!114 &114792180632085338
 MonoBehaviour:
@@ -1270,6 +1367,35 @@ MonoBehaviour:
   onClick:
   - mTarget: {fileID: 114307757028859212}
     mMethodName: OnAlarmToggle
+    mParameters: []
+    oneShot: 0
+--- !u!114 &114919076846722346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355734125778950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdca5042b1d12a4890ec1bd4f04290d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweenTarget: {fileID: 1355734125778950}
+  hover: {r: 1, g: 1, b: 1, a: 1}
+  pressed: {r: 1, g: 1, b: 1, a: 1}
+  disabledColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  duration: 0.2
+  dragHighlight: 0
+  hoverSprite: 
+  pressedSprite: 
+  disabledSprite: 
+  hoverSprite2D: {fileID: 0}
+  pressedSprite2D: {fileID: 0}
+  disabledSprite2D: {fileID: 0}
+  pixelSnap: 0
+  onClick:
+  - mTarget: {fileID: 114307757028859212}
+    mMethodName: PopupClose
     mParameters: []
     oneShot: 0
 --- !u!114 &114936644699980954
