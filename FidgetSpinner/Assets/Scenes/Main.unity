@@ -325,19 +325,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114307757028859212, guid: 81570904a8848f44fa2c665448d4d427,
         type: 2}
-      propertyPath: bgm
-      value: 
-      objectReference: {fileID: 1241161270}
-    - target: {fileID: 114307757028859212, guid: 81570904a8848f44fa2c665448d4d427,
-        type: 2}
       propertyPath: gameAudio
       value: 
       objectReference: {fileID: 1424391227}
-    - target: {fileID: 114307757028859212, guid: 81570904a8848f44fa2c665448d4d427,
+    - target: {fileID: 1255961504664440, guid: 81570904a8848f44fa2c665448d4d427, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65695741555956578, guid: 81570904a8848f44fa2c665448d4d427,
         type: 2}
-      propertyPath: admobPlayer
-      value: 
-      objectReference: {fileID: 853059171}
+      propertyPath: m_Size.y
+      value: 503.12598
+      objectReference: {fileID: 0}
+    - target: {fileID: 65695741555956578, guid: 81570904a8848f44fa2c665448d4d427,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 216.07765
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 81570904a8848f44fa2c665448d4d427, type: 2}
   m_IsPrefabParent: 0
@@ -476,12 +480,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 412, y: 82, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &853059171 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114693324909480556, guid: c6d2ac502fa54564fa34a9a08430bd63,
-    type: 2}
-  m_PrefabInternal: {fileID: 2022054324}
-  m_Script: {fileID: 11500000, guid: b55b2941a92f6f742ae62a11e4dcf98f, type: 3}
 --- !u!1 &858604124
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,6 +612,10 @@ Prefab:
       propertyPath: gameAudio
       value: 
       objectReference: {fileID: 1424391227}
+    - target: {fileID: 1212492712955108, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6cb6f90bd155a441a8c0d50201fb89c, type: 2}
   m_IsPrefabParent: 0

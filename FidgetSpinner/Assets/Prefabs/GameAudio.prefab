@@ -53,5 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonBeepList:
   - {fileID: 8300000, guid: 82b342a11412a0948ae178d8802bf348, type: 3}
-  effectList: []
-  gameSpinSuccess: {fileID: 8300000, guid: 860d23ba0ede82644bf00038098a86fc, type: 3}
+  effectList:
+  - {fileID: 8300000, guid: de92ef3c51e15ad448cdc0ae3920927a, type: 3}
+  - {fileID: 8300000, guid: b109680607823d84c982b811535227ef, type: 3}
+  - {fileID: 8300000, guid: 3408415d32ebd6c44bacd5434136d209, type: 3}
+  gameSpinSuccess: {fileID: 8300000, guid: b9ea998cde2873545aee159491553d71, type: 3}

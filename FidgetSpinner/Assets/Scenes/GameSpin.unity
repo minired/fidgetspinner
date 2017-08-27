@@ -147,11 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114496587864148584, guid: a84199c0f2eed5d47b138ef05953d34e,
-        type: 2}
-      propertyPath: gameSpinSuccess
-      value: 
-      objectReference: {fileID: 8300000, guid: b9ea998cde2873545aee159491553d71, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a84199c0f2eed5d47b138ef05953d34e, type: 2}
   m_IsPrefabParent: 0

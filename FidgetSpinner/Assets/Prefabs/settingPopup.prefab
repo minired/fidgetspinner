@@ -97,7 +97,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1294013203643684
 GameObject:
   m_ObjectHideFlags: 1
@@ -484,8 +484,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 39, y: 37, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 712.7917, y: 84.8679, z: 0}
+  m_Center: {x: -265.86575, y: 6.9486237, z: 0}
 --- !u!65 &65823231250598642
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -732,7 +732,7 @@ MonoBehaviour:
   musicOff: {fileID: 114721419819990054}
   vibrationOff: {fileID: 114705524444783522}
   alarmOff: {fileID: 114164878314807214}
-  bgm: {fileID: 0}
+  gameAudio: {fileID: 0}
 --- !u!114 &114479562883322398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   mWidth: 39
   mHeight: 37
   mDepth: 7
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.054054

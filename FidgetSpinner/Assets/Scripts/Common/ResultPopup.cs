@@ -37,6 +37,8 @@ namespace Fidget.Common
 
         public GameObject adButtonGroup;
 
+        public GameAudio gameaudio;
+
         // Use this for initialization
         void Start()
         {
@@ -104,6 +106,7 @@ namespace Fidget.Common
             {
                 popupClosed();
             }
+            gameaudio.ButtonBeepPop();
         }
 
         public void SetEnableAdButton()
@@ -147,6 +150,7 @@ namespace Fidget.Common
                 goolgePlay.LoginWithInit();
             }
             Scene scene = SceneManager.GetActiveScene();
+            gameaudio.ButtonBeepPop();
             if (scene.name == "Game")
             {
                 PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQAA");

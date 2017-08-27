@@ -57,7 +57,11 @@ namespace Fidget.TimeGame
         public UISprite backBtnSprite;
 
 
+        public GameAudio gameAudio;
+
         float highSpeed = 0.0f;
+
+        int speedUpCount = 0;
 
 
         private void Awake()
@@ -135,6 +139,7 @@ namespace Fidget.TimeGame
             fidgetSpinner.InitPosition();
             timeLabel.text = "20";
             highSpeed = 0.0f;
+            speedUpCount = 0;
         }
 
         private void SwipeMouse_downSwipe()
@@ -253,6 +258,10 @@ namespace Fidget.TimeGame
         {
             if (!isGameStart)
                 return;
+
+            SwipeSound();
+
+
             if (!fidgetSpinner.IsSpin)
             {
                 fidgetSpinner.SetRightDirection();
@@ -264,10 +273,22 @@ namespace Fidget.TimeGame
             fidgetSpinner.SpeedUp(fidgetSpinner.Haste);
         }
 
+        void SwipeSound()
+        {
+            speedUpCount++;
+            if (speedUpCount % 3 == 0)
+            {
+                gameAudio.ButtonSwipe1();
+            }
+               
+        }
+
         void LeftSpeedUp()
         {
             if (!isGameStart)
                 return;
+
+            SwipeSound();
 
             if (!fidgetSpinner.IsSpin)
             {

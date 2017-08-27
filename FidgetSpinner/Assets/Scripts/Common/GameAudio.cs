@@ -29,6 +29,47 @@ namespace Fidget.Common
             }
         }
 
+        public void ButtonSwipe1()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(effectList[0]);
+            }
+            catch
+            {
+
+            }
+        }
+        public void ButtonSwipe2()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(effectList[1]);
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void ButtonSwipe3()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(effectList[2]);
+            }
+            catch
+            {
+
+            }
+        }
+
         public void GameSpinSuccess()
         {
             try

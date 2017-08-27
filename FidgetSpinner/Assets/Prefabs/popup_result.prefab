@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1382090422482428
 GameObject:
   m_ObjectHideFlags: 1
@@ -1954,6 +1954,7 @@ MonoBehaviour:
   adCoinObj: {fileID: 1063646303089952}
   goolgePlay: {fileID: 114176002852832764}
   adButtonGroup: {fileID: 1236649286130434}
+  gameaudio: {fileID: 0}
 --- !u!114 &114783696041591978
 MonoBehaviour:
   m_ObjectHideFlags: 1

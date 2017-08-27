@@ -52,7 +52,7 @@ namespace Fidget.TimingGame
 
         float gameTime = 0.0f;
 
-
+        public GameAudio gameaudio;
 
         private void Awake()
         {
@@ -120,6 +120,7 @@ namespace Fidget.TimingGame
 
         private void BackBtn_backBtn()
         {
+            gameaudio.ButtonBeepPop();
             SceneManager.LoadScene("Main");
         }
 
@@ -231,6 +232,7 @@ namespace Fidget.TimingGame
             {
                 timingCircle.ClickGood();
                 fidgetSpinner.SpeedUp(fidgetSpinner.Haste * timingCircle.GetGoodBonus());
+                gameaudio.ButtonSwipe1();
             }
             else
             {
