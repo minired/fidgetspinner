@@ -178,7 +178,7 @@ namespace Fidget.TimingGame
             }
             else
             {
-                result = 1.0f;
+                result = 1.1f;
             }
             return result;
         }
