@@ -86,7 +86,7 @@ namespace Fidget.GameSpin
 
                 //resultPopup.scoreLabel.text = User.Instance.ScoreGameSpin.ToString();
                 resultPopup.highscoreLabel.text = User.Instance.HighScoreGameSpin.ToString();
-                resultPopup.coinGainLabel.text = "COIN" + User.Instance.ScoreGameSpin.ToString();
+                resultPopup.coinGainLabel.text = "COIN  " + User.Instance.ScoreGameSpin.ToString();
                 resultPopup.coinMoreLabel.text = (User.Instance.ScoreGameSpin * 2).ToString();
                 resultPopup.coinAdLabel.text = (User.Instance.ScoreGameSpin * 4).ToString();
                 resultPopup.gameObject.SetActive(true);

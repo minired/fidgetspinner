@@ -803,6 +803,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114836750190064564, guid: 90533b5bcaa7738489c5569082cbbb20,
+        type: 2}
+      propertyPath: aspectRatio
+      value: 5.888889
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313036382173574, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
   m_IsPrefabParent: 0
