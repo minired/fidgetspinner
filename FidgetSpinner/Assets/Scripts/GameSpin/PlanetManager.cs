@@ -312,9 +312,12 @@ namespace Fidget.GameSpin
 
         void AdPopupChecker()
         {
-            if (Advertisement.IsReady())
+            if (!admobPlayer.ShowAd())
             {
-                Advertisement.Show("video");
+                if (Advertisement.IsReady())
+                {
+                    Advertisement.Show("video");
+                }
             }
         }
 
@@ -326,6 +329,11 @@ namespace Fidget.GameSpin
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main");
+            }
+
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 timer.isStarted = true;

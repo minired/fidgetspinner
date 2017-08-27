@@ -293,9 +293,12 @@ namespace Fidget.TimeGame
       
         void AdPopupChecker()
         {
-            if (Advertisement.IsReady())
+            if (!admobPlayer.ShowAd())
             {
-                Advertisement.Show("video");
+                if (Advertisement.IsReady())
+                {
+                    Advertisement.Show("video");
+                }
             }
         }
 
@@ -303,6 +306,10 @@ namespace Fidget.TimeGame
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("Main");
+            }
             if (Input.GetMouseButtonDown(0))
             {
                 if (!isGameStart && !resultPopup.gameObject.activeInHierarchy)
@@ -360,7 +367,7 @@ namespace Fidget.TimeGame
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
                 }
-                if (GameInfo.gameCount % 5 == 0)
+                if (GameInfo.gameCount % 2 == 0)
                 {
                     AdPopupChecker();
                 }

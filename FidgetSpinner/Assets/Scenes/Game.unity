@@ -406,6 +406,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6d2ac502fa54564fa34a9a08430bd63, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &937934071 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114693324909480556, guid: c6d2ac502fa54564fa34a9a08430bd63,
+    type: 2}
+  m_PrefabInternal: {fileID: 937934070}
+  m_Script: {fileID: 11500000, guid: b55b2941a92f6f742ae62a11e4dcf98f, type: 3}
 --- !u!114 &940614073 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114250892656290468, guid: e6cb6f90bd155a441a8c0d50201fb89c,
@@ -818,7 +824,7 @@ MonoBehaviour:
   backgroundSelector: {fileID: 1236159994}
   coinAnimation: {fileID: 679059240}
   moveHandIcon: {fileID: 1580826657}
-  admobPlayer: {fileID: 0}
+  admobPlayer: {fileID: 937934071}
   adBtnSprite: {fileID: 1815193359}
   shopBtnSprite: {fileID: 940614073}
   backBtnSprite: {fileID: 1039201713}

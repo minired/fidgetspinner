@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:FidgetSpinner/Assets/Plugins/Android/support-annotations-24.0.0.jar.meta
 guid: 8a3a8ffb9de4f78468c74427275e5448
+=======
+guid: 585e23b334daefa4489dab637ab769bb
+labels:
+- gpsr
+timeCreated: 1503805898
+licenseType: Pro
+>>>>>>> c19b2bebcf1edddf0bdc272f8e346cdee3f8033b:FidgetSpinner/Assets/Plugins/Android/support-annotations-25.2.0.jar.meta
 PluginImporter:
   serializedVersion: 2
   iconMap: {}
