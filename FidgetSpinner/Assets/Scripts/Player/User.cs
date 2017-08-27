@@ -279,15 +279,15 @@ namespace Fidget.Player
         #endregion
 
 
-        public int InitMobile
+        public int RunCount
         {
             get
             {
-                return putil.GetInt("initmobile");
+                return putil.GetInt("runcount");
             }
             set
             {
-                putil.SetInt("initmobile", value);
+                putil.SetInt("runcount", value);
             }
         }
 

@@ -19,9 +19,13 @@ namespace Fidget.Main
 
         private void Awake()
         {
-           if(User.Instance.InitMobile < 1)
+           if(User.Instance.RunCount < 1)
             {
                 InitGame();
+            }
+            else
+            {
+                User.Instance.RunCount++;
             }
         }
         void InitGame()
@@ -30,14 +34,21 @@ namespace Fidget.Main
             User.Instance.Sound = true;
             User.Instance.Alarm = true;
 
-            User.Instance.InitMobile = 2;
+            User.Instance.RunCount = 1;
         }
 
         // Use this for initialization
         void Start()
         {
             Advertisement.Initialize("1515814", false);
-            googlePlay.LoginWithInit();
+            if (User.Instance.RunCount < 2)
+            {
+                googlePlay.LoginWithInit();
+            }
+            else
+            {
+                googlePlay.Init();
+            }
             googlePlay.UpdateCheckAchievements();
         }
 

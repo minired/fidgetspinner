@@ -141,7 +141,7 @@ namespace Fidget.Common
         public void OnRank()
         {
 #if UNITY_ANDROID
-            if (Social.localUser.authenticated)
+            if (!Social.localUser.authenticated)
             {
                 goolgePlay.LoginWithInit();
             }

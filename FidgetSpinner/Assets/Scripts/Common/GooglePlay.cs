@@ -39,7 +39,7 @@ namespace Fidget.Common
         }
 
 
-        private void Init()
+        public void Init()
         {
             if (GameInfo.googlePlayInit)
                 return;
