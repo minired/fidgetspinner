@@ -40,11 +40,16 @@ namespace Fidget.GameSpin
             sprite.fillAmount = 0f;
         }
 
-        // Use this for initialization
-        void Start()
+        public void Init()
         {
             isFever = false;
             sprite.fillAmount = 0f;
+        }
+
+        // Use this for initialization
+        void Start()
+        {
+            Init();
         }
 
         // Update is called once per frame

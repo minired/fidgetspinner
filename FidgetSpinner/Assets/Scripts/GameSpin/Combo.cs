@@ -10,7 +10,7 @@ namespace Fidget.GameSpin
         public Score score;
         public GameObject comboParent;
 
-        int combo;
+        public int combo;
 
         // Use this for initialization
         void Start() {
