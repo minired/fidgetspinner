@@ -155,7 +155,7 @@ namespace Fidget.Common
 
         public void SetMaxSpeed(float speedRate)
         {
-            maxSpeed = (8.99f * speedRate) + 100.0f;
+            maxSpeed = (3.99f * speedRate) + 100.0f;
         }
 
         public void SetDamping(float dampingRate)
