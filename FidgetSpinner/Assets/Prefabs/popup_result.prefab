@@ -188,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1382090422482428
 GameObject:
   m_ObjectHideFlags: 1
@@ -816,8 +816,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 57, y: 55, z: 0}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 140.51361, y: 123.17474, z: 0}
+  m_Center: {x: 2.5565338, y: 1.7044067, z: 0}
 --- !u!65 &65852798114431296
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -916,7 +916,7 @@ MonoBehaviour:
   mWidth: 57
   mHeight: 55
   mDepth: 9
-  autoResizeBoxCollider: 1
+  autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1.0363636
@@ -2037,17 +2037,17 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.7254902, g: 0.6, b: 0.9019608, a: 1}
   mPivot: 5
-  mWidth: 194
+  mWidth: 212
   mHeight: 36
   mDepth: 9
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.388889
+  aspectRatio: 5.611111
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
-  mText: COIN13868
+  mText: COIN  13868
   mFontSize: 36
   mFontStyle: 0
   mAlignment: 0

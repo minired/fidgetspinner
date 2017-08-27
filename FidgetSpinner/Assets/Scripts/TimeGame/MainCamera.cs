@@ -71,6 +71,7 @@ namespace Fidget.TimeGame
             SetLevelLabel();
             SetScoreLabel();
             timeLabel.text = "20";
+            speedLabel.text = "0 m/s";
             highSpeed = 0.0f;
         }
 
@@ -356,7 +357,7 @@ namespace Fidget.TimeGame
 
                     //resultPopup.scoreLabel.text = User.Instance.Score.ToString();
                 resultPopup.highscoreLabel.text = User.Instance.HighScore.ToString();
-                resultPopup.coinGainLabel.text = "COIN" + User.Instance.Score.ToString();
+                resultPopup.coinGainLabel.text = "COIN  " + User.Instance.Score.ToString();
                 resultPopup.coinMoreLabel.text = (User.Instance.Score * 2).ToString();
                 resultPopup.coinAdLabel.text = (User.Instance.Score * 4).ToString();
                 resultPopup.gameObject.SetActive(true);
