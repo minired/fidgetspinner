@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 using Fidget.Common;
 using UnityEngine.Advertisements;
 using Fidget.Player;
+
+
 namespace Fidget.Main
 {
     public class MainCamera : MonoBehaviour
@@ -19,23 +21,9 @@ namespace Fidget.Main
 
         private void Awake()
         {
-           if(User.Instance.RunCount < 1)
-            {
-                InitGame();
-            }
-            else
-            {
-                User.Instance.RunCount++;
-            }
+          
         }
-        void InitGame()
-        {
-            User.Instance.Vibration = true;
-            User.Instance.Sound = true;
-            User.Instance.Alarm = true;
-
-            User.Instance.RunCount = 1;
-        }
+       
 
         // Use this for initialization
         void Start()
@@ -50,6 +38,7 @@ namespace Fidget.Main
                 googlePlay.Init();
             }
             googlePlay.UpdateCheckAchievements();
+        
         }
 
         // Update is called once per frame
