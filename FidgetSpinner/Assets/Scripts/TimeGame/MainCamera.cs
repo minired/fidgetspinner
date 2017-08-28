@@ -59,6 +59,8 @@ namespace Fidget.TimeGame
 
         public GameAudio gameAudio;
 
+        public NativeAd nativeAd;
+
         float highSpeed = 0.0f;
 
         int speedUpCount = 0;
@@ -140,6 +142,7 @@ namespace Fidget.TimeGame
             timeLabel.text = "20";
             highSpeed = 0.0f;
             speedUpCount = 0;
+            nativeAd.AdDestory();
         }
 
         private void SwipeMouse_downSwipe()
@@ -389,9 +392,13 @@ namespace Fidget.TimeGame
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
                 }
-                if (GameInfo.gameCount % 2 == 0)
+                if (GameInfo.gameCount % 5 == 0)
                 {
                     AdPopupChecker();
+                }
+                else
+                {
+                    nativeAd.RequestNativeExpressAdView();
                 }
 
 

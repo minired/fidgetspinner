@@ -11,10 +11,13 @@ namespace Fidget.Common
         }
         public void Vibrate()
         {
+
+#if (UNITY_IPHONE || UNITY_IOS || UNITY_ANDROID)
             if (User.Instance.Vibration)
             {
                 Handheld.Vibrate();
             }
+#endif
         }
     }
 }

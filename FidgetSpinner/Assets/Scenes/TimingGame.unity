@@ -1776,6 +1776,54 @@ MonoBehaviour:
   mMaxLineHeight: 0
   mLineWidth: 0
   mMultiline: 1
+--- !u!1001 &915866499
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.0073337536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.13036011
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271199211425378, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &915866500 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114510467760511316, guid: f6d0dadc3c7183249af938fb016e8f60,
+    type: 2}
+  m_PrefabInternal: {fileID: 915866499}
+  m_Script: {fileID: 11500000, guid: 0bcc7a94aa9b05147b1d3357f1bf1c3b, type: 3}
 --- !u!1 &985426231
 GameObject:
   m_ObjectHideFlags: 0
@@ -9855,6 +9903,7 @@ MonoBehaviour:
   timeLabel: {fileID: 887256912}
   admobPlayer: {fileID: 1864872821}
   gameaudio: {fileID: 333649445}
+  nativeAd: {fileID: 915866500}
 --- !u!1 &1289741709
 GameObject:
   m_ObjectHideFlags: 0
