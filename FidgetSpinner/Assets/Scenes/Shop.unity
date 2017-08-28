@@ -314,6 +314,7 @@ Transform:
   m_Children:
   - {fileID: 1153844319}
   - {fileID: 459886027}
+  - {fileID: 1229839953}
   - {fileID: 1523439641}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -852,7 +853,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3051
+  startingRenderQueue: 3052
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 4
@@ -1303,6 +1304,103 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1984625163}
   m_Script: {fileID: 11500000, guid: 9abf48968b418fd438f485b6c22ae7e1, type: 3}
+--- !u!1 &1229839952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1229839953}
+  - component: {fileID: 1229839954}
+  m_Layer: 5
+  m_Name: UserLevel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229839953
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1229839952}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 209, y: 511, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 276064825}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229839954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1229839952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9d0b5f3bbe925a408bd595c79d0bf63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 0.69411767, g: 0.5254902, b: 0.95686275, a: 1}
+  mPivot: 4
+  mWidth: 168
+  mHeight: 36
+  mDepth: 25
+  autoResizeBoxCollider: 0
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 4.6666665
+  keepCrispWhenShrunk: 1
+  mTrueTypeFont: {fileID: 12800000, guid: 4e5e38478326c1b499e70b2efc72ad8b, type: 3}
+  mFont: {fileID: 0}
+  mText: Lv.1
+  mFontSize: 36
+  mFontStyle: 0
+  mAlignment: 3
+  mEncoding: 1
+  mMaxLineCount: 0
+  mEffectStyle: 0
+  mEffectColor: {r: 0, g: 0, b: 0, a: 1}
+  mSymbols: 1
+  mEffectDistance: {x: 1, y: 1}
+  mOverflow: 0
+  mMaterial: {fileID: 0}
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  mSpacingX: 0
+  mSpacingY: 0
+  mUseFloatSpacing: 0
+  mFloatSpacingX: 0
+  mFloatSpacingY: 0
+  mOverflowEllipsis: 0
+  mOverflowWidth: 0
+  mModifier: 0
+  mShrinkToFit: 0
+  mMaxLineWidth: 0
+  mMaxLineHeight: 0
+  mLineWidth: 0
+  mMultiline: 1
 --- !u!114 &1258904020 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114004329231525262, guid: 3ac693cbfe04b1a45abd327d2357dcc6,
@@ -1433,6 +1531,7 @@ MonoBehaviour:
   - {fileID: 520298291}
   - {fileID: 1913242844}
   - {fileID: 1544631691}
+  userLevel: {fileID: 1229839954}
 --- !u!1001 &1308898521
 Prefab:
   m_ObjectHideFlags: 0
@@ -1532,7 +1631,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4801432658669166, guid: 225add1cafa006c479b51480715a8253, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}

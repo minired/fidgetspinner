@@ -23,6 +23,9 @@ namespace Fidget.Shop
 
         public List<CardManager> cardList;
 
+        public ExpTable expTable = new ExpTable();
+        public UILabel userLevel;
+
         void UpdateBackground()
         {
             bgChanger.ChangeBackground(currentSpinner);
@@ -36,6 +39,8 @@ namespace Fidget.Shop
             uiPanel.clipOffset = new Vector2(GAP * currentSpinner, 0);
 
             previousSpinner = -1;
+
+            userLevel.text = "Lv." + expTable.GetLevel(User.Instance.Exp);
         }
 
         void Update()
