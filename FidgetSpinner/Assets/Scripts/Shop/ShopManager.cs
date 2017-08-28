@@ -26,6 +26,9 @@ namespace Fidget.Shop
         public ExpTable expTable = new ExpTable();
         public UILabel userLevel;
 
+        DigitChanger digitChanger = new DigitChanger();
+        public UILabel coinLabel;
+
         void UpdateBackground()
         {
             bgChanger.ChangeBackground(currentSpinner);
@@ -41,6 +44,7 @@ namespace Fidget.Shop
             previousSpinner = -1;
 
             userLevel.text = "Lv." + expTable.GetLevel(User.Instance.Exp);
+            coinLabel.text = digitChanger.digitToString((int)User.Instance.Coin);
         }
 
         void Update()
