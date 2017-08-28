@@ -44,7 +44,7 @@ namespace Fidget.Common
             if (GameInfo.googlePlayInit)
                 return;
 
-//#if UNITY_ANDROID 
+#if UNITY_ANDROID 
 
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
@@ -52,9 +52,9 @@ namespace Fidget.Common
             // recommended for debugging:
             PlayGamesPlatform.DebugLogEnabled = false;
 
-            // Activate the Google Play Games platform
+            //Activate the Google Play Games platform
             PlayGamesPlatform.Activate();
-//#endif
+#endif
             GameInfo.googlePlayInit = true;
         }
 
