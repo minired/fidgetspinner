@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 839451ca07857184c8fc1695458c60a4, type: 2}
   mSprites:
   - name: 1_bg@sprite
-    x: 906
-    y: 972
+    x: 1317
+    y: 62
     width: 398
     height: 38
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1_ell@sprite
-    x: 1277
-    y: 1086
+    x: 1053
+    y: 22
     width: 262
     height: 262
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1_new@sprite
-    x: 1312
-    y: 988
+    x: 1317
+    y: 38
     width: 382
     height: 22
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1_original@sprite
-    x: 1277
-    y: 1056
+    x: 1701
+    y: 38
     width: 268
     height: 22
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 2_ell@sprite
-    x: 0
-    y: 642
+    x: 663
+    y: 285
     width: 388
     height: 388
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_active_equip@sprite
-    x: 239
-    y: 135
+    x: 602
+    y: 1838
     width: 284
     height: 104
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_buy@sprite
-    x: 1773
-    y: 1231
+    x: 930
+    y: 1559
     width: 228
     height: 108
     borderLeft: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip copy 2@sprite
-    x: 239
-    y: 23
+    x: 602
+    y: 1732
     width: 284
     height: 104
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip copy@sprite
-    x: 1608
-    y: 1575
+    x: 888
+    y: 1944
     width: 284
     height: 104
     borderLeft: 0
@@ -184,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip@sprite
-    x: 1608
-    y: 1347
+    x: 1226
+    y: 1615
     width: 229
     height: 108
     borderLeft: 0
@@ -196,9 +196,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: box_maxlevel@sprite
+    x: 888
+    y: 1838
+    width: 284
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: box_require@sprite
-    x: 1608
-    y: 1463
+    x: 602
+    y: 1944
     width: 284
     height: 104
     borderLeft: 0
@@ -210,8 +223,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: broken@sprite
-    x: 1608
-    y: 1182
+    x: 771
+    y: 1510
     width: 157
     height: 157
     borderLeft: 0
@@ -223,8 +236,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_back@sprite
-    x: 1898
-    y: 1905
+    x: 896
+    y: 140
     width: 143
     height: 143
     borderLeft: 0
@@ -236,8 +249,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_press_right@sprite
-    x: 1608
-    y: 1034
+    x: 1174
+    y: 1908
     width: 96
     height: 140
     borderLeft: 0
@@ -249,8 +262,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_left@sprite
-    x: 1773
-    y: 1083
+    x: 602
+    y: 1421
     width: 96
     height: 140
     borderLeft: 0
@@ -262,8 +275,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_unpress_right@sprite
-    x: 1898
-    y: 1757
+    x: 1160
+    y: 1473
     width: 96
     height: 140
     borderLeft: 0
@@ -275,8 +288,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: circle1
-    x: 1277
-    y: 1356
+    x: 1284
+    y: 1725
     width: 323
     height: 323
     borderLeft: 0
@@ -288,8 +301,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: circle2
-    x: 0
-    y: 247
+    x: 1053
+    y: 286
     width: 387
     height: 387
     borderLeft: 0
@@ -301,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: circle3
-    x: 608
-    y: 1018
+    x: 0
+    y: 12
     width: 661
     height: 661
     borderLeft: 0
@@ -314,8 +327,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: combo_Planet@sprite
-    x: 396
-    y: 673
+    x: 602
+    y: 1563
     width: 167
     height: 167
     borderLeft: 0
@@ -327,8 +340,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: combobar_bg@sprite
-    x: 396
-    y: 647
+    x: 955
+    y: 2
     width: 154
     height: 18
     borderLeft: 0
@@ -340,8 +353,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: combobar_front@sprite
-    x: 395
-    y: 257
+    x: 1317
+    y: 9
     width: 158
     height: 27
     borderLeft: 0
@@ -353,8 +366,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: dark@sprite
-    x: 608
-    y: 1687
+    x: 0
+    y: 675
     width: 1282
     height: 361
     borderLeft: 0
@@ -366,8 +379,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin copy 2@sprite
-    x: 531
-    y: 37
+    x: 1160
+    y: 1626
     width: 41
     height: 41
     borderLeft: 0
@@ -379,8 +392,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin copy@sprite
-    x: 531
-    y: 86
+    x: 1226
+    y: 1800
     width: 41
     height: 41
     borderLeft: 0
@@ -392,8 +405,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin@sprite
-    x: 2002
-    y: 1858
+    x: 1239
+    y: 1867
     width: 39
     height: 39
     borderLeft: 0
@@ -405,8 +418,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_watch@sprite
-    x: 531
-    y: 176
+    x: 1174
+    y: 1843
     width: 63
     height: 63
     borderLeft: 0
@@ -418,8 +431,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: mid_Planet@sprite
-    x: 0
-    y: 35
+    x: 663
+    y: 79
     width: 231
     height: 204
     borderLeft: 0
@@ -431,8 +444,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: money@sprite
-    x: 608
-    y: 946
+    x: 663
+    y: 13
     width: 290
     height: 64
     borderLeft: 0
@@ -444,8 +457,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: planet@sprite
-    x: 395
-    y: 467
+    x: 888
+    y: 1669
     width: 167
     height: 167
     borderLeft: 0
@@ -457,8 +470,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: spinner@sprite
-    x: 396
-    y: 848
+    x: 1317
+    y: 102
     width: 195
     height: 182
     borderLeft: 0
@@ -470,8 +483,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: stone@sprite
-    x: 395
-    y: 292
+    x: 1057
+    y: 1669
     width: 167
     height: 167
     borderLeft: 0
@@ -483,8 +496,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: timebar@sprite
-    x: 608
-    y: 658
+    x: 700
+    y: 1281
     width: 32
     height: 280
     borderLeft: 0

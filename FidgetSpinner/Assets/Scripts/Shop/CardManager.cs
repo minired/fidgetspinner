@@ -40,6 +40,7 @@ namespace Fidget.Shop
         private ulong upgradeCost;
         public UISprite upgradeIcon;
         public UILabel requireLv;
+        public UILabel maxLabel;
 
         // status
         public UISprite speedGauge;
@@ -188,11 +189,12 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
                 buyLabel.text = "[4e2f9f]" + "EQUIP";
 
-                upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
-                upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+                upgradeButton.GetComponent<UIButton>().normalSprite = "box_maxlevel@sprite";
+                upgradeIcon.GetComponent<UISprite>().spriteName = null;
 
-                requireLv.text = "[3e3f40]" + "Lv.MAX";
+                requireLv.text = null;
                 upgradeLabel.text = null;
+                maxLabel.text = "MAX LEVEL";
             }
             else if (User.Instance.GetFidgetSpinnerLevel(cardID) >= MAXLEVEL && buyState == State.EQUIPED)
             {
@@ -200,11 +202,12 @@ namespace Fidget.Shop
                 buyButton.GetComponent<UIButton>().pressedSprite = null;
                 buyLabel.text = "[3e3f40]" + "EQUIP";
 
-                upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
-                upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
+                upgradeButton.GetComponent<UIButton>().normalSprite = "box_maxlevel@sprite";
+                upgradeIcon.GetComponent<UISprite>().spriteName = null;
 
-                requireLv.text = "[3e3f40]" + "Lv.MAX";
+                requireLv.text = null;
                 upgradeLabel.text = null;
+                maxLabel.text = "MAX LEVEL";
             }
             else if (buyState == State.NONE)
             {
@@ -215,9 +218,10 @@ namespace Fidget.Shop
 
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_require@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin@sprite";
-                //
-                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
                 
+                upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
+                maxLabel.text = null;
+
             }
             else if (upgradeCost > currentCoin && buyState == State.BUYED)
             {
@@ -229,6 +233,7 @@ namespace Fidget.Shop
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
                 upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
+                maxLabel.text = null;
             }
             else if (upgradeCost <= currentCoin && buyState == State.BUYED)
             {
@@ -240,6 +245,7 @@ namespace Fidget.Shop
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
                 upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
+                maxLabel.text = null;
             }
             else if (upgradeCost > currentCoin && buyState == State.EQUIPED)
             {
@@ -251,6 +257,7 @@ namespace Fidget.Shop
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_inactive_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy 2@sprite";
                 upgradeLabel.text = "[ffffff]" + upgradeCost.ToString("n0");
+                maxLabel.text = null;
             }
             else
             {
@@ -262,6 +269,7 @@ namespace Fidget.Shop
                 upgradeButton.GetComponent<UIButton>().normalSprite = "box_active_equip@sprite";
                 upgradeIcon.GetComponent<UISprite>().spriteName = "ic_coin copy@sprite";
                 upgradeLabel.text = "[512e91]" + upgradeCost.ToString("n0");
+                maxLabel.text = null;
             }
         }
 

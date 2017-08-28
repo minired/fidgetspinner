@@ -54,8 +54,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 9d6fc51b4cd37724ab618743df988229, type: 2}
   mSprites:
   - name: 1_bg@sprite
-    x: 1579
-    y: 986
+    x: 1375
+    y: 876
     width: 398
     height: 38
     borderLeft: 0
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1_new@sprite
-    x: 1527
-    y: 819
+    x: 1376
+    y: 978
     width: 382
     height: 22
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 1_original@sprite
-    x: 601
-    y: 81
+    x: 1761
+    y: 1002
     width: 268
     height: 22
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 2_bg@sprite
-    x: 1579
-    y: 947
+    x: 1290
+    y: 766
     width: 398
     height: 38
     borderLeft: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 2_new@sprite
-    x: 1579
-    y: 885
+    x: 1376
+    y: 1002
     width: 383
     height: 22
     borderLeft: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 2_original@sprite
-    x: 601
-    y: 58
+    x: 1760
+    y: 978
     width: 268
     height: 22
     borderLeft: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 3_bg@sprite
-    x: 1579
-    y: 908
+    x: 1375
+    y: 836
     width: 398
     height: 38
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 3_new@sprite
-    x: 1542
-    y: 858
+    x: 1145
+    y: 531
     width: 383
     height: 22
     borderLeft: 0
@@ -158,8 +158,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 3_original@sprite
-    x: 601
-    y: 35
+    x: 1646
+    y: 954
     width: 268
     height: 22
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 4_bg@sprite
-    x: 1143
-    y: 842
+    x: 1145
+    y: 555
     width: 398
     height: 38
     borderLeft: 0
@@ -184,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 4_new@sprite
-    x: 1143
-    y: 819
+    x: 1375
+    y: 812
     width: 383
     height: 22
     borderLeft: 0
@@ -197,8 +197,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: 4_original@sprite
-    x: 601
-    y: 12
+    x: 1376
+    y: 954
     width: 268
     height: 22
     borderLeft: 0
@@ -223,8 +223,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_active_equip@sprite
-    x: 601
-    y: 314
+    x: 602
+    y: 418
     width: 284
     height: 104
     borderLeft: 0
@@ -236,8 +236,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_buy@sprite
-    x: 886
-    y: 96
+    x: 1145
+    y: 806
     width: 228
     height: 108
     borderLeft: 0
@@ -249,8 +249,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip copy 2@sprite
-    x: 601
-    y: 419
+    x: 602
+    y: 206
     width: 284
     height: 104
     borderLeft: 0
@@ -262,8 +262,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip copy@sprite
-    x: 601
-    y: 209
+    x: 888
+    y: 418
     width: 284
     height: 104
     borderLeft: 0
@@ -275,8 +275,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: box_inactive_equip@sprite
-    x: 886
-    y: 205
+    x: 1145
+    y: 916
     width: 229
     height: 108
     borderLeft: 0
@@ -287,9 +287,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: box_maxlevel@sprite
+    x: 602
+    y: 100
+    width: 284
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: box_require@sprite
-    x: 601
-    y: 104
+    x: 602
+    y: 312
     width: 284
     height: 104
     borderLeft: 0
@@ -301,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_back@sprite
-    x: 1143
-    y: 881
+    x: 1145
+    y: 661
     width: 143
     height: 143
     borderLeft: 0
@@ -314,8 +327,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: coin@sprite
-    x: 1287
-    y: 960
+    x: 1145
+    y: 595
     width: 291
     height: 64
     borderLeft: 0
@@ -327,8 +340,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin copy 2@sprite
-    x: 886
-    y: 440
+    x: 1290
+    y: 680
     width: 41
     height: 41
     borderLeft: 0
@@ -340,8 +353,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin copy@sprite
-    x: 886
-    y: 482
+    x: 1290
+    y: 723
     width: 41
     height: 41
     borderLeft: 0
@@ -353,8 +366,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_coin@sprite
-    x: 928
-    y: 484
+    x: 1333
+    y: 725
     width: 39
     height: 39
     borderLeft: 0
@@ -366,7 +379,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: spiner@sprite
-    x: 601
+    x: 602
     y: 524
     width: 541
     height: 500
