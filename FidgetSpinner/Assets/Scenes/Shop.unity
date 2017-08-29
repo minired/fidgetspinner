@@ -1532,6 +1532,7 @@ MonoBehaviour:
   - {fileID: 1913242844}
   - {fileID: 1544631691}
   userLevel: {fileID: 1229839954}
+  coinLabel: {fileID: 1523439642}
 --- !u!1001 &1308898521
 Prefab:
   m_ObjectHideFlags: 0
