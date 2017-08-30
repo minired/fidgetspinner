@@ -27,7 +27,6 @@ namespace Fidget.Shop
         public int cardID;
         public UISprite fidgetSprite;
         public UILabel nameLabel;
-        public UILabel levelLabel;
         private int spriteLevel;
 
         // Button
@@ -61,8 +60,6 @@ namespace Fidget.Shop
             fidgetSprite.GetComponent<UISprite>().atlas = atlasList[FidgetSpinnerData.fidgetSpinnerItems[cardID].atlasIndex];
             fidgetSprite.GetComponent<UISprite>().spriteName = FidgetSpinnerData.fidgetSpinnerItems[cardID].spriteName;
 
-            nameLabel.text = FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
-
             spriteLevel = User.Instance.GetFidgetSpinnerLevel(cardID);
 
             if (cardID == 0 && User.Instance.GetFidgetSpinnerLevel(cardID) == 0)
@@ -74,12 +71,12 @@ namespace Fidget.Shop
 
             if (spriteLevel == 0)
             {
-                levelLabel.text = "Lv.1";
+                nameLabel.text = "Lv.1 " + FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
                 upgradeCost = FidgetSpinnerData.fidgetSpinnerItems[cardID].price;
             }
             else
             {
-                levelLabel.text = "Lv." + spriteLevel;
+                nameLabel.text = "Lv." + spriteLevel + " " + FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
                 upgradeCost = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel - 1].upgrade;
             }
 
@@ -321,7 +318,7 @@ namespace Fidget.Shop
                 requireLv.text = "[fffff6]" + "UPGRADE Lv." + (spriteLevel + 1);
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
-                levelLabel.text = "Lv." + spriteLevel.ToString();
+                nameLabel.text = "Lv." + spriteLevel + " " + FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
 
                 buyButton.GetComponent<UIButton>().normalSprite = "box_buy@sprite";
                 buyButton.GetComponent<UIButton>().pressedSprite = "box_require@sprite";
@@ -364,7 +361,7 @@ namespace Fidget.Shop
                 coin.SetCoinLabel(User.Instance.Coin);
 
                 User.Instance.SetFidgetSpinnerLevel(cardID, ++spriteLevel);
-                levelLabel.text = "Lv." + spriteLevel.ToString();
+                nameLabel.text = "Lv." + spriteLevel + " " + FidgetSpinnerData.fidgetSpinnerItems[cardID].name;
 
                 speedGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].speed * 0.01f;
                 hasteGauge.fillAmount = FidgetSpinnerData.fidgetSpinnerDetails[cardID, spriteLevel-1].haste * 0.01f;

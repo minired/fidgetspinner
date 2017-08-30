@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1210040061500468
 GameObject:
   m_ObjectHideFlags: 1
@@ -1314,7 +1314,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1402199794260730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -107, y: 353, z: 0}
+  m_LocalPosition: {x: 0, y: 353, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4432385641937402}
@@ -1386,8 +1386,7 @@ MonoBehaviour:
   coin: {fileID: 0}
   cardID: 0
   fidgetSprite: {fileID: 114316420062275150}
-  nameLabel: {fileID: 114181873007326464}
-  levelLabel: {fileID: 114225255605714954}
+  nameLabel: {fileID: 114225255605714954}
   buyButton: {fileID: 114808135632953608}
   buyLabel: {fileID: 114349545887736992}
   upgradeButton: {fileID: 114342457115676960}
@@ -1932,20 +1931,20 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 130
+  mWidth: 600
   mHeight: 50
   mDepth: 22
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 2.6
+  aspectRatio: 12
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 4e5e38478326c1b499e70b2efc72ad8b, type: 3}
   mFont: {fileID: 0}
-  mText: Lv.2
+  mText: Lv.2 Galaxy
   mFontSize: 50
   mFontStyle: 0
-  mAlignment: 3
+  mAlignment: 2
   mEncoding: 1
   mMaxLineCount: 0
   mEffectStyle: 0
