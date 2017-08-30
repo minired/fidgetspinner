@@ -561,77 +561,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1213973695762962, guid: 5929c90240831c94c8cd687c3bfe4022, type: 2}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 114305487844292368, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: aspectRatio
+      value: 3.8947368
       objectReference: {fileID: 0}
-    - target: {fileID: 114202711834853146, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: gameaudio
-      value: 
-      objectReference: {fileID: 1037077147}
-    - target: {fileID: 114413147360886798, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114413147360886798, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mSpriteName
-      value: star1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114532094801429562, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114532094801429562, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mSpriteName
-      value: star2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114119760764207990, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114119760764207990, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mSpriteName
-      value: img_planet@sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 114264947874886042, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114242121496086176, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114093310439824488, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114093310439824488, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mSpriteName
-      value: speed bg
-      objectReference: {fileID: 0}
-    - target: {fileID: 114794915216275400, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5929c90240831c94c8cd687c3bfe4022, type: 2}
   m_IsPrefabParent: 0
