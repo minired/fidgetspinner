@@ -55,7 +55,7 @@ MonoBehaviour:
   mSprites:
   - name: ad_bg@sprite
     x: 0
-    y: 696
+    y: 801
     width: 470
     height: 104
     borderLeft: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: coin_bg@sprite
     x: 0
-    y: 591
+    y: 696
     width: 470
     height: 104
     borderLeft: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: coin_new_bg@sprite
     x: 0
-    y: 801
+    y: 591
     width: 470
     height: 104
     borderLeft: 0
@@ -249,8 +249,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_ran@sprite
-    x: 605
-    y: 1501
+    x: 173
+    y: 124
     width: 168
     height: 168
     borderLeft: 0
@@ -275,8 +275,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ic_share@sprite
-    x: 173
-    y: 124
+    x: 605
+    y: 1501
     width: 168
     height: 168
     borderLeft: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_moneybg@sprite
-    x: 1054
+    x: 1345
     y: 1558
     width: 290
     height: 64
@@ -370,6 +370,19 @@ MonoBehaviour:
     y: 508
     width: 412
     height: 82
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: money@sprite
+    x: 1054
+    y: 1558
+    width: 290
+    height: 64
     borderLeft: 0
     borderRight: 0
     borderTop: 0

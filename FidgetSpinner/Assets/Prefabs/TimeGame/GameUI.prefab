@@ -1834,7 +1834,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114668134880709476, guid: 6eae1a6c70801ec4bbe9e1cf0e32eecb, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: money@sprite
   mFillCenter: 1
 --- !u!114 &114881613253891478
