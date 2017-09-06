@@ -125,6 +125,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1184731098067944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4174057076763048}
+  - component: {fileID: 114208973928648028}
+  - component: {fileID: 65682976299296260}
+  m_Layer: 5
+  m_Name: block80
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1187006151039920
 GameObject:
   m_ObjectHideFlags: 1
@@ -265,22 +282,6 @@ GameObject:
   - component: {fileID: 114698235510916896}
   m_Layer: 5
   m_Name: btnBack
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1584254925175362
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4881175938601940}
-  - component: {fileID: 114873244622750800}
-  m_Layer: 5
-  m_Name: dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -460,6 +461,19 @@ Transform:
   m_Father: {fileID: 4427982619271284}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4174057076763048
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184731098067944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4427982619271284}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4193536706357524
 Transform:
   m_ObjectHideFlags: 1
@@ -569,7 +583,7 @@ Transform:
   - {fileID: 4215344071425534}
   - {fileID: 4002485320346402}
   - {fileID: 4460582665417566}
-  - {fileID: 4881175938601940}
+  - {fileID: 4174057076763048}
   - {fileID: 4839801246019242}
   - {fileID: 4877507789766198}
   - {fileID: 4111737973426706}
@@ -731,19 +745,6 @@ Transform:
   m_Father: {fileID: 4427982619271284}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4881175938601940
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584254925175362}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4427982619271284}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4974518945804986
 Transform:
   m_ObjectHideFlags: 1
@@ -805,6 +806,18 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 168, y: 168, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65682976299296260
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184731098067944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1800, y: 1800, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65748734206706170
 BoxCollider:
@@ -880,7 +893,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: ic_ad@sprite
   mFillCenter: 1
 --- !u!114 &114056087603146998
@@ -933,8 +946,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
-  mSpriteName: btn_close@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: btn_close2@sprite
   mFillCenter: 1
 --- !u!114 &114084588595564278
 MonoBehaviour:
@@ -986,8 +999,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
-  mSpriteName: coin_bg@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: coin_new_bg@sprite
   mFillCenter: 1
 --- !u!114 &114093307010287870
 MonoBehaviour:
@@ -1136,7 +1149,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: ic_return@sprite
   mFillCenter: 1
 --- !u!114 &114161401424341794
@@ -1368,6 +1381,67 @@ MonoBehaviour:
   mSortingOrder: 0
   mSortingLayerName: 
   mClipOffset: {x: 0, y: 0}
+--- !u!114 &114208973928648028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1184731098067944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c5ca47aa5c01740810b7c66662099f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  rightAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  bottomAnchor:
+    target: {fileID: 0}
+    relative: 0
+    absolute: 0
+  topAnchor:
+    target: {fileID: 0}
+    relative: 1
+    absolute: 0
+  updateAnchors: 1
+  mColor: {r: 1, g: 1, b: 1, a: 1}
+  mPivot: 4
+  mWidth: 1800
+  mHeight: 1800
+  mDepth: -9
+  autoResizeBoxCollider: 1
+  hideIfOffScreen: 0
+  keepAspectRatio: 0
+  aspectRatio: 1
+  mType: 0
+  mFillDirection: 4
+  mFillAmount: 1
+  mInvert: 0
+  mFlip: 0
+  mApplyGradient: 0
+  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
+  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
+  centerType: 1
+  leftType: 1
+  rightType: 1
+  bottomType: 1
+  topType: 1
+  mRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  mTexture: {fileID: 2800000, guid: a6729fe7df57c4848af3819e0d556d3c, type: 3}
+  mMat: {fileID: 0}
+  mShader: {fileID: 4800000, guid: e75727d9555d9d14ca51d91908c681bc, type: 3}
+  mBorder: {x: 0, y: 0, z: 0, w: 0}
+  mFixedAspect: 0
 --- !u!114 &114252818488484906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,7 +1492,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: BEST@sprite
   mFillCenter: 1
 --- !u!114 &114284261550092574
@@ -1471,7 +1545,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: ic_ran@sprite
   mFillCenter: 1
 --- !u!114 &114297172339325990
@@ -1553,8 +1627,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
-  mSpriteName: coin2_bg@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: coin_bg@sprite
   mFillCenter: 1
 --- !u!114 &114325105667296498
 MonoBehaviour:
@@ -2005,7 +2079,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: X2@sprite
   mFillCenter: 1
 --- !u!114 &114836750190064564
@@ -2126,61 +2200,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: ic_share@sprite
-  mFillCenter: 1
---- !u!114 &114873244622750800
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1584254925175362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftAnchor:
-    target: {fileID: 0}
-    relative: 0
-    absolute: 0
-  rightAnchor:
-    target: {fileID: 0}
-    relative: 1
-    absolute: 0
-  bottomAnchor:
-    target: {fileID: 0}
-    relative: 0
-    absolute: 0
-  topAnchor:
-    target: {fileID: 0}
-    relative: 1
-    absolute: 0
-  updateAnchors: 1
-  mColor: {r: 1, g: 1, b: 1, a: 1}
-  mPivot: 4
-  mWidth: 722
-  mHeight: 1280
-  mDepth: 0
-  autoResizeBoxCollider: 0
-  hideIfOffScreen: 0
-  keepAspectRatio: 0
-  aspectRatio: 0.5640625
-  mType: 0
-  mFillDirection: 4
-  mFillAmount: 1
-  mInvert: 0
-  mFlip: 0
-  mApplyGradient: 0
-  mGradientTop: {r: 1, g: 1, b: 1, a: 1}
-  mGradientBottom: {r: 0.7, g: 0.7, b: 0.7, a: 1}
-  centerType: 1
-  leftType: 1
-  rightType: 1
-  bottomType: 1
-  topType: 1
-  mAtlas: {fileID: 114818846350573898, guid: cf3fc4ae408c3be4e92a2be0d68a85b2, type: 2}
-  mSpriteName: dark@sprite
   mFillCenter: 1
 --- !u!114 &114904715964602752
 MonoBehaviour:
@@ -2273,7 +2294,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114183708512573902, guid: 565f84875d7073741b3b9593430e4e7b, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: ic_coin@sprite
   mFillCenter: 1
 --- !u!114 &114923728234389900

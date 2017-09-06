@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99bc2dcda91fb0b44a9a32d45b25e363
-timeCreated: 1503840076
+timeCreated: 1504694351
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
@@ -51,9 +51,9 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
-  maxTextureSizeSet: 0
+  maxTextureSizeSet: 1
   compressionQualitySet: 0
-  textureFormatSet: 0
+  textureFormatSet: 1
   platformSettings:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 4096

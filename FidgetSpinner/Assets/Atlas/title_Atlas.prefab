@@ -53,9 +53,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 5e0c56ef4a97313428a8ae648c2982a6, type: 2}
   mSprites:
+  - name: ad_bg@sprite
+    x: 0
+    y: 696
+    width: 470
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: BEST@sprite
+    x: 0
+    y: 1180
+    width: 360
+    height: 243
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: btn_ad@sprite
-    x: 1099
-    y: 138
+    x: 1892
+    y: 1905
     width: 143
     height: 143
     borderLeft: 0
@@ -68,7 +94,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: btn_ad_gray
     x: 1892
-    y: 881
+    y: 1761
     width: 143
     height: 143
     borderLeft: 0
@@ -80,8 +106,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_back@sprite
-    x: 1892
-    y: 737
+    x: 1239
+    y: 1357
     width: 143
     height: 143
     borderLeft: 0
@@ -93,8 +119,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_click@sprite
-    x: 243
-    y: 62
+    x: 774
+    y: 1571
     width: 279
     height: 98
     borderLeft: 0
@@ -106,8 +132,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_close@sprite
-    x: 0
-    y: 7
+    x: 530
+    y: 812
     width: 39
     height: 37
     borderLeft: 0
@@ -118,9 +144,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: btn_close2@sprite
+    x: 530
+    y: 850
+    width: 57
+    height: 55
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: btn_setting@sprite
     x: 496
-    y: 208
+    y: 988
     width: 90
     height: 90
     borderLeft: 0
@@ -132,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn2_shop@sprite
-    x: 1403
-    y: 309
+    x: 1383
+    y: 1357
     width: 143
     height: 143
     borderLeft: 0
@@ -145,8 +184,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: coin
-    x: 605
-    y: 110
+    x: 0
+    y: 121
     width: 172
     height: 171
     borderLeft: 0
@@ -157,9 +196,100 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: coin_bg@sprite
+    x: 0
+    y: 591
+    width: 470
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: coin_new_bg@sprite
+    x: 0
+    y: 801
+    width: 470
+    height: 104
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_ad@sprite
+    x: 471
+    y: 804
+    width: 48
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_coin@sprite
+    x: 471
+    y: 847
+    width: 58
+    height: 58
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_ran@sprite
+    x: 605
+    y: 1501
+    width: 168
+    height: 168
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_return@sprite
+    x: 342
+    y: 124
+    width: 168
+    height: 168
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ic_share@sprite
+    x: 173
+    y: 124
+    width: 168
+    height: 168
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: img_Game spin@sprite
-    x: 849
-    y: 564
+    x: 0
+    y: 426
     width: 376
     height: 81
     borderLeft: 0
@@ -171,8 +301,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_gaugebg@sprite
-    x: 605
-    y: 282
+    x: 0
+    y: 293
     width: 600
     height: 50
     borderLeft: 0
@@ -184,8 +314,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_gaugewhite@sprite
-    x: 1244
-    y: 610
+    x: 1054
+    y: 1623
     width: 590
     height: 46
     borderLeft: 0
@@ -197,8 +327,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_moneybg@sprite
-    x: 849
-    y: 417
+    x: 1054
+    y: 1558
     width: 290
     height: 64
     borderLeft: 0
@@ -211,7 +341,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: img_planet@sprite
     x: 243
-    y: 161
+    y: 941
     width: 252
     height: 238
     borderLeft: 0
@@ -223,8 +353,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_Timed spin@sprite
-    x: 849
-    y: 482
+    x: 0
+    y: 344
     width: 374
     height: 81
     borderLeft: 0
@@ -236,8 +366,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_Timing spin@sprite
-    x: 605
-    y: 333
+    x: 0
+    y: 508
     width: 412
     height: 82
     borderLeft: 0
@@ -249,8 +379,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: music@sprite
-    x: 939
-    y: 123
+    x: 1806
+    y: 1511
     width: 159
     height: 158
     borderLeft: 0
@@ -262,8 +392,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: music_off@sprite
-    x: 1244
-    y: 136
+    x: 923
+    y: 1344
     width: 157
     height: 156
     borderLeft: 0
@@ -275,8 +405,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Notice@sprite
-    x: 778
-    y: 122
+    x: 1645
+    y: 1510
     width: 160
     height: 159
     borderLeft: 0
@@ -288,8 +418,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Notice_off@sprite
-    x: 1244
-    y: 293
+    x: 764
+    y: 1343
     width: 158
     height: 157
     borderLeft: 0
@@ -302,7 +432,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: popup@sprite
     x: 605
-    y: 646
+    y: 1670
     width: 638
     height: 378
     borderLeft: 0
@@ -315,7 +445,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: settingpopup@sprite
     x: 1244
-    y: 657
+    y: 1681
     width: 647
     height: 367
     borderLeft: 0
@@ -327,8 +457,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: speed bg
-    x: 0
-    y: 45
+    x: 377
+    y: 427
     width: 210
     height: 80
     borderLeft: 0
@@ -340,8 +470,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: star1
-    x: 605
-    y: 416
+    x: 361
+    y: 1194
     width: 243
     height: 229
     borderLeft: 0
@@ -354,7 +484,7 @@ MonoBehaviour:
     paddingBottom: 7
   - name: star2
     x: 0
-    y: 126
+    y: 906
     width: 242
     height: 273
     borderLeft: 0
@@ -367,7 +497,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: titleLogo
     x: 0
-    y: 400
+    y: 1424
     width: 604
     height: 624
     borderLeft: 0
@@ -379,8 +509,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: vibration@sprite
-    x: 1403
-    y: 453
+    x: 1081
+    y: 1344
     width: 157
     height: 156
     borderLeft: 0
@@ -392,8 +522,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: vibration_off@sprite
-    x: 1244
-    y: 451
+    x: 605
+    y: 1342
     width: 158
     height: 158
     borderLeft: 0
@@ -406,9 +536,22 @@ MonoBehaviour:
     paddingBottom: 0
   - name: white
     x: 496
-    y: 299
+    y: 1079
     width: 100
     height: 100
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: X2@sprite
+    x: 496
+    y: 911
+    width: 98
+    height: 76
     borderLeft: 0
     borderRight: 0
     borderTop: 0
