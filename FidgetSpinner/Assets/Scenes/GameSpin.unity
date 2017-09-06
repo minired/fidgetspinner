@@ -1780,6 +1780,12 @@ Prefab:
       propertyPath: aspectRatio
       value: 3.857143
       objectReference: {fileID: 0}
+    - target: {fileID: 114795756638776500, guid: 225add1cafa006c479b51480715a8253,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 225add1cafa006c479b51480715a8253, type: 2}
   m_IsPrefabParent: 0
