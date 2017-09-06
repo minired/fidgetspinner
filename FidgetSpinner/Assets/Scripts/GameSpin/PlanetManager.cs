@@ -19,6 +19,7 @@ namespace Fidget.GameSpin
         public Fever fever;
         public Combo_Circle circle;
         public CoinAnimation coinAnimation;
+        public ResultPopup resultPop;
 
         public GameObject resultPopup;
         public GameObject tabLabel;
@@ -319,6 +320,16 @@ namespace Fidget.GameSpin
                     Advertisement.Show("video");
                 }
             }
+        }
+
+        private void Awake()
+        {
+            resultPop.popupClosed += ResultPop_popupClosed;
+        }
+
+        private void ResultPop_popupClosed()
+        {
+            RestartGame();
         }
 
         void Start()

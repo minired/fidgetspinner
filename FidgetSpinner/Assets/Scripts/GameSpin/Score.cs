@@ -14,6 +14,7 @@ namespace Fidget.GameSpin
         public UILabel bonusLabel;
         public UILabel levelLabel;
         public Timer timer;
+        public GaugeUI gaugeUI;
         ExpTable expTable = new ExpTable();
 
         int bonusLevel;
@@ -90,6 +91,8 @@ namespace Fidget.GameSpin
                 User.Instance.Exp += (int)(temp * 0.2f);
                 level = expTable.GetLevel(User.Instance.Exp);
                 levelLabel.text = "Lv." + level.ToString();
+                float rate = expTable.GetLevelRate(level, User.Instance.Exp);
+                gaugeUI.SetGaugeAmount(rate);
             }
         }
     }
