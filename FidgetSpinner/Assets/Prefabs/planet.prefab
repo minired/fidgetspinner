@@ -91,7 +91,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114668134880709476, guid: 6eae1a6c70801ec4bbe9e1cf0e32eecb, type: 2}
+  mAtlas: {fileID: 114664605312456864, guid: 082eef08e4af5a74aa3094833c6415c9, type: 2}
   mSpriteName: planet@sprite
   mFillCenter: 1
 --- !u!114 &114773536189295192
@@ -107,7 +107,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlanet: 0
   isStone: 0
-  planet: {fileID: 21300000, guid: 1dfda88bdd9676c40ba7a96313797ad3, type: 3}
-  broken: {fileID: 21300000, guid: ffd4134d88906a646adc679c5625f52c, type: 3}
-  stone: {fileID: 21300000, guid: 958347474822b164cba6617dc0482e8e, type: 3}
-  feverPlanet: {fileID: 21300000, guid: 9310b3f516db4e540b01ad569cdc7dde, type: 3}
