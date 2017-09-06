@@ -345,13 +345,13 @@ namespace Fidget.GameSpin
                 SceneManager.LoadScene("Main");
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && !timer.isGameOver)
             {
                 timer.isStarted = true;
                 spinner.isStarted = true;
                 LeftButton();
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !timer.isGameOver)
             {
                 timer.isStarted = true;
                 spinner.isStarted = true;
