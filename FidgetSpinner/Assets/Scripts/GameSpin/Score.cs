@@ -88,7 +88,7 @@ namespace Fidget.GameSpin
                 temp = (relativeSpeed * fixedSpeed);
                 score += temp;
                 label.text = ((int)score).ToString();
-                User.Instance.Exp += (int)(temp * 0.2f);
+                User.Instance.Exp += (int)(temp * 0.35f);
                 level = expTable.GetLevel(User.Instance.Exp);
                 levelLabel.text = "Lv." + level.ToString();
                 float rate = expTable.GetLevelRate(level, User.Instance.Exp);
