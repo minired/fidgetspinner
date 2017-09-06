@@ -695,7 +695,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114710710705956338, guid: b4d983a89d72bb1449fa24c5d23a3f7d, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: btn_back@sprite
   mFillCenter: 1
 --- !u!114 &459886029
@@ -853,7 +853,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3052
+  startingRenderQueue: 3051
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 4
@@ -1644,6 +1644,12 @@ Prefab:
       propertyPath: aspectRatio
       value: 3.857143
       objectReference: {fileID: 0}
+    - target: {fileID: 114795756638776500, guid: 225add1cafa006c479b51480715a8253,
+        type: 2}
+      propertyPath: mAtlas
+      value: 
+      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 225add1cafa006c479b51480715a8253, type: 2}
   m_IsPrefabParent: 0
