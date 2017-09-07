@@ -841,7 +841,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: speed bg
   mFillCenter: 1
 --- !u!114 &114119247698542354
@@ -942,13 +942,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 254
-  mHeight: 269
+  mWidth: 252
+  mHeight: 238
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.94423795
+  aspectRatio: 1.0588236
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -962,8 +962,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet3@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: img_planet@sprite
   mFillCenter: 1
 --- !u!114 &114202711834853146
 MonoBehaviour:
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: img_gaugewhite@sprite
   mFillCenter: 1
 --- !u!114 &114264947874886042
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: img_gaugebg@sprite
   mFillCenter: 1
 --- !u!114 &114305487844292368
@@ -1210,12 +1210,12 @@ MonoBehaviour:
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mWidth: 244
-  mHeight: 232
+  mHeight: 244
   mDepth: 3
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 1.0517242
+  aspectRatio: 1
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -1229,8 +1229,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet1@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: star1
   mFillCenter: 1
 --- !u!114 &114443662670222246
 MonoBehaviour:
@@ -1410,13 +1410,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 275
-  mHeight: 308
+  mWidth: 274
+  mHeight: 274
   mDepth: 2
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 0.89285713
+  aspectRatio: 1
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -1430,8 +1430,8 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
-  mSpriteName: img_planet2@sprite
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
+  mSpriteName: star2
   mFillCenter: 1
 --- !u!114 &114563088231001780
 MonoBehaviour:
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: btn_back@sprite
   mFillCenter: 1
 --- !u!114 &114849198413866482

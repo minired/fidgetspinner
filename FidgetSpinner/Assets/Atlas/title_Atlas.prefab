@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn_ad_gray
-    x: 1892
-    y: 1761
+    x: 1383
+    y: 1357
     width: 143
     height: 143
     borderLeft: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: btn2_shop@sprite
-    x: 1383
-    y: 1357
+    x: 1892
+    y: 1761
     width: 143
     height: 143
     borderLeft: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: img_moneybg@sprite
-    x: 1345
+    x: 1054
     y: 1558
     width: 290
     height: 64
@@ -379,7 +379,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: money@sprite
-    x: 1054
+    x: 1345
     y: 1558
     width: 290
     height: 64

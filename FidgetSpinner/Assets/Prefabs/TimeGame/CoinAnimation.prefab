@@ -613,7 +613,7 @@ MonoBehaviour:
   anchorOffset: 0
   softBorderPadding: 1
   renderQueue: 0
-  startingRenderQueue: 3012
+  startingRenderQueue: 3011
   mClipTexture: {fileID: 0}
   mAlpha: 1
   mClipping: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114232701538925938
@@ -748,7 +748,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114303266516693246
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114396846367631330
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114417357967303494
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114644553659612540
@@ -1638,7 +1638,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114710970281355276
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114838559551947860
@@ -2196,7 +2196,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114872889098607216
@@ -2927,7 +2927,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
 --- !u!114 &114984946771015870
@@ -3206,6 +3206,6 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 114398153056387890, guid: a2b88700d4db7d3468325e45b44a84da, type: 2}
+  mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
   mSpriteName: coin
   mFillCenter: 1
