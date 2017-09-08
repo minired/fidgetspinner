@@ -241,12 +241,11 @@ namespace Fidget.Common
 
         public void SpeedUp(float fact)
         {
+            speed += fact;
             if (speed > maxSpeed)
             {
                 speed = maxSpeed;
-                return;
             }
-            speed += fact;
         }
 
         public void SpeedDown(float fact)
