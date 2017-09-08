@@ -47,12 +47,12 @@ namespace Fidget.Data
     {
         public static FidgetSpinnerItem[] fidgetSpinnerItems = {
             new FidgetSpinnerItem( "Galaxy", "spinner1", 0, 1, 0),
-            new FidgetSpinnerItem( "Bat", "spinner2", 0, 5, 300000),
-            new FidgetSpinnerItem( "Andromeda", "spinner3", 0, 10, 1200000),
-            new FidgetSpinnerItem( "Flower", "spinner4", 0, 20, 1500000),
+            new FidgetSpinnerItem( "Bat", "spinner2", 0, 5, 200000),
+            new FidgetSpinnerItem( "Andromeda", "spinner3", 0, 10, 500000),
+            new FidgetSpinnerItem( "Flower", "spinner4", 0, 20, 1000000),
             new FidgetSpinnerItem( "Dagger", "spinner5", 0, 30, 3000000),
-            new FidgetSpinnerItem( "AngelWing", "spinner6", 0, 40, 10000000),
-            new FidgetSpinnerItem( "Gold", "spinner7", 1, 50, 20000000),
+            new FidgetSpinnerItem( "AngelWing", "spinner6", 0, 40, 7000000),
+            new FidgetSpinnerItem( "Gold", "spinner7", 1, 50, 15000000),
             new FidgetSpinnerItem( "Crystal", "spinner8", 1, 60, 30000000),
             new FidgetSpinnerItem( "Ocean", "spinner9", 1, 80, 50000000),
             new FidgetSpinnerItem( "Volcano", "spinner10", 1, 100, 100000000),
