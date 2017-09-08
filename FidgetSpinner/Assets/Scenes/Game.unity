@@ -1034,66 +1034,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114989504536815480, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114396846367631330, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114747503610581740, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114838559551947860, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114286060381974926, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114185788596163252, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114339049544689444, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114923490270351534, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114417357967303494, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
-    - target: {fileID: 114677022580902350, guid: ea879acb007edb648ae2184f96f285a7,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ea879acb007edb648ae2184f96f285a7, type: 2}
   m_IsPrefabParent: 0
