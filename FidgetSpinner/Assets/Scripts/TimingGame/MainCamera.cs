@@ -235,17 +235,20 @@ namespace Fidget.TimingGame
         void CheckSpinClick()
         {
             timingCircle.CheckDistance();
+           
             if (timingCircle.IsGoodPoint())
             {
                 timingCircle.ClickGood();
                 fidgetSpinner.SpeedUp(fidgetSpinner.Haste * timingCircle.GetGoodBonus());
                 gameaudio.ButtonSwipe1();
+                gameaudio.ButtonBeepGood();
             }
             else
             {
                 timingCircle.ClickBad();
                 fidgetSpinner.SpeedDown(fidgetSpinner.Damping * 3f);
                 SoundManager.Instance.Vibrate();
+                gameaudio.ButtonBeepBad();
             }
         }
 

@@ -70,6 +70,34 @@ namespace Fidget.Common
             }
         }
 
+        public void ButtonBeepGood()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(effectList[3]);
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void ButtonBeepBad()
+        {
+            try
+            {
+                if (!GameInfo.isSoundOn)
+                    return;
+                LeanAudio.play(effectList[4]);
+            }
+            catch
+            {
+
+            }
+        }
+
         public void GameSpinSuccess()
         {
             try
