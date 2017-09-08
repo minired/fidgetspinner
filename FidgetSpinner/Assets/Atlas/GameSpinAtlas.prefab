@@ -431,8 +431,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: level_bg
-    x: 1277
-    y: 1042
+    x: 239
+    y: 9
     width: 256
     height: 6
     borderLeft: 0
@@ -444,8 +444,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: level_fill
-    x: 239
-    y: 9
+    x: 1277
+    y: 1042
     width: 256
     height: 6
     borderLeft: 0
