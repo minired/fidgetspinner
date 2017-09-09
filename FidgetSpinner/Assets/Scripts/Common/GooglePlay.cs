@@ -54,6 +54,11 @@ namespace Fidget.Common
 
             //Activate the Google Play Games platform
             PlayGamesPlatform.Activate();
+
+#elif UNITY_IOS
+ 
+        GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
+ 
 #endif
             GameInfo.googlePlayInit = true;
         }
@@ -66,11 +71,8 @@ namespace Fidget.Common
 
         public void LoginWithInit()
         {
-            if (!GameInfo.IsIOS)
-            {
-                Init();
-                Login();
-            }
+            Init();
+            Login();
         }
 
         public void UpdateCheckAchievements()
