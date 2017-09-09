@@ -145,7 +145,7 @@ PlayerSettings:
     iOS: com.nexters.fidgetspinner
   buildNumber:
     iOS: 1
-  AndroidBundleVersionCode: 12
+  AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -216,7 +216,7 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileID: 4a92cbef-d931-4792-863a-7f9988f7ca8b
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 2
-  AndroidTargetDevice: 4
+  AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/fidgetspinner/Keystore/fidget.keystore

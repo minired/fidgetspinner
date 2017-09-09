@@ -3,7 +3,9 @@ using System.Collections;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
+#if UNITY_IOS
 using UnityEngine.SocialPlatforms.GameCenter;
+#endif
 using GooglePlayGames.BasicApi.SavedGame;
 using System;
 using UnityEngine.SceneManagement;
@@ -46,7 +48,7 @@ namespace Fidget.Common
             if (GameInfo.googlePlayInit)
                 return;
 
-#if UNITY_ANDROID 
+#if UNITY_ANDROID
 
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
