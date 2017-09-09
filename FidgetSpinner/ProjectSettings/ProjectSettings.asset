@@ -537,7 +537,8 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: 
     4: NO_GPGS
-  platformArchitecture: {}
+  platformArchitecture:
+    iOS: 2
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
