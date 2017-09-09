@@ -13,6 +13,10 @@ namespace Fidget.Init
         
         void Awake()
         {
+			#if UNITY_IOS
+			Application.targetFrameRate = 60;
+			#endif
+
             ExpTable expTable = new ExpTable();
             if (User.Instance.RunCount < 1)
             {
