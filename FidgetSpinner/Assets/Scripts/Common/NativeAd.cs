@@ -19,7 +19,10 @@ namespace Fidget.Common
         string adUnitId = "unexpected_platform";
 #endif
             int x = 30;
-            int y = (int)(732f * ((float)Screen.width / (float)Screen.height));
+            int y = 410;
+#if (UNITY_IPHONE || UNITY_IOS)
+            y += 50;
+#endif
             // Create a 320x50 native express ad at the top of the screen.
             nativeExpressAdView = new NativeExpressAdView(adUnitId, new AdSize(300, 80), x,y);
             // Load a banner ad.
