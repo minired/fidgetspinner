@@ -3,11 +3,13 @@ using System.Collections;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SocialPlatforms.GameCenter;
 using GooglePlayGames.BasicApi.SavedGame;
 using System;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Fidget.Player;
+
 namespace Fidget.Common
 {
     public class GooglePlay : MonoBehaviour
