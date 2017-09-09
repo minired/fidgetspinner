@@ -69,6 +69,10 @@ namespace Fidget.GameSpin
         {
             int fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
+			if (level < 1) 
+			{
+				level = 1;
+			}
             fidgetSpeed = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].speed;
             fidgetCoin = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].coin;
             fixedSpeed += (fidgetSpeed * 0.08f);
