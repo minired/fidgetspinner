@@ -24,12 +24,12 @@ namespace Fidget.Common
 
 			if (ScreenHeightInch < 3f) 
 			{
-			    y = (int)(110f * ScreenHeightInch);
+			    y = (int)(109f * ScreenHeightInch);
 			} 
 			else 
 			{
 				float temp = ScreenHeightInch - 3f;
-			    y = (int)(ScreenHeightInch * (110f - (temp*6f)));
+			    y = (int)(ScreenHeightInch * (109f - (temp*6f)));
 			}
 
             // Create a 320x50 native express ad at the top of the screen.
