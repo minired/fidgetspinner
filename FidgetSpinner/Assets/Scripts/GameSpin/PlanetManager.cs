@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Fidget.Common;
 using UnityEngine.Advertisements;
-
+using Fidget.Player;
 namespace Fidget.GameSpin
 {
     public class PlanetManager : MonoBehaviour
@@ -265,7 +265,7 @@ namespace Fidget.GameSpin
             }
             Init();
             coinAnimation.OnPlayAnimation();
-            if (GameInfo.gameCount % 5 == 0)
+            if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
             {
                 AdPopupChecker();
             }

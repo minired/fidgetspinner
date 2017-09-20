@@ -392,7 +392,7 @@ namespace Fidget.TimeGame
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
                 }
-                if (GameInfo.gameCount % 5 == 0)
+                if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
                 {
                     AdPopupChecker();
                 }
