@@ -4,6 +4,8 @@ using UnityEngine;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.GameCenter;
+
 namespace Fidget.Common
 {
     public class ResultPopup : MonoBehaviour
@@ -151,6 +153,7 @@ namespace Fidget.Common
             if (!Social.localUser.authenticated)
             {
                 goolgePlay.LoginWithInit();
+                return;
             }
             Scene scene = SceneManager.GetActiveScene();
             if (gameaudio != null)
@@ -169,8 +172,29 @@ namespace Fidget.Common
             {
                 PlayGamesPlatform.Instance.ShowLeaderboardUI("CgkIyIDh6tIfEAIQCA");
             }
-           
+
+#elif (UNITY_IPHONE || UNITY_IOS )
+
+            if (!Social.localUser.authenticated)
+            {
+                goolgePlay.LoginWithInit();
+                return;
+            }
+
+            if (scene.name == "Game")
+            {
+                GameCenterPlatform.ShowLeaderboardUI("timedspin", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+            }
+            else if (scene.name == "GameSpin")
+            {
+                GameCenterPlatform.ShowLeaderboardUI("gamespinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+            }
+            else if (scene.name == "TimingGame")
+            {
+                GameCenterPlatform.ShowLeaderboardUI("timingspinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+            }
 #endif
+
         }
     }
 }

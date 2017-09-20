@@ -247,8 +247,6 @@ namespace Fidget.Common
 
         void CheckAllAchievemet()
         {
-            if (GameInfo.IsIOS)
-                return;
             CheckAllLevelMission(User.Instance.LevelMissionGrade);
             CheckAllCoinMission(User.Instance.CoinMissionGrade);
             CheckAllSpeedMission(User.Instance.TimedSpeedMissionGrade);
