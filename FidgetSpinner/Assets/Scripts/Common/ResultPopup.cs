@@ -180,7 +180,7 @@ namespace Fidget.Common
                 goolgePlay.LoginWithInit();
                 return;
             }
-
+			Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "Game")
             {
                 GameCenterPlatform.ShowLeaderboardUI("timedspin", UnityEngine.SocialPlatforms.TimeScope.AllTime);
