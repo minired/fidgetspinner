@@ -11,8 +11,8 @@ namespace Fidget.Common
         {
 #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-3026969986215886/6943229560";
-#elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3026969986215886/6943229560";
+#elif UNITY_IOS || UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3026969986215886/7133102103";
 #else
         string adUnitId = "ca-app-pub-3026969986215886/6943229560";
 #endif

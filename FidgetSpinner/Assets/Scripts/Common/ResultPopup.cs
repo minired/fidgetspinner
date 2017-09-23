@@ -4,7 +4,9 @@ using UnityEngine;
 using GooglePlayGames;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SceneManagement;
+#if (UNITY_IPHONE || UNITY_IOS )
 using UnityEngine.SocialPlatforms.GameCenter;
+#endif
 
 namespace Fidget.Common
 {

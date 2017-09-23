@@ -13,24 +13,37 @@ namespace Fidget.Common
             string adUnitId = "unused";
 #elif UNITY_ANDROID
         string adUnitId = "ca-app-pub-3026969986215886/2601757351";
-#elif UNITY_IPHONE
-        string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+#elif UNITY_IOS || UNITY_IPHONE
+        string adUnitId = "ca-app-pub-3026969986215886/5656546510";
 #else
         string adUnitId = "unexpected_platform";
 #endif
-			float ScreenHeightInch = Screen.height / Screen.dpi;
+            float screenHeightInch = Screen.height / Screen.dpi;
+            float screenWidthInch = Screen.width / Screen.dpi;
+
             int x = 30;
 			int y = 300;
 
-			if (ScreenHeightInch < 3f) 
+			if (screenHeightInch < 3f) 
 			{
-			    y = (int)(109f * ScreenHeightInch);
+			    y = (int)(109f * screenHeightInch);
 			} 
 			else 
 			{
-				float temp = ScreenHeightInch - 3f;
-			    y = (int)(ScreenHeightInch * (109f - (temp*6f)));
+				float temp = screenHeightInch - 3f;
+			    y = (int)(screenHeightInch * (109f - (temp*6f)));
 			}
+
+
+            if (screenWidthInch < 3f)
+            {
+                x = (int)(15f * screenWidthInch);
+            }
+            else
+            {
+                float temp = screenWidthInch - 3f;
+                x = (int)(screenWidthInch * (15f - temp));
+            }
 
             // Create a 320x50 native express ad at the top of the screen.
             nativeExpressAdView = new NativeExpressAdView(adUnitId, new AdSize(300, 80), x,y);
