@@ -11,7 +11,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Nexters
-  productName: FidgetSpinner
+  productName: "\uD53C\uC82F\uC2A4\uD53C\uB108 \uAC24\uB7ED\uC2DC"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -144,7 +144,7 @@ PlayerSettings:
     Android: com.nexters.fidgetspinner
     iOS: com.nexters.fidgetspinner
   buildNumber:
-    iOS: 1
+    iOS: 2
   AndroidBundleVersionCode: 13
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
