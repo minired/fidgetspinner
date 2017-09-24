@@ -145,7 +145,7 @@ PlayerSettings:
     iOS: com.nexters.fidgetspinner
   buildNumber:
     iOS: 2
-  AndroidBundleVersionCode: 13
+  AndroidBundleVersionCode: 14
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
