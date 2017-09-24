@@ -31,11 +31,15 @@ namespace Fidget.Common
 			else 
 			{
 				float temp = screenHeightInch - 3f;
-			    y = (int)(screenHeightInch * (112f - (temp*6f)));
+			    y = (int)(screenHeightInch * (110f - (temp*6f)));
 			}
 
 
-            if (screenWidthInch < 3f)
+            if (screenWidthInch < 2.5f)
+            {
+                x = (int)(15f * screenWidthInch);
+            }
+            else if (screenWidthInch < 3f)
             {
                 x = (int)(25f * screenWidthInch);
             }
