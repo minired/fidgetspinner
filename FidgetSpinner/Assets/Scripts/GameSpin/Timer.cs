@@ -37,6 +37,11 @@ namespace Fidget.GameSpin
             fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
 			Debug.Log (level);
+            if (level < 1)
+            {
+                User.Instance.SetFidgetSpinnerLevel(fidgetIndex, 1);
+                level = 1;
+            }
             haste = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].haste;
             damping = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].damping;
 
