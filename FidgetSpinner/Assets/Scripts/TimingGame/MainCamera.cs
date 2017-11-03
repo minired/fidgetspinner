@@ -178,7 +178,7 @@ namespace Fidget.TimingGame
                 resultPopup.BestSpriteOn();
                 if (Social.localUser.authenticated)
                 {
-                    Social.ReportScore(User.Instance.HighScoreLoop, "CgkIyIDh6tIfEAIQCA", (bool success) =>
+                    Social.ReportScore(User.Instance.HighScoreLoop, GameInfo.leaderBoardLoopSpin, (bool success) =>
                     {
                         // handle success or failure
                     });
