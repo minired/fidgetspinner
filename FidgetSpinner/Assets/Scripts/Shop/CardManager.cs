@@ -21,7 +21,7 @@ namespace Fidget.Shop
         private ExpTable expTable = new ExpTable();
 
         // Coin
-        public CoinUI coin = new CoinUI();
+        public CoinUI coin;
 
         // Fidget Base Data
         public int cardID;
