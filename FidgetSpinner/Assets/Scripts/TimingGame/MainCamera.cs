@@ -178,10 +178,18 @@ namespace Fidget.TimingGame
                 resultPopup.BestSpriteOn();
                 if (Social.localUser.authenticated)
                 {
+#if UNITY_ANDROID
                     Social.ReportScore(User.Instance.HighScoreLoop, GameInfo.leaderBoardLoopSpin, (bool success) =>
                     {
                         // handle success or failure
                     });
+
+#elif (UNITY_IPHONE || UNITY_IOS)
+                    Social.ReportScore(User.Instance.HighScoreLoop, GameInfo.leaderBoardLoopSpinIOS, (bool success) =>
+                    {
+                        // handle success or failure
+                    });
+#endif
                 }
             }
             else

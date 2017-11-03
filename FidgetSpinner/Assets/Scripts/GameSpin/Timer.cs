@@ -77,10 +77,17 @@ namespace Fidget.GameSpin
                     resultPopup.BestSpriteOn();
                     if (Social.localUser.authenticated)
                     {
+#if UNITY_ANDROID
                         Social.ReportScore(User.Instance.HighScoreGameSpin, GameInfo.leaderBoardGameSpin, (bool success) =>
                         {
                             // handle success or failure
                         });
+#elif (UNITY_IPHONE || UNITY_IOS)
+                        Social.ReportScore(User.Instance.HighScoreGameSpin, GameInfo.leaderBoardGameSpinIOS, (bool success) =>
+                        {
+                            // handle success or failure
+                        });
+#endif
                     }
                 }
                 else
