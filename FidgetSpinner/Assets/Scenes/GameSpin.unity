@@ -1781,7 +1781,7 @@ Prefab:
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: mWidth
-      value: 162
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
@@ -1994,7 +1994,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 4
-  mWidth: 16
+  mWidth: 14
   mHeight: 60
   mDepth: 15
   autoResizeBoxCollider: 0
@@ -3263,7 +3263,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 4
-  mWidth: 136
+  mWidth: 146
   mHeight: 60
   mDepth: 15
   autoResizeBoxCollider: 0
@@ -3655,5 +3655,6 @@ MonoBehaviour:
   sprite: {fileID: 2093800945}
   manager: {fileID: 1282996703}
   score: {fileID: 1886225736}
+  coinUI: {fileID: 1195357079}
   feverCount: 50
   feverDuration: 3
