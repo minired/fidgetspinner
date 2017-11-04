@@ -46,7 +46,7 @@ namespace Fidget.GameSpin
         public AdmobPlayer admobPlayer;
 
 
-        void TweenPlanets()       // 버튼 누른 뒤 행성들 이동
+        void TweenPlanets()       // 버튼 누른 뒤 행성들 한칸씩 아래로 이동
         {
             if (LeanTween.isTweening(leftPlanets[buttomNum]))
             {
@@ -56,7 +56,8 @@ namespace Fidget.GameSpin
 
             int j = 0;
 
-            leftPlanets[buttomNum].transform.localPosition = leftPosition[9];       // 맨밑 행성 맨위로, 사이즈 조절
+            // 맨밑 행성 맨위로, 사이즈 조절
+            leftPlanets[buttomNum].transform.localPosition = leftPosition[9];
             rightPlanets[buttomNum].transform.localPosition = rightPosition[9];
             leftPlanets[buttomNum].transform.localScale *= sizeDown;
             rightPlanets[buttomNum].transform.localScale *= sizeDown;
