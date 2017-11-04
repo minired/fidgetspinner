@@ -612,6 +612,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114881613253891478, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: mWidth
+      value: 288
+      objectReference: {fileID: 0}
+    - target: {fileID: 114305487844292368, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: mWidth
+      value: 168
+      objectReference: {fileID: 0}
+    - target: {fileID: 114038641150961376, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: mWidth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114479776297973072, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: mWidth
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 114443662670222246, guid: 5929c90240831c94c8cd687c3bfe4022,
+        type: 2}
+      propertyPath: mWidth
+      value: 170
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5929c90240831c94c8cd687c3bfe4022, type: 2}
   m_IsPrefabParent: 0
@@ -847,7 +872,6 @@ MonoBehaviour:
   shopBtnSprite: {fileID: 0}
   backBtnSprite: {fileID: 1039201713}
   gameAudio: {fileID: 1037077147}
-  nativeAd: {fileID: 0}
 --- !u!1001 &1394499948
 Prefab:
   m_ObjectHideFlags: 0
