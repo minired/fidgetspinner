@@ -28,8 +28,7 @@ namespace Fidget.GameSpin
 
         public void IncreaseCoin()
         {
-            User.Instance.Coin += coinBonus;
-            coinUI.SetCoinLabel(User.Instance.Coin);
+            coinUI.AdditionalCoin(coinBonus);
         }
 
         public void Fail()

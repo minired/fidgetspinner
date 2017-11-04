@@ -19,6 +19,7 @@ namespace Fidget.GameSpin
         public Fever fever;
         public Combo_Circle circle;
         public CoinAnimation coinAnimation;
+        public CoinUI coinUI;
         public ResultPopup resultPop;
 
         public GameObject resultPopup;
@@ -152,6 +153,7 @@ namespace Fidget.GameSpin
             combo.Success();
             fever.Success();
             circle.Success();
+
             if (CheckLeftPlanet() || CheckRightPlanet())
             {
                 fever.IncreaseCoin();

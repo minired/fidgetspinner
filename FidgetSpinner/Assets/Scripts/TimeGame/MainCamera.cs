@@ -415,6 +415,7 @@ namespace Fidget.TimeGame
 
             if (coinDelay <= 0.0f)
             {
+                coinUI.AdditionalCoin(fidgetSpinner.Coin);
                 fidgetSpinner.IncreaseCoin();
                 coinDelay = fidgetSpinner.CoinDelay;
                 coinUI.SetCoinLabel(User.Instance.Coin);

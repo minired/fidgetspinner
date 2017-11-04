@@ -1768,32 +1768,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 114795756638776500, guid: 225add1cafa006c479b51480715a8253,
-        type: 2}
-      propertyPath: mDepth
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
-        type: 2}
-      propertyPath: mDepth
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
-        type: 2}
-      propertyPath: mWidth
-      value: 162
-      objectReference: {fileID: 0}
-    - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 3.7142856
-      objectReference: {fileID: 0}
-    - target: {fileID: 114795756638776500, guid: 225add1cafa006c479b51480715a8253,
-        type: 2}
-      propertyPath: mAtlas
-      value: 
-      objectReference: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 225add1cafa006c479b51480715a8253, type: 2}
   m_IsPrefabParent: 0
@@ -2429,6 +2403,7 @@ MonoBehaviour:
   fever: {fileID: 2093800946}
   circle: {fileID: 817457624}
   coinAnimation: {fileID: 291925728}
+  coinUI: {fileID: 1195357079}
   resultPop: {fileID: 1196866564}
   resultPopup: {fileID: 1196866563}
   tabLabel: {fileID: 1137670984}
