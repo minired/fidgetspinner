@@ -314,17 +314,6 @@ namespace Fidget.TimeGame
         }
 
       
-        void AdPopupChecker()
-        {
-            if (!admobPlayer.ShowAd())
-            {
-                if (Advertisement.IsReady())
-                {
-                    Advertisement.Show("video");
-                }
-            }
-        }
-
 
         // Update is called once per frame
         void Update()
@@ -396,13 +385,6 @@ namespace Fidget.TimeGame
                 if(highSpeed > User.Instance.TimedSpinHighSpeed)
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
-                }
-                if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
-                {
-                    AdPopupChecker();
-                }
-                else
-                {
                 }
 
 

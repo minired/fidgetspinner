@@ -19,6 +19,7 @@ namespace Fidget.GameSpin
         public float feverCount;
         public float feverDuration;
 
+        private int cardID;
         private ulong coinBonus;
 
         public void Success()
@@ -57,7 +58,8 @@ namespace Fidget.GameSpin
 
         private void Awake()
         {
-            coinBonus = (ulong)FidgetSpinnerData.fidgetSpinnerDetails[User.Instance.EquipIndex, 1].coin * 10;
+            cardID = User.Instance.EquipIndex;
+            coinBonus = (ulong)FidgetSpinnerData.fidgetSpinnerDetails[cardID, User.Instance.GetFidgetSpinnerLevel(cardID) - 1].coin * 10;
         }
 
         // Use this for initialization

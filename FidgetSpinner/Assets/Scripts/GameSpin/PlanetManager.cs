@@ -290,10 +290,6 @@ namespace Fidget.GameSpin
             }
             Init();
             coinAnimation.OnPlayAnimation();
-            if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
-            {
-                AdPopupChecker();
-            }
         }
 
         public void FeverOff()
@@ -336,16 +332,7 @@ namespace Fidget.GameSpin
             leftPlanets[0].transform.localScale *= sizeUp;
         }
 
-        void AdPopupChecker()
-        {
-            if (!admobPlayer.ShowAd())
-            {
-                if (Advertisement.IsReady())
-                {
-                    Advertisement.Show("video");
-                }
-            }
-        }
+        
 
         private void Awake()
         {

@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fidget.Data;
+using Fidget.Player;
+using Fidget.Common;
+
 namespace Fidget.TimingGame
 {
     public class TimingCircle : MonoBehaviour
     {
+        public CoinUI coinUI;
 
         public UISprite timbBar;
         public UISprite centerCircle;
@@ -29,9 +34,12 @@ namespace Fidget.TimingGame
 
         float distance = 1.0f;
 
+        ulong coinBonus;
+
 
         private void Awake()
         {
+            coinBonus = (ulong)FidgetSpinnerData.fidgetSpinnerDetails[User.Instance.EquipIndex, User.Instance.GetFidgetSpinnerLevel(User.Instance.EquipIndex) - 1].coin;
             isBarSpin = false;
             timbBar.gameObject.SetActive(false);
             spinGood.gameObject.SetActive(false);
@@ -192,10 +200,14 @@ namespace Fidget.TimingGame
             if(distance < 0.05f)
             {
                 SetInfoText(4);
+                User.Instance.Coin += coinBonus * 20;
+                coinUI.SetCoinLabel(User.Instance.Coin);
             }
             else if (distance < 0.1f)
             {
                 SetInfoText(3);
+                User.Instance.Coin += coinBonus * 10;
+                coinUI.SetCoinLabel(User.Instance.Coin);
             }
             else if (distance < 0.15f)
             {
