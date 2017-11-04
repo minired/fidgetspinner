@@ -1781,12 +1781,12 @@ Prefab:
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: mWidth
-      value: 156
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 114337629689147182, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
       propertyPath: aspectRatio
-      value: 3.857143
+      value: 3.7142856
       objectReference: {fileID: 0}
     - target: {fileID: 114795756638776500, guid: 225add1cafa006c479b51480715a8253,
         type: 2}
@@ -1850,6 +1850,10 @@ Prefab:
       propertyPath: gameaudio
       value: 
       objectReference: {fileID: 391559203}
+    - target: {fileID: 1099313111674190, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 90533b5bcaa7738489c5569082cbbb20, type: 2}
   m_IsPrefabParent: 0
@@ -1994,7 +1998,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 4
-  mWidth: 14
+  mWidth: 16
   mHeight: 60
   mDepth: 15
   autoResizeBoxCollider: 0
@@ -2429,27 +2433,27 @@ MonoBehaviour:
   resultPopup: {fileID: 1196866563}
   tabLabel: {fileID: 1137670984}
   leftPosition:
-  - {x: -120, y: -215, z: 0}
-  - {x: -180, y: -100, z: 0}
-  - {x: -180, y: 15, z: 0}
-  - {x: -180, y: 130, z: 0}
-  - {x: -180, y: 245, z: 0}
-  - {x: -180, y: 360, z: 0}
-  - {x: -180, y: 475, z: 0}
-  - {x: -180, y: 590, z: 0}
-  - {x: -180, y: 705, z: 0}
-  - {x: -180, y: 830, z: 0}
+  - {x: -120, y: -155, z: 0}
+  - {x: -180, y: -40, z: 0}
+  - {x: -180, y: 75, z: 0}
+  - {x: -180, y: 190, z: 0}
+  - {x: -180, y: 305, z: 0}
+  - {x: -180, y: 420, z: 0}
+  - {x: -180, y: 535, z: 0}
+  - {x: -180, y: 650, z: 0}
+  - {x: -180, y: 765, z: 0}
+  - {x: -180, y: 890, z: 0}
   rightPosition:
-  - {x: 120, y: -215, z: 0}
-  - {x: 180, y: -100, z: 0}
-  - {x: 180, y: 15, z: 0}
-  - {x: 180, y: 130, z: 0}
-  - {x: 180, y: 245, z: 0}
-  - {x: 180, y: 360, z: 0}
-  - {x: 180, y: 475, z: 0}
-  - {x: 180, y: 590, z: 0}
-  - {x: 180, y: 705, z: 0}
-  - {x: 180, y: 830, z: 0}
+  - {x: 120, y: -155, z: 0}
+  - {x: 180, y: -40, z: 0}
+  - {x: 180, y: 75, z: 0}
+  - {x: 180, y: 190, z: 0}
+  - {x: 180, y: 305, z: 0}
+  - {x: 180, y: 420, z: 0}
+  - {x: 180, y: 535, z: 0}
+  - {x: 180, y: 650, z: 0}
+  - {x: 180, y: 765, z: 0}
+  - {x: 180, y: 890, z: 0}
   sizeUp: 1.25
   sizeDown: 0.8
   moveTime: 0.1
@@ -3263,7 +3267,7 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 4
-  mWidth: 146
+  mWidth: 136
   mHeight: 60
   mDepth: 15
   autoResizeBoxCollider: 0
