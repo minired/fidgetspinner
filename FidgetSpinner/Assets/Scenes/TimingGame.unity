@@ -1822,12 +1822,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f6d0dadc3c7183249af938fb016e8f60, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &915866500 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114510467760511316, guid: f6d0dadc3c7183249af938fb016e8f60,
-    type: 2}
-  m_PrefabInternal: {fileID: 915866499}
-  m_Script: {fileID: 11500000, guid: 0bcc7a94aa9b05147b1d3357f1bf1c3b, type: 3}
 --- !u!1 &985426231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1890,13 +1884,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.827451, g: 0.77254903, b: 0.9137255, a: 1}
   mPivot: 5
-  mWidth: 160
+  mWidth: 156
   mHeight: 42
   mDepth: 15
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.8095238
+  aspectRatio: 3.7142856
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 8dbbafad5a96066458d5c68ed89f7b4d, type: 3}
   mFont: {fileID: 0}
@@ -2328,13 +2322,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9372549, g: 0.88235295, b: 1, a: 1}
   mPivot: 4
-  mWidth: 294
+  mWidth: 300
   mHeight: 60
   mDepth: 13
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 4.9
+  aspectRatio: 5
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: cdd5fc6eab2f4d041843e1922a7140a7, type: 3}
   mFont: {fileID: 0}
@@ -10019,7 +10013,6 @@ MonoBehaviour:
   timeLabel: {fileID: 887256912}
   admobPlayer: {fileID: 1864872821}
   gameaudio: {fileID: 333649445}
-  nativeAd: {fileID: 915866500}
 --- !u!1 &1289741709
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,6 +10345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bf51ea8db47ea42832719847c16bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinUI: {fileID: 1745269219}
   timbBar: {fileID: 1922031432}
   centerCircle: {fileID: 1562004952}
   pivot1: {fileID: 69767960}
@@ -10604,13 +10598,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   mPivot: 5
-  mWidth: 162
+  mWidth: 168
   mHeight: 48
   mDepth: 7
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 3.375
+  aspectRatio: 3.5
   keepCrispWhenShrunk: 1
   mTrueTypeFont: {fileID: 12800000, guid: 73265f32ca6be1748852e3cbcbd67e45, type: 3}
   mFont: {fileID: 0}
