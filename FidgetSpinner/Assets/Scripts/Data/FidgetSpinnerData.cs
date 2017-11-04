@@ -51,13 +51,13 @@ namespace Fidget.Data
             new FidgetSpinnerItem( "Andromeda", "spinner3", 0, 10, 300000),
             new FidgetSpinnerItem( "Flower", "spinner4", 0, 20, 500000),
             new FidgetSpinnerItem( "Dagger", "spinner5", 0, 30, 1000000),
-            new FidgetSpinnerItem( "AngelWing", "spinner6", 0, 40, 2000000),
-            new FidgetSpinnerItem( "Gold", "spinner7", 1, 50, 5000000),
-            new FidgetSpinnerItem( "Crystal", "spinner8", 1, 60, 10000000),
-            new FidgetSpinnerItem( "Ocean", "spinner9", 1, 80, 10000000),
-            new FidgetSpinnerItem( "Volcano", "spinner10", 1, 100, 50000000),
-            new FidgetSpinnerItem( "Redvelvet", "spinner11", 1, 120, 100000000),
-            new FidgetSpinnerItem( "DarthVader", "spinner12", 1, 150, 300000000),
+            new FidgetSpinnerItem( "AngelWing", "spinner6", 0, 40, 1500000),
+            new FidgetSpinnerItem( "Gold", "spinner7", 1, 50, 2000000),
+            new FidgetSpinnerItem( "Crystal", "spinner8", 1, 60, 3000000),
+            new FidgetSpinnerItem( "Ocean", "spinner9", 1, 80, 5000000),
+            new FidgetSpinnerItem( "Volcano", "spinner10", 1, 100, 7000000),
+            new FidgetSpinnerItem( "Redvelvet", "spinner11", 1, 120, 10000000),
+            new FidgetSpinnerItem( "DarthVader", "spinner12", 1, 150, 30000000),
         };
 
 
