@@ -14,7 +14,7 @@ namespace Fidget.GameSpin
 
         // Use this for initialization
         void Start() {
-            combo = 1;
+            combo = 0;
         }
 
         // Update is called once per frame
