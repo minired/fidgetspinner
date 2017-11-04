@@ -42,8 +42,7 @@ namespace Fidget.GameSpin
 
         public void Init()
         {
-            isFever = false;
-            sprite.fillAmount = 0f;
+            FeverOff();
         }
 
         // Use this for initialization
