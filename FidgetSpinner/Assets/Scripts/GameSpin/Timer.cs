@@ -49,6 +49,16 @@ namespace Fidget.GameSpin
             deltaAmount -= (damping * 0.000015f);
         }
 
+        private void Awake()
+        {
+            resultPopup.popupClosed += ResultPopup_CoinLabelApply;
+        }
+
+        void ResultPopup_CoinLabelApply()
+        {
+            coinUI.SetCoinLabel(User.Instance.Coin);
+        }
+
         // Update is called once per frame
         void Update()
         {
