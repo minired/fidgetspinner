@@ -178,10 +178,18 @@ namespace Fidget.TimingGame
                 resultPopup.BestSpriteOn();
                 if (Social.localUser.authenticated)
                 {
-                    Social.ReportScore(User.Instance.HighScoreLoop, "CgkIyIDh6tIfEAIQCA", (bool success) =>
+#if UNITY_ANDROID
+                    Social.ReportScore(User.Instance.HighScoreLoop, GameInfo.leaderBoardLoopSpin, (bool success) =>
                     {
                         // handle success or failure
                     });
+
+#elif (UNITY_IPHONE || UNITY_IOS)
+                    Social.ReportScore(User.Instance.HighScoreLoop, GameInfo.leaderBoardLoopSpinIOS, (bool success) =>
+                    {
+                        // handle success or failure
+                    });
+#endif
                 }
             }
             else
@@ -197,7 +205,7 @@ namespace Fidget.TimingGame
             resultPopup.gameObject.SetActive(true);
             resultPopup.ShowScore(User.Instance.Score);
             resultPopup.BottomBtnAnimation();
-            if (GameInfo.gameCount % 5 == 0)
+            if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
             {
                 AdPopupChecker();
             }
@@ -235,17 +243,20 @@ namespace Fidget.TimingGame
         void CheckSpinClick()
         {
             timingCircle.CheckDistance();
+           
             if (timingCircle.IsGoodPoint())
             {
                 timingCircle.ClickGood();
                 fidgetSpinner.SpeedUp(fidgetSpinner.Haste * timingCircle.GetGoodBonus());
                 gameaudio.ButtonSwipe1();
+                gameaudio.ButtonBeepGood();
             }
             else
             {
                 timingCircle.ClickBad();
                 fidgetSpinner.SpeedDown(fidgetSpinner.Damping * 3f);
                 SoundManager.Instance.Vibrate();
+                gameaudio.ButtonBeepBad();
             }
         }
 

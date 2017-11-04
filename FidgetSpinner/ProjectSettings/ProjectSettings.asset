@@ -11,7 +11,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Nexters
-  productName: FidgetSpinner
+  productName: "\uD53C\uC82F\uC2A4\uD53C\uB108 \uAC24\uB7ED\uC2DC"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -144,14 +144,14 @@ PlayerSettings:
     Android: com.nexters.fidgetspinner
     iOS: com.nexters.fidgetspinner
   buildNumber:
-    iOS: 1
-  AndroidBundleVersionCode: 11
+    iOS: 2
+  AndroidBundleVersionCode: 14
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
-  iPhoneStrippingLevel: 0
+  iPhoneStrippingLevel: 1
   iPhoneScriptCallOptimization: 0
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
@@ -537,7 +537,8 @@ PlayerSettings:
   scriptingDefineSymbols:
     1: 
     4: NO_GPGS
-  platformArchitecture: {}
+  platformArchitecture:
+    iOS: 2
   scriptingBackend: {}
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 

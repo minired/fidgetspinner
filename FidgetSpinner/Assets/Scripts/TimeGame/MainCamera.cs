@@ -368,10 +368,17 @@ namespace Fidget.TimeGame
                     resultPopup.BestSpriteOn();
                     if (Social.localUser.authenticated)
                     {
-                        Social.ReportScore(User.Instance.HighScore, "CgkIyIDh6tIfEAIQAA", (bool success) =>
+#if UNITY_ANDROID
+                        Social.ReportScore(User.Instance.HighScore, GameInfo.leaderBoardTimedSpin, (bool success) =>
                         {
                             // handle success or failure
                         });
+#elif (UNITY_IPHONE || UNITY_IOS)
+                         Social.ReportScore(User.Instance.HighScore, GameInfo.leaderBoardTimedSpinIOS, (bool success) =>
+                        {
+                            // handle success or failure
+                        });
+#endif
                     }
                 }
                 else
@@ -392,7 +399,7 @@ namespace Fidget.TimeGame
                 {
                     User.Instance.TimedSpinHighSpeed = highSpeed;
                 }
-                if (GameInfo.gameCount % 5 == 0)
+                if (GameInfo.gameCount % 5 == 0 && User.Instance.Exp > 50000)
                 {
                     AdPopupChecker();
                 }

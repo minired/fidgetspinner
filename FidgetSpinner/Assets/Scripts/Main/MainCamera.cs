@@ -28,7 +28,12 @@ namespace Fidget.Main
         // Use this for initialization
         void Start()
         {
+			#if UNITY_ANDROID
             Advertisement.Initialize("1515814", false);
+			#elif (UNITY_IPHONE || UNITY_IOS )
+			Advertisement.Initialize("1515815", false);
+			#endif
+
             if (User.Instance.RunCount < 2)
             {
                 googlePlay.LoginWithInit();

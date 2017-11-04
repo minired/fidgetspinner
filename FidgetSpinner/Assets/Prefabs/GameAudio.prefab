@@ -57,4 +57,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: de92ef3c51e15ad448cdc0ae3920927a, type: 3}
   - {fileID: 8300000, guid: b109680607823d84c982b811535227ef, type: 3}
   - {fileID: 8300000, guid: 3408415d32ebd6c44bacd5434136d209, type: 3}
+  - {fileID: 8300000, guid: e84b74e36f66e4340afae6dfe4fad782, type: 3}
+  - {fileID: 8300000, guid: 05d491d7b80b0c046b63110b6d1fecb6, type: 3}
   gameSpinSuccess: {fileID: 8300000, guid: b9ea998cde2873545aee159491553d71, type: 3}

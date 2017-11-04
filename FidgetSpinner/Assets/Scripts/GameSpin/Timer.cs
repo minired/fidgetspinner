@@ -36,12 +36,27 @@ namespace Fidget.GameSpin
             isGameOver = false;
             fidgetIndex = User.Instance.EquipIndex;
             level = User.Instance.GetFidgetSpinnerLevel(fidgetIndex);
-
+			Debug.Log (level);
+            if (level < 1)
+            {
+                User.Instance.SetFidgetSpinnerLevel(fidgetIndex, 1);
+                level = 1;
+            }
             haste = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].haste;
             damping = FidgetSpinnerData.fidgetSpinnerDetails[fidgetIndex, level - 1].damping;
 
             successAmount += (haste * 0.002f);
             deltaAmount -= (damping * 0.000015f);
+        }
+
+        private void Awake()
+        {
+            resultPopup.popupClosed += ResultPopup_CoinLabelApply;
+        }
+
+        void ResultPopup_CoinLabelApply()
+        {
+            coinUI.SetCoinLabel(User.Instance.Coin);
         }
 
         // Update is called once per frame
@@ -72,10 +87,17 @@ namespace Fidget.GameSpin
                     resultPopup.BestSpriteOn();
                     if (Social.localUser.authenticated)
                     {
-                        Social.ReportScore(User.Instance.HighScoreGameSpin, "CgkIyIDh6tIfEAIQBw", (bool success) =>
+#if UNITY_ANDROID
+                        Social.ReportScore(User.Instance.HighScoreGameSpin, GameInfo.leaderBoardGameSpin, (bool success) =>
                         {
                             // handle success or failure
                         });
+#elif (UNITY_IPHONE || UNITY_IOS)
+                        Social.ReportScore(User.Instance.HighScoreGameSpin, GameInfo.leaderBoardGameSpinIOS, (bool success) =>
+                        {
+                            // handle success or failure
+                        });
+#endif
                     }
                 }
                 else

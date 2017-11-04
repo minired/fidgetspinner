@@ -3,11 +3,15 @@ using System.Collections;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
+#if UNITY_IOS
+using UnityEngine.SocialPlatforms.GameCenter;
+#endif
 using GooglePlayGames.BasicApi.SavedGame;
 using System;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Fidget.Player;
+
 namespace Fidget.Common
 {
     public class GooglePlay : MonoBehaviour
@@ -44,7 +48,7 @@ namespace Fidget.Common
             if (GameInfo.googlePlayInit)
                 return;
 
-#if UNITY_ANDROID 
+#if UNITY_ANDROID
 
             PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().Build();
             PlayGamesPlatform.InitializeInstance(config);
@@ -54,6 +58,11 @@ namespace Fidget.Common
 
             //Activate the Google Play Games platform
             PlayGamesPlatform.Activate();
+
+#elif UNITY_IOS
+ 
+        GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
+ 
 #endif
             GameInfo.googlePlayInit = true;
         }
@@ -66,11 +75,8 @@ namespace Fidget.Common
 
         public void LoginWithInit()
         {
-            if (!GameInfo.IsIOS)
-            {
-                Init();
-                Login();
-            }
+            Init();
+            Login();
         }
 
         public void UpdateCheckAchievements()
@@ -241,8 +247,6 @@ namespace Fidget.Common
 
         void CheckAllAchievemet()
         {
-            if (GameInfo.IsIOS)
-                return;
             CheckAllLevelMission(User.Instance.LevelMissionGrade);
             CheckAllCoinMission(User.Instance.CoinMissionGrade);
             CheckAllSpeedMission(User.Instance.TimedSpeedMissionGrade);
