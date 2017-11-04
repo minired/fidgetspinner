@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fidget.Player;
+using Fidget.Common;
+using Fidget.Data;
 
 namespace Fidget.GameSpin
 {
@@ -9,16 +12,24 @@ namespace Fidget.GameSpin
         public UISprite sprite;
         public PlanetManager manager;
         public Score score;
+        public CoinUI coinUI;
 
         bool isFever;
 
         public float feverCount;
         public float feverDuration;
 
+        private ulong coinBonus;
 
         public void Success()
         {
             sprite.fillAmount += (1f / feverCount);
+        }
+
+        public void IncreaseCoin()
+        {
+            User.Instance.Coin += coinBonus;
+            coinUI.SetCoinLabel(User.Instance.Coin);
         }
 
         public void Fail()
@@ -43,6 +54,11 @@ namespace Fidget.GameSpin
         public void Init()
         {
             FeverOff();
+        }
+
+        private void Awake()
+        {
+            coinBonus = (ulong)FidgetSpinnerData.fidgetSpinnerDetails[User.Instance.EquipIndex, 1].coin * 10;
         }
 
         // Use this for initialization

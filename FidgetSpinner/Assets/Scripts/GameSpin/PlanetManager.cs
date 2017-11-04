@@ -152,7 +152,28 @@ namespace Fidget.GameSpin
             combo.Success();
             fever.Success();
             circle.Success();
+            if (CheckLeftPlanet() || CheckRightPlanet())
+            {
+                fever.IncreaseCoin();
+            }
+
             TweenPlanets();
+        }
+
+        bool CheckLeftPlanet()
+        {
+            if (leftPlanets[buttomNum].GetComponent<UISprite>().spriteName == "combo_Planet@sprite")
+                return true;
+            else
+                return false;
+        }
+
+        bool CheckRightPlanet()
+        {
+            if (rightPlanets[buttomNum].GetComponent<UISprite>().spriteName == "combo_Planet@sprite")
+                return true;
+            else
+                return false;
         }
 
         void PlanetFail(bool isStone)
@@ -203,6 +224,7 @@ namespace Fidget.GameSpin
             score.Success();
             combo.Success();
             circle.Success();
+            fever.IncreaseCoin();
 
             TweenPlanets_Fever();
         }
