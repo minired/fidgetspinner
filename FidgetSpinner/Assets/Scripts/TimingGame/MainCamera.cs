@@ -54,7 +54,6 @@ namespace Fidget.TimingGame
 
         public GameAudio gameaudio;
 
-        public NativeAd nativeAd;
 
         private void Awake()
         {
@@ -108,7 +107,6 @@ namespace Fidget.TimingGame
             clickIcon.SetActive(true);
             fidgetSpinner.InitPosition();
             timeLabel.text = "30";
-            nativeAd.AdDestory();
         }
 
         void InitGame()
@@ -211,7 +209,6 @@ namespace Fidget.TimingGame
             }
             else
             {
-                nativeAd.RequestNativeExpressAdView();
             }
         }
 

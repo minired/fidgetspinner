@@ -59,7 +59,6 @@ namespace Fidget.TimeGame
 
         public GameAudio gameAudio;
 
-        public NativeAd nativeAd;
 
         float highSpeed = 0.0f;
 
@@ -142,7 +141,6 @@ namespace Fidget.TimeGame
             timeLabel.text = "20";
             highSpeed = 0.0f;
             speedUpCount = 0;
-            nativeAd.AdDestory();
         }
 
         private void SwipeMouse_downSwipe()
@@ -405,7 +403,6 @@ namespace Fidget.TimeGame
                 }
                 else
                 {
-                    nativeAd.RequestNativeExpressAdView();
                 }
 
 
