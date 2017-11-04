@@ -11,7 +11,7 @@ public class Combo_Circle : MonoBehaviour {
     
     public float delay;
 
-    Vector3 circlePosition = new Vector3(0, -422f, 0);
+    Vector3 circlePosition = new Vector3(0, -323f, 0);
 
     public void Success()
     {
