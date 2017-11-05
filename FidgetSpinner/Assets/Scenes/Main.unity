@@ -410,13 +410,13 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 412
-  mHeight: 82
+  mWidth: 352
+  mHeight: 86
   mDepth: 5
   autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
-  aspectRatio: 5.02439
+  aspectRatio: 4.0930233
   mType: 0
   mFillDirection: 4
   mFillAmount: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 114995760015151180, guid: 184b346885db5694eb0a1da01b08c6c9, type: 2}
-  mSpriteName: img_Timing spin@sprite
+  mSpriteName: tex_Loopspin
   mFillCenter: 1
 --- !u!114 &719695441
 MonoBehaviour:
@@ -472,7 +472,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 412, y: 82, z: 0}
+  m_Size: {x: 352, y: 86, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &858604124
 GameObject:
