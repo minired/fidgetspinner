@@ -3,9 +3,10 @@
 --- !u!129 &1
 PlayerSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
   productGUID: f3fcf955e4b1c304cbe2a189adfb6034
   AndroidProfiler: 0
+  AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
@@ -38,8 +39,6 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_SplashScreenBackgroundLandscape: {fileID: 0}
-  m_SplashScreenBackgroundPortrait: {fileID: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
@@ -49,7 +48,6 @@ PlayerSettings:
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
-  m_MobileMTRendering: 0
   m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
@@ -64,8 +62,10 @@ PlayerSettings:
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   disableDepthAndStencilBuffers: 0
+  androidBlitType: 0
   defaultIsFullScreen: 1
   defaultIsNativeResolution: 1
+  macRetinaSupport: 1
   runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
@@ -95,6 +95,7 @@ PlayerSettings:
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
   xboxEnablePIXSampling: 0
+  metalFramebufferOnly: 0
   n3dsDisableStereoscopicView: 0
   n3dsEnableSharedListOpt: 1
   n3dsEnableVSync: 0
@@ -103,6 +104,7 @@ PlayerSettings:
   xboxOneMonoLoggingLevel: 0
   xboxOneLoggingLevel: 1
   xboxOneDisableEsram: 0
+  xboxOnePresentImmediateThreshold: 0
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 0
   psp2AcquireBGM: 1
@@ -134,18 +136,23 @@ PlayerSettings:
     daydream:
       depthFormat: 0
       useSustainedPerformanceMode: 0
+      enableVideoLayer: 0
+      useProtectedVideoMemory: 0
     hololens:
       depthFormat: 1
   protectGraphicsMemory: 0
   useHDRDisplay: 0
+  m_ColorGamuts: 00000000
   targetPixelDensity: 0
   resolutionScalingMode: 0
+  androidSupportedAspectRatio: 1
+  androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.nexters.fidgetspinner
     iOS: com.nexters.fidgetspinner
   buildNumber:
     iOS: 2
-  AndroidBundleVersionCode: 14
+  AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -166,7 +173,7 @@ PlayerSettings:
   iOSTargetOSVersionString: 7.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 
+  tvOSTargetOSVersionString: 9.0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -219,11 +226,13 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/fidgetspinner/Keystore/fidget.keystore
-  AndroidKeyaliasName: fidgetspinner
+  AndroidKeystoreName: C:/fidgetspinner/Keystore/fidgetgl.keystore
+  AndroidKeyaliasName: megaspingl
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
+  AndroidEnableTango: 0
   androidEnableBanner: 0
+  androidUseLowAccuracyLocation: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -237,39 +246,50 @@ PlayerSettings:
       m_Icon: {fileID: 2800000, guid: d16c8d6123a9d1d47878f802801f98aa, type: 3}
       m_Width: 192
       m_Height: 192
+      m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: be1e88acf4103194f96392a6ed4b1b57, type: 3}
       m_Width: 144
       m_Height: 144
+      m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: 805739d4cabce8d4794dd4d10c0d75e7, type: 3}
       m_Width: 96
       m_Height: 96
+      m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: 05c331931f5bc1e4e99d426a51636374, type: 3}
       m_Width: 72
       m_Height: 72
+      m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: e827456c71cec744dac9481d3c901af9, type: 3}
       m_Width: 48
       m_Height: 48
+      m_Kind: 0
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: c88efd2881e2d0e4faacaddb3cfbdb1c, type: 3}
       m_Width: 36
       m_Height: 36
+      m_Kind: 0
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
       m_Icon: {fileID: 2800000, guid: d16c8d6123a9d1d47878f802801f98aa, type: 3}
       m_Width: 128
       m_Height: 128
+      m_Kind: 0
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
+  m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
-  webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
+  mobileMTRendering:
+    Android: 1
+    iPhone: 1
+    tvOS: 1
   wiiUTitleID: 0005000011000000
   wiiUGroupID: 00010000
   wiiUCommonSaveSize: 4096
@@ -651,11 +671,15 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 387009cf-2f96-4c7c-8345-014541dd9485
-  projectName: FidgetSpinner
+  cloudProjectId: 64c56c97-8ade-4c90-a9f7-7f92c5d745be
+  projectName: FidgetSpinnerGL
   organizationId: seokjoong
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

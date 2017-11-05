@@ -29,10 +29,10 @@ namespace Fidget.Main
         void Start()
         {
 			#if UNITY_ANDROID
-            Advertisement.Initialize("1515814", false);
-			#elif (UNITY_IPHONE || UNITY_IOS )
-			Advertisement.Initialize("1515815", false);
-			#endif
+            Advertisement.Initialize("1597809", false);
+#elif (UNITY_IPHONE || UNITY_IOS)
+			Advertisement.Initialize("1597810", false);
+#endif
 
             if (User.Instance.RunCount < 2)
             {
