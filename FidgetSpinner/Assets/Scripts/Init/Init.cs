@@ -5,18 +5,21 @@ using Fidget.Player;
 using Fidget.Common;
 using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
+using Fidget.Common;
 
 namespace Fidget.Init
 {
     public class Init : MonoBehaviour
     {
-        
+        public BottomAd bottomAd;
+
         void Awake()
         {
-			#if UNITY_IOS
+#if UNITY_IOS
 			Application.targetFrameRate = 60;
-			#endif
+#endif
 
+            bottomAd.RequestBanner();
             ExpTable expTable = new ExpTable();
             if (User.Instance.RunCount < 1)
             {
@@ -26,7 +29,7 @@ namespace Fidget.Init
             {
                 User.Instance.RunCount++;
             }
-            Analytics.CustomEvent("gameOver", new Dictionary<string, object>
+            Analytics.CustomEvent("initEvent", new Dictionary<string, object>
             {
                 { "equip", User.Instance.EquipIndex },
                 { "levelequip"+User.Instance.EquipIndex.ToString(), User.Instance.GetFidgetSpinnerLevel(User.Instance.EquipIndex) },

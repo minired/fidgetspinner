@@ -11,9 +11,8 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
-            this.RequestBanner();
         }
-        private void RequestBanner()
+        public void RequestBanner()
         {
 #if UNITY_ANDROID
             string adUnitId = "ca-app-pub-3026969986215886/2438843858";
