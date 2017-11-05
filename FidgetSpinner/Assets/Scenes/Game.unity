@@ -616,31 +616,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114305487844292368, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 3.857143
-      objectReference: {fileID: 0}
-    - target: {fileID: 114881613253891478, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 4.8333335
-      objectReference: {fileID: 0}
-    - target: {fileID: 114479776297973072, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 4.111111
-      objectReference: {fileID: 0}
-    - target: {fileID: 114443662670222246, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 3.4583333
-      objectReference: {fileID: 0}
-    - target: {fileID: 114038641150961376, guid: 5929c90240831c94c8cd687c3bfe4022,
-        type: 2}
-      propertyPath: aspectRatio
-      value: 2.0416667
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5929c90240831c94c8cd687c3bfe4022, type: 2}
   m_IsPrefabParent: 0

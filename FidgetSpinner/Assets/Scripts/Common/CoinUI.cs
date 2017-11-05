@@ -8,62 +8,56 @@ namespace Fidget.Common
     {
         public UILabel coinLabel;
 
-        public GameObject additionalCoin;
-
         public GameObject parent;
 
         Vector3 preloadPos = new Vector3(299f, 490f, 0f);
 
-        Queue<GameObject> labelPool = new Queue<GameObject>(20);
+        public List<GameObject> labelPool;
 
         DigitChanger digitChanger = new DigitChanger();
+
+        int labelPoolIndex = 0;
 
         public void SetCoinLabel(ulong coin)
         {
             coinLabel.text = digitChanger.UdigitToString(coin);
         }
 
-        void PreloadLabels()
-        {
-            for (int i = 0; i < 20; ++i)
-            {
-                GameObject label = NGUITools.AddChild(parent, additionalCoin);
-                label.transform.parent = this.transform;
-                label.transform.localScale = new Vector3(1.0f, 1.0f);
-                label.transform.localPosition = preloadPos;
-                label.SetActive(false);
-                labelPool.Enqueue(label);
-            }
-        }
 
         public void AdditionalCoin(ulong coin)
         {
-            StartCoroutine(AdditionalCoin_Co(coin));
-            //User.Instance.Coin += coin;
-            //SetCoinLabel(User.Instance.Coin);
+            StartCoroutine(AdditionalCoinProc(coin));
         }
 
-        IEnumerator AdditionalCoin_Co(ulong coin)
+        IEnumerator AdditionalCoinProc(ulong coin)
         {
-            GameObject label = labelPool.Dequeue();
-            label.SetActive(true);
-            label.GetComponent<UILabel>().text = "+" + coin.ToString();
-            label.GetComponent<TweenAlpha>().ResetToBeginning();
-            LeanTween.moveLocalY(label, 576f, 1f);
+            if (labelPoolIndex >= labelPool.Count)
+            {
+                labelPoolIndex = 0;
+            }
+            GameObject labelObj = labelPool[labelPoolIndex];
+            labelPoolIndex++;
 
+            labelObj.SetActive(false);
+            labelObj.transform.localPosition = preloadPos;
+            labelObj.GetComponent<UILabel>().text = "+" + coin.ToString();
+            labelObj.GetComponent<TweenAlpha>().ResetToBeginning();
+            labelObj.SetActive(true);
+            LeanTween.moveLocalY(labelObj, 576f, 1f);
             yield return new WaitForSeconds(1f);
-
-            label.SetActive(false);
-            label.transform.localPosition = preloadPos;
-            labelPool.Enqueue(label);
+            labelObj.SetActive(false);
+            Debug.Log(labelObj.name);
         }
+
+
+
+
 
 
         // Use this for initialization
         void Start()
         {
             SetCoinLabel(User.Instance.Coin);
-            PreloadLabels();
         }
 
         // Update is called once per frame

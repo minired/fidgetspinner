@@ -34,7 +34,7 @@ namespace Fidget.TimingGame
 
         float distance = 1.0f;
 
-        ulong coinBonus;
+        ulong coinBonus = 0;
 
 
         private void Awake()
@@ -201,12 +201,14 @@ namespace Fidget.TimingGame
             {
                 SetInfoText(4);
                 User.Instance.Coin += coinBonus * 20;
+                coinUI.AdditionalCoin(coinBonus * 20);
                 coinUI.SetCoinLabel(User.Instance.Coin);
             }
             else if (distance < 0.1f)
             {
                 SetInfoText(3);
                 User.Instance.Coin += coinBonus * 10;
+                coinUI.AdditionalCoin(coinBonus * 10);
                 coinUI.SetCoinLabel(User.Instance.Coin);
             }
             else if (distance < 0.15f)
