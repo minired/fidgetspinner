@@ -28,6 +28,8 @@ namespace Fidget.Common
             for (int i = 0; i < 20; ++i)
             {
                 GameObject label = NGUITools.AddChild(parent, additionalCoin);
+                label.transform.parent = this.transform;
+                label.transform.localScale = new Vector3(1.0f, 1.0f);
                 label.transform.localPosition = preloadPos;
                 label.SetActive(false);
                 labelPool.Enqueue(label);
