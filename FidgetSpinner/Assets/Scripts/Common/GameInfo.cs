@@ -13,11 +13,11 @@ namespace Fidget.Common
 
         public const string leaderBoardLoopSpin = "CgkIyIDh6tIfEAIQCA";
 
-        public const string leaderBoardTimedSpinIOS = "timedspin";
+        public const string leaderBoardTimedSpinIOS = "grp.timedspin";
 
-        public const string leaderBoardGameSpinIOS = "gamespinrank";
+        public const string leaderBoardGameSpinIOS = "grp.gamespinrank";
 
-        public const string leaderBoardLoopSpinIOS = "timingspinrank";
+        public const string leaderBoardLoopSpinIOS = "grp.timingspinrank";
 
       
 

@@ -289,7 +289,13 @@ namespace Fidget.Common
             {
                 if (grade == i)
                 {
+#if UNITY_ANDROID
                     CheckLevelMission(levelAchivementLevel[i], levelAchievementCode[i]);
+
+#elif (UNITY_IPHONE || UNITY_IOS)
+                     CheckLevelMission(levelAchivementLevel[i], "grp." + levelAchievementCode[i]);
+#endif
+
                 }
             }
         }
@@ -319,7 +325,15 @@ namespace Fidget.Common
             {
                 if (grade == i)
                 {
+
+#if UNITY_ANDROID
                     CheckCoinMission(coinAchivementAmount[i], coinAchievementCode[i]);
+
+#elif (UNITY_IPHONE || UNITY_IOS)
+                      CheckCoinMission(coinAchivementAmount[i], "grp." + coinAchievementCode[i]);
+#endif
+
+
                 }
             }
         }
@@ -345,7 +359,12 @@ namespace Fidget.Common
             {
                 if (grade == i)
                 {
+#if UNITY_ANDROID
                     CheckTimedSpinSpeedMission(timedSpinSpeedAchivementSpeed[i], timedSpinSpeedAchievementCode[i]);
+
+#elif (UNITY_IPHONE || UNITY_IOS)
+                    CheckTimedSpinSpeedMission(timedSpinSpeedAchivementSpeed[i], "grp."+timedSpinSpeedAchievementCode[i]);
+#endif
                 }
             }
         }

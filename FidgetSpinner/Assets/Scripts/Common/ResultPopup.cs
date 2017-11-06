@@ -185,15 +185,15 @@ namespace Fidget.Common
 			Scene scene = SceneManager.GetActiveScene();
             if (scene.name == "Game")
             {
-                GameCenterPlatform.ShowLeaderboardUI("timedspin", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+                GameCenterPlatform.ShowLeaderboardUI("grp.timedspin", UnityEngine.SocialPlatforms.TimeScope.AllTime);
             }
             else if (scene.name == "GameSpin")
             {
-                GameCenterPlatform.ShowLeaderboardUI("gamespinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+                GameCenterPlatform.ShowLeaderboardUI("grp.gamespinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
             }
             else if (scene.name == "TimingGame")
             {
-                GameCenterPlatform.ShowLeaderboardUI("timingspinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
+                GameCenterPlatform.ShowLeaderboardUI("grp.timingspinrank", UnityEngine.SocialPlatforms.TimeScope.AllTime);
             }
 #endif
 

@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Nexters
-  productName: "\uD53C\uC82F\uC2A4\uD53C\uB108 \uAC24\uB7ED\uC2DC"
+  productName: FidgetSpinner Galaxy
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -148,11 +148,11 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.nexters.fidgetspinner
+    Android: com.nexters.fidgetspinnergl
     iOS: com.nexters.fidgetspinner
   buildNumber:
     iOS: 2
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -223,7 +223,7 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileID: 4a92cbef-d931-4792-863a-7f9988f7ca8b
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 2
-  AndroidTargetDevice: 3
+  AndroidTargetDevice: 4
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/fidgetspinner/Keystore/fidgetgl.keystore
