@@ -31,7 +31,7 @@ namespace Fidget.Main
 			#if UNITY_ANDROID
             Advertisement.Initialize("1597809", false);
 #elif (UNITY_IPHONE || UNITY_IOS)
-			Advertisement.Initialize("1597810", false);
+//			Advertisement.Initialize("1597810", false);
 #endif
 
             if (User.Instance.RunCount < 2)

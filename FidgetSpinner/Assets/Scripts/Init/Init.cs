@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fidget.Player;
 using Fidget.Common;
-using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using Fidget.Common;
 
@@ -29,6 +28,7 @@ namespace Fidget.Init
             {
                 User.Instance.RunCount++;
             }
+			/*
             Analytics.CustomEvent("initEvent", new Dictionary<string, object>
             {
                 { "equip", User.Instance.EquipIndex },
@@ -36,6 +36,7 @@ namespace Fidget.Init
                 { "coin", User.Instance.Coin },
                 { "exp", expTable.GetLevel(User.Instance.Exp) }
             });
+            */
         }
         void InitGame()
         {

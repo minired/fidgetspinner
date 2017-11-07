@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Advertisements;
+
 namespace Fidget.Common
 {
     public class BottomUI : MonoBehaviour
@@ -37,6 +37,7 @@ namespace Fidget.Common
         // Use this for initialization
         void Start()
         {
+			adPopupObj.GetComponent<PopupAd> ().Init ();
             StartCoroutine(ChangeStatusProc());
         }
         void MoveEnd()
@@ -72,10 +73,17 @@ namespace Fidget.Common
 
         public void ShowAdPopup()
         {
+			if (adPopupObj.GetComponent<PopupAd> ().IsLoded ()) 
+			{
+				adPopupObj.SetActive(true);
+			}
+
+			/*
             if (Advertisement.IsReady())
             {
                 adPopupObj.SetActive(true);
             }
+            */
         }
 
 
@@ -83,6 +91,7 @@ namespace Fidget.Common
         {
             while (true)
             {
+				/*
                 if (Advertisement.IsReady())
                 {
                     btnAdSprite.spriteName = "btn_ad@sprite";
@@ -93,6 +102,18 @@ namespace Fidget.Common
                     btnAdSprite.spriteName = "btn_ad_gray";
                     adBtnObj.GetComponent<UIButton>().normalSprite = "btn_ad_gray";
                 }
+                */
+				if (adPopupObj.GetComponent<PopupAd> ().IsLoded ())
+				{
+					btnAdSprite.spriteName = "btn_ad@sprite";
+					adBtnObj.GetComponent<UIButton>().normalSprite = "btn_ad@sprite";
+				}
+				else
+				{
+					btnAdSprite.spriteName = "btn_ad_gray";
+					adBtnObj.GetComponent<UIButton>().normalSprite = "btn_ad_gray";
+				}
+			
                 yield return new WaitForSeconds(3f);
             }
         }

@@ -149,7 +149,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.nexters.fidgetspinnergl
-    iOS: com.nexters.fidgetspinner
+    iOS: com.nexters.fidgetspinnergl
   buildNumber:
     iOS: 2
   AndroidBundleVersionCode: 6
@@ -220,7 +220,7 @@ PlayerSettings:
   metalAPIValidation: 1
   iOSRenderExtraFrameOnPause: 0
   appleDeveloperTeamID: PR26D6FK56
-  iOSManualSigningProvisioningProfileID: 4a92cbef-d931-4792-863a-7f9988f7ca8b
+  iOSManualSigningProvisioningProfileID: c3930535-1632-4e66-891e-203dee581cca
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 2
   AndroidTargetDevice: 4
@@ -279,6 +279,103 @@ PlayerSettings:
       m_Width: 128
       m_Height: 128
       m_Kind: 0
+  - m_BuildTarget: iPhone
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 4f595c7f809bd403fa3e6d03187c2f31, type: 3}
+      m_Width: 180
+      m_Height: 180
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: f1116123fdf614a61815c46cc35a9f34, type: 3}
+      m_Width: 167
+      m_Height: 167
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: a9c5c568f852f4bc3818cbbf17fe29d4, type: 3}
+      m_Width: 152
+      m_Height: 152
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 5c824d6ad3c1d40ab91f632467fe69cb, type: 3}
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3d2ffb8c0aa57458db1bc5d4be452138, type: 3}
+      m_Width: 120
+      m_Height: 120
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 87c5b3afa9045426d853986efbfa4500, type: 3}
+      m_Width: 114
+      m_Height: 114
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: a9c5c568f852f4bc3818cbbf17fe29d4, type: 3}
+      m_Width: 76
+      m_Height: 76
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 522d5975747db48d7bb91fb032f19a40, type: 3}
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 73129f74d63ed49ad9d47fb25d82bcd2, type: 3}
+      m_Width: 57
+      m_Height: 57
+      m_Kind: 0
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 22449e39f75834087ac2a3828bad3452, type: 3}
+      m_Width: 120
+      m_Height: 120
+      m_Kind: 3
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: bdd44aedd800d4057997eb4ef13290f7, type: 3}
+      m_Width: 80
+      m_Height: 80
+      m_Kind: 3
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: b5564ded936cc435fa923602eee2a2da, type: 3}
+      m_Width: 40
+      m_Height: 40
+      m_Kind: 3
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 8fdf233e9b34c448fb2c124e9a06227c, type: 3}
+      m_Width: 87
+      m_Height: 87
+      m_Kind: 1
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 55ef9ae4e1c424b44bd40a22f066b35c, type: 3}
+      m_Width: 58
+      m_Height: 58
+      m_Kind: 1
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 3c45a2e3ad98e48288aed9fe31002a5e, type: 3}
+      m_Width: 29
+      m_Height: 29
+      m_Kind: 1
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: d2c624035870c473389438a339cad79e, type: 3}
+      m_Width: 60
+      m_Height: 60
+      m_Kind: 2
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 8731898c1c545462389f6de384a469ee, type: 3}
+      m_Width: 40
+      m_Height: 40
+      m_Kind: 2
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 308f05dff0ca441f4bd3efc5a286ad4f, type: 3}
+      m_Width: 20
+      m_Height: 20
+      m_Kind: 2
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 1721c093f6b9543b291e926f25cc41fe, type: 3}
+      m_Width: 1024
+      m_Height: 1024
+      m_Kind: 4
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
